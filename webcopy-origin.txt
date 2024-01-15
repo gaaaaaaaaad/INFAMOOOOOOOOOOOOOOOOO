@@ -1,0 +1,48 @@
+Uri: https://omarmenu.xyz/
+File Name: C:\Downloaded Web Sites\omarmenu.xyz\index.htm
+Content Type: text/html
+
+Uri: https://omarmenu.xyz/animejs%403.0.1/lib/anime.min.js
+File Name: C:\Downloaded Web Sites\omarmenu.xyz\animejs@3.0.1\lib\anime.min.js
+Content Type: application/javascript
+
+Uri: https://omarmenu.xyz/attachments/1085611989683941396/1093467811017412679/menu-preview.png
+File Name: C:\Downloaded Web Sites\omarmenu.xyz\attachments\1085611989683941396\1093467811017412679\menu-preview.png
+Content Type: image/png
+
+Uri: https://omarmenu.xyz/background.gif
+File Name: C:\Downloaded Web Sites\omarmenu.xyz\background.gif
+Content Type: image/gif
+
+Uri: https://omarmenu.xyz/css?family=IBM+Plex+Sans:400,600
+File Name: C:\Downloaded Web Sites\omarmenu.xyz\css
+Content Type: application/octet-stream
+
+Uri: https://omarmenu.xyz/discord.html
+File Name: C:\Downloaded Web Sites\omarmenu.xyz\discord.html
+Content Type: text/html
+
+Uri: https://omarmenu.xyz/favicon.ico
+File Name: C:\Downloaded Web Sites\omarmenu.xyz\favicon.ico
+Content Type: image/vnd.microsoft.icon
+
+Uri: https://omarmenu.xyz/giftcard.html
+File Name: C:\Downloaded Web Sites\omarmenu.xyz\giftcard.html
+Content Type: text/html
+
+Uri: https://omarmenu.xyz/main.min.js
+File Name: C:\Downloaded Web Sites\omarmenu.xyz\main.min.js
+Content Type: application/javascript
+
+Uri: https://omarmenu.xyz/money.mp4
+File Name: C:\Downloaded Web Sites\omarmenu.xyz\money.mp4
+Content Type: video/mp4
+
+Uri: https://omarmenu.xyz/scrollreveal%404.0.0/dist/scrollreveal.min.js
+File Name: C:\Downloaded Web Sites\omarmenu.xyz\scrollreveal@4.0.0\dist\scrollreveal.min.js
+Content Type: application/javascript
+
+Uri: https://omarmenu.xyz/style.css
+File Name: C:\Downloaded Web Sites\omarmenu.xyz\style.css
+Content Type: text/css
+
