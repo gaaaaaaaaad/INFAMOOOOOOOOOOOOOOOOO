@@ -102,15 +102,16 @@
         }
 
         .video-container {
-            max-width: 800px;
+            max-width: 500px;
             margin: 0 auto;
         }
 
         .video-box {
+            flex: 0 1 calc(48% - 10px);
+            margin-bottom: 20px;
             position: relative;
             overflow: hidden;
             padding-bottom: 56.25%; /* 16:9 aspect ratio */
-            margin-bottom: 20px;
         }
 
         .video-box iframe {
