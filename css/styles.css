@@ -23,6 +23,9 @@ body {
 	-moz-transition: all 0.3s linear;
 	-o-transition: all 0.3s linear;
 }
+#discord-link {
+	display: none;
+}
 ::selection {
 	color: #fff;
 	background: #8e0000;
