@@ -454,6 +454,10 @@ color:#F89F9F;
 	position: relative;
 	border-bottom: 2px #8e0000 solid;
 }
+.container {
+    position: relative;
+    z-index: 1;
+}
 .banner-container:before {
 position: absolute;
 width: 100%; 
