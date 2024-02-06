@@ -596,9 +596,7 @@ img, video, iframe, embed, object {
     -------------------------------------------------*/
 #aboutUs {
 	
-	padding-top: 35px;
-	padding-bottom: 25px;
-	overflow: hidden;
+
 position: relative;
 }
 #video-background {
