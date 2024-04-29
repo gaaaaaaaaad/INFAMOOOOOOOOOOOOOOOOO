@@ -1,6 +1,6 @@
 {
   "version": "10.1",
-  "status": "Undetected"
-  "services": "Online"
+  "status": "Undetected",
+  "services": "Online",
   "compatibility": "Supports 1.68"
 }
