@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<CNFGTextures>
+	<Texture textureid="32653987">
+		<TextureName>w_am_bat_s</TextureName>
+		<ReplacementTexture>FX</ReplacementTexture>
+		<IsGif>true</IsGif>
+		<Delay>0</Delay>
+	</Texture>
+	<Texture textureid="32653987">
+		<TextureName>w_am_bat</TextureName>
+		<ReplacementTexture>FX</ReplacementTexture>
+		<IsGif>true</IsGif>
+		<Delay>0</Delay>
+	</Texture>
+</CNFGTextures>

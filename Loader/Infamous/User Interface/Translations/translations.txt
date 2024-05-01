@@ -1,0 +1,2162 @@
+SUB,879841261,Home,Does Not Matter
+SUB,2307291526,Config,Save, reset or load settings.
+SUB,1305079782,Lua,Load lua scripts.
+SUB,1880323709,Lua,Load scripts.
+SUB,4231794529,Theme,Load custom menu themes.
+SUB,3204289615,Position,Adjust menu position, size & more stuff..
+SUB,1025013155,Translations,Load & reload translations.
+SUB,4119252608,Assign Keys,Reassign menu keys.
+SUB,828078830,Session Info,Draws a small window to display session information.
+BUTTON,4272379708,Reset Settings,Restore all settings to default.
+BUTTON,1320236296,Open Discord,Will open discord link.
+BUTTON,2340557512,Chosen,IDK.
+FLOAT,467607871,Padding,Change padding between header & options.
+FLOAT,2558310423,Padding,Change padding between options & description.
+FLOAT,3041045794,Padding,Change padding between header & sub bar.
+FLOAT,976141877,Horizontal,Move menu horizontal.
+FLOAT,2350473737,Vertical,Move menu vertical.
+FLOAT,3884634367,Horizontal,Move session info horizontal.
+FLOAT,290628750,Vertical,Move session info vertical.
+SUB,1614593165,Settings,Menu settings.
+SUB,3052066764,Header Customization,Header settings.
+SUB,1144191879,Sub bar Customization,Sub bar settings.
+SUB,1495183268,Header Color,Change header color.
+SUB,2962996654,Header Title Color,Change header title color.
+SUB,750423190,Header Title Fonts,Change title fonts.
+SUB,3792519589,Submenu Color,Change submenu color.
+SUB,1907521595,Submenu Line Color,Change submenu line color.
+SUB,531479189,Gui Autism,Give your gui autism.
+TOGGLE_INT_SLIDER,3071611718,Header Rainbow,Header keep changing rgb colors.
+TOGGLE_INT_SLIDER,6211325,Header Title Rainbow,Header title keep changing rgb colors.
+TOGGLE_INT_SLIDER,2715750862,Submenu Rainbow,Submenu keep changing rgb colors.
+TOGGLE_INT_SLIDER,3658630357,Submenu Line Rainbow,Submenu line keep changing rgb colors.
+TOGGLE_INT_SLIDER,323295267,Left Text Rainbow,Header left text to rainbow.
+TOGGLE_INT_SLIDER,1817608888,Right Text Rainbow,Submenu left text to rainbow.
+TOGGLE_INT_SLIDER,708945149,Options Rainbow,Options to rainbow.
+TOGGLE_INT_SLIDER,3821948149,Scroller Rainbow,Scroller to rainbow.
+TOGGLE_INT_SLIDER,3485289646,Arrow Rainbow,Arrows to rainbow.
+TOGGLE_INT_SLIDER,2445866252,Selected Arrow Rainbow,Selected Arrows to rainbow.
+TOGGLE_INT_SLIDER,954889383,Off Rainbow,Off button to rainbow.
+TOGGLE_INT_SLIDER,3357744948,On Rainbow,On button to rainbow.
+TOGGLE_INT_SLIDER,1096929684,Sliders Background Rainbow,Sliders background turns into rainbow.
+TOGGLE_INT_SLIDER,1015728881,Sliders Rainbow,Sliders it self turns into rainbow.
+TOGGLE_INT_SLIDER,678054426,Option Text Rainbow,Option text it self turns into rainbow.
+TOGGLE_INT_SLIDER,631414923,Selected Text Rainbow,Selected text it self turns into rainbow.
+TOGGLE_INT_SLIDER,4135739104,Rainbow Description,Description background it self turns into rainbow.
+TOGGLE_INT_SLIDER,4284591726,Description Text Rainbow,Description text it self turns into rainbow.
+TOGGLE_INT_SLIDER,1812323836,Breaker Rainbow,Breaker turns into rainbow.
+TOGGLE_INT_SLIDER,2819765646,Example Slider,Slider to help you with the looks.
+FLOAT,97318423,Breaker Width Multiplier,Adjust breaker's width.
+FLOAT,3654846341,Breaker Thickness Multiplier,Adjust breaker's thickness.
+SUB,1137191128,Left Text Color,Change left text color.
+SUB,3238024365,Option Count Color,Change count color.
+SUB,14280927,Breaker Customization,Breaker settings.
+SUB,1837295246,Option Customization,Options settings.
+SUB,1477204180,Background,Background related settings.
+SUB,491266305,Option Fonts,Change option fonts.
+SUB,1879705756,Scroll Bar,Scroll bar related settings.
+SUB,3899130402,Arrow,Arrow related settings.
+SUB,1964265937,Selected Arrow Color,Selected arrow color settings.
+SUB,2764366780,Off Color,Off color settings.
+SUB,53804340,Toggles,Toggles related settings.
+SUB,1668681754,On Color,On color settings.
+SUB,3766631497,Slider,Adjust slider related settings.
+SUB,3531750371,Slider Background Color,Slider background color settings.
+SUB,2944752543,Slider Color,Slider color settings.
+FLOAT,4077562344,Slider Width Multiplier,Set slider's width.
+FLOAT,2889875938,Slider Thickness Multiplier,Set slider's thickness.
+SUB,3542653704,Text Color,Text color settings.
+SUB,1896126384,Selected Text Color,Selected text color settings.
+SUB,1123203483,Footer Customization,Footer settings.
+FLOAT,460453113,Footer Height,Adjust menu footer height.
+FLOAT,1596610890,Footer Line Height,Adjust menu footer line height.
+FLOAT,2002248500,Footer Padding,Adjust menu footer padding.
+FLOAT,2879892426,Description Padding,Adjust menu description padding.
+FLOAT,3079273261,Description Height,Adjust menu description height.
+SUB,489140349,Footer Line Color,Footer line color.
+TOGGLE_INT_SLIDER,2271884166,Footer Line Rainbow,Footer line it self turns into rainbow.
+SUB,2202632217,Footer Color,Footer color.
+TOGGLE_INT_SLIDER,3331704346,Footer Rainbow,Footer it self turns into rainbow.
+SUB,2630544317,Footer Left Text Color,Footer left text color.
+TOGGLE_INT_SLIDER,1898077395,Footer Left Text Rainbow,Footer left text it self turns into rainbow.
+SUB,765620435,Footer Right Text Color,Footer right text color.
+TOGGLE_INT_SLIDER,3919085305,Footer Right Text Rainbow,Footer right text it self turns into rainbow.
+SUB,1702702250,Description Customization,Description settings.
+SUB,3409962681,Description Rect Color,Description rect color settings
+SUB,1860587706,Description Text Color,Description text color settings
+BUTTON,1984557588,Terminate Menu,Unloads menu from game.
+BUTTON,2393415765,Default Theme,Resets theme to default.
+FLOAT,2327896094,Width,Adjust menu width.
+FLOAT,740348599,Height,Adjust menu header height.
+FLOAT,3274179416,Submenu Line Height,Adjust submenu line height.
+SUB,2738193377,Title,Change setting of text on header.
+TOGGLE,3696717525,Enable Title,Enables menu name on header.
+TOGGLE_INT,3810607152,Animated Header,Play animated [GIF] on header & set delay.
+TOGGLE_INT,437701392,Animated Submenu,Play animated [GIF] on submenu & set delay.
+TOGGLE_INT,113793326,Animated Submenu Line,Play animated [GIF] on submenu line & set delay.
+TOGGLE_INT,452184325,Animated Scrollbar,Play animated [GIF] on scroll bar & set delay.
+TOGGLE_INT,2685910378,Animated Background,Play animated [GIF] on background & set delay.
+TOGGLE_INT,2660530804,Animated Footer Line,Play animated [GIF] on footer line & set delay.
+TOGGLE_INT,3085509898,Animated Footer,Play animated [GIF] on footer & set delay.
+TOGGLE_INT,3554479742,Animated Description,Play animated [GIF] description & set delay.
+TOGGLE_INT,4163623233,Animated Arrow,Play animated [GIF] arrow & set delay.
+FLOAT,926377019,Height,Adjust menu options height.
+FLOAT,3168074722,Height,Adjust menu sub bar height.
+BUTTON,3446227667,Red,Adjust red color selected item.
+BUTTON,4104840473,Green,Adjust green color selected item.
+BUTTON,1443636594,Blue,Adjust blue color selected item.
+BUTTON,2701753611,Alpha,Adjust alpha selected item.
+BUTTON,3173334047,Compose Custom Color,RGBA color selector.
+BUTTON,3360239835,Save Settings,Save current menu's state.
+BUTTON,3243311655,Save Theme,Save current menu's theme.
+BUTTON,2811620106,Load Settings,Load saved menu's state.
+TOGGLE,4164484552,Vibration,Enables vibration to menu when scrolling & etc. [Controller].
+TOGGLE,4029294094,In Game Controller Support,Uses in game functions to support controller.
+INT,882972965,Page Items,Adjust number of options per page.
+NOTIFICATION,4158241237,Rockstar Games,Wishing you a Merry Christmas, Infamous!
+NOTIFICATION,873046629,Rockstar Games,Wishing you all the best with Infamous!
+NOTIFICATION,3038781860,Assign Open Key Message,Enter any key on keyboard to assign.
+INT,2558322599,Reassign Open Key,Change menu open key for keyboard.
+BUTTON,2517468871,Load Translations,It will load translation from translations.exe.
+NOTIFICATION,1690687601,Extracting translations.,Translations - Extracted.
+NOTIFICATION,3255958099,Updating translations.,Translations - New List Added.
+NOTIFICATION,2727834438,Loading translations.,Translations - Loaded.
+NOTIFICATION,341948081,ON,OFF
+NOTIFICATION,3778980495,Lua Engine,Loading Lua: 
+NOTIFICATION,4030452469,Lua Engine,Reloading Lua: 
+NOTIFICATION,2151603123,Lua Engine,Neglecting Lua: 
+TOGGLE_INT_SLIDER,3812650931,Auto Load Chosen Option Fonts,Saves into memory to load last selected option fonts.
+TOGGLE_INT_SLIDER,2262900047,Auto Load Chosen Theme,Saves into memory to load last selected theme when game is booted.
+TOGGLE_INT_SLIDER,1938928504,Auto Load Chosen Title Fonts,Saves into memory to load last selected title fonts.
+FLOAT,2814725596,Text Scale,Change scale of option fonts.
+FLOAT,196774682,Text Scale,Change scale of title fonts.
+SUB,1354841095,Animations Customization,Animations settings.
+FLOAT_TOGGLE,420369014,Scroller Animation,Adjust  scroller animation.
+FLOAT_TOGGLE,150893800,Menu Animations,Adjust speed of all the animations.
+FLOAT,1341234076,Toggles Scale,Change scale of on & off buttons.
+TOGGLE,4222121985,Example Button,Button made for an example.
+BUTTON,1315262260,Load Config,Load selected config.
+BUTTON,3911462048,Mark As Default,Config will load automatically when menu is botted.
+SUB,64532314,Key Delay,Delay when pressing keys.
+SUB,3038084873,Stage 1,Delay when pressing keys level 1.
+INT,3985558073,Start (MS),Start point for level 1.
+INT,3570819942,Delay (MS),Delay when level is 1.
+SUB,2178848924,Stage 2,Delay when pressing keys level 2.
+INT,1780938405,Start (MS),Start point for level 2.
+INT,2497250452,Delay (MS),Delay when level is 2.
+SUB,2410263602,Stage 3,Delay when pressing keys level 3.
+INT,2861021338,Start (MS),Start point for level 3.
+INT,536850528,Delay (MS),Delay when level is 3.
+INT,2167651697,Reset Delay (MS),Delay when level is resetting to 0.
+BUTTON,11799319,Move To Left,Sets menu's position to left.
+BUTTON,2262667346,Move To Right,Sets menu's position to right.
+BUTTON,502643438,Move To Top,Sets menu's position to top.
+BUTTON,825307457,Align To Center,Sets menu's position to center x.
+SUB,394868198,Particles Effects,Draw particle effect on ui.
+TOGGLE,3868923164,Draw On Header,Draws particle effects on header.
+TOGGLE,3613248069,Draw On Sub Bar,Draws particle effects on sub bar.
+TOGGLE,1922669447,Draw On Sub Bar Line,Draws particle effects on sub bar line.
+TOGGLE,2200138215,Draw On Background,Draws particle effects on options.
+TOGGLE,133870407,Draw On Footer Line,Draws particle effects on footer line.
+TOGGLE,326197147,Draw On Footer,Draws particle effects on footer.
+TOGGLE,1038062742,Draw On Description,Draws particle effects on description.
+INT,472169385,Number Of Effects,Number of effects will be drawn.
+FLOAT,3728157567,Speed Of Effects,Speed of effects will be drawn.
+FLOAT,775934222,Circle Radius,Radius of rounded effect.
+FLOAT,2124618989,Lines Thickness,Thickness of line effect.
+FLOAT,2328059389,Lines Distances,Distance of lines.
+SUB,2731988678,Particles Line Coloring,Edit colors of line particle effects.
+SUB,3378250902,Particles Circle Coloring,Edit colors of circle particle effects.
+TOGGLE_INT_SLIDER,1688420359,Rainbow Line,Line turns into rainbow.
+TOGGLE_INT_SLIDER,67308044,Rainbow Circle,Circle turns into rainbow.
+SUB,3989149776,Self,You're ped related options.
+SUB,791180122,Health,Self health related options.
+SUB,2421446248,Nuke God,Crazy small mini feature of infamous.
+SUB,1891018481,Forcefield,Creates field around your ped.It pushes props,peds and vehicles away from you.
+SUB,712589223,Movements,Movements related options.
+SUB,1738636017,Walk Styles,Change your ped walk style.
+SUB,760523025,Weapon Holding Styles,Change your ped weapon holding style.
+SUB,213385507,Weapon Animation Styles,Change your ped weapon animation style.
+SUB,1173541854,Wind Pushing,Winds will push your ped.
+SUB,2927889711,Jump Flags,Change your jumping.
+SUB,2525391063,Player Skin,Self model changing options.
+SUB,3741845570,Appearance,Self appearance modifying options.
+SUB,125794789,Saved Appearances,Will load any. XML files in C:/Infamous/Extra/Appearance.
+SUB,370655432,Appearance Editor,Modify your ped's appearance.
+SUB,1561917622,Clothing,Modify your ped's clothing.
+SUB,2873293703,Props,Modify your ped's props.
+SUB,3118526828,Latest Peds,Skins that have been recently added to game.
+SUB,3918471748,Player,Player skins.
+SUB,2842788967,Animals,Animal skins.
+SUB,3509259514,Ambient Female,Ambient female skins.
+SUB,2228193508,Ambient Male,Ambient male skins.
+SUB,228668867,Cutscene,Cutscene skins.
+SUB,673068639,Gang Female,Gang female skins.
+SUB,3269508391,Gang Male,Gang male skins.
+SUB,1110997147,Story,Story skins.
+SUB,2719809731,Multiplayer,Multiplayer skins.
+SUB,2582975658,Scenario Female,Scenario female skins.
+SUB,570996321,Scenario Male,Scenario male skins.
+SUB,890430565,Story Scenario Female,Story scenario female skins.
+SUB,3738600648,Story Scenario Male,Story scenario male skins.
+SUB,2951697028,Other,Other skins.
+SUB,1489910039,Male Styles,Male related walk styles only.
+SUB,1713328458,Female Styles,Female related walk styles only.
+SUB,4107455726,More Styles,More other styles.
+SUB,1672968141,Particle Effects,Play particle effects on your ped!
+SUB,2990000437,PTFX Loop Manager,Settings for looped ptfx!
+SUB,3352747083,Load Saved,Load saved ptfx!
+BUTTON,3648317396,Save PTFX,Saves current database of ptfx.
+SUB,2586578314,Play Effects Loop,Allows you to play ptfx looped!
+SUB,4120680315,Play Effects Once,Allows you to play ptfx once!
+SUB,3217406436,Effect Settings,Allows you to modify ptfx settings!
+FLOAT,1672811536,PTFX Scale,Scale of particle effect.
+FLOAT,3953797679,PTFX Offset X,X offset of particle effect.
+FLOAT,2419323788,PTFX Offset Y,Y offset of particle effect.
+FLOAT,2189809712,PTFX Offset Z,Z offset of particle effect.
+FLOAT,3874464616,PTFX Rotation X,X rotation of particle effect.
+FLOAT,3687681316,PTFX Rotation Y,Y rotation of particle effect.
+FLOAT,177695415,PTFX Rotation Z,Z rotation of particle effect.
+INT,1040500446,Start PTFX Loop,Starts the loop of ptfx.
+INT,2009880295,PTFX Delay,PTFX delay in ms.
+BUTTON,860863067,Remove PTFX Loop,Deletes ptfx from the loop.
+BUTTON,1538211471,Play PTFX Once,Play selected ptfx once.
+SUB,4263098118,Animations,Playable animations on local ped.
+SUB,508551904,LOL,LOLADMINMENU.
+SUB,4143584819,Custom,List of common animations in Infamous/Extra/Animations.
+SUB,705016974,Common,List of common animations.
+SUB,2413774418,Settings,Settings to modify animations flags & more.
+SUB,2267637030,Dancing,List of dancing animations.
+SUB,2673376308,Animal,List of animal animations.
+SUB,3712215540,Gestures,List of gesture animations.
+SUB,2918128479,Idle,List of idle animations.
+SUB,295319315,Bike Stunts,List of animations related to bike stunts.
+TOGGLE,2280238136,Model Previews,You will be able to see preview skins.
+BREAKER,1271682322,Scenarios,0XNULL
+SUB,4198729172,Walking,Walking scenarios.
+SUB,2717011493,Standing,Standing scenarios.
+SUB,474475428,Entertainment,Entertainment scenarios.
+SUB,3807713634,Specific Human Interactions,Specific human interactions scenarios.
+SUB,1440708217,Animal Actions,Animal actions scenarios.
+SUB,233218605,Driving & Vehicle Actions,Driving and vehicle actions scenarios.
+SUB,3601621500,Props & Other Actions,Props and other actions scenarios.
+SUB,1031031141,Miscellaneous,Miscellaneous scenarios.
+SUB,4163634388,No Clip,Lets you move around freely.
+TOGGLE,2231491210,Enable No Clip,Enables no clip feature.
+FLOAT,1040691631,Up Speed,Speed when pressing up key [Left Shift].
+FLOAT,1287465744,Down Speed,Speed when pressing down key [Left Control].
+FLOAT,641489181,Forwards Speed,Speed when pressing forward key [W].
+FLOAT,932051780,Backwards Speed,Speed when pressing backward key [S].
+FLOAT,4068545192,Turning Left Speed,Speed when pressing left key [A].
+FLOAT,4253011397,Turning Right Speed,Speed when pressing right key [D].
+FLOAT,4055239326,Speed Multiplier,Full speed multiplier when no clipping.
+TOGGLE,1830696422,Collision,Collision will be disabled when no clipping.
+TOGGLE,1536932810,Keep Physics,Ped has no reaction to collision.
+TOGGLE,3673801201,Switch To Cam Movement,No clip moving will use camera as movement. And some speed factor will not be used.
+TOGGLE_INT_SLIDER,3433882162,Left - Right Animation,You're ped will play rotating animation.
+TOGGLE_INT_SLIDER,721161097,Up - Down Animation,You're ped will play rotating animation.
+TOGGLE_INT_SLIDER,2472078435,Roll Up - Down Animation,You're ped will play rolling rotating animation.
+TOGGLE,4004332449,T-Pos Animation,Ped play t-pos animation.
+TOGGLE,3927962610,God Mode,You will never be killed again.
+BREAKER,1529510329,Proofs,0XNULL
+BREAKER,1817932267, ,0XNULL
+BREAKER,2983284918,More Modes,0XNULL
+TOGGLE,510057269,Bullet Proof,You will never be killed with a bullet again.
+TOGGLE,2430138641,Fire Proof,You will never be killed by fire again.
+TOGGLE,1280945931,Explosion Proof,You will never be killed by explosions again.
+TOGGLE,1210576091,Collision Proof,You will never be killed by collisions again.
+TOGGLE,1923875581,Melee Proof,You will never be killed by melee attacks again.
+TOGGLE,4132447217,Steam Proof,You will never be killed by steam again.
+TOGGLE,1173663338,Unknown Proof,You will never be killed by unknown causes again.
+TOGGLE,3123271065,Water Proof,You will never be killed by water again.
+BREAKER,1373031564,Options,0XNULL
+BREAKER,227635677,Settings,0XNULL
+TOGGLE_INT_SLIDER,1735376217,Adjust Wanted Level,Change or lock your current wanted level.
+TOGGLE_INT_SLIDER,2724302368,Fake Wanted Level,UI simulates custom wanted levels, with mini-map flashing.
+TOGGLE,2539545644,Never Wanted,Sets current wanted level to 0.
+TOGGLE,3384504908,Police Ignore,Police will ignore you.
+TOGGLE,933513514,Everyone Ignore,Everyone will ignore you.
+TOGGLE,562115137,Noiseless,You will make 0 noise when moving,.
+TOGGLE,3872418555,Super Jump,Super jump without beast animation.
+TOGGLE,4156288309,Beast Jump,Super jump with beast animation.
+TOGGLE,2269557593,Sky Driving Landing,Jumping will play sky driving animation animation.
+TOGGLE,417627925,Limitless Jumping,Basically unlimited jumping.
+TOGGLE_INT_SLIDER,1135561532,Ninja Jumping,Jump like ninja.
+TOGGLE_INT_SLIDER,2558236410,Rotation Jumping,Jump like while rotating.
+TOGGLE_INT_SLIDER,2093928973,Jumping Height,Adjust jump height.
+TOGGLE,1727430344,Invisibility,Become a shadow.
+TOGGLE,1108151523,No Ragdoll,Player will never fall.
+INT_SLIDER,4075416435,Super Ragdoll,Player will ragdoll like crazy but no ragdoll will be disabled.
+TOGGLE,4288164242,Reduce Capsule Collision,It does what it says & it will allow warping through some objects.
+TOGGLE_INT_SLIDER,2690302478,Run Speed,Modify your running speed.
+TOGGLE_INT_SLIDER,386718993,Swim Speed,Modify your swim speed.
+TOGGLE_INT_SLIDER,2276312951,Enable Wind Pushing,Forcely possiblely run superly & set speed.
+TOGGLE,252793053,Random Force,Apply random force while running.
+TOGGLE,1638004538,Apply While Walking,Apply wind when walking.
+TOGGLE,2652254960,Apply While Running,Apply wind when running.
+TOGGLE,2824874051,Apply While Sprinting,Apply wind when sprinting.
+TOGGLE,241083381,Enable Sprint Button Check,Wind will only apply if sprint key is pressed.
+TOGGLE,602722105,Walk Underwater,Allows you to walk underwater.
+TOGGLE,4089845535,Midget Mode,Makes you ped smaller.
+BUTTON,3855498528,Heal Player,Refills your health.
+BUTTON,1635934617,Kill Your Self,You will be killed.
+TOGGLE,809084247,Apply Alternate Outfits,Enable applying alternate outfits when the model differs.
+BUTTON,670234434,Save Appearance,Allows saving of current outfits and appearance.
+BUTTON,2265221365,Skin,Change skin type.
+BUTTON,92221586,Skin Variation,skin head variation.
+BUTTON,2571972306,Head,Change head type.
+BUTTON,4049002430,Head Variation,Change head variation.
+BUTTON,2250944691,Face,Change face type.
+BUTTON,1679032892,Face Variation,Change face variation.
+BUTTON,507267951,Mask,Change mask type.
+BUTTON,4136340782,Mask Variation,Change mask variation.
+BUTTON,1369131780,Torse,Change torse typer.
+BUTTON,2607236250,Torse Variation,Change mask variation.
+BUTTON,694694619,Hair,Change hair type.
+BUTTON,456059203,Hair Variation,Change hair variation.
+BUTTON,1160507494,Torso 2,Change torso type.
+BUTTON,772355971,Torso 2 Variation,Change torso variation.
+BUTTON,895397926,Leg,Change leg type.
+BUTTON,1659990135,Leg Variation,Change leg variation.
+BUTTON,2290416218,Backpack,Change parachute/bag type.
+BUTTON,3736997655,Backpack Variation,Change parachute/bag variation.
+BUTTON,3608016486,Shoes,Change shoes type.
+BUTTON,2118779622,Shoes Variation,Change shoes variation.
+BUTTON,2800578517,Accessory,Change accessory type.
+BUTTON,640656286,Accessory Variation,Change accessory variation.
+BUTTON,1907633128,Undershirt,Change undershirt type.
+BUTTON,2166748529,Undershirt Variation,Change undershirt variation.
+BUTTON,3500278219,Badge,Change badge type.
+BUTTON,1949487924,Badge Variation,Change badge variation.
+BUTTON,162447773,Torso 2,Change torso 2 type.
+BUTTON,4205053047,Torso 2 Variation,Change torso 2 variation.
+BUTTON,743946552,Hat,Change hat type.
+BUTTON,57608590,Hat Variation,Change hat variation.
+BUTTON,1092194669,Glasses,Change glasses type.
+BUTTON,4056763386,Glasses Variation,Change glasses variation.
+BUTTON,611703821,Ear Prop,Change ear prop type.
+BUTTON,2487276922,Ear Prop Variation,Change ear prop variation.
+BUTTON,2226077696,Unknow Prop,Change unk prop type.
+BUTTON,918209781,Unknow Prop Variation,Change unk prop variation.
+BUTTON,2227768241,Right Hand Prop,Change right hand prop type.
+BUTTON,1773036137,Right Hand Prop Variation,Change right hand prop variation.
+BUTTON,2107929152,Left Hand Prop,Change left hand prop type.
+BUTTON,1880129312,Left Hand Prop Variation,Change left hand prop variation.
+FLOAT_TOGGLE,939397576,Field Of View,Change field of view of your camera.
+TOGGLE,280961148,Allow Restricted Outfits,Better turn it off when going to change cloths at shop or similar place other than menu.
+TOGGLE,2369496051,Enable Nuke God,Creates nuking around your ped.
+FLOAT,387523781,Away Distance,How far from you nuking will be going on.
+FLOAT,864838829,Height,Nuking height depending of you position as well.
+INT,1785191214,Number Of Angles,Nuking angles max is 360.
+TOGGLE,2343567821,Sound,Turn on or off explosion sounds.
+TOGGLE,888186744,Invisible,Turn on or off explosion visibility.
+TOGGLE,1473345832,Damage,Turn on or off explosion damaging.
+INT_SLIDER,2301978633,Shakiness,Explosions shakiness.
+INT,4052457268,Selected Nuke,Nuke explosion.
+TOGGLE_INT_SLIDER,3258412492,Enable Forcefield,You can also strength of force.
+TOGGLE,3280283636,Include Vehicles,Include vehicle in forcefield.
+TOGGLE,683449558,Include Peds,Include peds in forcefield.
+FLOAT,2434410528,Range,Set distance from you that force will work on.
+TOGGLE,3105648275,Keep Range Sphere,Its keeps drawing range's distance.
+TOGGLE_INT_SLIDER,390801829,Rainbow Sphere,The sphere will keep changing colors.
+TOGGLE,2547827508,Maintain Calm State,You won't get hyper when there is shooting nearby.
+TOGGLE_INT_SLIDER,1602179977,Enable Walk Style Override,Your ped movement will be changed to selected one.
+TOGGLE_INT_SLIDER,3469897008,Enable Weapon Handling Style Override,Your ped weapon handling style will be changed to selected one.
+TOGGLE_INT_SLIDER,2763215466,Enable Weapon Handling Style Override,Your ped weapon handling style will be changed to selected one.
+BUTTON,4026390047,Clean,Your ped will be clean as born newly.
+BUTTON,2156003739,Stop Animations,Your ped will no longer play any animation.
+SUB,1296927510,Auto Replenishment,Fills you're health or armor automatically.
+TOGGLE,3570626181,Enable Auto Replenishment,Toggles feature that lets you fills you're health or armor automatically.
+TOGGLE_INT_SLIDER,1287763181,Fill Health,Enable health replenishment.
+TOGGLE_INT_SLIDER,2368717945,Fill Armor,Enable armor replenishment.
+TOGGLE,359303365,Fill When In Cover,Health & armor will fill if you're taking cover.
+TOGGLE,711961449,Fill When Injured,Health & armor will fill when you're ped is injured.
+TOGGLE,555559719,Fill When Jumping,Health & armor will fill when you're ped is jumping.
+TOGGLE,3408774584,Fill When In Vehicle,Health & armor will fill when you're ped is in any vehicle.
+TOGGLE,1531862229,Fill Otherwise,Health & armor will fill otherwise.
+TOGGLE_INT_SLIDER,2902517857,Increased Friction,Increased friction to grounding.
+SUB,2122114041,Falling Flags,Change falling flags & make you're ped dive in sky XD.
+TOGGLE,1924119036,Graceful Landing,Lands gracefully without animations or slowing.
+TOGGLE,881805453,Parachute At Threshold,Parachutes when threshold to coordinates is reached.
+TOGGLE,3779969801,Cam Shake On Fall,Camera shakes when falling.
+TOGGLE,3014109781,Play Ragdoll Animation,Plays ragdoll animation when falling.
+TOGGLE,2613370899,Play Dive Animation,Plays dive animation when falling.
+TOGGLE,2376837436,No Fall Animation,No animation when falling.
+TOGGLE,221928788,No Slow Fall,No slowing down while falling.
+TOGGLE,639881196,Unk Flag,Unknown toggle when falling.
+TOGGLE,2746595626,Super Jump,Enables super jump ability.
+TOGGLE,2728324816,Land On Jump,Ability to land smoothly after jumping.
+TOGGLE,1197167349,Beast Jump,Performs a beast-like jump.
+TOGGLE,3137308922,Beast Jump With Super,Beast jump combined with super jump.
+TOGGLE,1359259978,Ragdoll On Fall,Triggers ragdoll animation on falling.
+SUB,3134356633,Super Skydiving,Sky diving like a god.
+TOGGLE,1784421718,Enable Super Skydiving,Enables Super Sky diving.
+FLOAT,3705396572,Forward Speed Multiplier,Skydiving forward speed multiplying. (W or Forward Joystick)
+FLOAT,3695454684,Backward Speed Multiplier,Skydiving backward speed multiplying. (S or Backward Joystick)
+FLOAT,168040052,Up Speed Multiplier,Skydiving up speed multiplying. (Left Shift or Jump button on controller)
+FLOAT,1016793827,Down Speed Multiplier,Skydiving down speed multiplying. (Left Control or duck button on controller)
+FLOAT,2699306219,Force Boost,Skydiving boost speed.
+TOGGLE,3009434437,Walk On Air,Feature lets you walk on air.
+TOGGLE,469049743,Swim Everywhere,Lets you swim on everywhere.
+TOGGLE,431426021,Get Drunk,You're ped will get drunk asf.
+TOGGLE,4188466577,Tennis Mode,Jump around like you're in a tennis match.
+TOGGLE,2930324654,Freeze,Freeze! Hold your position right where you are.
+TOGGLE,2702638218,Gracefulness,Maintain a tidy environment for your ped. Keep it clean and dirt-free.
+FLOAT_TOGGLE,903001714,Scale,Enable/disable scaling modification for your character.
+TOGGLE_INT_SLIDER,3659082609,Limitless Parachuting,You're parachute winds will last for ever.
+FLOAT_TOGGLE,3458400113,Wetness,Change you're ped's wetness.
+SUB,2395265665,Walk Through,Allows you to walk through entities.
+TOGGLE,2121825096,Enable Walk Through,Allows you to walk through peds or object and vehicles.
+TOGGLE,1040770310,Peds,Allows you to walk through peds.
+TOGGLE,2500886068,Vehicles,Allows you to walk through vehicles.
+TOGGLE,604195073,Objects,Allows you to walk through objects.
+TOGGLE,965692248,Tiny Legs,Makes you're ped's legs tiny.
+TOGGLE_INT_SLIDER,2815195510,Alpha,Set you're ped's alpha.
+SUB,201955728,Baba Yoga,Makes you meditate & become god of destruction.
+TOGGLE,1679980375,Enable BabaYoga,Toggle baba yogo mode.
+TOGGLE,3002188550,Attract Nearby Entities,Attracts nearby peds & vehicles.
+FLOAT,2554308935,Speed,Speed of going front or back or left & right.
+FLOAT,2575066136,Speed Z,Speed of going up.
+FLOAT,3166022962,Rotation Speed,Ped rotation speed.
+NOTIFICATION,3216384525,Baba Yoga Controls, 
+NOTIFICATION,1321841124,Up,[Aim Button]
+NOTIFICATION,685121787,Front,[W] - [L Stick To F]
+NOTIFICATION,520359255,Back,[S] - [L Stick To B]
+NOTIFICATION,2210944722,Shoot,[Shoot Botton]
+TOGGLE,3529391855,No Head,Removes head of your ped.
+TOGGLE,1236238140,Fire Man,Sets you on fire.
+SUB,3048808528,Flappy Bird,Makes you're ped fly like a bird.
+TOGGLE,4118910965,Enable Flappy Bird,Ragdolling bird.
+FLOAT,2148736594,Vertical Speed,Adjust vertical speed.
+FLOAT,3411835879,Horizontal Speed,Adjust horizontal speed.
+FLOAT,1733375744,Up Speed,Adjust up speed.
+FLOAT,2970173185,Overall Speed,Adjust overall speed.
+NOTIFICATION,2727359345,Flappy Controls, 
+NOTIFICATION,2492560765,Up,Space
+NOTIFICATION,2775540066,Front,[W] - [L Stick To F]
+NOTIFICATION,995200292,Back,[S] - [L Stick To B]
+NOTIFICATION,1610798726,Left,[A] - [L Stick To L]
+NOTIFICATION,1870820741,Right,[D] - [L Stick To R]
+FLOAT_TOGGLE,434466292,Leap & Jump,Ability to jump far far away at drawn marker & adjust height of jump.
+NOTIFICATION,982869048,Leap & Jump Controls, 
+NOTIFICATION,1133632941,Target,Hold [E] - [L DPad]
+NOTIFICATION,677326927,Auto Jump,Release [E] - [L Dpad]
+SUB,3309311327,Djinn Carpet,Ability to fly on carpet like djinn.
+TOGGLE,2198257391,Enable Djinn Carpet,Jump to call carpet.
+FLOAT,1626417272,Carpet Forward Boost,Boost speed when pressing [W | Left Sick].
+FLOAT,3702324210,Carpet Slowdown Boost,Slowdown Boost speed when pressing [S | Left Sick].
+FLOAT,1138301528,Carpet Overall Speed,Overall Carpet's speed.
+TOGGLE,1266497197,Switch To Mass Artillery Weapon,Now carpet will spam artillery when you aim at.
+NOTIFICATION,1201524734,Carpet Controls, 
+NOTIFICATION,2498054351,Call,Jump
+NOTIFICATION,1340757901,Boost,[W] - [L Stick To F]
+NOTIFICATION,943269931,Slowdown,[S] - [L Stick To B]
+NOTIFICATION,713919700,Shoot,[Aim Button]
+NOTIFICATION,2495766848,Attract,[Shoot Botton]
+SUB,1783624669,Fire Breath,Makes you're ped breath like flame fire like dragon. Patek fr
+FLOAT_TOGGLE,886007753,Enable Fire Breath,Breath like dragon & adjust size. Patek fr
+SUB,3660741040,Flags,Enable some cool ped flags.
+TOGGLE,1780143833,Update Animations Fast,Ped animation will slightly become faster.
+TOGGLE,929531342,Ragdoll,Ped will start rag dolling.
+TOGGLE,202270811,Aim Camera Far,Aim camera will change position & will backup a bit. Like mini fov.
+TOGGLE,713473264,Gun Position To Left,Gun position will move to left.
+TOGGLE,1232577051,Dim Aim Ridicule,Aim ridicule will dim slightly.
+TOGGLE,1424491953,Gun Position To Center,Gun position will move to center.
+SUB,1126939819,Surfing,Feature allows you to surf on road or water. 
+TOGGLE,2956617699,Enable Surfing,Enable surfing.
+FLOAT,67962570,Left & Right Move Rate,Rate of when moving left or right. When using [A or D & Left Stick].
+FLOAT,3684786184,Up & Down Move Rate,Rate of when moving up or down. When using [E or LB] & [R or B].
+FLOAT,3594164792,Surfing Speed,Overall surfing speed rate. When using [W or Left stick in front & running key for boost].
+FLOAT,1417503394,Surfing Jump Boost,Boost when jumping. When using [Jump key for jump].
+NOTIFICATION,1597212710,Surfing Controls, 
+NOTIFICATION,1453803909,Forward,[W] - [L Stick To F]
+NOTIFICATION,969076344,Boost,[L Shift] - [A]
+NOTIFICATION,669600453,Jump,[Space] - [X]
+NOTIFICATION,3596593075,Yaw R,[D] - [L Stick To R]
+NOTIFICATION,3499924525,Yaw L,[A] - [L Stick To L]
+NOTIFICATION,1321474170,Pitch Up,[E] - [LB]
+NOTIFICATION,2098623774,Pitch Down,[R] - [B]
+SUB,3382204941,Camera,Adjust gameplay camera settings.
+FLOAT_TOGGLE,3860755724,Zoom,Adjust gameplay camera zoom.
+TOGGLE,818466505,Lock Zoom,Prevents accidental zoom changes when pressing the V key.
+TOGGLE,2134014842,Clamping Yaw,Enable yaw camping.
+FLOAT,977430180,Yaw Minimum,Adjust minimum yaw.
+FLOAT,3910904088,Yaw Maximum,Adjust maximum yaw.
+TOGGLE,1859665573,Clamping Pitch,Enable pitch camping.
+FLOAT,994830169,Pitch Minimum,Adjust pitch yaw.
+FLOAT,964427321,Pitch Maximum,Adjust pitch yaw.
+NOTIFICATION,1964190912,Angry Bird Controls, 
+NOTIFICATION,3152263572,Poop,Attack Key
+TOGGLE,1971617075,Enable Angry Bird,Toggle angry bird & start attacking.
+SUB,355181074,Online,Network related options.
+SUB,3460967848,Quick Join,Quickly join a session.
+SUB,1057012078,Protections,Protects you from other modders.
+SUB,3831361419,Spoof,Spoofs allow you to avoid modder detections & more stuff.
+SUB,841994588,Detections,Avoid detection in other cheats.
+TOGGLE,1963072819,God Mode,Avoids detection for using godmode or proofs.
+TOGGLE,2830095576,Spectate,Avoids detection when spectating someone.
+TOGGLE,689559070,Super Jump,Avoids detection when using superjump.
+TOGGLE,1285378614,Abnormal Model,Avoids detection when using other model than default one.
+SUB,177913039,Recovery,Increase in-game stats or add money.
+SUB,3871029110,Tunables,Tunables allow you unlocking stuff in game using globals etc.
+SUB,1942592216,Sessions Explorer,Explore last sessions or live sessions.
+SUB,3779869665,Last Sessions,Data collected from last sessions.
+SUB,3379954802,Player Joiner,Join player by name or scid.
+SUB,1055763795,Select Session,Pick session from the following list.
+SUB,4114991470,Selected Player,Select player to join & view info.
+NOTIFICATION,360230684,Session,Transitioning Player: Patience, a seamless switch is underway.
+NOTIFICATION,1981461182,Session,Player: Unreachable.
+SUB,273245030,Money,Add money to you're account.
+SUB,1984519317,Browse More Stats,Use stats in Extra/Stats.
+SUB,2323599503,Modding Alert Notifications,Toggle modder detection notifications for players.
+SUB,2803901075,Off Radar,You won't show on map & invisible ghost on map!
+TOGGLE,1115324473,Enable Off Radar,You won't show on map.
+TOGGLE,116682488,Ghost Organization,Off radar will change to organization version. Must be in organization
+SUB,3339736140,Bribe Cops,Lester crest will set cops off you.
+SUB,570206961,Activity Log,Tracks joins/leaves for online activity monitoring.
+SUB,2576963781,Freemode Events Exploits,Such as criminal damage & hunt the beast & etc.
+TOGGLE,2587383652,Criminal Damage Exploit,This exploit will keep increasing you're damaging value.
+TOGGLE,2733110465,Hunt The Beast Exploit,This exploit will make you kill the beast instantly.
+TOGGLE,2532289788,Dead - Drop Exploit,This exploit will make you auto deliver the drop.
+TOGGLE,2740262372,Hot Property Exploit,This exploit will make sure only you have the pickup & will auto kill other if they have.
+TOGGLE,2745129249,Kill List Exploit,This exploit will auto kill targets.
+TOGGLE,2840176046,King Of Castle Exploit,This exploit will make sure that you stay the king.
+TOGGLE,932909102,Enable Cops Bribe,Never wanted Lester version.
+TOGGLE,1610886418,Bribe Authorities,Other version of bribe cops.
+TOGGLE,102448110,Reveal Players,Lester version. Helps you in deathmatch most likely.
+TOGGLE,1399477630,Button,Press any session type you like.
+TOGGLE,1504726894,File Log Players,All joined players will be logged into file [Session.log].
+TOGGLE,4220356228,Join Notification,Receive a notification when someone joins your lobby.
+TOGGLE,3299822032,Leave Notification,Receive a notification when someone leaves your lobby.
+TOGGLE,1188909441,Join Console Log,Display player information in the console when someone joins your lobby.
+TOGGLE,878128127,Leave Console Log,Display player information in the console when someone leaves your lobby.
+NOTIFICATION,2798418555,Activity,: has exited the lobby.
+NOTIFICATION,3293500266,Activity,: has entered the lobby.
+TOGGLE,3803797308,Show Talking Players,All talking players will be displayed.
+TOGGLE,3373489300,Kill Player When Shoots,Players will be killed when they shoot.
+TOGGLE,2097535589,Anti Idle Kick,You won't get kicked when afk. But must be in game window
+TOGGLE,2288729196,Fast Respawning,You will respawn faster when you die.
+BUTTON,1068831776,Clone Lobby,Your game will freeze for 8 seconds. It makes you disconnect & clone same lobby.
+BUTTON,3017018139,No Orbital Cannon Cooldown,Orbital cannon will have no cooldown time. It will be instant.
+BUTTON,4056605146,Endless Bullshark,Bullshark will never end. You will keep getting it.
+INT_SLIDER,1373380299,Ghost Fading,Your player will keep fading.
+SUB,1718763218,Services,Allows you to quickly access services.
+BUTTON,667683677,Bullshark Testosterone,Request bullshark testosterone
+BUTTON,2261253044,Ballistic Armor,Request ballistic armor.
+BUTTON,3198919509,Ammo Drop,Request an ammo drop.
+BUTTON,3164891989,Boat Pickup,Request a boat pickup.
+BUTTON,1650567231,Helicopter Pickup,Request a helicopter pickup.
+BUTTON,571198259,Backup Helicopter,Request a backup helicopter.
+BUTTON,1010847695,Airstrike,Request an airstrike.
+BUTTON,2597831746,Avenger,Request an Avenger.
+BUTTON,3733225721,Kosatka,Request a Kosatka.
+BUTTON,2292171073,Mobile Operations Center,Request a Mobile Operations Center.
+BUTTON,3727886334,Terrorbyte,Request a Terrorbyte.
+BUTTON,855066428,Acid Lab Bike,Request a bike for the Acid Lab.
+BUTTON,1788758586,Taxi,Request a taxi.
+BUTTON,2335323583,RC Bandito,Request an RC Bandito.
+BUTTON,2828850074,Minitank,Request a minitank.
+BUTTON,2310764708,Reveal Profile,Explore the details of the player's profile.
+BUTTON,3836357042,Join,Initiate entry into the player's session.
+BUTTON,3891335151,Send Invite,Invite player to your lobby.
+BUTTON,1915222177,Send Friend Request,Initiate a friendship by sending a friend request to the player.
+BUTTON,587292186,Input Scid,Allows you to input any player's scid.
+BUTTON,1866513753,Input Name,Allows you to input any player's name.
+BUTTON,710875800,Empty,The button is inactive due to missing content or non-existent elements..
+BREAKER,1889764334,Joined -,0XNULL
+SUB,852836059,Session,Options that apply on all the players in lobby.
+SUB,3447332951,Include,Select type of player that will be included in session options.
+TOGGLE,695073735,Include You,You will be included in session options.
+TOGGLE,3626108105,Include Friends,You're friends will be included in session options.
+TOGGLE,102956352,Include Nearby Player,Only nearby players will be included in session options.
+TOGGLE,287422964,Include Others,Include other left in session options.
+SUB,3271697399,Teleport,Teleport session related options.
+SUB,2225859558,Warehouses,Teleport session to selected warehouse.
+SUB,2282589428,Apartments,Teleport session to selected apartment.
+BUTTON,2330196546,Teleport Session To You,Tries to teleport session to you!.
+BUTTON,2880307985,Teleport Session To Warehouse,Teleports session to warehouse!.
+BUTTON,1439195634,Teleport Session To Apartment,Teleports session to apartment!.
+BUTTON,3144384374,Explode Session Unknow,Kills everyone in session but not with you're name!.
+BUTTON,2335709938,Explode Session Owned,Kills everyone in session but with you're name!.
+SUB,789999665,Bounty,Set bounty on session.
+TOGGLE_INT,3839084331,Loop Bounty,Loops bounty on session.
+BUTTON,351039451,Bounty Owned,Means it will set bounty as you!.
+TOGGLE_INT,1219169717,Shake Camera,Loops bounty on session.
+TOGGLE,1770125676,Ragdoll,Session will ragdoll every where.
+TOGGLE,1709819005,Session Info Bar,Displays host and other session related information.
+NOTIFICATION,838446353,Ms/Frame:,Fps in sesssion info.
+NOTIFICATION,2864256300,Fill/Free Slots:,Free or free slots in sesssion info.
+NOTIFICATION,1084028398,Game Time:,Game time in sesssion info.
+NOTIFICATION,1837847143,Host:,Host in sesssion info.
+NOTIFICATION,1988403122,Script Host:,Script host in sesssion info.
+NOTIFICATION,2658233327,Date:,Date in sesssion info.
+NOTIFICATION,1863800685,Time:,Time in sesssion info.
+NOTIFICATION,2544197562,H: ,Hour in sesssion info.
+NOTIFICATION,1674826170, M: ,Minutes in sesssion info.
+NOTIFICATION,2753689404, S: ,Seconds in sesssion info.
+NOTIFICATION,2349936246,Slot [,Slot in talking info.
+NOTIFICATION,1584205629,] ~b~Talking:,Talking in talking info.
+TOGGLE,2797687119,Quick Joining,You will load into sessions faster.
+TOGGLE,1791492846,Force Script Host,Tries to get you script host.
+TOGGLE,3826759154,Force Session Host,Tries to get you session host.
+SUB,655098454,Streamer Mode,Streamer mode hides name of you & all players in you're lobby.
+TOGGLE,1994051808,Enable Streamer Mode,Hide name of all players.
+TOGGLE,149726202,Only Self,Hide your name only.
+SUB,3091097428,Custom Names,Input custom names here.
+SUB,1722123793,Slot,Input custom slot names here.
+SUB,2954933927,Config,Input custom slot names here.
+NOTIFICATION,1366782388,Input Local Name,Change local slot name.
+NOTIFICATION,3819245060,Save Config,Save streamer mode configs.
+SUB,204151091,Chat Manager,Explore a variety of options related to chat.
+SUB,3225341825,Spams,Options related to chat spamming.
+TOGGLE,948988350,Learn & Block Spams,This feature will auto learn spams & block them.
+TOGGLE,994085100,Show Spams In Logger,This feature will show spams in logger.
+TOGGLE,2223334585,Show What Spam Is Learned,This feature will show when spam is learned in logger.
+TOGGLE,1634660502,Log Chat In Console,This feature will show chat in logger.
+SUB,3133354479,Stats,Manage player statistics and information.
+TOGGLE,693196176,Player Stats,player statistics and information.
+TOGGLE,1252168696,Financial Stats,Monitor financial information.
+TOGGLE,3121291506,Wallet:,View player's wallet status.
+TOGGLE,2054268627,Bank:,Check player's bank status.
+TOGGLE,3247732882,Overall Earnings:,View player's overall earnings.
+TOGGLE,3061853539,Performance Stats,Monitor player's performance metrics.
+TOGGLE,4214730679,KD:,View Kill/Death ratio.
+TOGGLE,957812574,Weapon Accuracy:,Check player's weapon accuracy.
+TOGGLE,2733766273,Shooting Ability:,Monitor player's shooting ability.
+TOGGLE,2636719535,Hits:,View hits count.
+TOGGLE,3570480771,Shots:,View shots count.
+TOGGLE,3574139293,Social Stats,View player's social statistics.
+TOGGLE,622570869,Reputation:,Check player's reputation.
+TOGGLE,840036706,Rank:,View player's rank.
+TOGGLE,849746437,Horny Count:,View player's horny count.
+TOGGLE,977153346,Crew Reputation:,Check player's crew reputation.
+TOGGLE,3894430630,Combat Stats,Access player's combat statistics.
+TOGGLE,437477395,Deaths By Players,View deaths by other players.
+TOGGLE,3908141899,Kills On Players,View kills on other players.
+TOGGLE,465699254,Total [DM] Won,View total Deathmatch won.
+TOGGLE,450449806,Total [DM] Lost,View total Deathmatch lost.
+TOGGLE,2723270792,Missions Stats,View player's mission statistics.
+TOGGLE,3331902011,Missions Created,View missions created by player.
+TOGGLE,819344216,Mission Wins,View mission wins.
+TOGGLE,850561453,Modder Detection,Detect modders in-game.
+TOGGLE,270872725,Modder,Indicate player as modder.
+TOGGLE,3799497958,Godmode,Check if player is in godmode.
+TOGGLE,2472256729,Vehicle GodMode,Check if player's vehicle is in godmode.
+TOGGLE,2923972398,Abnormal Health,Detect abnormal health status.
+TOGGLE,292675179,Frame Flags,Check if player is manipulating frame flags.
+TOGGLE,2628026282,Damage Mods,Detect damage modification by player.
+TOGGLE,384280291,Movement Mods,Detect movement modifications by player.
+TOGGLE,2980984822,Excessive Money,Detect excessive money manipulation.
+TOGGLE,3477891587,Abnormal Model,Detect abnormal player model.
+TOGGLE,2448048710,Location,View player's current location.
+TOGGLE,2971200255,X,View player's X coordinate.
+TOGGLE,1042285835,Y,View player's Y coordinate.
+TOGGLE,1301455856,Z,View player's Z coordinate.
+TOGGLE,705495264,Traveling Speed,View player's traveling speed.
+TOGGLE,2915084111,IP,Display player's IP.
+TOGGLE,2316855419,Country,Display player's country.
+TOGGLE,2117472257,City,Display player's city.
+TOGGLE,3316413295,Continent,Display player's continent.
+TOGGLE,994915674,Timezone,Display player's timezone.
+TOGGLE,3658797803,Currency,Display player's currency.
+TOGGLE,3831082967,Country Capital,Display player's country capital.
+TOGGLE,2942484307,Country Neighbours,Display player's country neighbours.
+TOGGLE,1254160802,Country Phone,Display player's country phone code.
+TOGGLE,2995477654,Currency Rates,Display currency rates.
+TOGGLE,4287594448,Latitude,Display player's latitude.
+TOGGLE,1304292168,Longitude,Display player's longitude.
+SUB,1761557441,Restrictions,Options to bypass chat and hearing restrictions & more.
+TOGGLE,2720500676,Mute Override,Capable of potentially circumventing muting or automatic muting.
+TOGGLE,4005781797,Listen Override,It grants you the ability to listen to other online players even when their chat settings are set to 'none' 'crew' or 'friends' only.
+TOGGLE,62995911,Send Override,Allows you to send messages to other online players even when their chat settings are restricted to 'none' 'crew' or 'friends' only.
+SUB,2632166930,Teleport,Teleportation related options.
+TOGGLE,3422749264,Auto Waypoint,Auto initiate teleportation to the waypoint marker.
+BUTTON,2341715471,To Waypoint,Initiate teleportation to the waypoint marker.
+BUTTON,3539652243,To Objective,Initiate teleportation to the objective marker.
+BUTTON,83198459,To Last Vehicle,Initiate teleportation to the last vehicle.
+SUB,2137689072,Story Safe House,Manage your safe house options.
+SUB,4123332158,Landmark Teleport,Teleport to landmarks.
+SUB,3026357000,Sky Teleport,Teleport to high-altitude locations.
+SUB,184294395,Underwater Teleport,Teleport to underwater locations.
+SUB,1625740102,Interior Teleport,Teleport to interior locations.
+BUTTON,1462334285,Teleport,Initiate teleportation to selected location.
+SUB,3835955191,Portal Teleporting,Teleport to desire location thru portal.
+TOGGLE,1064046076,Enable Portal Teleporting,Hold [G] key on keyboard & Hold left d-pad on controller.
+TOGGLE_INT_SLIDER,356381747,Portal Rainbow,Sets portal color to changing rgb.
+SUB,1507147564,Modifications,Settings that modify weapon specifications.
+SUB,3011081184,Combat,Options related to combating.
+SUB,1395457202,Aesthetic & Visual,Options that are aesthetic & visual.
+SUB,4034227036,Special Effects,Special weapon effects.
+SUB,3382143392,Premium Exclusive,Premium exclusive options.
+SUB,1445628300,Holiday & Special,Holiday and special weapons.
+SUB,2246609828,Fun & Miscellaneous,Fun and miscellaneous weapons.
+SUB,1034450007,Additional Options,Some more additional weapon options.
+SUB,2663546784,Weapon,Options related to firearms.
+SUB,1789127839,Air Explosions,Select any air-related explosion in the game.
+SUB,1701243271,Land Vehicle Explosions,Select any land vehicle-related explosion in the game.
+SUB,439359128,Projectile Explosions,Select any projectile-related explosion in the game.
+SUB,1044117099,Environmental Explosions,Select any environmental-related explosion in the game.
+SUB,1325623561,Special Explosions,Select any special-related explosion in the game.
+SUB,827638929,Water Explosions,Select any water-related explosion in the game.
+SUB,2432618839,EMP Explosions,Select any EMP-related explosion in the game.
+SUB,3766841388,Cluster Explosions,Select any cluster-related explosion in the game.
+SUB,910281512,Mine Explosions,Select any mine-related explosion in the game.
+SUB,4193569084,Weapons,No need to select anything here.
+SUB,4080376322,Change Projectile,Select any projectile in the game.
+SUB,3444610899,Individual Weapon Selection,Select any weapon in the game.
+SUB,1943575419,Latest Weapons,Weapons that have been recently added into the game.
+SUB,812940881,Melee Weapons,Select any melee weapon in the game.
+SUB,1033586649,Handguns,Select any handgun weapon in the game.
+SUB,417140311,SMGs,Select any SMG weapon in the game.
+SUB,3913419598,Shotguns,Select any shotgun weapon in the game.
+SUB,2879629528,Assault Rifles,Select any assault rifle weapon in the game.
+SUB,3596531609,Sniper Rifles,Select any sniper rifle weapon in the game.
+SUB,4178504359,Machine Guns,Select any machine gun weapon in the game.
+SUB,125472009,Special Weapons,Select any special weapon in the game.
+SUB,2765455609,Explosive Weapons,Select any explosive weapon in the game.
+SUB,634677159,Other Items,Select other items/weapons in the game.
+SUB,554499056,Vehicle-mounted Weapons,Select vehicle-mounted weapons in the game.
+SUB,1229824426,Projectile Weapon,Enables the use of projectiles with your weapon.
+SUB,2869288480,Delete Gun,Deletes anything you shoot at.
+TOGGLE,3773123409,Enable Projectile Weapon,Allows you to shoot projectiles from your gun.
+TOGGLE,3388139895,Owned Projectile,When you kill someone by projectile it will be by your name.
+TOGGLE,4080262452,Invisible Projectile,Projectile will be invisible.
+TOGGLE,2150195025,Airstrike Mode,Projectile will be shot from the sky.
+INT_SLIDER,2197547531,Projectile Speed,Adjusts the velocity of the projectiles fired from your weapon.
+BUTTON,2807113040,Fill Weapons Inventory,Gives you all the weapons in the game.
+TOGGLE,1588666787,No Recoil,No movement when shooting.
+TOGGLE,3178825832,Infinite Ammo,Gives you unlimited ammo.
+TOGGLE,1386200698,Infinite Parachutes,Gives you endless parachutes.
+TOGGLE,2266367393,No Reload,Never reload your gun again.
+TOGGLE,3494679629,Hand Cuffs,Puts cuffs on your wrists.
+TOGGLE,577369668,Auto Kill Enemies,Auto kills all the enemies near you.
+TOGGLE,2762895154,Interior Weapon Access,Break free from restrictions and seamlessly use your arsenal even in confined environments.
+TOGGLE_INT_SLIDER,645919501,Rapid Fire,Adjusts the rate of fire. Won't work with proximity gun.
+TOGGLE,3941970460,Explosive Fist,Gives you explosive melee.
+TOGGLE,3081721586,Explosive Ammo,Gives you explosive ammo.
+TOGGLE,1357880625,Fire Ammo,Sets anything on fire that you shoot.
+TOGGLE_INT_SLIDER,347268454,Rainbow Camo,Changes the camo in a loop.
+TOGGLE,826042903,Invisible Skin,Toggle to make your weapon skin invisible.
+TOGGLE,2554721205,Auto Fill Weapons Inventory,Automatically restocks your inventory with missing weapons.
+FLOAT_TOGGLE,3159687176,Damage Multiplier,Multiplies amount of damage.
+TOGGLE,104732182,Infinite Range,Weapon range is increased, bullets will go far.
+TOGGLE,699155839,Infinite Lock On Range,Weapon lock-on range is increased, bullets will go far.
+TOGGLE,3301048613,Disable Combat Roll,Disable combat rolling.
+TOGGLE,904928295,Modded Combat Roll,Combat rolling has no more cooldowns.
+SUB,1932175142,Proximity Gun,Targets and fires at nearby entities if the aim input is pressed.
+TOGGLE,3215593676,Enable Proximity Gun,Targets and fires at nearby entities if the aim input is pressed.
+SUB,3937025852,Lines Color,Change lines color.
+SUB,1811547745,Markers Color,Change marker color.
+TOGGLE_INT_SLIDER,2781628667,Enable Delete Gun,Set strength to 0 for normal delete gun; increase for range delete gun.
+TOGGLE_INT_SLIDER,1650063079,Rainbow Range Marker,Range delete gun marker changes colors to RGB.
+TOGGLE,320686095,Teleportation Firearm,Instantly teleport to where your shots land.
+SUB,1400495168,Change Explosion,Select an explosion type.
+SUB,3639427522,Explosive Ammo,Create an explosion where your shots land.
+TOGGLE,1128353084,Enable Explosive Ammo,Create explosions on shot impact.
+FLOAT_SLIDER,4094774636,Impact Damage Scale,Scale the damage of your shots' impact.
+TOGGLE,1907862857,Audible Impact,Make shot impacts audible.
+TOGGLE,99428181,Invisible Impact,Make shot impacts invisible.
+TOGGLE,1744262349,No Damage Impact,Disable damage from shot impacts.
+FLOAT_SLIDER,273265928,Camera Shake,Adjust camera shake from shot impacts.
+TOGGLE,2016028183,Clown Mode,Create purple explosions and comic-style FX.
+TOGGLE,1441768029,Laser Eyes,Shoot lasers from your eyes.
+TOGGLE_INT_SLIDER,4220259983,Super Punch,Increase punch force.
+SUB,2447640702,Grenade Trails,Create trails when throwing grenades.
+TOGGLE,3005985296,Enable Grenade Trails,Toggle trails on grenades.
+TOGGLE_INT_SLIDER,599516101,Rainbow Grenade Trails,Rainbow FX for grenade trails.
+SUB,1283680301,Artillery Gun,Cause mass explosions.
+SUB,2670306567,Aimbot,Automatically aim at targets.
+SUB,3981482058,Range,Adjust aimbot range.
+TOGGLE_INT_SLIDER,92695804,Rainbow Artillery Sights,Rainbow FX for artillery sights.
+TOGGLE_INT_SLIDER,1942942295,Enable Artillery Gun,Shoot artillery where aimed.
+TOGGLE_INT_SLIDER,1218370952,Bullet Force Multiplier,Increase bullet force.
+TOGGLE_INT_SLIDER,292944348,Haven Gun,Launch entities to haven.
+TOGGLE,216576289,Drive It Gun,Teleport your ped into the vehicle you shoot at.
+TOGGLE,2490922828,Minecraft Gun,Allows you to spawn blocks like in Minecraft.
+TOGGLE,3905231001,Tryhard Mode,You will die instantly after shooting.
+TOGGLE,3575818396,Revive Gun,Revive dead peds you shoot.
+TOGGLE,1002425834,Enable Aimbot,Enable aimbot.
+FLOAT_TOGGLE,786402760,Field of View (FoV),Set field of view when aiming.
+SUB,1401858848,Includes,Select who you want to target for aimbot.
+TOGGLE,707709088,Include Cops,Include cops in aimbot targeting.
+TOGGLE,851394855,Include Friends,Include friends in aimbot targeting.
+TOGGLE,642859117,Include Army,Include army members in aimbot targeting.
+TOGGLE,970264105,Include Medic,Include medics in aimbot targeting.
+TOGGLE,237155986,Include Fireman,Include firemen in aimbot targeting.
+TOGGLE,3351290,Include Animals,Include animals in aimbot targeting.
+TOGGLE,2917934526,Include Prostitute,Include prostitutes in aimbot targeting.
+TOGGLE,154497594,Include Criminals,Include criminals in aimbot targeting.
+TOGGLE,2301924315,Include SWAT,Include SWAT members in aimbot targeting.
+TOGGLE,3949437048,Include Mission Peds,Include mission NPCs in aimbot targeting.
+TOGGLE,741819638,Include Players,Include players in aimbot targeting.
+TOGGLE,2245491460,Include Other,Include other stranger peds in aimbot targeting.
+FLOAT_TOGGLE,2165661974,Smoothing,Controls the smoothness of aimbot movements.
+FLOAT_TOGGLE,4008196507,Max Distance,Sets the maximum distance for aimbot targeting.
+TOGGLE,1380371364,Bypass Walls,Allows aimbot to target peds behind walls.
+TOGGLE,2290163472,Shoot Thru Walls,Allows you to shoot thru walls.
+TOGGLE,1358131296,Silent Bot,Aim & kill silently.
+FLOAT,3547800847,Max Screen Distance,Adjust distance to get entity from screen.
+FLOAT,3654014243,Range Circle Thinkness,Adjust thickness on range circle.
+TOGGLE,610214203,Disable Circle,Disables range circle.
+TOGGLE_INT_SLIDER,4207673525,Rainbow Circle,Rainbow FX for range circle.
+SUB,2294658384,Gravity Gun,Enables you to pick up and throw entities.
+TOGGLE,864245998,Enable Gravity Gun,Enables gravity gun functionality.
+TOGGLE,2101754631,Disable Force Pickup,Disables force application when picking up an entity.
+FLOAT,946561005,Gravity Gun: Entity Distance,Distance at which picked entities will stay from you.
+FLOAT,1493880674,Gravity Gun: Moving Force,Force applied when picking up and moving an entity.
+FLOAT,1014776901,Gravity Gun: Throw Force Multiplier,Force applied when throwing an entity.
+SUB,2987902768,Santa Presentor,Gifts descend from the sky as targets for shooting fun!
+TOGGLE,1808496827,Enable Santa Presentor,Gifts descend from the sky as targets for shooting amusement.
+FLOAT,1272595764,Present Force,Amount of force applied to the gift.
+FLOAT,76669823,Present Particle Size,Size of the particle effect when the gift is dropped.
+TOGGLE,3109546925,Explosion Audio,Audible explosion upon gift impact.
+TOGGLE,1655308733,Explosion Visible,Visible explosion upon gift impact.
+TOGGLE,874166778,Nuke Gun,Creates a huge nuke upon bullet impact.
+TOGGLE,2621685161,Dubstep Gun,Make everyone dance with the dubstep gun.
+SUB,2014990243,Hash Visualization,Visualize and inspect hash values of in-game entities.
+TOGGLE,790831400,Enable Hash Gun,Show hash values for in-game entities.
+TOGGLE,2700026866,Switch To Hex Hash,Switch between hex and normal hash display formats.
+TOGGLE,1230903610,Show Heading,Display yaw rotation position of entities.
+TOGGLE,2628206305,Show Coordinates,Display coordinates of entities.
+TOGGLE,1850945434,Hash Projection on Shooting,Display hash of entities shot.
+TOGGLE,2959544788,Log Entity Info on Shooting,Log entity hash and info when shooting.
+TOGGLE,1951132182,Copy Hash on Shooting,Copy hash to clipboard when shooting.
+SUB,3125361952,Text Color,Adjust color of hash text.
+TOGGLE_INT_SLIDER,2320024861,Rainbow Text,Enable rainbow effect for hash text.
+SUB,4024444572,Special Effects,Choose additional effects from the list.
+SUB,2397258036,Paint Gun,Allows painting entities.
+TOGGLE_INT_SLIDER,2959910147,Enable Paint Gun,Enable painting on shooting.
+FLOAT,1156061586,Paint Effect Size,Adjust size of paint effect.
+TOGGLE_INT_SLIDER,725910254,Rainbow Paint,Enable rainbow effect for paint.
+SUB,2547388431,Laser Sight,Adds laser sight to gun.
+TOGGLE,1456101210,Enable Laser Sight,Turn on laser sight.
+FLOAT,3790054405,Hit Point Distance,Adjust distance of hit point.
+FLOAT,3709918044,Hit Point Brightness,Adjust brightness of hit point.
+FLOAT,1734519886,Hit Point Hardness,Adjust hardness of hit point.
+FLOAT,4123324984,Hit Point Radius,Adjust radius of hit point.
+FLOAT,3629671187,Hit Point Fall Off,Adjust fall off of hit point.
+TOGGLE_INT_SLIDER,3156695892,Laser Color Rainbow,Enable rainbow effect for laser color.
+SUB,1082756719,Nuclear Missile,Launch a nuclear missile that wipes entities upon impact.
+TOGGLE,301419805,Enable Nuclear Missile,Use Left Stick for lateral movement, L1 and R1 for vertical rotation. Press W for speed boost, A to rotate left, and D to rotate right. Use Q and E for vertical rotation.
+TOGGLE,3170464918,Missile ESP,Display name and line on nearby players.
+TOGGLE,2042383335,Missile Exhaust Sound,Enable missile exhaust sound.
+TOGGLE_INT_SLIDER,3137199520,Missile Shake & Vibrations,Adjust shake and vibrations of missile.
+TOGGLE_INT_SLIDER,2768305252,Missile Exhaust Fire Effect,Adjust exhaust effect of missile.
+FLOAT,2595009076,Missile Speed,Adjust speed of missile.
+TOGGLE,795004220,Soul Swapper,Swap to peds you shoot.
+SUB,1549109832,Bullet Trails,Creates trails when you shoot a bullet.
+SUB,2339446699,Trails Selection,Select any kind of trails you like from a list.
+TOGGLE,2994824644,Trails Visible,Choose if trails should be visible.
+TOGGLE,3036831638,Trails Audio,Choose if trails should have sound.
+TOGGLE,2728337274,Trails No Damage,Choose if trails should do damage.
+FLOAT,509067061,Trails Camera Shake,Adjust shake of cam.
+TOGGLE_INT,4105311492,Enable Bullet Trails,Toggle bullet trails.
+FLOAT_TOGGLE,3342898734,ShockWave Arm,Creates shock wave where you shoot at.
+TOGGLE,2283512636,Randomizer Arm,Randomizer the entities appearance.
+SUB,816620586,Magnet Gun,Creates magnet front of your gun.
+TOGGLE,432401171,Enable Magnet Gun,Toggle magnet gun.
+FLOAT,3334179936,Attract Range,The distance between entities should be attracted using magnetic gun.
+FLOAT,339564115,Magnet Power,Adjust power of magnet.
+FLOAT,2155428379,Magnet Distance,Adjust distance of magnet from you.
+TOGGLE_INT_SLIDER,3054014211,Magnet Color Rainbow,Enable rainbow effect for magnet.
+SUB,1063276570,Instrument Of Death,If you have played Fortnut then you know what this is.
+TOGGLE,3605806471,Enable Instrument Of Death,Toggle instrument of death.
+FLOAT,1467089527,Fx Mass,Adjust size of effect.
+FLOAT,145146009,Distance,Adjust distance of instrument.
+FLOAT,1560620783,Speed Of Instrument,Adjust speed of instrument.
+SUB,3737527799,Particle Bullet Trails,Use particle effects as trails.
+TOGGLE_INT,3697772992,Enable Particle Bullet Trails,Use particles for as bullet trails.
+FLOAT,3746027973,Particle Mass,Adjust size of particle.
+SUB,868740774,Projectile Trails,Creates trails when you throw a projectile.
+TOGGLE,4203761697,Enable Projectile Trails,Toggle projectile trails.
+SUB,3172636856,Launched ParticleFx,Change & modify ptfx when projectile is launched.
+TOGGLE_INT,2232029023,Enable Launched ParticleFx,Toggle launched particlefx.
+FLOAT,1348593371,Launched ParticleFx Mass,Adjust size of particle.
+INT,3509069095,Launched Fx Delay ~n~Ms,Dealy between each ptfx in ms.
+SUB,1766687220,Launched ExplosionFx,Change & modify explosion when projectile is launched.
+TOGGLE_INT,1870839981,Enable Launched ExplosionFx,Toggle launched explosionfx.
+TOGGLE,2473726911,Owned ExplosionFx,Explosion will be owned by you.
+TOGGLE,554914863,Audio ExplosionFx,Explosion will have audio.
+TOGGLE,2535628153,Visible ExplosionFx,Explosion can be visible or invisible.
+FLOAT,3564979584,Shakiness ExplosionFx,Adjust shakiness of explosion.
+SUB,2323554929,Blown ParticleFx,Change & modify ptfx when projectile is blown.
+TOGGLE_INT,3661933865,Enable Blown ParticleFx,Toggle blown particlefx.
+FLOAT,2826068965,Blown ParticleFx Mass,Adjust size of particle.
+SUB,2462777834,Blown ExplosionFx,Change & modify explosion when projectile is blown.
+TOGGLE_INT,984780048,Enable Blown ExplosionFx,Toggle blown explosionfx.
+TOGGLE,1569095901,Owned ExplosionFx,Explosion will be owned by you.
+TOGGLE,3531258935,Audio ExplosionFx,Explosion will have audio.
+TOGGLE,3653399677,Visible ExplosionFx,Explosion can be visible or invisible.
+FLOAT,2124467837,Shakiness ExplosionFx,Adjust shakiness of explosion.
+TOGGLE,3627098793,Blackhole Gun,Creates blackhole at position you shoot at.
+FLOAT_TOGGLE,10960003,Tornado Gun,Creates tornado where you aim at.
+TOGGLE,2537752936,~o~Halloween ~p~Special ~d~ Grenade,Super special spooky grenades.
+TOGGLE,615172356,Prop Hunt Gun,Shoot at any entity to change to them.
+TOGGLE,3826629578,Valkyrie Rocket,Spawns controllable rocket.
+NOTIFICATION,307145397,Valkyrie Controls, 
+NOTIFICATION,317618998,Create Rocket,Reload Key
+SUB,3800490321,Vehicle,Car related options.
+SUB,4048481646,Spawn Settings,Settings related to vehicle spawnning.
+SUB,559541862,Los Santos Customs,Allow's you to modify vehicles for free & no need to go to LSC.
+SUB,2884432789,Armor,Vehicle's strength.
+SUB,2263663493,Brakes,Vehicle's brake strength.
+SUB,1699832268,Transmission,Vehicle's transmission upgrades.
+SUB,4139776839,Suspension,Vehicle's suspension height.
+SUB,1551732684,Horns,Vehicle's horn sounds.
+SUB,3387244764,Window Tints,Vehicle's window tints.
+SUB,2857521373,Number Plates Type,Change number plates type.
+BUTTON,3980423474,Change Plate Text,Change number plate text.
+SUB,4052003691,Spoiler,Vehicle's spoiler selection.
+SUB,3628599624,Front Bumper,Customize the front bumper of the vehicle.
+SUB,1083873612,Rear Bumper,Customize the rear bumper of the vehicle.
+SUB,2488722576,Side Skirts,Customize the side skirts of the vehicle.
+SUB,2626154204,Exhaust,Customize the exhaust of the vehicle.
+SUB,2359953465,Frame,Customize the frame of the vehicle.
+SUB,2533549054,Grille,Customize the grille of the vehicle.
+SUB,4024531519,Hood,Customize the hood of the vehicle.
+SUB,3457548172,Fender,Customize the fender of the vehicle.
+SUB,4204947556,Right Fender,Customize the right fender of the vehicle.
+SUB,492382196,Roof,Customize the roof of the vehicle.
+SUB,3370349657,Livery,Customize livery of the vehicle.
+SUB,869890843,Nitrous,Install nitrous in the vehicle.
+SUB,485334744,Turbo,Install a turbocharger in the vehicle.
+SUB,3318887200,Subwoofer,Install a subwoofer in the vehicle.
+SUB,119969601,Wheels,Browse wheels for vehicle.
+SUB,1699106977,Sports,Browse sports wheels for vehicle.
+SUB,51614090,Muscles,Browse muscles wheels for vehicle.
+SUB,1571441787,Lowriders,Browse lowriders wheels for vehicle.
+SUB,2784064750,SUV,Browse suv wheels for vehicle.
+SUB,4082399677,Offroad,Browse offroad wheels for vehicle.
+SUB,4289898682,Tuner,Browse tuner wheels for vehicle.
+SUB,1384823624,Bike Wheels,Browse bike wheels for vehicle.
+SUB,1100574670,High End,Browse high-end wheels for vehicle.
+SUB,870286612,Benny's Wheels,Browse Benny's wheels for vehicle.
+SUB,3814829306,Bespoke Wheels,Browse bespoke wheels for vehicle.
+SUB,3174555767,Street Wheels,Browse street wheels for vehicle.
+SUB,3890772421,Track Wheels,Browse track wheels for vehicle.
+SUB,1064223040,Open Wheels,Browse open wheels for vehicle.
+SUB,361624904,Vehicle,Ground vehicle speed & break multipliers.
+FLOAT_TOGGLE,3374864328,Vehicle Acceleration Multiplier,Vehicle will be faster.
+FLOAT_TOGGLE,2355623971,Vehicle Reverse Multiplier,Vehicle will brake faster.
+TOGGLE,3095848202,Vehicle Ground Check,Vehicle acceleration & brake multiplier will only apply when all wheels are touching ground.
+SUB,1715505588,Bike & Bicycle,Bike speed & break multipliers.
+FLOAT_TOGGLE,995224771,Bike Acceleration Multiplier,Bike will be faster.
+FLOAT_TOGGLE,550996972,Bike Reverse Multiplier,Bike will brake faster.
+TOGGLE,1245054866,Bike Ground Check,Bike acceleration & brake multiplier will only apply when all wheels are touching ground.
+SUB,897311617,Plane,Plane speed & break multipliers.
+FLOAT_TOGGLE,358453305,Plane Acceleration Multiplier,Plane will be faster.
+FLOAT_TOGGLE,3023568597,Plane Reverse Multiplier,Plane will brake faster.
+TOGGLE,3625387352,Plane Ground Check,Plane acceleration & brake multiplier will only apply when all wheels are touching ground.
+SUB,4088238878,Helicopter,Helicopter speed & break multipliers.
+FLOAT_TOGGLE,3734548250,Helicopter Acceleration Multiplier,Helicopter will be faster.
+FLOAT_TOGGLE,289338942,Helicopter Reverse Multiplier,Helicopter will brake faster.
+TOGGLE,3687257974,Helicopter Ground Check,Helicopter acceleration & brake multiplier will only apply when its not near ground.
+SUB,132816897,Boat & Jet ski,Boat & jet ski speed & break multipliers.
+FLOAT_TOGGLE,3553657613,Boat & Jet ski Acceleration Multiplier,Boat & jet ski will be faster.
+FLOAT_TOGGLE,1795681923,Boat & Jet ski Reverse Multiplier,Boat & jet ski will brake faster.
+TOGGLE,2451402732,Boat & Jet ski Water Check,Boat & jet ski acceleration & brake multiplier will only apply when its near water.
+TOGGLE_INT_SLIDER,31604147,Enhanced Jump Ability,Activate jumping ability for your vehicle press space for keyboard and X on controller.
+TOGGLE,584225084,Bypass Max Speed,Vehicle will have no speed limit.
+SUB,3311772331,Vehicle Spawner,Spawn any car in game.
+SUB,3311518121,XML Vehicles - (Menyooo),Spawn any menyooo or xml modded vehicle in game.
+SUB,715104814,InI Vehicles,Spawn any ini modded vehicle in game.
+SUB,3944987160,Json Vehicles,Spawn any json modded vehicle in game.
+SUB,211898199,Vehicles.,Spawn sort of vehicles you like in game.
+SUB,3554272369,Appearance,Vehicle appearance related options.
+SUB,2494331862,Performance,Vehicle performance related options.
+SUB,1280631026,Premium,Premium vehicle options.
+SUB,1008673899,Control,Controllable vehicle options.
+SUB,3110258914,Customization,Vehicle customizations.
+SUB,2294982380,Utility,Vehicle Utility options.
+SUB,638492402,Maintenance,Vehicle maintenance options.
+SUB,2107824394,Abilities,Vehicle abilities.
+SUB,2156081011,Speed,Vehicle speed related options.
+SUB,1375245323,Special,Special vehicle options.
+SUB,138930782,Environmental,Environmental vehicle options.
+SUB,2386099540,Specialized,Specialized vehicle options.
+SUB,1137501058,Primary Custom Color,Lets you choose your car color RGB.
+SUB,680933909,Wheelie,Makes your vehicle wheelie.
+TOGGLE,3224604380,Enable Wheelie,It will lift vehicle on the selected side & speed.
+FLOAT,3683065993,Start Wheelie Speed,Speed when wheelie will start.
+FLOAT,2202612019,Wheelie Force,Force of wheelie. More the stronger.
+INT,3926152347,--SAV--,--SAV--
+INT,915575114,--SAV--,--SAV--
+SUB,2929638311,More Flags,More of vehicle flags aka abilities but not theses are not saveable in menu.
+SUB,1970232450,Swap Vehicle Weapons,Swaps vehicle weapons only if you're vehicle has one.
+SUB,2084647085,Air Vehicles,Air related vehicle weapons.
+SUB,3213564577,Land Vehicles,Land related vehicle weapons.
+SUB,3859415200,Land Bikes,Land bikes related vehicle weapons.
+SUB,955628985,Sea Vehicles,Sea related vehicle weapons.
+SUB,537648867,Special Vehicles Weapons,Some special related vehicle weapons.
+BUTTON,2055817809,Swap Vehicle Weapon,Swaps you're current vehicle's weapon to selected one.
+BUTTON,2410729132,Apply Color,Current chosen color will be applied.
+SUB,1267365120,Secondary Custom Color,Lets you choose your car color RGB.
+SUB,1938663667,Horn Boost,Horn boost allow you to boost vehicle when pressing horn.
+TOGGLE,955507827,Enable Horn Boost,When you press horn you vehicle speed will be increased.
+TOGGLE,1630036485,Disable Horn,Disable honking sound when using horn boost.
+INT,3935536704,Adjust Speed,Change speed boost when honking.
+TOGGLE,2870182982,Boost Screen Fx,Disable/Enable screen fx when horn boosting.
+TOGGLE,899542180,Boost Particle Fx,Disable/Enable particle fx when horn boosting.
+TOGGLE,2711533555,Apply Only When On Ground,Adds check for ground when using horn boost.
+TOGGLE,3230658061,Boost Sound Fx,Enable/Disable horn boost sound.
+SUB,2823379304,Nos,Enables nos for you're vehicle.
+TOGGLE,3949495683,Enable Nos,Enable/Disable nos.
+FLOAT,3124781169,Nos Shakiness,Screen shakiness while using nos.
+FLOAT,1176200260,Nos Power,Power of nos applied.
+INT,3331693009,Nos Time Lasting,Time in ~y~(ms) ~d~ for setting how long the nos lasts.
+BUTTON,3810963117,Apply Color,Current chosen color will be applied.
+BUTTON,1029427280,Input Spawn,Spawn a vehicle by inputting its name.
+TOGGLE,2590329130,Model Previews,You will be able to see preview vehicles.
+TOGGLE,2874004956,Picture Previews,You will be able to see picture preview of vehicles.
+TOGGLE,3390527758,God Mode,Your car will not die.
+TOGGLE,2458034239,Dead Skin,Makes your vehicle render as dead.
+TOGGLE,1334182400,Drive Underwater,Makes you vehicle driveable in water.
+TOGGLE,632311673,Disable Collision,Makes your vehicle not have any collsion. Will allow you go undermap.
+TOGGLE,3737207443,Anti Lock-ON,Player won't be able to lock on you.
+TOGGLE,3210544155,Keep Doors Locked,Makes your vehicle doors locked.
+SUB,3175533530,Vehicle Flying,Lets you fly aroud your vehicle like crazy.
+TOGGLE,3036516142,Enable Vehicle Flying,Controls: Accelerate, Reverse, Duck, E (RB), Q (LB).
+FLOAT,392756980,Vehicle Flying Forward Speed,Change speed of vehicle when flying forwards. Control: Accelerate
+FLOAT,1903778125,Vehicle Flying Backward Speed,Change speed of vehicle when flying backwards. Control: Reverse
+FLOAT,2508061997,Vehicle Flying Down Speed,Change speed of vehicle when flying down. For no clip.
+FLOAT,929447967,Vehicle Flying Up Speed,Change speed of vehicle when pressing duck key.
+FLOAT,650015820,Vehicle Flying Left Speed,Change speed of vehicle when pressing left key.
+FLOAT,3170887916,Vehicle Flying Right Speed,Change speed of vehicle when pressing right key.
+FLOAT,2743712875,Vehicle Deacceleration Rate,Change speed of vehicle when stopping.
+FLOAT,3084445172,Vehicle Flying Rotation Speed,Change speed of vehicle rotating while flying. Control: E (RB) & Q (LB)
+TOGGLE,3295916974,Fly When Lifted From Ground,A check to make vehicle only fly when lifted from ground. Controls: Accelerate
+TOGGLE,2148858285,Gravitation Flying,Controls: Acceleration, Reverse, Duck. Note: default is adv flying & you can only use one mode.
+TOGGLE,884977460,No Clip Flying,Controls: same as self no clip. Note: default is adv flying & you can only use one mode.
+TOGGLE_INT_SLIDER,2253761954,Left - Right Animation,You're vehicle will play rotating animation.
+TOGGLE_INT_SLIDER,1248446189,Up - Down Animation,You're vehicle will play rotating animation.
+TOGGLE_INT_SLIDER,205669106,Roll Up - Down Animation,You're vehicle will play rolling rotating animation.
+TOGGLE,106819768,Switch To CAM Movement,Your no clip will switch to cam movement.
+TOGGLE,2200019285,No Physics,Your vehicle will have no physics while no clipping.
+TOGGLE,264689003,Collision,Disable or enable vehicle collision while no clipping.
+FLOAT,24583146,Overall No Clip Speed Multiplier,Multiplies speed of no clipping.
+TOGGLE,1451636461,Instant Enter,Instantly enter the vehicle.
+TOGGLE,1334657586,Instant Exit,Instantly exit the vehicle.
+TOGGLE,2242208322,Invert Controls,Invert vehicle controls.
+SUB,453105841,Drive Through Entities,This feature allows driving through objects, vehicles, and pedestrians.
+TOGGLE,1942293337,Enable Through Driving,This will let you drive through objects, vehicles, and pedestrians.
+TOGGLE,2686821216,Through Peds,This will let you drive through pedestrians.
+TOGGLE,2035828230,Through Vehicles,This will let you drive through vehicles.
+TOGGLE,1085478809,Through Objects,This will let you drive through objects.
+TOGGLE,2414265905,Snow Tyre Tracks,Enable snow tire visual effects on the ground.
+TOGGLE,376460354,Seatbelt,Prevent falls from bikes and ejections through windshields.
+TOGGLE,2457803195,Disable Gravity,Disable gravity for the vehicle.
+TOGGLE,258744847,Sticky,Vehicle stays sticky to road.
+SUB,825369244,Drift Mode,Tokyo style drift tuner & mode.
+TOGGLE,3577744709,Enable Drift Mode,Vehicle likes to drift more than you want to.
+TOGGLE,3651418225,Bike Container Rider,Og feature that gives you ability to ride on container with bike.
+TOGGLE_INT_SLIDER,4137328485,Set Alpha,Adjust the transparency (alpha) of the vehicle.
+TOGGLE,3547482422,Invisible,Toggle the vehicle's visibility.
+TOGGLE,2983139302,Speedometer,Its a cool speedometer ong fr.
+TOGGLE,4208963774,Anti-Tyre Blowout,Ensure tires remain intact and functional throughout the journey.
+TOGGLE_INT_SLIDER,758441041,Rainbow Primary,Rainbow the primary color of your car.
+TOGGLE_INT_SLIDER,3136587881,Rainbow Secondary,Rainbow the secondary color of your car.
+FLOAT_SLIDER,688123353,Dirt Level,Adjusts the dirt on vehicle.
+TOGGLE_INT_SLIDER,1579869262,Headlights Multiplier,Adjusts the intensity of the headlights, effective in local mode only.
+TOGGLE,474624995,Auto Repair,Automatically repairs your vehicle when damaged.
+TOGGLE,4282485515,Tough Body,Your vehicle body will be stronger.
+TOGGLE,1686156832,Super Exaust System,Your vehicle will make more pops. Spam that acceleration and handbrake.
+TOGGLE_INT_SLIDER,2703622903,Tank Mod,Your is heavy & tougher.
+BUTTON,2169542091,Wash & Dry,Makes your vehicle dirt free.
+BUTTON,3115821219,Repair Dents,Is your vehicle body damaged? Press me to fix it.
+BUTTON,255151345,Fully Repair Health & Body,Is your vehicle fully damaged? Press me to fix it.
+BUTTON,386357356,Enhance,This enhances your vehicle to its maximum specifications.
+TOGGLE,1482025285,Bonnet View,Elevate your drive: switch to bonnet view for a dynamic and immersive experience.
+SUB,3783286752,Neons,Change neons state or color on vehicle.
+SUB,3799354924,Smash Hit,Allows you to smash other cars with yours.
+TOGGLE_INT_SLIDER,4104291920,Left,Left hit. Use left arrow on keyboard or left dpad for controller.
+TOGGLE_INT_SLIDER,1910312244,Right,Right hit. Use right arrow on keyboard or right dpad for controller.
+TOGGLE_INT_SLIDER,354686792,Front,Front hit. Use front arrow on keyboard or front dpad for controller.
+TOGGLE_INT_SLIDER,3156408511,Back,Left hit. Use left arrow on keyboard or left dpad for controller.
+SUB,1855600598,Flip Controller,Flip's vehicle at running time how ever you want.
+TOGGLE_INT_SLIDER,3842956047,Left,Left flipping. Use up arrow on keyboard or up dpad for controller.
+TOGGLE_INT_SLIDER,1788281906,Right,Right flipping. Use down arrow on keyboard or down dpad for controller.
+TOGGLE_INT_SLIDER,3327787271,Front,Front flipping. Use X on keyboard or A for controller.
+TOGGLE_INT_SLIDER,1076013441,Back,Left flipping. Use R arrow on keyboard or B for controller.
+TOGGLE_INT_SLIDER,2956661745,Roll Left,Roll left. Use left arrow on keyboard or left d pad for controller.
+TOGGLE_INT_SLIDER,3289041970,Roll Right,Roll right. Use right arrow keyboard or right d pad for controller.
+TOGGLE,2331238533,Left Neon,Change state of neon.
+TOGGLE,2703480476,Right Neon,Change state of neon.
+TOGGLE,2833757170,Front Neon,Change state of neon.
+TOGGLE,2334043742,Back Neon,Change state of neon.
+BUTTON,2551278828,Apply Neon Color,Changes neon color if is enabled.
+TOGGLE_INT_SLIDER,2455879769,Rainbow,Enables neon rainbow.
+TOGGLE,2665188854,Deluxo Tires,Change state of tire by holding h on keyboard.
+TOGGLE,2059543417,Instant Refill Rocket Boost,If your vehicle have rocket boost it will refill instantly.
+TOGGLE,3190393375,Instant Refill Jump Boost,If your vehicle have jump boost it will refill instantly.
+TOGGLE_INT_SLIDER,1733597452,Parachuting Ability,Gives your vehicle parachute ability.
+TOGGLE_INT_SLIDER,1164311901,Rocket Boost Ability,Gives your vehicle boosting ability.
+TOGGLE,1470249838,Jump Ability,Gives your vehicle jumping ability.
+TOGGLE,1944409459,Ramp Buggy Ability,Gives your vehicle ramp buggy ability.
+TOGGLE,75848648,MK1 Glide Ability,Gives your bike gliding ability like oppressor.
+TOGGLE,2327268070,Vertical Boost,Gives your vehicle vertical boosting.
+TOGGLE,1952089562,Nitrous Ability,Gives your vehicle in-game build nitrous. Press X to activate.
+TOGGLE,1550014883,Deluxo Flying Ability,Fly like deluxo with any vehicle. Hold H.
+TOGGLE,2747606374,CAbility,Fly like deluxo with any vehicle. Hold H.
+TOGGLE,2235182265,Oppressor MK2 Flying Ability,Fly like oppressor mk2 with any bike.
+TOGGLE,3144073849,Drifting Ability,Drifting ability vrrom vrrom vroom!.
+SUB,758830937,Slipstream,Enables split streams behind your vehicle.
+TOGGLE,1543033333,Enable Slipstream,Toggle split streams effect.
+TOGGLE_INT_SLIDER,2147137587,Rainbow Split Streams,Set split streams to rainbow effect.
+TOGGLE,731667403,Max Upgrades,Vehicle will be upgraded to maxed.
+TOGGLE,2318330894,Fade Effect,Vehicle will fade when it spawns. Online only.
+TOGGLE,1356421658,Spawn Inside,You will be seated into vehicle when spawned.
+TOGGLE,3187945234,Spawn Aircraft In Air,When spawning air-crafts you will be spawned into air.
+TOGGLE,4035979353,Delete Current,The vehicle you're in will be deleted.
+TOGGLE,2826535190,Sync Speed,Speed of vehicle will sync to your current speed.
+TOGGLE,3449675774,Instant Engine Startup,When you getting into a vehicle it will already running.
+TOGGLE,1614253215,Keep Engine Running,When you get out of car. The engine will keep running.
+TOGGLE,2137220506,Drive Train,Feature that lets you drive a train.
+FLOAT_TOGGLE,1844458549,Vehicle Scale,Vehicle size can be changed.
+FLOAT_TOGGLE,2217597537,Wheel Width,Vehicle wheels width.
+FLOAT_TOGGLE,3999431585,Wheel Height,Vehicle wheels height.
+FLOAT_TOGGLE,1958787367,Plane Turbulence Multiplier,Plane disruption multiplier while flying.
+FLOAT,4014144542,Bias Rear,Change vehicle handling rear bias.
+FLOAT,1901646057,Bias Front,Change vehicle handling front bias.
+FLOAT,2454653148,Drive Inertia,Change vehicle drive inertia.
+FLOAT,1916289481,Traction Curve Max,Change vehicle traction curve max.
+FLOAT,2749949089,Traction Curve Min,Change vehicle traction curve min.
+TOGGLE,52142806,Sprint Button Check,Drifting will only apply when sprint button is pressed.
+TOGGLE,1872332491,Auto Flip,Vehicle will auto-flip when is flipped. Oh its confusing wtf.
+BUTTON,3027154051,Flip,You vehicle will be un flipped if flipped.
+SUB,3640772164,Projectile Weapon,Shoot projectile from list while driving or flying.
+TOGGLE_INT_SLIDER,2521537898,Enable Projectile Weapon,Will enable ability to any projectile from list via vehicle. (Use Radio Key).
+TOGGLE,233827560,Owned,Kill anyone with projectile will show your name.
+TOGGLE,415048595,Duel Mode,Duel mode will shoot rockets from both sides.
+INT,1766657435,Projectile Speed,More the faster projectile will travel.
+INT_SLIDER,2586942186,Fire Rate,Fire rate of explosion or projectiles.
+TOGGLE,4289524661,Enable Laser Sights,Laser sights will display where its aimed at.
+TOGGLE_INT_SLIDER,3605994933,Rainbow Laser Sights,Laser sights will keep changing colors.
+FLOAT,2636357132,X Offset Adjustment,Adjust targeting x position.
+INT_SLIDER,3810829205,Moving X Offset,Automatically moves from -100 to 100 in loop.
+FLOAT,3897242722,Y Offset Adjustment,Adjust targeting y position.
+INT_SLIDER,15327389,Moving Y Offset,Automatically moves from -100 to 100 in loop.
+FLOAT,3114882839,Z Offset Adjustment,Adjust targeting z position.
+INT_SLIDER,916631168,Moving Z Offset,Automatically moves from -100 to 100 in loop.
+TOGGLE,1410911802,Vehicle Rapid Fire,Rapid fires any vehicles weapon.
+FLOAT_TOGGLE,1143258555,Quick Acceleration,Vehicle will quickly go to your selected speed.
+TOGGLE,2449645565,Quick Handbrake,Vehicle will brake instantly.
+SUB,3418653733,Tires Customization,Tires related options.
+SUB,2690533511,Custom Tire Track Colors,Allows customization of tire track colors for vehicles. Special thanks to friend #0xnullptr for the feature.
+TOGGLE,3026919291,Enable Custom Tire Track Colors,Toggle to enable custom coloring of tire tracks on vehicles.
+TOGGLE,1134348984,Constant Tracks,When on tracks will be constant when driving.
+INT_SLIDER,2784756929,Track Texture,Change tire track textures between 0 - 100.
+TOGGLE_INT_SLIDER,1413253214,Rainbow Tire Tracks,Tire tracks will keep changing colors.
+TOGGLE,4177541553,Mint Condition,No dirt will stick to your vehicle.
+INT,1427245334,--SAV--,--SAV--
+SUB,1588270869,Bike Tricks,You're ped will do bike tricks while driving & better to use with bikes & sea sharks.
+TOGGLE,2154346324,Enable Bike Tricks,Toggle bike tricks.
+TOGGLE,3548141590,Play Constantly,Do bike tricks constantly & non stop else only plays when wheels not on ground.
+TOGGLE,1919870347,Do Random Tricks,Tricks will be random each time.
+SUB,3560102404,Drive On Water,Allows you to drive on water.
+TOGGLE,1029799874,Enable Drive On Water,Feature that allows you to drive on water.
+FLOAT,103716203,Height Adjustment,Add or remove height offset.
+FLOAT,1863785629,Height Smoothness,Adjust smoothness of height.
+SUB,3558840598,Wheels Alignment,Adjust camber & toe etc.
+FLOAT,1814766359,Adjust Front Toe,Adjust front wheels toe.
+FLOAT,2150198456,Adjust Rear Toe,Adjust rear wheels toe.
+FLOAT,2122693250,Adjust Front Camber,Adjust front wheels camber.
+FLOAT,1407265125,Adjust Rear Camber,Adjust rear wheels camber.
+FLOAT,96879065,Adjust Turning Radius,Adjust turning radius of wheels.
+FLOAT_TOGGLE,2623488625,Drive On Air,Feature that lets you drive on air.
+NOTIFICATION,954220400,Save Current Vehicle,Saves this vehicle into xml & allows you to load it later.
+SUB,207288410,Cargobob Magnet,It is exactly what it says & you need to be in cargobob.
+SUB,2792608857,Prostitutes ~b~18+,Spawn prostitutes in your vehicle.
+BUTTON,3957698701,Blowjob,Prostitute will spawn in your vehicle seat to give you pleasure.
+BUTTON,1042423103,Sex,Prostitute will spawn in your vehicle seat to give you pleasure.
+TOGGLE,1755537038,Moaning ~o~ AKa Sound,Hmmmm yea.
+TOGGLE,4074549894,Enable Magnet,Toggle to enable magnet on Cargobob.
+FLOAT,1964129636,Strength,Adjust CargoBob's magnet strength.
+FLOAT,424431776,Falloff,Adjust CargoBob's magnet falloff.
+FLOAT,1322866215,Attraction Strength,Adjust CargoBob's attraction magnet strength.
+FLOAT,1682184948,Attraction Falloff,Adjust CargoBob's attraction magnet falloff.
+FLOAT,3453915848,Pull Strength,Adjust CargoBob's magnet pull strength.
+FLOAT,113111840,Pull Rope Length,Adjust CargoBob's magnet pull rope length.
+NOTIFICATION,806557600,Cargobob Controls, 
+NOTIFICATION,3998253173,Magnet,[E] - [D-Pad Right]
+NOTIFICATION,3209593082,Vehicle,Seat is not free.
+NOTIFICATION,3831955219,Vehicle,Vehicle does not exist!.
+TOGGLE,83213680,Stats,Vehicle stats when using picture preview.
+TOGGLE,2139736321,Model: ,Vehicle model stat when using picture preview.
+TOGGLE,2785761276,Name: ,Vehicle name when using picture preview.
+TOGGLE,3967255568,Make: ,Vehicle make name when using picture preview.
+TOGGLE,460742730,Acceleration: ,Vehicle acceleration when using picture preview.
+TOGGLE,2835567316,Max Speed: ,Vehicle maximum speed when using picture preview.
+TOGGLE,3879745958,Max Braking: ,Vehicle maximum braking when using picture preview.
+TOGGLE,522404154,Max Traction: ,Vehicle maximum traction when using picture preview.
+TOGGLE,1424827460,Seats: ,Number of seats in the vehicle when using picture preview.
+TOGGLE,3267075740,Gears: ,Number of gears in the vehicle when using picture preview.
+SUB,1466503941,Miscellaneous,Modify miscellaneous in the world. Interact with nearby entities and more.
+SUB,2680685616,VFX,Modify in game VFXs.
+SUB,314841499,Texture Replacement,Modify in game textures.
+SUB,1185700771,Configs,Loaded saved configs.
+SUB,2008463004,Find & Replace,Find & modify in game textures.
+SUB,372699387,Texture,Replace selected texture.
+SUB,1313554706,Light Corona,Modify in game lights corona.
+FLOAT_TOGGLE,2765664310,Corona Size,Adjust lighting corona size.
+TOGGLE_INT_SLIDER,2380222496,Rainbow Corona,Enable light's corona to shift colors dynamically.
+FLOAT_TOGGLE,3055731731,Corona Intensity,Adjust lighting intensity.
+FLOAT_TOGGLE,386956034,Corona Bias,Adjust lighting bias.
+TOGGLE,449654916,Enable Color Override,Toggle to override corona colors.
+TOGGLE,2060909239,Colorful Mode,All color go into different mode.
+FLOAT,1504547482,Frequency,Adjust lights corona frequency.
+FLOAT,846469272,Saturation,Adjust lights corona saturation.
+FLOAT,680756026,Lumination,Adjust lights corona lumination.
+FLOAT,763314362,Hue,Adjust lights corona hue.
+TOGGLE_INT_SLIDER,2987319216,Hue Lerping,Toggle hue lerping & adjust lerp.
+SUB,3548586708,Lights,Modify in game lights.
+FLOAT_TOGGLE,3404502978,Cones Intensity,Adjust lighting intensity.
+TOGGLE,3555033932,Colorful Mode,All color go into different mode.
+FLOAT,2596060753,Frequency,Adjust lights frequency.
+FLOAT,1011990951,Saturation,Adjust lights saturation.
+FLOAT,1588472656,Lumination,Adjust lights lumination.
+FLOAT,1381247112,Hue,Adjust lights hue.
+TOGGLE_INT_SLIDER,2882934387,Hue Lerping,Toggle hue lerping & adjust lerp.
+TOGGLE,3256079128,Enable Color Override,Toggle to override cone colors.
+TOGGLE_INT_SLIDER,1452272510,Rainbow Cones,Enable light cones to shift colors dynamically.
+TOGGLE_INT,2474572161,Audio Pitch,Adjust game's audio pitch.
+SUB,3387460956,Fun Options,Fun & fun related options :(.
+SUB,747436851,Ocean Settings,Adjust various ocean-related options.
+TOGGLE,359006093,Clear Ocean,Cleans the water of ocean.
+TOGGLE,3324179255,Drain Ocean,Drain water from ocean.
+SUB,1417158669,Weather Settings,Adjust various weather-related options for a dynamic and immersive experience.
+SUB,2228093524,Weather Type,Change the weather type.
+SUB,4120604849,ChaosModV,Experience chaos-inducing effects. Caution: Some may cause crashes in online mode.
+SUB,3598885176,Time Settings,Adjust time-related settings.
+SUB,685030068,Extra Sensory Perception (ESP),Enable ESP around pedestrians.
+SUB,2263674159,XML Maps,Spawn XML maps.
+SUB,2693161122,Screen Visual Effects,Enable screen visual effects.
+SUB,1411048484,Scene Transitions,Apply scene transition effects.
+SUB,2651120769,Cinematics And Intros,Apply cinematic and intro effects.
+SUB,1388163622,Visual Effects,Apply visual effects.
+SUB,699786625,Mission Results,Apply mission results effects.
+SUB,1190544080,Miscellaneous,Apply miscellaneous effects.
+SUB,971074740,Night Vision,Turn on night vision.
+TOGGLE,3941983521,Enable Night Vision,Toggle night vision.
+SUB,3490484285,Heat Vision,Turn on heat vision.
+TOGGLE,2840655031,Enable Heat Vision,Toggle Heat vision.
+INT,683963302,Hour,Change the in-game hours.
+INT,2147328527,Minute,Change the in-game minutes.
+INT,2490387196,Seconds,Change the in-game seconds.
+SUB,3951308512,Time Scale,Change time scaling depending on motions.
+FLOAT_TOGGLE,2821190506,Enable Time Scale,Make in game time slower.
+TOGGLE_INT_SLIDER,4143723493,Smooth Motion,Time will slowly & smoothly update.
+TOGGLE,959221625,Instant Slowdown On Motion,Slo-Mo will activate instantly when motion is trigged.
+INT,1466126150,Deactivate Delay,Delay to deactivate Slo-Mo after motion in milliseconds.
+TOGGLE,1000351137,Local Ped Falling,Slo-Mo will activate when local ped is falling.
+TOGGLE,3216913805,Local Ped Jumping,Slo-Mo will activate when local ped is jumping.
+TOGGLE,4148633717,Local Ped Climbing,Slo-Mo will activate when local ped is climbing.
+TOGGLE,1754113733,Always,Slo-Mo will stay activated always.
+TOGGLE,2767761170,Local Ped Diving,Slo-Mo will activate when local ped is diving.
+TOGGLE,1975043044,Local Ped Performing Stealth Kill,Slo-Mo will activate when local ped is performing a stealth kill.
+TOGGLE,210127884,Local Ped Being Stealth Killed,Slo-Mo will activate when local ped is being stealth killed.
+TOGGLE,2471689282,Local Ped Dead or Dying,Slo-Mo will activate when local ped is dead or dying.
+TOGGLE,1953397180,Local Ped Running,Slo-Mo will activate when local ped is running.
+TOGGLE,1021012284,Local Ped Sprinting,Slo-Mo will activate when local ped is sprinting.
+TOGGLE,1043553225,Local Ped Walking,Slo-Mo will activate when local ped is walking.
+TOGGLE,2335422115,Local Ped Aiming,Slo-Mo will activate when local ped is aiming.
+TOGGLE,3508442973,Local Ped Shooting,Slo-Mo will activate when local ped is shooting.
+TOGGLE,4221490810,Local Ped Collided,Slo-Mo will activate when local ped has collided with anything.
+TOGGLE,571006675,Local Ped Rag dolling,Slo-Mo will activate when local ped is rag dolling.
+TOGGLE,426937067,Vehicle Collided,Slo-Mo will activate when a vehicle has collided with anything.
+TOGGLE,1314364178,Black-Out,Toggle to darken the environment by turning off all lights on the map for night.
+TOGGLE,912505557,No World Limits,Survive beyond map borders penalty-free.
+SUB,3213549280,Hide HUD,Options to hide various HUD elements.
+TOGGLE,1492131851,Disable All HUD,Disables the entire HUD, including the map, health, armor, and all related elements.
+TOGGLE,3119291456,Hide Area & Vehicle Name,Hides area and vehicle name HUD components.
+TOGGLE,2868873810,Hide Weapon Wheel & Radar,Hides weapon wheel and radar.
+TOGGLE,3498652423,Hide Wanted Stars,Hides wanted stars.
+TOGGLE,2542795815,Hide Weapon Icon,Hides weapon icon.
+TOGGLE,3174260043,Cash,Show/hide cash information.
+TOGGLE,2769514343,MP Cash,Show/hide multiplayer cash information.
+TOGGLE,605024149,MP Message,Show/hide multiplayer messages.
+TOGGLE,4254032924,Vehicle Name,Show/hide vehicle names.
+TOGGLE,1547731578,Area Name,Show/hide area names.
+TOGGLE,2555267986,Vehicle Class,Show/hide vehicle classes.
+TOGGLE,1523497229,Street Name,Show/hide street names.
+TOGGLE,3254464933,Help Text,Show/hide help text.
+TOGGLE,3150015137,Floating Help Text 1,Show/hide floating help text 1.
+TOGGLE,2910244364,Floating Help Text 2,Show/hide floating help text 2.
+TOGGLE,2242736696,Cash Change,Show/hide cash change information.
+TOGGLE,1818112214,Reticle,Show/hide reticle.
+TOGGLE,3327868167,Subtitle Text,Show/hide subtitle text.
+TOGGLE,3275241209,Radio Stations,Show/hide radio stations.
+TOGGLE,3451424231,Saving Game,Show/hide saving game indicator.
+TOGGLE,968860643,Game Stream,Show/hide game stream information.
+TOGGLE,634975249,Weapon Wheel,Show/hide weapon wheel.
+TOGGLE,3993023581,Weapon Wheel Stats,Show/hide weapon wheel stats.
+TOGGLE,401780964,HUD Components,Show/hide HUD components.
+TOGGLE,3418989477,HUD Weapons,Show/hide HUD weapons.
+TOGGLE_INT_SLIDER,1573935737,Random Storms,Generate spontaneous lightning and thunder at unpredictable locations.
+FLOAT_TOGGLE,2397862861,Rain Effect,Command rain, manipulate rain sounds, and orchestrate the formation of puddles at will.
+FLOAT_TOGGLE,3105665193,Snow Effect,Alter vehicle slipperiness and more.
+BUTTON,4029003905,Skip Cutscene,Toggle to skip cutscenes.
+BUTTON,105266520,Random Weather,Change the weather to random.
+FLOAT_TOGGLE,1416677551,Water Wave Strength,Fine-tune water waves and their intensity.
+TOGGLE_INT_SLIDER,3065250372,Gravity,Change world gravity affecting all pedestrians and vehicles.
+TOGGLE,3464584070,No Restricted Areas,Enter restricted zones without attracting police attention.
+TOGGLE,1555365870,No Traffic,Remove traffic from roads.
+TOGGLE,448368986,Earthquake,Create a chaotic earthquake.
+TOGGLE,501700142,Airstrike,Call in a devastating airstrike.
+TOGGLE,3132235609,Blackhole,Create a gravitational black hole.
+TOGGLE,1445783406,Boost Velocity,Experience a speed boost.
+TOGGLE,3057533278,Clone On Death,Spawn a clone upon death.
+TOGGLE,2317763891,Fireworks,Ignite a colorful display of fireworks.
+TOGGLE,301649942,Force FP,Force first-person perspective.
+BUTTON,133086275,Get Towed,Simulate getting your car towed.
+TOGGLE,185092427,Ghost World,Enter a ghostly alternate dimension.
+TOGGLE,2253524647,Intense Music,Elevate the atmosphere with intense music.
+TOGGLE,631553721,Invert Velocity,Flip the player's velocity upside down.
+TOGGLE,1944120534,Jumpy Props,Make in-game props bounce and jump.
+TOGGLE,664256882,Low Render Distance,Limit visual range with a low render distance.
+TOGGLE,2422484750,Meteor Rain,Summon a spectacular rain of meteors.
+TOGGLE,2486523063,Midas Touch,Turn everything you touch to gold with the Midas effect.
+TOGGLE,3452746039,News Team,Appear on the news.
+TOGGLE,3414577346,Disable In Game Phone,Temporarily disable the in-game phone.
+TOGGLE,759359544,Remove Sky,Remove the sky for a unique visual experience.
+TOGGLE,2566969538,Access Pause Menu on Death,Allows access to the pause menu even when your character is deceased.
+TOGGLE,1795199532,Riot Mode,All NPCs become hostile, and random NPCs are armed with pistols and SMGs.
+TOGGLE,3935908383,Anti Oppressors Mode,Eliminates all MK2/MK Oppressors within approximately 200 meters.
+SUB,1193936681,Mobile,Mobile phone related settings.
+TOGGLE,1916388502,Radio,Enable mobile radio without needing to be in a vehicle.
+TOGGLE,1321896809,In Hand Phone,Enable in hand phone.
+FLOAT_TOGGLE,1127639164,Scale,Draw a box around pedestrians.
+TOGGLE_INT_SLIDER,3164183567,Render ID,Change phone's render id.
+SUB,780985635,Rotation,Adjust phone's rotation.
+FLOAT,1665114115,X Offset,Adjust phone's x rotation.
+FLOAT,857554887,Y Offset,Adjust phone's y rotation.
+FLOAT,551459658,Z Offset,Adjust phone's z rotation.
+TOGGLE,2711300517,Enable ESP,Reveal all pedestrians through walls and terrain.
+TOGGLE,2574673325,ESP On Players Only,Reveal all players through walls and terrain.
+TOGGLE,933930418,Name On Players Only,Names will be drawn on players.
+FLOAT_TOGGLE,1594746871,Draw Box Around Ped,Draw a box around pedestrians.
+TOGGLE,134840923,Draw Skeleton on Ped,Draw the skeleton on pedestrians.
+TOGGLE,1183462646,Draw Health Bar on Ped,Draw the health bar on pedestrians.
+TOGGLE_INT_SLIDER,2964831739,Rainbow ESP Box,Enable rainbow-colored boxes that change dynamically.
+TOGGLE_INT_SLIDER,2704268677,Rainbow Skeleton Box,Enable rainbow-colored skeletons that change dynamically.
+TOGGLE_INT_SLIDER,198169282,Enable Looped Visual Effects,Enable looped screen visual effects.
+TOGGLE,1101936912,Watch Dogs Hacking,Engage in remote control actions reminiscent of Watch Dogs. Use aim and attack keys to select options.
+BUTTON,4194593500,Close,Initiate a close proximity action.
+BUTTON,3389657848,Explosion,Trigger an explosion remotely.
+BUTTON,1663712064,Beam To,Teleport to a designated location.
+BUTTON,1361528628,Freeze,Freeze the movement of the target.
+BUTTON,3933199669,Release,Release control over the target.
+BUTTON,3672592173,Ragdoll,Force the target into a ragdoll state.
+BUTTON,1403127378,Jump,Activate the jump function for the target.
+BUTTON,3820407592,Summon,Summon the target to your location.
+BUTTON,1529486503,Seat In,Seat the target inside a vehicle.
+BUTTON,1565920900,Power Off,Power off the target.
+BUTTON,3991753946,Break,Break the functionality of the target.
+BUTTON,230608647,Repair,Initiate repairs on the target.
+BUTTON,2247165009,Push,Apply a pushing force to the target.
+BUTTON,3229386881,Reverse,Reverse the functionality of the target.
+SUB,232072519,Aerial Support,Summon a support aircraft for engaging enemies from the air.
+TOGGLE,4270471820,Activate Aerial Support,Toggle the deployment of aerial support.
+INT,3365328190,Weapon Type,Select the type of weapon for the aircraft.
+INT_SLIDER,1909110199,Firing Rate,Adjust the rate of fire for the aircraft's weapon.
+BREAKER,3499350706,Aircraft Armaments,0XNULL
+SUB,263157935,Dynamic Hit Indicators,Display visual hit markers on entities when they lose or gain health.
+TOGGLE,3518666399,Enable Hit Indicators,Toggle the display of hit markers.
+FLOAT,3077024073,Indicator Size,Adjust the size of hit markers.
+INT_SLIDER,2771532716,Fade-out Rate,Control the rate at which hit markers disappear.
+FLOAT,2992432318,Shake Intensity,Adjust the intensity of the shake effect for hit markers.
+TOGGLE_INT_SLIDER,315559486,Dynamic Color Shift,Enable hit markers to shift colors dynamically.
+SUB,2939256069,Azimuth,Modify azimuth effects.
+SUB,8192296,East Azimuth,Adjust colors for the eastern azimuth.
+SUB,2434250276,West Azimuth,Adjust colors for the western azimuth.
+SUB,3342017533,Azimuth Transition,Modify transition colors for azimuth.
+SUB,1862060754,Zenith,Modify zenith effects.
+SUB,1620993334,Zenith Color,Adjust zenith sky color.
+SUB,1156091600,Zenith Transition,Modify transition colors for zenith.
+SUB,3862829044,High Dynamic Range (HDR),Adjust sky HDR settings.
+SUB,685817252,Sun,Modify sun color and intensity.
+SUB,3865247407,Sun Core,Adjust sun core color.
+SUB,2747919890,Sun Disc,Adjust sun disc color and size.
+SUB,1580597364,Moon,Modify moon effects.
+TOGGLE,2442572481,Enable Override East Azimuth,Apply custom color to eastern azimuth.
+TOGGLE_INT_SLIDER,18966336,Rainbow East Azimuth,Continuously change eastern azimuth colors.
+FLOAT_TOGGLE,1379495712,East Azimuth Intensity,Continuously adjust eastern azimuth color intensity.
+TOGGLE,252122953,Enable Override West Azimuth,Apply custom color to western azimuth.
+TOGGLE_INT_SLIDER,164725598,Rainbow West Azimuth,Continuously change western azimuth colors.
+FLOAT_TOGGLE,3724355220,West Azimuth Intensity,Continuously adjust western azimuth color intensity.
+TOGGLE,1412227108,Enable Override Azimuth Transition,Apply custom color to azimuth transition.
+TOGGLE_INT_SLIDER,3529725725,Rainbow Azimuth Transition,Continuously change azimuth transition colors.
+FLOAT_TOGGLE,3029777241,Azimuth Transition Intensity,Continuously adjust azimuth transition color intensity.
+FLOAT_TOGGLE,3930636140,Azimuth Transition Position,Set position for azimuth transition.
+TOGGLE,1887323804,Enable Override Zenith,Apply custom color to zenith.
+TOGGLE_INT_SLIDER,365997852,Rainbow Zenith,Continuously change zenith colors.
+FLOAT_TOGGLE,251101292,Zenith Intensity,Continuously adjust zenith color intensity.
+TOGGLE,178198432,Enable Override Zenith Transition,Apply custom color to zenith transition.
+TOGGLE_INT_SLIDER,2500635452,Rainbow Zenith Transition,Continuously change zenith transition colors.
+FLOAT_TOGGLE,3100969617,Zenith Transition Intensity,Continuously adjust zenith transition color intensity.
+FLOAT_TOGGLE,1529704098,Zenith Transition Position,Set position for zenith transition.
+FLOAT_TOGGLE,596222515,Zenith Transition East Blend,Set zenith transition east blend.
+FLOAT_TOGGLE,3675475573,Zenith Transition West Blend,Set zenith transition west blend.
+FLOAT_TOGGLE,321172474,Zenith Transition Blend Start,Set zenith transition blend start.
+FLOAT_TOGGLE,3005567250,Sky HDR,Adjust sky HDR.
+FLOAT_TOGGLE,1022721850,Cloud HDR,Adjust cloud HDR.
+FLOAT_TOGGLE,2135745641,Sun HDR,Adjust sun HDR.
+FLOAT_TOGGLE,2570148867,Miephase,Set sun miephase.
+FLOAT_TOGGLE,2535554240,Mmiescatter,Set sun miescatter.
+FLOAT_TOGGLE,4018102086,Influence Radius,Set influence radius.
+FLOAT_TOGGLE,1867247976,Scatter Inten,Set scatter inten.
+TOGGLE,1302909352,Enable Override Sun Core,Apply custom color to sun core.
+TOGGLE_INT_SLIDER,1866361861,Rainbow Sun Core,Continuously change sun core colors.
+TOGGLE,2949197087,Enable Override Sun Disc,Apply custom color to sun disc.
+TOGGLE_INT_SLIDER,3086322229,Rainbow Sun Disc,Continuously change sun disc colors.
+FLOAT_TOGGLE,901856494,Sun Disc Size,Adjust sun disc size.
+TOGGLE,796064315,Enable Override Moon,Apply custom color to moon core.
+TOGGLE_INT_SLIDER,203698840,Rainbow Moon Core,Continuously change moon core colors.
+FLOAT_TOGGLE,3734978702,Moon Intensity,Adjust moon intensity.
+FLOAT_TOGGLE,1835886787,Moon Influence Radius,Adjust moon influence radius.
+FLOAT_TOGGLE,3397502571,Moon Disc Size,Adjust moon disc size.
+FLOAT_TOGGLE,1426014317,Moon Scatter Intensity,Adjust moon scatter intensity.
+FLOAT_TOGGLE,505194783,Stars Intensity,Adjust stars intensity.
+FLOAT_TOGGLE,1068310761,Plane Intensity,Adjust plane intensity.
+SUB,1863346062,Santa's Gift Shower,Summon a shower of gifts at a designated marker.
+TOGGLE,2161855320,Activate Gift Shower,Initiate a festive shower of gifts at your marker.
+FLOAT,3260978449,Gift Shower Range,Adjust the distance from the marker at which gifts will spawn.
+FLOAT,1477138754,Gifts Drop Height,Set the height at which gifts will drop.
+INT,1098683894,Gift Shower Angle Count,Control the number of angles at which gifts will spawn.
+FLOAT,248784304,Gifts Descent Speed,Adjust the speed at which gifts descend.
+FLOAT,2977533751,Gifts Particle Effect Size,Change the size of particle effects for the gifts.
+TOGGLE,3114218379,Gifts Audio Cue,Enable sound effects for the gift explosions.
+TOGGLE,3112138857,Drop Gifts at Waypoint,Gifts will drop at the waypoint marker.
+TOGGLE,1146025869,Visible Explosions,Toggle the visibility of gift explosions.
+NOTIFICATION,774138999,Santa's Gifts (Waypoint),Set a waypoint. Gifts are on their way!
+NOTIFICATION,1080201455,Santa's Gifts (Shoot),Grab your gun and shoot to mark the location for gift drops.
+SUB,1506544270,Command Interface & Hotkeys,Activate a customizable command interface on the side of the screen and assign hotkeys to various features.
+TOGGLE,1663200907,Enable Command Interface,Toggle the visibility of the command interface. Press [~`] to open.
+TOGGLE,4001020906,Display Only When Opened,Set to display the command interface only when it's opened.
+BUTTON,1315980409,Clear Network Overrides,Reset any network override settings to default.
+TOGGLE_INT_SLIDER,762568360,Time Acceleration,Accelerate the passage of time and adjust the rate.
+SUB,2209667633,Extraterrestrial Dominance Mode,Conquer Los Santos with precision control: [Shoot] [Aim] [Jump] [Rolls with Q/LB & E/RB] [Pitch with R/L3 & E/RB].
+TOGGLE,4065638583,Activate Extraterrestrial Dominance,Enable to assert your dominance over Los Santos.
+FLOAT,2066042094,Beam Force Adjustment,Adjust the force of the UFO's beam.
+INT,3484166224,Rotation Speed Multiplier,Multiply the rotation speed of the UFO (spinning).
+INT,526283376,Pitch Angle Multiplier,Multiply the pitch angle of the UFO (up & down control with R/L3 & E/RB).
+INT,3537774273,Roll Angle Multiplier,Multiply the roll angle of the UFO (roll control with Q/LB & E/RB).
+FLOAT,4274346705,UFO Flight Speed,Adjust the flying speed of the UFO.
+FLOAT,4204430735,UFO Deceleration Rate,Adjust the rate at which the UFO decelerates during flight.
+FLOAT_TOGGLE,2262417769,Custom Pedestrian PNG,Enable custom PNG display on pedestrian entities.
+TOGGLE,1553835880,Cum Mode 18+,Peds will start cumming XD.
+SUB,247465341,SkyGuard System,Deploy a defensive SkyGuard system to launch missiles at selected entities for protection.
+TOGGLE,2995488238,Enable SkyGuard System,Toggle the SkyGuard system for added protection.
+TOGGLE,2826129528,Include Players in SkyGuard,Include players as potential targets for the SkyGuard system.
+TOGGLE,847458095,Include NPCs in SkyGuard,Include NPCs as potential targets for the SkyGuard system.
+TOGGLE,2584796801,Use On Airborne Entities Only,Restrict the SkyGuard system to target aircraft only.
+FLOAT,3431846900,Adjust SkyGuard Range,Set the range from your position for the SkyGuard system's protective attack.
+INT,1823924916,SkyGuard Attack Delay,Set the delay of the SkyGuard system's attack in milliseconds.
+BUTTON,4148561653,Restore All Textures,Restore all replaced textures to original state.
+BUTTON,3776510413,Find Texture,Find a texture that is currently loaded into game.
+BUTTON,4021567211,Save Config,Save all replaced textures into config.
+SUB,3633161426,Moon Cycle,Change moons lunar cycle.
+BUTTON,3322792607,New Moon,Sets the moon to its darkest phase.
+BUTTON,721813764,Waxing Crescent,Sets the moon to its early crescent phase.
+BUTTON,2208062801,First Quarter,Sets the moon to its first quarter phase.
+BUTTON,2095312872,Waxing Gibbous,Sets the moon to its waxing gibbous phase.
+BUTTON,2957702001,Waxing Gibbous 2,Sets the moon to its waxing gibbous phase.
+BUTTON,1756056369,Full Moon,Sets the moon to its brightest phase.
+BUTTON,3708877460,Waning Gibbous,Sets the moon to its waning gibbous phase.
+BUTTON,1089726244,Waning Gibbous 2,Sets the moon to its waning gibbous phase.
+BUTTON,2346911571,Third Quarter,Sets the moon to its third quarter phase.
+BUTTON,2242453266,Waning Crescent,Sets the moon to its waning crescent phase.
+BUTTON,3810295051,Waning Crescent 2,Sets the moon to its waning crescent phase.
+BUTTON,3414258103,Reset Lunar Phase,Resets the moon cycle override.
+SUB,3652168259,Cats Invasion,Cats will start invading Los Santos.
+TOGGLE,3365829145,Enable Cats Invasion,Toggle to start invading Los Santos.
+INT,1231944252,Number Of Cats,Adjust number of cat attackers.
+FLOAT,1495393356,Spawn Max Range,Adjust the maximum range within which cats can spawn.
+INT,2952653502,Respawn Time ~b~(S),Adjust respawn timer in seconds.
+FLOAT,1717438610,Target Range,Modifies the range at which cats will engage and attack targets.
+SUB,812231252,Jedi Force,You will have jedi powers.
+TOGGLE,2326938362,Enable Jedi Force,Toggle & {May the Force be with you}.
+FLOAT,31120682,Force Carry Distance,Modifie pickup distance.
+FLOAT,485161657,Push Force,Modifie push force.
+FLOAT,1647554704,Overall Force,Modifie overall force & this applies to crry & push force.
+SUB,2958905345,Effects,Adjust particle effects.
+FLOAT,1620482168,Left Hand Effect Scale,Adjust left hand ptfx scale.
+FLOAT,3752302207,Right Hand Effect Scale,Adjust right hand ptfx scale.
+FLOAT,1976733547,Sparks Effect Scale,Adjust sparks ptfx scale.
+NOTIFICATION,3266647846,Jedi Force Controls, 
+NOTIFICATION,1709812706,Pickup,[Aim Button]
+NOTIFICATION,203462149,Push,[Aim + Attack]
+SUB,160715835,QuickSilver,You will run & sprint line quicksilver.
+TOGGLE,1665294691,Enable QuickSilver,Toggle to run faster than winds.
+TOGGLE,3779652686,Sprint On Air,Allows you to run on air.
+FLOAT,3357309372,Sprint Speed,Adjust sprint speed
+FLOAT,1864807419,FOV,Adjust sprinting fov speed
+SUB,906355584,Ebony Maw,If your Marvel femboy. You will know what is this about.
+TOGGLE,2369219367,Enable Ebony Maw,Toggle to throw rocks at bad peoples.
+FLOAT,1524402466,Rocks idle Speed,Adjust rocks idling speed.
+FLOAT,328630375,Rocks Throw Speed,Adjust rocks throwing speed.
+NOTIFICATION,2159142,Ebony Maw Controls, 
+NOTIFICATION,1012036591,Aim,Hold [X] - [A]
+NOTIFICATION,2548035293,Attack,Release [X] - [A]
+TOGGLE_INT_SLIDER,2895009815,Rainbow Thermal ,Continuously change thermal colors.
+FLOAT,1570613044,Thermal Thickness,Adjust thermal thickness.
+FLOAT,1451188392,Thermal Start Distance,Adjust thermal start distance.
+FLOAT,1517757424,Thermal Stop Distance,Adjust thermal stop distance.
+FLOAT,990785690,Thermal Noise,Adjust thermal noise.
+FLOAT,1675672393,Thermal Intensity,Adjust thermal noise intensity.
+FLOAT,483065034,Thermal Min Noise,Adjust thermal min noise.
+FLOAT,463063266,Thermal Max Noise,Adjust thermal max noise.
+SUB,3536987933,Phantom Drive,The world begins to echo the fate of Krypton.
+TOGGLE,3235026111,Enable Phantom Drive,Initiate the establishment of Krypton's foundation.
+FLOAT,3989023511,Up Force,Increase the power output of the phantom drive.
+FLOAT,3165499639,Down Force,Decrease the power output of the phantom drive.
+FLOAT,2158746377,Particle Effects Scale,Modify the scale of the particle effect.
+INT,2699316612,Phantom Drive Update Delay,Modify the update time of the phantom drive.
+SUB,1300017620,Devil Yoga,The world begins to echo the fate of Krypton.
+TOGGLE,3893550000,Enable Devil Yoga,Initiate the establishment of Krypton's foundation.
+FLOAT,1100288174,Range,Increase the power output of the phantom drive.
+FLOAT,3089701841,Distance,Increase the power output of the phantom drive.
+FLOAT,4233095809,Force Adjustment,Increase the power output of the phantom drive.
+INT,728508052,Total Angles,Adjust number of angles.
+INT,3005561292,Force Delay,Adjust number of angles.
+SUB,4184845726,Character Stats,Max out your character stats like stamina & etc.
+SUB,2489383909,Rank,Ascend to godlike status and alter your level to any value you desire.
+BUTTON,2992889098,Max Stamina,Max out your character's stamina.
+BUTTON,2675555170,Max Strength,Increase character's strength.
+BUTTON,1026825581,Max Shooting,Improve shooting skills.
+BUTTON,515757725,Max Lung Capacity,Increase lung capacity.
+BUTTON,668107275,Max Stealth,Enhance stealth abilities.
+BUTTON,2636701909,Max Flying,Improve flying skills.
+BUTTON,1486023937,Max Driving,Boost driving skills.
+BUTTON,2640932677,Increase Mechanic,Enhance character's mechanic skills.
+BUTTON,4181751881,Wheelie Ability,Improve character's wheelie ability.
+BUTTON,3150633454,Special Ability,Enhance character's special ability.
+BUTTON,4165031848,Clear Mental State,Clear character's mental state.
+SUB,3263916649,Special Bunker Unlocks,Bunker related recoveries.
+SUB,203658388,Special Arcade Unlocks,Arcade related recoveries.
+SUB,2342357875,Special Outfits,Unlock some special outfits & masks.
+SUB,2461407350,Business,Business related recoveries.
+SUB,186488072,Instant Resupply Manager,Resupply manager allows you to resupply instantly.
+SUB,702366577,MC Business,Mc business related recoveries.
+SUB,456905765,Product Capacity,Mc business product capacity.
+SUB,2814806795,Product Value,Mc business product value.
+SUB,1938522405,Product Time,Mc business product time.
+SUB,2630566886,Acid Lab,Acid lab related recoveries.
+SUB,1148656810,Acid Lab Manager,Acid lab manager related recoveries.
+SUB,90310095,Night Club,Night club related recoveries.
+SUB,3167821068,Cooldowns,Night club related cooldowns.
+SUB,1426867736,Product Prices,Night club related product prices.
+SUB,2142331200,Special Cargo,Special cargo related recoveries.
+SUB,696725476,Cooldowns,Special cargo related cooldowns.
+SUB,2436281030,Product Prices,Special cargo related product prices.
+SUB,15820189,Special Awards,Unlock some special awards.
+SUB,2671646800,Tuners Xp Multiplier,Tuners xp recoveries.
+SUB,2088937978,Special Mp Unlocks,More multiplayer unlocks.
+SUB,4057048986,Special Parachutes Unlock,Unlock some rare parachutes.
+SUB,4281758589,Common Tunables,More list of common tunables.
+SUB,3458796547,Bounty,Tunables related to bounty.
+SUB,876575353,Inventory,Allows you to add armors & snacks.
+INT,136489013,Ps and Qs,Add or remove Ps and Qs snacks.
+INT,2983015990,Ego Chaser,Add or remove EgoChaser snacks.
+INT,2098164755,Meteorite,Add or remove Meteorite snacks.
+INT,3097587663,eCola,Add or remove eCola snacks.
+INT,853483879,Pisswasser,Add or remove Pisswasser snacks.
+INT,3907333658,Champagne,Add or remove Champagne snacks.
+INT,2022518763,Cigarettes,Add or remove Cigarettes snacks.
+INT,2000367778,Super Light Armor,Add or remove Super Light Armor.
+INT,1872053496,Light Armor,Add or remove Light Armor.
+INT,3774703591,Standard Armor,Add or remove Standard Armor.
+INT,533901427,Heavy Armor,Add or remove Heavy Armor.
+INT,3877873800,Super Heavy Armor,Add or remove Super Heavy Armor.
+INT,807402238,Rebreathers,Add or remove rebreathers.
+BUTTON,1026003794,Allow Character Redesign,Re-unlock the ability to redesign your character's look.
+BUTTON,815543243,Skip Tutorial,Skips tutorial for you if you new to gtao.
+BUTTON,2906594681,Permanent Fast Run,Unlocks ability to run faster & join new lobby after using option.
+BUTTON,773690422,Unlock Heist Vehicles,Unlocks any locked heist vehicles.
+BUTTON,2464763394,Unlock Tattoos,Unlocks any locked tattoos.
+BUTTON,2560629430,Unlock Clothing,Unlocks any locked clothing.
+BUTTON,3518463863,Unlock Los Santos Custom Mods,Unlocks any locked LSC vehicle mods.
+BUTTON,2800926585,Unlock Weapon Skins,Unlocks any locked weapon skins.
+BUTTON,1762440029,Unlock Weapons,Unlocks any locked weapons.
+BUTTON,1202691268,Unlock Hair Styles,Unlocks any locked hair styles.
+BUTTON,2572038318,Reset Badsports,Resets players bad sport status.
+BUTTON,1985392000,~p~Millionaires ~d~Cash Flow,Will make you~p~ millionaire ~d~in few seconds.
+BUTTON,1746423654,Add Money,Input any amount of money from ~p~0$ ~d~to ~o~1000000$.
+BUTTON,1934249145,Jump Money,Any time you jump game will give you money.
+NOTIFICATION,1433090648,Money,~o~Note: ~d~Certain financial options may not work consistently or consecutively. In such cases, consider joining a new lobby to explore alternative possibilities.
+TOGGLE,2092547322,RP Loop,Will make you level you up in few seconds.
+TOGGLE,2814734052,Gift Method,Ranking will switch to gift method.
+BUTTON,2603067136,Search Rank,Search rank from the bottom list.
+TOGGLE,3088506088,Crew Rank,Now you will be setting crew rank.
+SUB,865221407,Bredder,Spawning & moving related options.
+SUB,96289167,Objects,Objects to spawn options.
+SUB,3969658420,Peds,Peds to spawn.
+SUB,2141835177,Database,Edit or move entity thru database.
+SUB,1297500056,Selected Entity,Here you can edit entity.
+SUB,251278572,Attachments,Here you can attach entity to something & edit.
+SUB,987302761,Attach To Local Ped,Here you can attach entity to local ped & bones.
+SUB,349123250,Attach To Local Vehicle,Here you can attach entity to local vehicle & bones.
+SUB,2859590038,Orientation,Here you can change entity orientation.
+TOGGLE,2853260470,Creator Mode,Let's you move entities or use freecam.
+BUTTON,4264595377,Search Object By Name,Input to search an object.
+BUTTON,3141372243,Clear All Database,Delete all spawned objects in database & world.
+BREAKER,1016267865,XML,0XNULL
+NOTIFICATION,1274984730,Clear Database,Database & world cleared.
+NOTIFICATION,2374143496,Clear Database,~r~Failed ~d~to clear database since its empty.
+SUB,2723787349,Players,Lobby list.
+SUB,3024362066,Info Settings,Settings related to player info.
+TOGGLE,1104366957,Focus,You're gameplay camera will start focusing on player when selected!
+TOGGLE,1105172968,Draw Sky Marker,Draws the big giant line from sky to player & when not near you!
+TOGGLE,1525961710,Draw Bottom Marker,Draws rounded marker bottom of player.
+TOGGLE,3715877411,Draw Top Arrow Marker,Draws arrow top of player.
+TOGGLE,1762611882,Draw Map,Draws mao & show location of player.
+TOGGLE,1296708307,Draw Line,Draws line from you to player.
+TOGGLE,2074524010,Draw Name,Draws name on player.
+TOGGLE,2461419867,Auto Spectate,You will auto spectate player when viewing player list.
+SUB,2010613728,Remote,Remote options.
+SUB,867151001,Bounty,Set bounty on player.
+BUTTON,11097374,Apply Bounty Once,Button to set bounty on player once.
+SUB,4931606,Activity Starter,Remotely starts selected activity on player's side.
+SUB,1886103613,Send Messages,Remotely send inappropriate or banned & more messages.
+SUB,1466475768,Give Collectibles,Remotely starts giving player collectibles.
+SUB,3392787948,Teleport,Teleport related stuff for player.
+SUB,2067092714,Vehicle,Player's vehicle related options.
+SUB,2542089820,Magneto,Magneto creates field around player that attracts entities.
+SUB,2850512690,Weapons,Weapon's related stuff for player.
+SUB,1375614519,Kidnap Player,Player will be loaded into truck and taken away.
+SUB,2748882627,Jesus Trolling,All options related to Jesus trolling.
+TOGGLE,2037040861,Jesus Stunner,Spawns Jesus with stun gun. He will keep tazing player.
+TOGGLE,2153300596,Jesus Mk2 Killer,Spawns Jesus with mk2 with vengeance.
+SUB,2812967576,Give Weapons,Give weapons to player.
+TOGGLE,3525847587,Set As Anonymous,Set bounty on player as anonymous (by not your name).
+INT,42763926,Amount,The bounty of bounty.
+TOGGLE,2303110566,Loop Bounty,Sets bounty on player in loop.
+TOGGLE,4135319238,Spectate,You will be watching player.
+BUTTON,1339568154,Teleport To Player,You will be teleported to player.
+BUTTON,3357222987,Teleport To Me (Forcedly),Tries to teleport player to you.
+BUTTON,427771082,Teleport Into Vehicle,You will be teleported into player's vehicle.
+BUTTON,2550261474,Parachute To Player,You will parachute to player instantly.
+BUTTON,3711442160,Remote Null Kick,Kick's player remotely. Not great way.
+BUTTON,1361775372,Host Kick,Host kick player. The most powerful kick in game when your host.
+TOGGLE,4223835632,Freeze,Player ped will be not able to move or do anything.
+TOGGLE,58754039,Water Loop,Kind of makes player fly with flow of water.
+TOGGLE,2618382350,Fire Loop,Set's player on fire also does damage to them.
+TOGGLE,3043778727,Fireworks Festival,Creates firework around player.
+TOGGLE,1078563000,Remote Off The Radar,Set's player off radar.
+TOGGLE,10569879,Remote Clear Wanted,Clear's player wanted state.
+TOGGLE,2776453046,Remote Ceo Kick,Kick's player from ceo.
+TOGGLE,2996312137,Focus On Player,You camera will be focused on player.
+BUTTON,3496179470,Law and Order,The player is confined in a cell and fatally assaulted by law enforcement.
+BUTTON,1840280396,Shall Not Pass,Spawns Invisible Barrier.
+BUTTON,717586432,I Am God,Angle Jesus beat player to death.
+BUTTON,3765359538,Taxi,Jesus will take the wheel & drive player to you're waypoint or goes to random location.
+BUTTON,3297719606,Jesus On Faggio,Jesus will take the wheel of Faggio & troll player.
+BUTTON,2735745988,Repair,Fix all the damages on player's vehicle.
+BUTTON,1067488196,Enhance,Upgrades player's vehicle to max.
+BUTTON,560407614,Delete,Delete player's vehicle.
+TOGGLE,3717123195,Disturb Handling,Disturbs player's handling.
+TOGGLE,2576236737,Horn Boost,Give player horn boost.
+SUB,1264080816,Change Primary Color,Change player's vehicle primary color.
+BUTTON,2351201927,Apply Color,Changes color of player's vehicle.
+BUTTON,3518004562,Ram Player,Random vehicle will ram player.
+SUB,425501976,Change Secondary Color,Change player's vehicle secondary color.
+SUB,2032484055,Troll Vehicles,Spawn vehicles that go and hit player.
+SUB,4283584363,Freeze,Freeze player's vehicle at its position.
+SUB,3155427831,Invinciblity,Give player's vehicle godmode.
+SUB,4014030637,Push,Push player's vehicle with force.
+SUB,2236100353,Collision,Change collison state of player's vehicle.
+BUTTON,2581236227,Enable Collision,Enable collision of player's vehicle.
+BUTTON,2292241997,Disable Collision,Disable collision of player's vehicle.
+SUB,2198264921,Rotation,Change rotation of player's vehicle.
+SUB,3310077783,Tires,Brust tire or fixed them.
+BUTTON,131054503,Brust Left Front & Front,Brust front or left front player's vehicle wheel.
+BUTTON,2120122723,Brust Right Front & Back,Brust back or right front player's vehicle wheel.
+BUTTON,3280638807,Brust Rear Right,Brust rear right player's vehicle wheel.
+BUTTON,733618177,Brust Rear Left,Brust rear left player's vehicle wheel.
+BUTTON,960928947,Pop All Tires,Brust all tires on player's vehicle.
+BUTTON,2308528062,Fix All Tires,Fix all tires on player's vehicle.
+BUTTON,1935782643,Fix Left Front & Front,Fix front or left front player's vehicle wheel.
+BUTTON,441524759,Fix Right Front & Back,Fix back or right front player's vehicle wheel.
+BUTTON,2973166840,Fix Rear Right,Fix rear right player's vehicle wheel.
+BUTTON,1699859801,Fix Rear Left,Fix rear left player's vehicle wheel.
+BUTTON,1097583358,Up Side Down,Rotates player's vehicle up side down.
+BUTTON,4251877259,Flip,Flips player's vehicle correctly.
+BUTTON,1708539349,Mirror Rotation,Sets player's vehicle rotation to opposite.
+BUTTON,3494405948,Random Rotation,Sets player's vehicle rotation to random.
+BUTTON,1886093194,Set On Ground Properly,Sets player's vehicle on ground properly.
+SUB,1090325559,Engine,Change engine health of player's vehicle.
+BUTTON,1731028516,Kill Engine,Engine of player's vehicle dies.
+BUTTON,3458210898,Set Engine On Fire,Engine of player's vehicle gets on fire.
+BUTTON,1802335194,Engine Smoking,Engine of player's vehicle starts to smoke.
+BUTTON,1678187694,Repair Engine,Engine of player's vehicle gets fixed.
+BUTTON,1286757423,Shut Off Engine,Engine of player's vehicle goes off.
+SUB,1804068033,Door,Change doors lock or open state of player's vehicle.
+BUTTON,2014217868,Lock,Lock player's vehicle.
+BUTTON,639259214,Unlock,Unlock player's vehicle.
+BUTTON,1781085398,Open Doors,Opens player's vehicle doors.
+BUTTON,3215321553,Shut Doors,Shut player's vehicle doors.
+BUTTON,1049840335,Broken Doors,Broken vehicle doors.
+SUB,2072408661,Invisible,Change visible state of player's vehicle.
+BUTTON,1632653701,Set Invisible,Invisible player's vehicle.
+BUTTON,4109753998,Set Visible,Make player's vehicle visible if invisible.
+BUTTON,374750124,Apply Color,Changes color of player's vehicle.
+BUTTON,1952311128,Copy Appearance,Change your outfits to same as player's.
+BUTTON,904180693,Spawn Prostitute BJ,Hooker will spawn & give bj to player.
+BUTTON,3272835001,Spawn Prostitute Sex,Hooker will spawn & have sex with player.
+BUTTON,3773364714,Fill Vehicle With Prostitutes,Fill player's car with hookers.
+BUTTON,1852830215,Fill Vehicle With Jesus,Fill player's car with Jesus.
+BUTTON,1346033556,Fill Vehicle With Chimp,Fill player's car with chimps.
+BUTTON,1835695875,Spin Cage,Spawn's cage that spins.
+BUTTON,125847927,Pit Cage,Spawn's huge pit around player.
+BUTTON,680983648,Jail Cage,Spawn's jail around player.
+TOGGLE,1597116190,Semi God Mode,Player health & armor will keep filling when low.
+TOGGLE,3913941677,Magneto,Player will start attracting entities.
+TOGGLE,613664292,Magneto Collision,Enable or disable collision of entities.
+FLOAT,1184762743,Magneto Force,Change force strength.
+TOGGLE,2021151326,Enable Collectibles,Starts player giving selected collectibles.
+TOGGLE,1490757264,Random Collectibles,Collectibles will be random.
+BUTTON,4134946442,Freeze,Freeze player's vehicle.
+BUTTON,830700464,Defreeze,Remove freeze from player's vehicle.
+BUTTON,569771171,Add Godmode,Gives godmode to player's vehicle.
+BUTTON,1384695032,Remove Godmode,Removes godmode from player's vehicle.
+BUTTON,3312365159,Gift Vehicle,Make the vehicle that player is in savable.
+INT_SLIDER,686279795,Forward,Push player's vehicle to frontwards.
+INT_SLIDER,2117445396,Backward,Push player's vehicle to backwards.
+INT_SLIDER,1886385645,Left,Push player's vehicle to left.
+INT_SLIDER,511279925,Right,Push player's vehicle to right.
+INT_SLIDER,2189393863,Up,Push player's vehicle to upwards.
+INT_SLIDER,1078326056,Down,Push player's vehicle to downwards.
+BUTTON,3763750037,Rain Artillery,Rain artillery on player. May god save him.
+BUTTON,225515317,Mini Trolly Vehicle,Well its trolling car.
+BUTTON,1676914480,Mini Trolly Tank,Well its trolling mini tank.
+BUTTON,1977076057,Nude Golfer,Well its trolling nude golfer with his whip.
+BUTTON,3530405647,Sexy Beach Woman,Well its sexy trolling girl.
+BUTTON,840278215,Ramp Buggy,Really cool rammer.
+BUTTON,2940716775,Jewish Biker,Great guy with great bike.
+BUTTON,972512251,Chick On Scooter,Great girl with great scooter.
+BUTTON,4157508073,Chick On BMX,Another chik with her ride.
+BUTTON,3463583116,Juggernaut's Small Car,Big juggernaut's mini ride.
+BUTTON,3233485218,Lester The Farmer,Uncle Lester with crusty tractor.
+BUTTON,2596958192,Give All Weapons,Gives player all the weapons in game to player.
+BUTTON,3187694853,Remove All Weapons,Remove all the weapons player have.
+BUTTON,4168037008,Give All Melee Weapons,Gives player all the melee weapons in the game.
+BUTTON,4123841740,Give All Handguns Weapons,Gives player all the handguns weapons in the game.
+BUTTON,332214906,Give All SMGs,Gives player all the SMGs in the game.
+BUTTON,2952093103,Give All Shotguns,Gives player all the shotguns in the game.
+BUTTON,3241223776,Give All Assault Rifles,Gives player all the assault rifles in the game.
+BUTTON,862853998,Give All Sniper Rifles,Gives player all the sniper rifles in the game.
+BUTTON,2837321391,Give All Machine Guns,Gives player all the machine guns in the game.
+BUTTON,728548184,Give All Explosive Weapons,Gives player all the explosive weapons in the game.
+BUTTON,3756688977,Give All Special Weapons,Gives player all the special weapons in the game.
+BUTTON,2874707781,Give All Other Items,Gives player all other items in the game.
+BUTTON,2999037700,NPC Kidnap Player,NPC will kidnap player into truck.
+BUTTON,4074047914,You Kidnap Player,You will kidnap player into truck.
+NOTIFICATION,2809900627,Control Request Failed,Failed to request control.
+BUTTON,4089796654,Teleport To Air,Teleports player's vehicle into air.
+BUTTON,2531370735,Teleport To Me,Teleports player's vehicle to you with player as well.
+BUTTON,3009970211,Rain Xmas Gifts,Rains Santa's gifts aka presents.
+SUB,1681830362,Steal Vehicle,You or npc will be seat into play's vehicle and vroom vrrom!.
+SUB,229739049,Spawn NPCs,Spawn any npc in game as mercenaries or protectors & braindead!.
+BUTTON,2087949117,Steal As You,You will be seat into play's vehicle.
+BUTTON,626456578,Steal As Npc,Npc will be seat into play's vehicle.
+SUB,2663584012,Crash,Crashes player's game.
+BUTTON,4211842914,Jump Scare,Will spawn ghosts around player. That will scare him!
+BUTTON,3138082025,Nuke Player,Huge explosion will spawn on player!
+BUTTON,3132382227,Trip Anticheat On Player,Player's account will have be noticeable by r*!
+BUTTON,3866134999,Phone Bomb On Vehicle,Player's vehicle will have bomb that can be activated when you call someone from phone!
+BUTTON,2794583005,Start Activity On Player,Starts activity on player!
+BUTTON,3874897826,Send Message Once,A button to send text only once!
+TOGGLE,2182409373,Message Spam Loop,Sends text every second.
+TOGGLE,4130870091,Random Messages,When sending text. Random text will be selected.
+BUTTON,3182920535,Stander Crash,Powerful crash against modders!(May have to press many times.)
+BUTTON,2415113159,Take & Leave Crash,Taker will take it and leave the game but it may take a while!
+NOTIFICATION,2195426545,Take & Leave - Crash,Started.
+NOTIFICATION,88389455,Take & Leave - Crash,Finished.
+BUTTON,3509532148,Man Slaughter,Slaught player out of the lobby!
+NOTIFICATION,2808036497,Man Slaughter - Crash,Finished.
+BUTTON,2575480899,Mystical Cow Balls,Crash player by using mystical cow!
+NOTIFICATION,3133972665,Mystical Cow - Crash,Started.
+NOTIFICATION,3358647472,Mystical Cow - Crash,Finished.
+BUTTON,2219853510,Burger King Dog Shit,Crash made with lettuce of burger king!
+NOTIFICATION,242301992,Burger King - Crash,Started.
+NOTIFICATION,4199631883,Burger King - Crash,Finished.
+BUTTON,1313253369,Driving Failure,Player must be in vehicle to crash him!
+NOTIFICATION,3335886526,Driving Failure - Crash,Started.
+NOTIFICATION,1635592075,Driving Failure - Crash,Player not in vehicle.
+NOTIFICATION,3109533041,Driving Failure - Crash,Finished.
+BUTTON,948569644,OG Smoke & High,Og way to crash players!
+NOTIFICATION,3912245807,OG Smoke & High - Crash,Started.
+NOTIFICATION,3149712331,OG Smoke & High - Crash,Finished.
+BUTTON,431032834,Juggernaut,Juggernaut will become one of the crash reason!
+NOTIFICATION,1733309697,Juggernaut - Crash,Started.
+NOTIFICATION,2572157807,Juggernaut - Crash,Finished.
+BUTTON,2263363434,Mega Machine,Mega machine crash range is quite big. You may end up crashing entire lobby!
+NOTIFICATION,63621323,Mega Machine - Crash,Started.
+NOTIFICATION,3326055951,Mega Machine - Crash,Finished.
+BUTTON,3551798845,Baba Yaga,Get good nerd!
+BUTTON,2356731793,Fatty,40% chance of working & works better on standing players!
+NOTIFICATION,2445128054,Fatty - Crash,Started.
+NOTIFICATION,1460967160,Fatty - Crash,Finished.
+BUTTON,3403126593,Mischief,Mischief crashing XD!
+BUTTON,2356019008,Mischief V2,Mischief crashing another method XD!
+BUTTON,828164383,Mischief V3,Mischief crashing XD! Note: You may need to spam this.
+BUTTON,2684894911,Sweep Crash,Weird GTA.
+NOTIFICATION,464481214,Sweep - Crash,Started.
+NOTIFICATION,2488372443,Sweep - Crash,Finished.
+NOTIFICATION,3390896093,Mischief - Crash,Started.
+NOTIFICATION,4247800868,Mischief - Crash,Finished.
+BUTTON,2434554542,Ear Crash,Ear crashing & rapes ears before crashing.
+NOTIFICATION,314516422,Ear - Crash,Started.
+NOTIFICATION,2850283875,Ear - Crash,Finished.
+BUTTON,1461326162,Dummy Crash,Weird GTA.
+NOTIFICATION,4088575569,Dummy - Crash,Started.
+NOTIFICATION,1769701686,Dummy - Crash,Finished.
+TOGGLE,384925009,Paste Killer,A great method to kill those pasted cheats. Note: This may not work on normal players.
+BUTTON,145388225,Tow Vehicle,You will be towing player's car!
+BUTTON,1819960866,Cargo Pickup,You will be pickup players car with cargo bob!
+BUTTON,2509434030,Remove Windshield,Vehicles windshield will fly away!
+SUB,3416682960,Kick,Many kick for you to use on player.
+SUB,2135445753,Cage,Cage player using number of cages.
+BUTTON,1191233747,Breakup Kick,Only works if you're a host!
+BUTTON,1969529734,Ban Kick,Only works if you're a host!
+BUTTON,4032136623,Complaint Kick,Kick for kicking modders!
+BUTTON,3974659066,End Session Kick,Kick for kicking modders! Might take few seconds
+BUTTON,948078827,Sync Kick,Kick for kicking modders!
+BUTTON,2659316841,Script Host Kick,Only works if you're a script host!
+NOTIFICATION,4101174710,Force Script Host Failed,Failed to kick player.
+BUTTON,348209921,Turn Player Into Beast,Turns player into beast!
+NOTIFICATION,271983305,Turn Player Into Beast,Started.
+NOTIFICATION,3960852454,Turn Player Into Beast,Failed.
+NOTIFICATION,3807813213,Script Launch,Failed.
+BUTTON,3377876664,Endless Loading Screen,Sends player to endless loading screen!
+BUTTON,617141651,Trigger Ceo Raid,Note: player must be in ceo.
+TOGGLE,3510410537,Annoying Santa,Plays bells sound in loop.
+TOGGLE,2244554034,Transaction Error,Display transaction error on players screen.
+SUB,3742572723,Fake Notification,Send fake notifications to player.
+BUTTON,2749447940,Send Notification Once,Sends fake notification once to player.
+TOGGLE,2497175068,Loop Notification,Sends fake notification every second & repletely.
+TOGGLE,1040166430,Random Notification,Sends fake notification every second & repletely.
+BUTTON,1791302940,Force Into Mission,Sends player into a mission.
+BUTTON,792063983,Kick From Interior,Kicks player from interior.
+SUB,2924082290,Money,Drop money on player.
+SUB,3141386351,Action Figures & Rp,Drop action figures on player.
+TOGGLE_INT,3893859909,Enable Money Drop,Drop player money with custom delay.
+TOGGLE_INT,2091821453,Drop Types,Select type of drops.
+TOGGLE_INT,3680669710,Enable RP Drop,Drop player money with custom delay.
+TOGGLE_INT,1500801777,RP Types,Select type of drops.
+TOGGLE_INT,2164235574,Camera Shake,Shakes player's camera.
+TOGGLE_INT,2279297397,FPS Drop,Plays explosion ptfx on player to drop they're fps.
+TOGGLE,3565087472,Hooker World,Player will start to get surrounded by moaning hookers.
+TOGGLE,2500155742,Angry Peds,Peds nearby player will starting to hate him.
+TOGGLE,1251690773,Angry Vehicles,Vehicles nearby player will starting to hate him.
+TOGGLE,3534952179,EMP Vehicle,EMP their vehicle & repletely.
+BUTTON,2546782200,Spawn Npcs As,As a mercenaries or protector & braindead.
+TOGGLE,1082789140,Taser,Player will keep getting electrocuted.
+TOGGLE,371940798,Ragdoll,Player will keep rag dolling. Drink too much!
+SUB,3436799053,Apartments,Teleports player to apartment.
+BUTTON,1029022775,Teleport Player To Apartment,Player will get teleported to selected location.
+SUB,4186601742,Warehouses,Teleports player to warehouse.
+BUTTON,2741124606,Teleport Player To Warehouse,Player will get teleported to selected location.
+BUTTON,2565103540,Rain Exploding Barrels,Exploding barrels will rain from top of player.
+SUB,532803622,Projectile Gun,Give projectile gun to player.
+SUB,3480507816,Impact Gun,Give impact gun to player.
+TOGGLE,349020511,Enable Impact Gun,Players bullets will have impact effect when touched!
+TOGGLE,2984873694,Enable Projectile Gun,Players bullets will shoot projectiles!
+TOGGLE,3587844874,Airstrike Mode,Players bullets will shoot projectiles but from above!
+TOGGLE,2707641708,Delete Gun,Any thing player will damage will get deleted!
+TOGGLE,1656764517,Fire Ammo,Any thing player will damage will get on fire! Only works on peds.
+TOGGLE,1926577450,Magnet Gun,Gun will start attracting entities!
+TOGGLE,1104909691,Try Hard Gun,Player will die instantly when he shoots!
+SUB,353074973,Godmode,Toggle modder detection when a player has godmode.
+TOGGLE,3195227321,Notification,Show side notification on the right if a player has god mode.
+TOGGLE,3385506591,Console,Log if a player is in god mode to the console and logs.
+TOGGLE,3776883069,Notification,Show side notification on the right if a player has god mode while in a vehicle.
+TOGGLE,3549210644,Console,Log if a player is in god mode while in a vehicle to the console and logs.
+TOGGLE,1030597042,Notification,Show side notification on the right if a player's health is not normal.
+TOGGLE,2450616357,Console,Log if a player's health is not normal to the console and logs.
+TOGGLE,74197387,Notification,Show side notification on the right if a player is using frame flags.
+TOGGLE,234502477,Console,Log if a player is using frame flags to the console and logs.
+TOGGLE,1699672218,Notification,Show side notification on the right if a player is using damage mods.
+TOGGLE,3414557792,Console,Log if a player is using damage mods to the console and logs.
+TOGGLE,3544762540,Notification,Show side notification on the right if a player is using movements mods.
+TOGGLE,3502388773,Console,Log if a player is using movements mods to the console and logs.
+TOGGLE,2559788753,Notification,Show side notification on the right if a player has too much money.
+TOGGLE,2470121051,Console,Log if a player has too much money to the console and logs.
+SUB,1248113710,Money Drop,Toggle modder detection when a player is droping money.
+TOGGLE,1201221566,Notification,Show side notification on the right if a player is droping money.
+TOGGLE,1344836879,Console,Log if a player is using droping money to the console and logs.
+TOGGLE,1038817602,Notification,Show side notification on the right if a player sending fishy events.
+TOGGLE,807126442,Console,Log if a player is using sending fishy events to the console and logs.
+TOGGLE,4036345912,Notification,Show side notification on the right if a player is using an abnormal model.
+TOGGLE,1561245146,Console,Log if a player is using an abnormal model to the console and logs.
+SUB,1961156900,Godmode in Vehicle,Toggle modder detection when a player has godmode while in a vehicle.
+SUB,902617174,Detected By Events,Toggle modder detection when a player is sending fishy event.
+SUB,548871755,Abnormal Health,Toggle modder detection when a player's health is not normal.
+SUB,3101107558,Frame Flags,Toggle modder detection when a player is using frame flags.
+SUB,1137285450,Damage Mods,Toggle modder detection when a player is using damage mods.
+SUB,985723799,Movements Mods,Toggle modder detection when a player is using movements mods.
+SUB,1574059275,Excessive Money,Toggle modder detection when a player has too much money.
+SUB,3942735401,Abnormal Model,Toggle modder detection when a player is using an abnormal model.
+NOTIFICATION,952694915,Player On Godmode, has godmode on confirmed modder.
+NOTIFICATION,3892146128,Player in Godmode Vehicle, has godmode on their vehicle confirmed modder.
+NOTIFICATION,330131134,Abnormal Player Health, has abnormal health confirmed modder.
+NOTIFICATION,1938684397,Player Using Frame Flags, is using frame flags confirmed modder.
+NOTIFICATION,1374035284,Player Using Damage Mods, is using damage modifiers confirmed modder.
+NOTIFICATION,2269983094,Player Using Movement Mods, is using movement modifiers confirmed modder.
+NOTIFICATION,1448456733,Player Has Excessive Money, has too much money could be modding.
+NOTIFICATION,988611760,Player Not Using Normal Model, is not using a normal character model confirmed modder.
+NOTIFICATION,1227496732,Plyer Droping Money, is droping money.
+NOTIFICATION,1558373917,Plyer Sending Fishy Events, has send fishy event.
+SUB,551154109,Kick Votes,Protections against kick voting.
+TOGGLE,3099360199,Enable,Enable protections against kick votes.
+TOGGLE,1187995140,Console Logging,Log kick votes into console when someone vote kicking.
+TOGGLE,1156112325,Notification,Side notification when someone vote kicking.
+NOTIFICATION,551279805,Protection,: is vote kicking you.
+SUB,1237897455,Explosions,Protections against explosions.
+TOGGLE,3062656882,Enable,Enable protections against explosions.
+TOGGLE,117912415,Console Logging,Log into console when someone makes explosions.
+TOGGLE,4068330281,Notification,Side notification when someone makes explosions.
+NOTIFICATION,2616598713,Protection,: is making explosions.
+SUB,1282821579,Reports,Protections against reports.
+TOGGLE,1582907030,Enable,Enable protections against reports.
+TOGGLE,827342467,Console Logging,Log into console when someone reports you.
+TOGGLE,2043932151,Notification,Side notification when someone reports you.
+NOTIFICATION,1620511589,Protection,: is reporting you.
+SUB,3318458325,Cage,Protections against caging.
+TOGGLE,1255532575,Log Script Events,Menu now logs script events. Your logs can help improve the menu.
+TOGGLE,1031305033,Log CAD Events,Menu now logs cad events. Your logs can help improve the menu.
+TOGGLE,4076199112,Enable,Enable protections against cage.
+TOGGLE,2653823251,Console Logging,Log into console when someone tries to cage you.
+TOGGLE,1587105819,Notification,Side notification when someone tries to cage you.
+NOTIFICATION,3180263040,Protection,: is trying to cage you.
+SUB,3835339224,Crashes,Protections against game crashing.
+TOGGLE,231178214,Enable,Enable protections against crashes.
+TOGGLE,1786562652,~y~Extra ~b~Mode,~r~Note: ~d~This can also break some syncs.
+TOGGLE,4194979282,Console Logging,Log into console when someone tries to crash you.
+TOGGLE,543867441,Notification,Side notification when someone tries to crash you.
+NOTIFICATION,1154805754,Protection,: is trying to crash you're game [vehicle temp tasks].
+NOTIFICATION,1334908867,Protection,: is trying to crash you're game [rope].
+NOTIFICATION,2112135052,Protection,: is trying to crash you're game [invalid script entity type].
+NOTIFICATION,3988570288,Protection,: is trying to crash you're game [group override].
+NOTIFICATION,4129812414,Protection,: is trying to crash you're game [invalid world state].
+NOTIFICATION,198706212,Protection,: is trying to crash you're game [remove unarmed weapon].
+NOTIFICATION,3563200292,Protection,: is trying to crash you're game [invalid control type].
+NOTIFICATION,1462259819,Protection,: is trying to crash you're game [sound].
+NOTIFICATION,859614057,Protection,: is trying to crash you're game [tse 2].
+NOTIFICATION,3647573248,Protection,: is trying to crash you're game [tse 3].
+NOTIFICATION,2925257397,Protection,: is trying to crash you're game [tse 4].
+NOTIFICATION,1490581157,Protection,: is trying to crash you're game [msg crash].
+NOTIFICATION,4115815248,Protection,: is trying to crash you're game [msg crash 2].
+NOTIFICATION,416334714,Protection,: is trying to crash you're game [mc].
+NOTIFICATION,190486564,Protection,: trying to crash your game with an invalid vehicle.
+NOTIFICATION,214207994,Protection,: trying to crash your game with an invalid vehicle (2).
+NOTIFICATION,1141786858,Protection,: trying to crash your game with an invalid door.
+NOTIFICATION,725313077,Protection,: trying to crash your game with an pickup object.
+NOTIFICATION,2030665957,Protection,: trying to crash your game with an invalid ped.
+NOTIFICATION,2200711355,Protection,: trying to crash your game with an invalid ped prop.
+NOTIFICATION,3974203271,Protection,: trying to crash your game with an ped attachment.
+NOTIFICATION,4044893358,Protection,: trying to crash your game with an invalid object.
+NOTIFICATION,2569884510,Protection,: trying to crash your game with an invalid player model.
+NOTIFICATION,1095296617,Protection,: trying to crash your game with an invalid sector.
+NOTIFICATION,4187120185,Protection,: trying to crash your game with an invalid sector (GS).
+NOTIFICATION,1760004625,Protection,: trying to crash your game with an invalid train track.
+NOTIFICATION,2713854923,Protection,: trying to crash your game with an submarine.
+NOTIFICATION,3452271030,Protection,: trying to crash your game with ped flags.
+NOTIFICATION,1237352935,Protection,: trying to crash your game with gadget.
+NOTIFICATION,2714488487,Protection,: trying to crash your game with invalid weapon type.
+NOTIFICATION,2359796511,Protection,: trying to crash your game with clone sync.
+TOGGLE,2674392630,Fake Deposits,Protects against fake deposit messages.
+TOGGLE,1711349879,Transaction Errors,Protects against transation errors.
+TOGGLE,849324177,Block Ptfx,Protects against player spamming ptfx.
+TOGGLE,2262901670,Block Joins,Protects against player rid joining & downsight friend will not be able to join aswell.
+SUB,4009356470,Freeze,Protections against freeze.
+TOGGLE,808794495,Enable,Enable protections against you're ped freezing.
+TOGGLE,4006431293,Console Logging,Log into console when someone freeze you.
+TOGGLE,1837439674,Notification,Side notification when someone freeze you.
+NOTIFICATION,2421662946,Protection,: is freezing you.
+NOTIFICATION,2757449756,Protection,: is freezing you [tse].
+SUB,4132795139,Ragdoll,Protections against ragdoll events.
+TOGGLE,3316999126,Enable,Enable protections against player trying to send ragdoll events.
+TOGGLE,3475455929,Console Logging,Log into console when someone send ragdoll events.
+TOGGLE,1399685127,Notification,Side notification when someone send ragdoll events.
+NOTIFICATION,1571259668,Protection,: is ragdolling you.
+SUB,3567704674,Request Control,Protections against player requesting control.
+TOGGLE,153131680,Enable,Enable protections against player trying to player requesting control.
+TOGGLE,4198539656,Console Logging,Log into console when player requesting control.
+TOGGLE,1655931571,Notification,Side notification when player requesting control.
+NOTIFICATION,1021418187,Protection,: is requesting control you.
+SUB,3391993693,Remove & Give Weapons,Protections against player removing or giving weapons.
+TOGGLE,3570730252,Enable,Enable protections against player trying to remove or give weapons.
+TOGGLE,2474916930,Console Logging,Log into console when player remove or give weapons.
+TOGGLE,2938398190,Notification,Side notification when player removing or give weapons.
+NOTIFICATION,2376010370,Protection,: is removing weapons you.
+NOTIFICATION,2429283772,Protection,: is giving you weapons.
+SUB,2630912255,Sound Spam,Protections against player spaming sounds.
+TOGGLE,3791714039,Enable,Enable protections against player trying to spam sounds.
+TOGGLE,1539043651,Console Logging,Log into console when player is sound spaming you.
+TOGGLE,2811080584,Notification,Side notification when player is sound spaming you.
+NOTIFICATION,1043959272,Protection,: is sound spaming you.
+NOTIFICATION,1843893515,Protection,: is sound spaming you [tse].
+SUB,4186424208,Bounty,Protections against player setting bounty.
+TOGGLE,4120497597,Enable,Enable protections against player trying to set bounty.
+TOGGLE,3653829808,Console Logging,Log into console when player is setting bounty on you.
+TOGGLE,644183496,Notification,Side notification when player is setting bounty on you.
+NOTIFICATION,2737809065,Protection,: is setting bounty on you.
+SUB,2770490141,CEO Kick,Protections against player ceo kicking.
+TOGGLE,3091805365,Enable,Enable protections against player trying to ceo kick you.
+TOGGLE,4023688642,Console Logging,Log into console when player is ceo kicking you.
+TOGGLE,1340128457,Notification,Side notification when player is ceo kicking you.
+NOTIFICATION,220433867,Protection,: is ceo kicking on you.
+SUB,3084940655,CEO Money,Protections against player ceo money.
+TOGGLE,2161739382,Enable,Enable protections against player trying to giving ceo money you.
+TOGGLE,1037380696,Console Logging,Log into console when player is giving ceo money you.
+TOGGLE,4099055134,Notification,Side notification when player is giving ceo money you.
+NOTIFICATION,2799484121,Protection,: is giving ceo money to you.
+SUB,2044797332,Clearing Wanted,Protections against player clearing wanted.
+TOGGLE,3195909208,Enable,Enable protections against player trying to clearing wanted level from you.
+TOGGLE,2730854693,Console Logging,Log into console when player trying to clearing wanted level from you.
+TOGGLE,1972311737,Notification,Side notification when player trying to clearing wanted level from you.
+NOTIFICATION,1722312810,Protection,: is clearing wanted level from you.
+SUB,4144841272,Force Mission,Protections against player force mission sending.
+TOGGLE,3495611254,Enable,Enable protections against player trying to force send you to mission.
+TOGGLE,2839440923,Console Logging,Log into console when player trying to force send you to mission.
+TOGGLE,1827686584,Notification,Side notification when player trying to force send you to mission.
+NOTIFICATION,1583896633,Protection,: is force sending you to mission.
+NOTIFICATION,1706887580,Protection,: is force sending you to mission.
+SUB,126436514,Give Collectible,Protections against player giving collectible.
+TOGGLE,1149382312,Enable,Enable protections against player trying to give collectible.
+TOGGLE,649647368,Console Logging,Log into console when player trying to give collectible.
+TOGGLE,766919416,Notification,Side notification when player trying to give collectible.
+NOTIFICATION,8904168,Protection,: is giving you collectible.
+SUB,1855290696,Banner,Protections against player sending banner.
+TOGGLE,888442661,Enable,Enable protections against player trying to send banner.
+TOGGLE,3936423987,Console Logging,Log into console when player trying to send banner.
+TOGGLE,256738343,Notification,Side notification when player trying to send banner.
+NOTIFICATION,132283104,Protection,: is sending you banner.
+SUB,3682648926,Teleport,Protections against player teleporting you.
+TOGGLE,1037867894,Enable,Enable protections against player trying to teleporting you.
+TOGGLE,2726286991,Console Logging,Log into console when player trying to teleport you.
+TOGGLE,2427652176,Notification,Side notification when player trying to teleport you.
+NOTIFICATION,3367541674,Protection,: is teleporting you [mc].
+NOTIFICATION,2016415597,Protection,: is teleporting you [cayo].
+NOTIFICATION,425669554,Protection,: is teleporting you [cutscene].
+NOTIFICATION,3201939091,Protection,: is teleporting you [send to location].
+NOTIFICATION,2761715861,Protection,: is teleporting you [send to location 2].
+NOTIFICATION,847826312,Protection,: is teleporting you [tse].
+NOTIFICATION,2538391187,Protection,: is teleporting you [warehouse].
+SUB,997287336,Personal Vehicle,Protections against player remotely messing with you're vehicle.
+TOGGLE,1394486916,Enable,Enable protections against player remotely messing with you're vehicle.
+TOGGLE,50763621,Console Logging,Log into console when player trying to remotely messing with you're vehicle.
+TOGGLE,1720074436,Notification,Side notification when player trying to remotely messing with you're vehicle.
+NOTIFICATION,987836981,Protection,: is remotely messing with you're vehicle.
+SUB,1332729051,Off Radar,Protections against player remotely setting off radar.
+TOGGLE,3918115732,Enable,Enable protections against player remotely setting you off radar.
+TOGGLE,190067150,Console Logging,Log into console when player trying to remotely set you off radar.
+TOGGLE,4177295963,Notification,Side notification when player trying to remotely set you off radar.
+NOTIFICATION,3658408743,Protection,: is setting you off the radar.
+SUB,2015190825,Camera,Protections against player remotely messing with cam.
+TOGGLE,1125592678,Enable,Enable protections against player is messing with cam.
+TOGGLE,375382927,Console Logging,Log into console when player trying to mess with you're cam.
+TOGGLE,19211220,Notification,Side notification when player trying to mess with you're cam.
+NOTIFICATION,507513069,Protection,: is messing with you're cam.
+SUB,1098197472,Force Spectate,Protections against player remotely sending you to spectate.
+TOGGLE,3268497592,Enable,Enable protections against player remotely sending you to spectate.
+TOGGLE,599519841,Console Logging,Log into console when player trying to send you to spectate.
+TOGGLE,2888666636,Notification,Side notification when player trying to send you to spectate mode.
+NOTIFICATION,3406341335,Protection,: is sending you to spectate.
+SUB,4245052735,Vehicle Kick,Protections against player remotely kicking you from vehicle.
+TOGGLE,885432973,Enable,Enable protections against player remotely kicking you from vehicle.
+TOGGLE,1174931624,Console Logging,Log into console when player trying to kick you from vehicle.
+TOGGLE,2751005839,Notification,Side notification when player trying to kick you from vehicle.
+NOTIFICATION,3811724091,Protection,: is kicking you from vehicle.
+SUB,580354036,Kick,Protections against player kicks.
+TOGGLE,3105817602,Enable,Enable protections against player remotely kicking you.
+TOGGLE,1066018564,Console Logging,Log into console when player trying to kick you.
+TOGGLE,495791387,Notification,Side notification when player trying to kick you.
+NOTIFICATION,3861671840,Protection,: is kicking you [Netbail].
+NOTIFICATION,3918881709,Protection,: is kicking you [Null].
+NOTIFICATION,256687734,Protection,: is kicking you [End Session].
+NOTIFICATION,3320089763,Protection,: is kicking you.
+SUB,2670021147,Activity,Protections against player send you to activities.
+TOGGLE,658180424,Enable,Enable protections against player sending you to activities.
+TOGGLE,4110463206,Console Logging,Log into console when player trying to send you to activities.
+TOGGLE,979168875,Notification,Side notification when player trying to send you to activities.
+NOTIFICATION,3884429118,Protection,: is send you to activities.
+SUB,207548368,Interior Kick,Protections against player sending you interior kick.
+TOGGLE,2267494165,Enable,Enable protections against player sending you interior kick.
+TOGGLE,2923787957,Console Logging,Log into console when player trying to send you interior kick.
+TOGGLE,882267488,Notification,Side notification when player trying to send you interior kick.
+NOTIFICATION,662841865,Protection,: is send you to interior kick.
+SUB,3007395104,Raids,Protections against ceo raids.
+TOGGLE,3473896707,Enable,Enable protections against player sending you raids.
+TOGGLE,1711685418,Console Logging,Log into console when player trying to send you raid.
+TOGGLE,1547786462,Notification,Side notification when player trying to send you raid.
+NOTIFICATION,635843862,Protection,: is send you to raid.
+BUTTON,327040979,Enable Protections,All of the protections will be enabled.
+BUTTON,3831911158,Enable Notifications,All of the notifications for protections will be enabled.
+BUTTON,34879147,Enable Logging,All of the console logging for protections will be enabled.
+BUTTON,92247129,Disable Protections,All of the protections will be disabled.
+BUTTON,677175893,Disable Notifications,All of the notifications for protections will be disabled.
+BUTTON,4257267750,Disable Logging,All of the console logging for protections will be disabled.
+SUB,277454818,Protections Manager,Lets you manage all the protections in one tab.
+NOTIFICATION,2042285908,Protection,Enabled all protections.
+NOTIFICATION,1522449725,Protection,Enabled all protections logging.
+NOTIFICATION,1323860937,Protection,Enabled notifications for all protections.
+NOTIFICATION,1489872805,Protection,Disabled all protections.
+NOTIFICATION,1736379792,Protection,Disabled all protections logging.
+NOTIFICATION,1817610882,Protection,Disabled notifications for all protections.
+SUB,1670372254,Spectate Activity,Notify or logs when player is trying to spectate you.
+TOGGLE,4217297085,Console Logging,Log into console when player trying to spectate you.
+TOGGLE,2110978017,Notification,Side notification when player is trying spectate you.
+NOTIFICATION,3233666551,Activity,: is spectating you.
+SUB,355917392,Desyncer,Notify or logs when player is desynced.
+TOGGLE_INT,4102346752,Enable,Enable desyncing when player is trying to mess with you.
+TOGGLE,4209480262,Console Logging,Log into console when player is desynced.
+TOGGLE,1666937900,Notification,Side notification when player is desynced.
+NOTIFICATION,3067055294,Protection,: is desynced.
+TOGGLE,596764251,Block Vehicles,BLK veh.
+SUB,1921120246,Crash Patches,In-game crash patching.
+SUB,883570225,CBS Crash,Protections against CBS crash.
+TOGGLE,1412431112,Enable CBS Crash,Protects against cbs crashing.
+TOGGLE,2536611666,Log,Show in logger when game is getting crashed by cbs crash.
+TOGGLE,3715951762,Notification,Shows notification when game is getting crashed by cbs crash.
+NOTIFICATION,992145378,Protection,CBS - Crash Avoided.
+SUB,1662667725,Sweep Crash,Protections against sweep crash.
+TOGGLE,2083641501,Enable Sweep Crash,Protects against sweep crashing.
+TOGGLE,3255582114,Log,Show in logger when game is getting crashed by sweep crash.
+TOGGLE,2092077280,Notification,Shows notification when game is getting crashed by sweep crash.
+NOTIFICATION,1387144224,Protection,Sweep - Crash Avoided.
+SUB,29378814,Object Spam Crash,Protections against object spam crashing.
+TOGGLE,2547497343,Enable Object Spam Crash,Protects against crashing by spamming objects.
+TOGGLE,650018771,Log,Show in logger when game is getting crashed by spamming objects crash.
+TOGGLE,1039331016,Notification,Shows notification when game is getting crashed by spamming objects.
+NOTIFICATION,3160364007,Protection,Spam Objects - Crash Avoided Too Many Objects.
+SUB,2713154530,Shoot Crash,Protections against shoot crash.
+TOGGLE,1620514230,Enable Shoot Crash,Protects against shoot crashing.
+TOGGLE,1024233586,Log,Show in logger when game is getting crashed by shoot crash.
+TOGGLE,1728637215,Notification,Shows notification when game is getting crashed by shoot crash.
+NOTIFICATION,642027145,Protection,Shoot - Crash Avoided.
+SUB,2240107182,Deluxo Crash,Protections against deluxo crash.
+TOGGLE,1601033417,Enable Deluxo Crash,Protects against deluxo crashing.
+TOGGLE,1763072311,Log,Show in logger when game is getting crashed by deluxo crash.
+TOGGLE,2122907626,Notification,Shows notification when game is getting crashed by deluxo crash.
+NOTIFICATION,2284221914,Protection,Deluxo - Crash Avoided.
+SUB,209287357,Invalid Mod Crash,Protections against invalid mod crash.
+TOGGLE,477987428,Enable Invalid Mods Crash,Protects against invalid mod crashing.
+TOGGLE,1304970571,Log,Show in logger when game is getting crashed by invalid mod crash.
+TOGGLE,1478938913,Notification,Shows notification when game is getting crashed by invalid mod crash.
+NOTIFICATION,3425855020,Protection,Invalid Mods - Crash Avoided.
+SUB,4184383670,Fragment Crash,Protections against fragment crash.
+TOGGLE,3733045776,Enable Fragment Crash,Protects against fragment crashing.
+TOGGLE,3510373960,Log,Show in logger when game is getting crashed by fragment crash.
+TOGGLE,1715700779,Notification,Shows notification when game is getting crashed by fragment crash.
+NOTIFICATION,3960171178,Protection,Fragment - Crash Avoided.
+SUB,1924519577,Render Crash,Protections against render crash.
+TOGGLE,3602139080,Enable Render Crash,Protects against render crashing.
+TOGGLE,723513451,Log,Show in logger when game is getting crashed by render crashes.
+TOGGLE,785492378,Notification,Shows notification when game is getting crashed by render crashes.
+NOTIFICATION,1590317789,Protection,Render - Crash Avoided.
+SUB,2588914058,Parachute Crash,Protections against parachute crash.
+TOGGLE,536755673,Enable Parachute Crash,Protects against parachute crashing.
+TOGGLE,664643434,Log,Show in logger when game is getting crashed by parachute crashes.
+TOGGLE,2351443685,Notification,Shows notification when game is getting crashed by parachute crashes.
+NOTIFICATION,1682396810,Protection,Parachute - Crash Avoided.

@@ -1,0 +1,97 @@
+<animations>
+
+    <animation>
+        <name>Force Entry</name>
+        <animation>anim@veh@plane@dodo@ps@enter_exit</animation>
+        <animationid>d_force_entry</animationid>
+    </animation>
+	
+    <animation>
+        <name>Burial</name>
+        <animation>random@burial</animation>
+        <animationid>a_burial_stop</animationid>
+    </animation>
+	
+	<animation>
+        <name>D Force</name>
+        <animation>nim@veh@helicopter@havok@ps@enter_exit</animation>
+        <animationid>d_force_entry</animationid>
+    </animation>
+	
+	<animation>
+        <name>Vehicle Force</name>
+        <animation>anim@veh@plane@seabreeze@front@ps@enter_exit</animation>
+        <animationid>d_force_entry</animationid>
+    </animation>
+	
+	   <animation>
+        <name>Front to Back</name>
+        <animation>avoids</animation>
+        <animationid>frfront_toback</animationid>
+    </animation>
+    <animation>
+        <name>Front to Left</name>
+        <animation>avoids</animation>
+        <animationid>frfront_toleft</animationid>
+    </animation>
+    <animation>
+        <name>Front to Right</name>
+        <animation>avoids</animation>
+        <animationid>frfront_toright</animationid>
+    </animation>
+    <animation>
+        <name>Back to Front</name>
+        <animation>avoids</animation>
+        <animationid>frback_tofront</animationid>
+    </animation>
+    <animation>
+        <name>Back to Left</name>
+        <animation>avoids</animation>
+        <animationid>frback_toleft</animationid>
+    </animation>
+    <animation>
+        <name>Back to Right</name>
+        <animation>avoids</animation>
+        <animationid>frback_toright</animationid>
+    </animation>
+    <animation>
+        <name>Left to Back</name>
+        <animation>avoids</animation>
+        <animationid>frleft_toback</animationid>
+    </animation>
+    <animation>
+        <name>Left to Front</name>
+        <animation>avoids</animation>
+        <animationid>frleft_tofront</animationid>
+    </animation>
+    <animation>
+        <name>Left to Right</name>
+        <animation>avoids</animation>
+        <animationid>frleft_toright</animationid>
+    </animation>
+    <animation>
+        <name>Right to Back</name>
+        <animation>avoids</animation>
+        <animationid>frright_toback</animationid>
+    </animation>
+    <animation>
+        <name>Right to Front</name>
+        <animation>avoids</animation>
+        <animationid>frright_tofront</animationid>
+    </animation>
+    <animation>
+        <name>Right to Left</name>
+        <animation>avoids</animation>
+        <animationid>frright_toleft</animationid>
+    </animation>
+    <animation>
+        <name>Devon Yoga</name>
+        <animation>misscarsteal1leadin</animation>
+        <animationid>devon_idle_01</animationid>
+    </animation>
+    <animation>
+        <name>Devon Yoga 2</name>
+        <animation>misscarsteal1leadin</animation>
+        <animationid>devon_idle_02</animationid>
+    </animation>
+</animations>

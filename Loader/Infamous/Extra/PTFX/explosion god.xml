@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<ptfx_data>
+	<ptfx ptfx_asset="scr_agencyheistb" ptfx_name="scr_agency3b_heli_expl" bone="IK_Root" scale="0.100000001" delay="100" name="explosion god">
+		<offset x="0" y="0" z="1.30000019" />
+		<rotation x="0" y="0" z="0" />
+		<color x="255" y="0" z="0" w="255" />
+	</ptfx>
+</ptfx_data>
