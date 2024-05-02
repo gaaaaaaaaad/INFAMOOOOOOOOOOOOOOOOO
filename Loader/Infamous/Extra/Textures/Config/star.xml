@@ -1,9 +1,0 @@
-<?xml version="1.0"?>
-<CNFGTextures>
-	<Texture textureid="4177616949">
-		<TextureName>starfield</TextureName>
-		<ReplacementTexture>FX</ReplacementTexture>
-		<IsGif>true</IsGif>
-		<Delay>0</Delay>
-	</Texture>
-</CNFGTextures>
