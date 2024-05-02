@@ -1,32 +1,18 @@
-10.1
------------
--added fsdfdsf
--added dog killer
--wow killer
--added fsdfdsf
--added dog killer
--wow killer
--added fsdfdsf
--added dog killer
--wow killer
--added fsdfdsf
--added dog killer
--wow killer
--added fsdfdsf
--added dog killer
--wow killer
--added fsdfdsf
--added dog killer
--wow killer
--added fsdfdsf
--added dog killer
--wow killer
--added fsdfdsf
--added dog killer
--wow killer
--added fsdfdsf
--added dog killer
--wow killer
--added fsdfdsf
--added dog killer
--wow killer
+Version 10.2 (Date: [05-02])
+
+[Features]:
+
+- New Loader: Introducing a revamped loader for enhanced performance and reliability.
+- Auto Updating: Now enjoy hassle-free updates with automatic updating functionality.
+- Loader Assets Downloading: Seamless downloading of loader assets for smoother operation.
+- Improved Streamer Mode: Enhancements to streamer mode for better privacy and user experience.
+
+[Fixes]:
+
+- Aimbot Features Fix: Rectified issue with aimbot features being enabled when set to off.
+- Script Host Stability: Fixed instability issues with the script host for smoother execution.
+- Watch Dogs Fonts Translation: Added support for Watch Dogs fonts translation for improved accessibility.
+- Mission Protections: Addressed vulnerabilities in mission protections for enhanced security.
+- Discord RPC Enhancement: Improved Discord Rich Presence functionality for better integration.
+- Menu Stability: General improvements to menu stability for a more reliable experience.
+- InI Vehicle Enhancement: Upgraded InI vehicle features for optimized performance and usability.
