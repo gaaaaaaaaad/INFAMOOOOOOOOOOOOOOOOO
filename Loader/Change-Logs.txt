@@ -2,17 +2,41 @@ Version 10.2 (Date: [05-02])
 
 [Features]:
 
-- New Loader: Introducing a revamped loader for enhanced performance and reliability.
-- Auto Updating: Now enjoy hassle-free updates with automatic updating functionality.
-- Loader Assets Downloading: Seamless downloading of loader assets for smoother operation.
-- Improved Streamer Mode: Enhancements to streamer mode for better privacy and user experience.
+- New Loader
+- Auto Updating
+- Loader Assets Downloading
+- Improved Streamer Mode
+- Now Default Fonts Are Build In Menu
+- Added Bypass Game Altered Version
+- Added Netbail Option
+- Added Damage Packs
+- Adeed Blood Packs
+- Improved Font Loading
+- Fixed Dome Crashing
+- Improved Poopy Bird
+- Improved Save Theme
+- Added Yatch Builder
+- Fix title font not scaling
+- Added Player Info Customization
+- Added Adjust Right Arrow Width & Scale
+- Added More Color Options For Toggles
+- Added Claim Bounty
+- Added Send Meteorite On Player
+- Added Send Player Attackers To Player
+- Chaged Hotkeys System
+- Added Teleport All Players To Player
+- Improved Valkyrie Rocket
+- Keyboard Improvements
+- Improved Crash Protections
+- Improved Force Host
 
 [Fixes]:
 
-- Aimbot Features Fix: Rectified issue with aimbot features being enabled when set to off.
-- Script Host Stability: Fixed instability issues with the script host for smoother execution.
-- Watch Dogs Fonts Translation: Added support for Watch Dogs fonts translation for improved accessibility.
-- Mission Protections: Addressed vulnerabilities in mission protections for enhanced security.
-- Discord RPC Enhancement: Improved Discord Rich Presence functionality for better integration.
-- Menu Stability: General improvements to menu stability for a more reliable experience.
-- InI Vehicle Enhancement: Upgraded InI vehicle features for optimized performance and usability.
+- Aimbot Features Fix
+- Script Host Stability
+- Watch Dogs Fonts Translation
+- Mission Protections
+- Discord RPC Enhancement
+- Menu Stability
+- InI Vehicle Enhancement
+- Fixed Mission Breaking
