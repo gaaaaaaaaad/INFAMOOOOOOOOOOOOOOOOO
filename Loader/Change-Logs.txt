@@ -1,7 +1,13 @@
+Version 10.c (Date: [05-12])
+
+[Fixes]:
+- Bug Fixes In Loader
+
+
 Version 10.b (Date: [05-11])
 
 [Fixes]:
-- Bug Fixes In loader
+- Bug Fixes In Loader
 
 Version 10.a (Date: [05-11])
 
