@@ -1,3 +1,8 @@
+Version 10.ea (Date: [05-16])
+
+[Fixes]:
+- Fixed Bugs While Injecting Menu
+
 ----------------------------
 Version 10.e (Date: [05-14])
 
