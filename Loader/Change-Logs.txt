@@ -1,4 +1,9 @@
-Version 11.1 (Date: [06-03])
+Version 11.3 (Date: [06-03])
+- Fixed Discord RPC
+- Fixed Theme Loading
+
+----------------------------
+Version 11.2 (Date: [06-03])
 
 [Fixes Loader]:
 - Loader Crashing While Log In
