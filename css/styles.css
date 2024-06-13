@@ -345,11 +345,7 @@ color:#F89F9F;
 	color: #8e0000;
 	line-height: 90px !important;
 }
-#section-strapline {
-	background: #f00bfff;
-	line-height: 42px;
-	clear: both;
-}
+
 /*----Nav ----*/
 .header .navbar-brand {
 	float: left;
@@ -452,7 +448,7 @@ color:#F89F9F;
 	background-size: 100% 100%;
 	background-size: cover;
 	position: relative;
-	border-bottom: 2px #8e0000 solid;
+	border-bottom: 2px #252525 solid;
 }
 .container {
     position: relative;
@@ -511,7 +507,7 @@ a.arrow-link:hover {
 	color: #8e0000;
 }
 .colord {
-	background: #8e0000;
+	background: #000000;
 }
 	.colord p {
 		color: #fff;
@@ -1219,6 +1215,77 @@ nav#filter li {
 	user-select: none;
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
+
+
+#SocialsHeader{
+    margin-bottom: 80px;
+}
+.socialLinks {
+    font-family: 'To Japan';
+    font-size: 64px;
+    font-weight: 400;
+    line-height: 115.44px;
+    text-align: center;
+    color: white;
+    margin-top: 80px;
+    margin-bottom: 0;
+    text-shadow: 7px 0px 0px #8e0000;
+
+}
+
+.sollyPNG{
+    display: none;
+}
+
+.linksPara{
+    font-family: 'To Japan';
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 32.47px;
+    text-align: center;
+    margin-top: 0;
+    color: #E6D2FF;
+    margin-bottom: 40px;
+}
+
+.socialButtons{
+    background-color: #8e0000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.icons{
+    width: 142px;
+    height: 143px;
+    background-color: white;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    border-radius: 26px;
+    transition: transform 0.3s ease;
+    box-shadow: 0px 8px 0px 0px #79141B;
+}
+
+.icons img{
+    width: 65px;
+    height: 71px;
+}
+
+.icons:hover{
+    transform: scale(1.2);
+}
+
+.ButtonIcons{
+    display: flex;
+    justify-content: space-around;
+    width: 60%;
+    margin-top: 10%;
+    margin-bottom: 5%;
+}
+
 .contact-parlex {
 	padding-top: 0px;  
 	background:#3a3a3a;
