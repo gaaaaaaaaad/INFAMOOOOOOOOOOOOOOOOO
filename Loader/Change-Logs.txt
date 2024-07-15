@@ -1,3 +1,27 @@
+Version 12 (Date: [07-14)
+- Thunder Lightning 
+- Thunder Lightning: VFX's related to lightning.
+- Darkness: Adjust the darkness of lightning with a toggleable float slider.
+- Lighting Freeze: Toggle to freeze the lighting effects.
+- Brightness: Adjust the brightness of the lightning with a toggleable float slider.
+- Lighting Effect: Adjust the lighting effects with a toggleable float slider.
+- Color
+- Enable Override: Enable to change colors of lightning with an int toggle slider.
+- Color: VFX's related to lightning.
+- Set Color: Allows setting the color of lightning with RGBA values.
+- Rainbow: Continuously change colors with an int toggle slider.
+- Additional Features
+- Ring Scale: Adjust the radius of the lightning effects with a toggleable float slider.
+- Sky Effect: Adjust the sky effect related to lightning with a toggleable float slider.
+- Fast Lightning: Toggle the fast lightning effect with a toggleable float slider.
+- Improvements:
+- Improved Protections: Enhanced the security and stability of the feature set.
+- Crash Fixes: Fixed crash-related issues when going online.
+- Drive On Walls
+- Make Game Sound Cursed
+- SP Special Abilities Change:
+
+
 Version 11.61 (Date: [07-02])
 - Some Fixes
 
