@@ -1,3 +1,13 @@
+Version 12.50 (Date: [07-22)
+- Added Options To Change Particles Velocity
+- Changed Default Fonts
+- Added Crow Attackers
+- Added Phase Shifiting
+- Changed & Improved Notifications
+- Fixed Sliders Color Not Saving In Theme
+- Added Outfit Name Changer 
+- Added No Vehicle Ammo Charge
+
 Version 12 (Date: [07-14)
 - Thunder Lightning 
 - Thunder Lightning: VFX's related to lightning.
