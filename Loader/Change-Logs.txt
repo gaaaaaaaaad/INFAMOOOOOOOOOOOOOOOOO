@@ -1,4 +1,10 @@
-Version 12.60 (Date: [08-4)
+Version 12.80 (Date: [08-8)
+- Improvement Cash Flow Recovery
+- Fixed NPCs & Vehicles Bricking
+- Improvements & Bug Fixes
+
+
+Version 12.70 (Date: [08-4)
 - Improvements & Bug Fixes
 
 Version 12.60 (Date: [07-30)
