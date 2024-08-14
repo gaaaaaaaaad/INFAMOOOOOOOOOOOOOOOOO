@@ -1,0 +1,2 @@
+BIGJB lua script. The first Infamous lua script.
+BIGJB Lua 脚本。第一个 Infamous Lua 脚本。
