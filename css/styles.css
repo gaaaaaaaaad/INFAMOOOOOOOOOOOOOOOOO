@@ -1388,3 +1388,19 @@ nav#filter li {
 .isotopeWrapper article {
 	margin: 0px;
 }
+
+.picture-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px; /* Space between the image and the content */
+    border: 2px solid #000; /* Black outline around the picture */
+    padding: 10px; /* Padding inside the border */
+    border-radius: 10px; /* Rounded corners for the outline */
+}
+
+.picture-box img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
