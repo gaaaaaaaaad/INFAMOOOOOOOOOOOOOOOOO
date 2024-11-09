@@ -141,7 +141,7 @@ h2 {
 
 .menu-title {
     margin-left: 10px; /* Space between icon and text */
-    text-shadow: 1px 1px 0 black; /* Black outline effect */
+    text-shadow: 1px 1px 0 rgb(255, 0, 0); /* Black outline effect */
 }
 
 .menu-item {

@@ -4,17 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>Infamous Unleashed</title>
+    <link rel="shortcut icon" href="images/logo.png">
 
-    <meta property="og:title" content="Unleash The Ultimate Experience ">
-    <meta name="description"target="_blank"content="Infamous is a top rated mod menu for GTA online with advanced easy to use UI and a lot of customization. It offers amazing unquie features  such as Fun, vehicle, player trolling, weapon, safe money recovery and more.">
-    
-     <meta name="keywords" content="mod menu, gta 5, gta v, rdr2, red dead online, cs2, fivem, gta 5 online, infamous, paid mod menu, money recovery, pc, recoverykings, gta 5 recovery, infamous unleashed">
-     <link rel="shortcut icon" href="images/logo.png">
-
-
-
-
-     
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/styles.css" />
     <style>
@@ -28,8 +19,9 @@
         /* Body Style */
         body {
             font-family: 'Arial', sans-serif;
-            color: #333;
+            color: #121212;
             line-height: 1.6;
+            background-color: #121212;
         }
 
         /* Video Player Styles */
@@ -67,69 +59,119 @@
         /* Animated Text Styles */
         .text-container {
             position: absolute;
-            bottom: 0; /* Start from the bottom */
-            left: 50%; /* Center horizontally */
-            transform: translateX(-50%); /* Offset for perfect centering */
-            z-index: 3; /* Above overlay */
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 3;
             color: white;
-            text-align: center; /* Center text */
+            text-align: center;
             padding: 30px;
-            max-width: 100%; /* Full width */
-            animation: moveUpText 1s ease-in-out forwards; /* Speed up animation to 3 seconds */
+            max-width: 100%;
+            animation: moveUpText 1s ease-in-out forwards;
+            font-size: 1.2rem;
         }
 
         /* Keyframes for text animation */
         @keyframes moveUpText {
             0% {
-                transform: translate(-50%, 0); /* Start from the bottom */
+                transform: translate(-50%, 0);
             }
             100% {
-                transform: translate(-50%, -100%); /* Move up off the screen */
+                transform: translate(-50%, -100%);
             }
         }
 
-        /* Picture Box Styles */
-        #picture-box {
-            position: absolute;
-            bottom: 30%; /* Align with text vertically */
-            left: 70%; /* Positioning from the left */
-            width: 300px; /* Set width for the image box */
-            height: auto; /* Maintain aspect ratio */
-            z-index: 3; /* Above video and overlay */
-            cursor: pointer; /* Change cursor to pointer */
-            transition: transform 0.5s ease; /* Smooth transition for movement */
-        }
+ /* Picture Box Styles with Outline */
+#picture-box {
+    position: absolute;
+    bottom: 30%;
+    left: 70%;
+    width: 300px;
+    z-index: 3;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+    border: 5px solid #ff0000; /* Default color for the outline */
+    border-radius: 10px; /* Same as image for a smooth outline */
+}
 
-        #picture-box img {
-            width: 100%; /* Make the image responsive */
-            height: auto; /* Maintain aspect ratio */
-            border-radius: 10px; /* Optional: round the corners */
-        }
+/* Customize Outline Color */
+#picture-box:hover {
+    border-color: #007bff; /* Changes outline color on hover */
+}
+
+#picture-box img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
 
 
-
-        
-         /* Button Styles */
-         .btn {
-            background-color: #9c0707; /* Bootstrap primary color */
+        /* Button Styles */
+        .btn {
+            background-color: #9c0707;
             color: white;
             border: none;
             padding: 10px 20px;
-            margin: 5px; /* Space between buttons */
+            margin: 5px;
             cursor: pointer;
             font-size: 1rem;
             transition: background-color 0.3s ease;
-            text-decoration: none; /* Remove underline from links */
-            display: inline-block; /* Make link act like a button */
+            text-decoration: none;
+            display: inline-block;
         }
 
         .btn:hover {
-            background-color: #0056b3; /* Darker shade on hover */
+            background-color: #0056b3;
         }
 
         /* Rounded Button Style */
         .btn-rounded {
-            border-radius: 30px; /* Make buttons rounded */
+            border-radius: 30px;
+        }
+
+        /* Features Section Styling */
+        .features-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 50px 0;
+            text-align: center;
+            color: white;
+        }
+
+        .feature-box {
+            flex: 1;
+            min-width: 200px;
+            max-width: 300px;
+            margin: 20px;
+            padding: 20px;
+            background-color: #2222;
+            border-radius: 8px;
+        }
+
+        .feature-box h3 {
+            color: #ff4141;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .feature-box p {
+            color: #ddd;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        .feature-box .icon {
+            font-size: 2rem;
+            color: #ff4141;
+            margin-bottom: 10px;
+        }
+
+        /* Enlarged Text Style */
+        .heading p, .heading h1 {
+            color: white;
+            font-size: 1.2rem;
+            font-weight: bold;
         }
 
         /* Media Queries for Responsive Design */
@@ -141,25 +183,25 @@
                 font-size: 1.2rem;
             }
             #picture-box {
-                width: 200px; /* Adjust picture box width on smaller screens */
+                width: 200px;
             }
             .text-container {
-                max-width: 90%; /* Use more screen width on small devices */
-                left: 50%; /* Center the text container */
-                transform: translateX(-50%); /* Adjust centering for small devices */
+                max-width: 90%;
+                left: 50%;
+                transform: translateX(-50%);
             }
         }
     </style>
 </head>
 <body>
 
-    <!-- Random Video Player Section -->
+    <!-- Video Player Section -->
     <section id="video-player">
         <video id="videoPlayer" autoplay loop muted>
             <source id="videoSource" src="" type="video/mp4">
             Your browser does not support the video tag.
         </video>
-        <div class="overlay"></div> <!-- Dark overlay for better text visibility -->
+        <div class="overlay"></div>
         
         <!-- Text and Buttons Overlay -->
         <div class="text-container">
@@ -167,10 +209,7 @@
             <h3>Dive into the realm of endless possibilities with Infamous Unleashed.</h3>
             <a href="https://discord.gg/2KYUvZkD5q" class="btn" target="_blank">Join Discord</a>
             <a href="#buybuy" class="btn">Purchase</a>
-            <a href="#download" class="btn btn-rounded">Download</a> <!-- Change the href to your desired URL -->
-            
-            
-
+            <a href="#download" class="btn btn-rounded">Download</a>
         </div>
 
         <!-- Picture Box Overlay -->
@@ -188,67 +227,85 @@
     <div class="container">
         <div class="heading text-center">
             <h2>About Us</h2>
-            <p>Welcome to Infamous! Our mission is to deliver our customers the highest quality experience possible. With a commitment to excellence, we strive to provide unparalleled service and satisfaction in every aspect of our offerings.</p>
-            <h1>Here's a sneak peek of what Infamous has to offer.</h1>
+            <p>Infamous started as a mod menu for GTA 5 as Very well Known Mod Menu called N3NYOOO Started back in 2021/2022 as a Free Menu, but we're committed to providing high-quality Mod Menus/Cheats for other games like RDR2, FiveM, CS2, and more in the future.</p>
+        </div>
+
+        <!-- Features Section (Moved Above Sneak Peek Text) -->
+        <div class="features-container">
+            <!-- Unique Options Box -->
+            <div class="feature-box">
+                <div class="icon">🧠</div> <!-- You can replace this with an actual icon if available -->
+                <h3>Unique Options</h3>
+                <p>We focus on integrating unique ideas to keep it fresh from others.</p>
+            </div>
+
+            <!-- Adaptable Design Box -->
+            <div class="feature-box">
+                <div class="icon">🧩</div> <!-- Replace with an actual icon if available -->
+                <h3>Adaptable Design</h3>
+                <p>The Infamous UI boasts remarkable adaptability, featuring a comprehensive theming system and configuration saving capabilities, allowing users to personalize every aspect of the interface to their liking.</p>
+            </div>
+
+   
+            <!-- Why Infamous Box -->
+            <div class="feature-box">
+                <div class="icon">🤗</div> <!-- Replace with an actual icon if available -->
+                <h3>Why Infamous</h3>
+                <p>Easy to use, packed with features, transparent, secure, and with 24/7 support for a reliable experience.</p>
+            </div>
+        </div>
+
+        <!-- Sneak Peek Text -->
+        <div class="heading text-center">
+            <h2>Here's a sneak peek of what Infamous has to offer.</h2>
+            <h2> </h2>
+            <h2> </h2>
         </div>
     </div>
 
     <script>
-        // Array of video file names stored in the "videos" folder
         const videos = [
-            'videos/video1.mp4', // Replace with your actual video paths
+            'videos/video1.mp4',
             'videos/video2.mp4',
             'videos/video3.mp4',
             'videos/video4.mp4',
-            'videos/video5.mp4',
-            'videos/video7.mp4'
-        
-            // Add more video file paths as needed
+            'videos/video5.mp4'
         ];
 
-        // Function to select a random video from the list
         function selectRandomVideo() {
             const randomIndex = Math.floor(Math.random() * videos.length);
             return videos[randomIndex];
         }
 
-        // Set the video source and play
         const videoSource = document.getElementById('videoSource');
-        videoSource.src = selectRandomVideo(); // Set a random video source
+        videoSource.src = selectRandomVideo();
         const videoPlayer = document.getElementById('videoPlayer');
-        videoPlayer.load(); // Load the new video
-        videoPlayer.muted = false; // Ensure the video is not muted
-        videoPlayer.play(); // Play the video
+        videoPlayer.load();
+        videoPlayer.muted = false;
+        videoPlayer.play();
 
-        // Handle file input for local MP4 files
         const fileInput = document.getElementById('fileInput');
         fileInput.addEventListener('change', function(event) {
             const file = event.target.files[0];
             if (file && file.type === 'video/mp4') {
-                const url = URL.createObjectURL(file);
-                videoSource.src = url; // Set the video source to the local file
-                videoPlayer.load(); // Load the new video
-                videoPlayer.muted = false; // Ensure the uploaded video plays with sound
-                videoPlayer.play(); // Play the video
+                const fileURL = URL.createObjectURL(file);
+                videoSource.src = fileURL;
+                videoPlayer.load();
+                videoPlayer.play();
             }
         });
 
-        // Function to make the picture box move around the screen
         function jumpAround() {
             const pictureBox = document.getElementById('picture-box');
-            const maxWidth = window.innerWidth - pictureBox.clientWidth; // Max width for movement
-            const maxHeight = window.innerHeight - pictureBox.clientHeight; // Max height for movement
-            const randomX = Math.random() * maxWidth; // Random X position
-            const randomY = Math.random() * maxHeight; // Random Y position
-
-            // Move smoothly to the random position
-            pictureBox.style.transform = `translate(${randomX}px, ${randomY}px)`; // Move to random position
+            pictureBox.classList.add('jump');
+            setTimeout(() => {
+                pictureBox.classList.remove('jump');
+            }, 1000);
         }
     </script>
 
 </body>
 </html>
-
 
 
       
@@ -716,7 +773,7 @@
                         <img class="img-responsive" src="images/reseller/wwbst.png" alt="">
                     </div>
                     <!-- Member Details -->
-                    <h4>WWB</h4>
+                    <h2>WWB</h2>
                     <!-- Designation -->
                     <div class="team-socials">
                         <a href="https://whatwhatboy.sellpass.io/products/Infamous-GTA"target="_blank">
@@ -736,7 +793,7 @@
                         <img class="img-responsive" src="images/reseller/rk.png" alt="">
                     </div>
                     <!-- Member Details -->
-                    <h4>Recoverykings</h4>
+                    <h2>Recoverykings</h2>
                     <!-- Designation -->
                     <div class="team-socials">
                         <a href="https://recoverykings.net/product/infamous/?coupon=uno"target="_blank">
@@ -755,7 +812,7 @@
                         <img class="img-responsive" src="images/reseller/Noah.png" alt="">
                     </div>
                     <!-- Member Details -->
-                    <h4>Noahs Mods</h4>
+                    <h2>Noahs Mods</h2>
                     <!-- Designation -->
                     <div class="team-socials">
                         <a href="https://noahsmods.com/product/infamous/"target="_blank">
@@ -777,7 +834,7 @@
                         <img class="img-responsive" src="images/reseller/ezMod.png" alt="">
                     </div>
                     <!-- Member Details -->
-                    <h4>EZmod</h4>
+                    <h2>EZmod</h2>
                     <!-- Designation -->
                     <div class="team-socials">
                         <a href="https://ezmod.vip/product/infamous-gta-mod-menu/"target="_blank">
@@ -797,7 +854,7 @@
                         <img class="img-responsive" src="images/reseller/lokoo.png" alt="">
                     </div>
                     <!-- Member Details -->
-                    <h4>Lokoszservices</h4>
+                    <h2>Lokoszservices</h2>
                     <!-- Designation -->
                     <div class="team-socials">
                         <a href="https://lokoszservices.sellauth.com/product/977bfd7f298e0"target="_blank">
@@ -819,7 +876,7 @@
                         <img class="img-responsive" src="images/reseller/acces.png" alt="">
                     </div>
                     <!-- Member Details -->
-                    <h4>Acces Solutions</h4>
+                    <h2>Acces Solutions</h2>
                     <!-- Designation -->
                     <div class="team-socials">
                         <a href="https://www.acces2solutions.com/en/product-page/infamous-mod-menu-gta-v-lifetime"target="_blank">
@@ -841,7 +898,7 @@
                         <img class="img-responsive" src="images/reseller/yuri.png" alt="">
                     </div>
                     <!-- Member Details -->
-                    <h4>Yurimod</h4>
+                    <h2>Yurimod</h2>
                     <!-- Designation -->
                     <div class="team-socials">
                         <a href="https://yurimod.com/product/infamous-mod-menu/"target="_blank">
@@ -860,7 +917,7 @@
                         <img class="img-responsive" src="images/reseller/supkeys.png" alt="">
                     </div>
                     <!-- Member Details -->
-                    <h4>Supreme Keys</h4>
+                    <h2>Supreme Keys</h2>
                     <!-- Designation -->
                     <div class="team-socials">
                         <a href="https://supremekeys.net/product/infamous-premium/"target="_blank">
@@ -886,7 +943,7 @@
                         <img class="img-responsive" src="images/reseller/wicked.png" alt="">
                     </div>
                     <!-- Member Details -->
-                    <h4>Wicked Gamerz</h4>
+                    <h2>Wicked Gamerz</h2>
                     <!-- Designation -->
                     <div class="team-socials">
                         <a href="https://www.wickedgamerz.com/purchase-infamous"target="_blank">
@@ -908,7 +965,7 @@
                         <img class="img-responsive" src="images/reseller/PremiumCheats.png" alt="">
                     </div>
                     <!-- Member Details -->
-                    <h4>Premium Cheats</h4>
+                    <h2>Premium Cheats</h2>
                     <!-- Designation -->
                     <div class="team-socials">
                         <a href="https://discord.gg/"target="_blank">
@@ -929,7 +986,7 @@
                         <img class="img-responsive" src="images/reseller/Omar.png" alt="">
                     </div>
                     <!-- Member Details -->
-                    <h4>OmarPlays</h4>
+                    <h2>OmarPlays</h2>
                     <!-- Designation -->
                     <div class="team-socials">
                         <a href=" "target="_blank">
@@ -952,7 +1009,7 @@
                         <img class="img-responsive" src="images/reseller/moddingpal.png" alt="">
                     </div>
                     <!-- Member Details -->
-                    <h4>Modding Palace</h4>
+                    <h2>Modding Palace</h2>
                     <!-- Designation -->
                     <div class="team-socials">
                         <a href="https://moddingpalace.com/product/infamous/"target="_blank">
@@ -974,7 +1031,7 @@
                         <img class="img-responsive" src="images/reseller/unix.png" alt="">
                     </div>
                     <!-- Member Details -->
-                    <h4>Unixx </h4>
+                    <h2>Unixx </h2>
                     <!-- Designation -->
                     <div class="team-socials">
                         <a href="https://unixx.shop/#28"target="_blank">
@@ -997,7 +1054,7 @@
                         <img class="img-responsive" src="images/reseller/divinemods.png" alt="">
                     </div>
                     <!-- Member Details -->
-                    <h4>Divinemods</h4>
+                    <h2>Divinemods</h2>
                     <!-- Designation -->
                     <div class="team-socials">
                         <a href="https://divinemods.com/shop/gta-v/infamous"target="_blank">
@@ -1017,7 +1074,7 @@
                         <img class="img-responsive" src="images/reseller/infmods.png" alt="">
                     </div>
                     <!-- Member Details -->
-                    <h4>Infinitymods</h4>
+                    <h2>Infinitymods</h2>
                     <!-- Designation -->
                     <div class="team-socials">
                         <a href="https://infinitymods.cc/shop/gta-v/infamous"target="_blank">
@@ -1037,7 +1094,7 @@
                         <img class="img-responsive" src="images/reseller/wws.png" alt="">
                     </div>
                     <!-- Member Details -->
-                    <h4>WalterWhiteModz</h4>
+                    <h2>WalterWhiteModz</h2>
                     <!-- Designation -->
                     <div class="team-socials">
                         <a href="https://discord.gg/worldwinnersbr"target="_blank">
@@ -1057,7 +1114,7 @@
                         <img class="img-responsive" src="images/reseller/hansModz.png" alt="">
                     </div>
                     <!-- Member Details -->
-                    <h4>HansModz </h4>
+                    <h2>HansModz </h2>
                     <!-- Designation -->
                     <div class="team-socials">
                         <a href="https://hansmodz.com/product/infamous-mod-menu/"target="_blank">
@@ -1078,7 +1135,7 @@
                         <img class="img-responsive" src="images/reseller/Modmarket.png" alt="">
                     </div>
                     <!-- Member Details -->
-                    <h4>Mod Market</h4>
+                    <h2>Mod Market</h2>
                     <!-- Designation -->
                     <div class="team-socials">
                         <a href="https://sites.google.com/view/mod-market-online/inicio"target="_blank">
@@ -1123,7 +1180,7 @@
                         <img class="img-responsive" src="images/reseller/999.png" alt="">
                     </div>
                     <!-- Member Details -->
-                    <h4>999（招募中国经销商</h4>
+                    <h2>999（招募中国经销商</h2>
                     <!-- Designation -->
                     <div class="team-socials">
                         <a href=" http://999mod.co/"target="_blank">
@@ -1143,7 +1200,7 @@
                         <img class="img-responsive" src="images/reseller/cnr.png" alt="">
                     </div>
                     <!-- Member Details -->
-                    <h4> 智宇 </h4>
+                    <h2> 智宇 </h2>
                     <!-- Designation -->
                     <div class="team-socials">
                         <a href=" https://www.gtazhiyu.com/"target="_blank">
@@ -1162,7 +1219,7 @@
                         <img class="img-responsive" src="images/reseller/shicn.png" alt="">
                     </div>
                     <!-- Member Details -->
-                    <h4> Shark </h4>
+                    <h2> Shark </h2>
                     <!-- Designation -->
                     <div class="team-socials">
                         <a href=" https://sharkcheats.com/"target="_blank">
@@ -1181,7 +1238,7 @@
                         <img class="img-responsive" src="images/reseller/gualao.png" alt="">
                     </div>
                     <!-- Member Details -->
-                    <h4> Gualoa </h4>
+                    <h2> Gualoa </h2>
                     <!-- Designation -->
                     <div class="team-socials">
                         <a href="https://www.gualaoshop.com/?cid=2&mid=340"target="_blank">
@@ -1201,7 +1258,7 @@
                         <img class="img-responsive" src="images/reseller/XiGua.jpg" alt="">
                     </div>
                     <!-- Member Details -->
-                    <h4> XiGua </h4>
+                    <h2> XiGua </h2>
                     <!-- Designation -->
                     <div class="team-socials">
                         <a href="https://xgp.icu/"target="_blank">
@@ -1276,7 +1333,7 @@
                         <img class="img-responsive" src="images/reseller/wwbst.png" alt="">
                     </div>
                     <!-- Member Details -->
-                    <h4>WWB</h4>
+                    <h2>WWB</h2>
                     <!-- Designation -->
                     <div class="team-socials">
                         <a href="https://whatwhatboy.sellpass.io/products/Infamous-RDR2"target="_blank">
@@ -1296,7 +1353,7 @@
                         <img class="img-responsive" src="images/reseller/rk.png" alt="">
                     </div>
                     <!-- Member Details -->
-                    <h4>Recoverykings</h4>
+                    <h1>Recoverykings</h1>
                     <!-- Designation -->
                     <div class="team-socials">
                         <a href="https://recoverykings.net/product/infamous-rdr2/?coupon=uno"target="_blank">
@@ -1316,7 +1373,7 @@
                         <img class="img-responsive" src="images/reseller/Noah.png" alt="">
                     </div>
                     <!-- Member Details -->
-                    <h4>Noahs Mods</h4>
+                    <h2>Noahs Mods</h2>
                     <!-- Designation -->
                     <div class="team-socials">
                         <a href="https://noahsmods.com/product/infamous/"target="_blank">
@@ -1336,7 +1393,7 @@
                         <img class="img-responsive" src="images/reseller/supkeys.png" alt="">
                     </div>
                     <!-- Member Details -->
-                    <h4>Supreme Keys</h4>
+                    <h2>Supreme Keys</h2>
                     <!-- Designation -->
                     <div class="team-socials">
                         <a href="https://supremekeys.net/product/infamous-premium/"target="_blank">
@@ -1357,7 +1414,7 @@
                         <img class="img-responsive" src="images/reseller/wws.png" alt="">
                     </div>
                     <!-- Member Details -->
-                    <h4>WalterWhiteModz</h4>
+                    <h2>WalterWhiteModz</h2>
                     <!-- Designation -->
                     <div class="team-socials">
                         <a href="https://discord.gg/worldwinnersbr"target="_blank">
@@ -1410,7 +1467,7 @@
                         <img class="img-responsive" src="images/reseller/wwbst.png" alt="">
                     </div>
                     <!-- Member Details -->
-                    <h4>WWB</h4>
+                    <h2>WWB</h2>
                     <!-- Designation -->
                     <div class="team-socials">
                         <a href="https://whatwhatboy.sellpass.io/products/Infamous-RDR2"target="_blank">
@@ -1429,7 +1486,7 @@
                         <img class="img-responsive" src="images/reseller/rk.png" alt="">
                     </div>
                     <!-- Member Details -->
-                    <h4>Recoverykings</h4>
+                    <h1>Recoverykings</h1>
                     <!-- Designation -->
                     <div class="team-socials">
                         <a href="https://recoverykings.net/?coupon=uno"target="_blank">
@@ -1449,7 +1506,7 @@
                         <img class="img-responsive" src="images/reseller/wws.png" alt="">
                     </div>
                     <!-- Member Details -->
-                    <h4>WalterWhiteModz</h4>
+                    <h2>WalterWhiteModz</h2>
                     <!-- Designation -->
                     <div class="team-socials">
                         <a href="https://discord.gg/worldwinnersbr"target="_blank">
@@ -1470,7 +1527,7 @@
                         <img class="img-responsive" src="images/reseller/Noah.png" alt="">
                     </div>
                     <!-- Member Details -->
-                    <h4>Noahs Mods</h4>
+                    <h2>Noahs Mods</h2>
                     <!-- Designation -->
                     <div class="team-socials">
                         <a href="https://noahsmods.com/product/infamous-spoofer"target="_blank">
@@ -1530,7 +1587,7 @@
                           <img class="img-responsive" src="images/reseller/ " alt="">
                       </div>
                       <!-- Member Details -->
-                      <h4>Place</h4>
+                      <h2>Place</h2>
                       <!-- Designation -->
                       <div class="team-socials">
                           <a href="  "target="_blank">
@@ -1581,7 +1638,7 @@
                           <img class="img-responsive" src="images/reseller/ " alt="">
                       </div>
                       <!-- Member Details -->
-                      <h4>Place</h4>
+                      <h2>Place</h2>
                       <!-- Designation -->
                       <div class="team-socials">
                           <a href="  "target="_blank">
@@ -1632,7 +1689,7 @@
                           <img class="img-responsive" src="images/reseller/Noah.png" alt="">
                       </div>
                       <!-- Member Details -->
-                      <h4>Noahs Mods</h4>
+                      <h2>Noahs Mods</h2>
                       <!-- Designation -->
                       <div class="team-socials">
                           <a href="https://noahsmods.com/product/infamous-cod/"target="_blank">
@@ -1665,7 +1722,7 @@
                                       <img class="img-responsive" src="images/reseller/ " alt="">
                                   </div>
                                   <!-- Member Details -->
-                                  <h4>Place</h4>
+                                  <h2>Place</h2>
                                   <!-- Designation -->
                                   <div class="team-socials">
                                       <a href="  "target="_blank">
