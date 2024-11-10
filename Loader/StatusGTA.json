@@ -1,6 +1,6 @@
 {
-  "version": "13.02",
+  "version": "14.00",
   "status": "Undetected.",
-  "services": "Avoid Online",
-  "compatibility": "1.69"
+  "services": "Online",
+  "compatibility": "Latest Update"
 }
