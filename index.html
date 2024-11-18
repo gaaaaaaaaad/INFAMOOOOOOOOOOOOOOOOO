@@ -202,7 +202,7 @@
             Your browser does not support the video tag.
         </video>
         <div class="overlay"></div>
-        
+
         <!-- Text and Buttons Overlay -->
         <div class="text-container">
             <h1>Unleash the POWER with Infamous!</h1>
@@ -246,7 +246,7 @@
                 <p>The Infamous UI boasts remarkable adaptability, featuring a comprehensive theming system and configuration saving capabilities, allowing users to personalize every aspect of the interface to their liking.</p>
             </div>
 
-   
+
             <!-- Why Infamous Box -->
             <div class="feature-box">
                 <div class="icon">🤗</div> <!-- Replace with an actual icon if available -->
@@ -276,24 +276,44 @@
             return videos[randomIndex];
         }
 
-        const videoSource = document.getElementById('videoSource');
-        videoSource.src = selectRandomVideo();
         const videoPlayer = document.getElementById('videoPlayer');
-        videoPlayer.load();
-        videoPlayer.muted = true;
-        videoPlayer.play();
+        const videoSource = document.getElementById('videoSource');
 
+        function initializeVideo() {
+            videoSource.src = selectRandomVideo();
+            videoPlayer.load();
+            videoPlayer.muted = false; // Unmute the video
+            videoPlayer.play().catch(err => {
+                console.error('Autoplay with sound failed:', err);
+                //alert('Click anywhere on the page to enable sound.');
+            });
+        }
+
+        // Start playback after user interaction if needed
+        document.body.addEventListener('click', function () {
+            videoPlayer.muted = false; // Ensure video is unmuted
+            videoPlayer.play().catch(err => console.log('Play after interaction failed:', err));
+        });
+
+        // Load and play video on page load
+        initializeVideo();
+
+        // Handle custom file uploads
         const fileInput = document.getElementById('fileInput');
-        fileInput.addEventListener('change', function(event) {
+        fileInput.addEventListener('change', function (event) {
             const file = event.target.files[0];
             if (file && file.type === 'video/mp4') {
                 const fileURL = URL.createObjectURL(file);
                 videoSource.src = fileURL;
                 videoPlayer.load();
-                videoPlayer.play();
+                videoPlayer.muted = false; // Ensure sound is enabled
+                videoPlayer.play().catch(err => console.log('Play failed:', err));
+            } else {
+                alert('Please select a valid MP4 file.');
             }
         });
 
+        // Picture box jump effect
         function jumpAround() {
             const pictureBox = document.getElementById('picture-box');
             pictureBox.classList.add('jump');
@@ -301,6 +321,9 @@
                 pictureBox.classList.remove('jump');
             }, 1000);
         }
+
+        // Add a test jump effect on page load
+        document.getElementById('picture-box').addEventListener('click', jumpAround);
     </script>
 
 </body>
