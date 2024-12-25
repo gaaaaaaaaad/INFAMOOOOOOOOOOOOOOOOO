@@ -1,0 +1,1 @@
+This is an recovery Lua script designed specifically for your second character.
