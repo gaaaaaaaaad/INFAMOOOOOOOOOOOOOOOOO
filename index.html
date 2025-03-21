@@ -1,0 +1,1991 @@
+<!DOCTYPE html>
+<html lang="en-gb" class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Infamous Unleashed</title>
+    <link rel="shortcut icon" href="images/logo.png">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Style */
+        body {
+            font-family: 'Arial', sans-serif;
+            color: #121212;
+            line-height: 1.6;
+            background-color: #121212;
+        }
+
+        /* Video Player Styles */
+        #video-player {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        video {
+            width: 100%;
+            height: auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1; /* Send video to the back */
+        }
+
+        /* Overlay for content visibility */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 2; /* Content above the video */
+        }
+
+        /* Animated Text Styles */
+        .text-container {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 3;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            max-width: 100%;
+            animation: moveUpText 1s ease-in-out forwards;
+            font-size: 1.2rem;
+        }
+
+        /* Keyframes for text animation */
+        @keyframes moveUpText {
+            0% {
+                transform: translate(-50%, 0);
+            }
+            100% {
+                transform: translate(-50%, -100%);
+            }
+        }
+
+ /* Picture Box Styles with Outline */
+#picture-box {
+    position: absolute;
+    bottom: 30%;
+    left: 70%;
+    width: 300px;
+    z-index: 3;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+    border: 5px solid  /* Default color for the outline */
+    border-radius: 10px; /* Same as image for a smooth outline */
+}
+
+/* Customize Outline Color */
+#picture-box:hover {
+    border-color: #007bff; /* Changes outline color on hover */
+}
+
+#picture-box img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+
+        /* Button Styles */
+        .btn {
+            background-color: #9c0707;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        /* Rounded Button Style */
+        .btn-rounded {
+            border-radius: 30px;
+        }
+
+        /* Features Section Styling */
+        .features-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 50px 0;
+            text-align: center;
+            color: white;
+        }
+
+        .feature-box {
+            flex: 1;
+            min-width: 200px;
+            max-width: 300px;
+            margin: 20px;
+            padding: 20px;
+            background-color: #121212;
+            border-radius: 8px;
+        }
+
+        .feature-box h3 {
+            color: #ff4141;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .feature-box p {
+            color: #ddd;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        .feature-box .icon {
+            font-size: 2rem;
+            color: #ff4141;
+            margin-bottom: 10px;
+        }
+
+        /* Enlarged Text Style */
+        .heading p, .heading h1 {
+            color: white;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        /* Media Queries for Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            h3 {
+                font-size: 1.2rem;
+            }
+            #picture-box {
+                width: 200px;
+            }
+            .text-container {
+                max-width: 90%;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Video Player Section -->
+    <section id="video-player">
+        <video id="videoPlayer" autoplay loop muted>
+            <source id="videoSource" src="" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="overlay"></div>
+
+        <!-- Text and Buttons Overlay -->
+        <div class="text-container">
+            <h1>Unleash the POWER with Infamous!</h1>
+            <h3>Dive into the realm of endless possibilities with Infamous Unleashed.</h3>
+            <a href="https://discord.gg/2KYUvZkD5q" class="btn" target="_blank">Join Discord</a>
+            <a href="#buybuy" class="btn">Purchase</a>
+            <a href="#download" class="btn btn-rounded">Download</a>
+        </div>
+
+        <!-- Picture Box Overlay -->
+        <div id="picture-box" onclick="jumpAround()">
+            <img src="https://i.imgur.com/9rcJn7g.png" alt="Overlay Image" />
+        </div>
+
+        <!-- File Upload Section -->
+        <div class="upload-container">
+            <input type="file" id="fileInput" accept="video/mp4" />
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="heading text-center">
+            <h2>About Us</h2>
+            <p>Infamous started as a mod menu for GTA 5 as Very well Known Mod Menu called N3NYOOO Started back in 2021/2022 as a Free Menu, but we're committed to providing high-quality Mod Menus/Cheats for other games like RDR2, FiveM, RedM CS2, and more in the future.</p>
+        </div>
+
+        <!-- Features Section (Moved Above Sneak Peek Text) -->
+        <div class="features-container">
+            <!-- Unique Options Box -->
+            <div class="feature-box">
+                <div class="icon">🧠</div> <!-- You can replace this with an actual icon if available -->
+                <h3>Unique Options</h3>
+                <p>We focus on integrating unique ideas to keep it fresh from others.</p>
+            </div>
+
+            <!-- Adaptable Design Box -->
+            <div class="feature-box">
+                <div class="icon">🧩</div> <!-- Replace with an actual icon if available -->
+                <h3>Adaptable Design</h3>
+                <p>The Infamous UI boasts remarkable adaptability, featuring a comprehensive theming system and configuration saving capabilities, allowing users to personalize every aspect of the interface to their liking.</p>
+            </div>
+
+
+            <!-- Why Infamous Box -->
+            <div class="feature-box">
+                <div class="icon">🤗</div> <!-- Replace with an actual icon if available -->
+                <h3>Why Infamous</h3>
+                <p>Easy to use, packed with features, transparent, secure, and with 24/7 support for a reliable experience.</p>
+            </div>
+        </div>
+
+        <!-- Sneak Peek Text -->
+        <div class="heading text-center">
+            <h2>Here's a sneak peek of what Infamous has to offer.</h2>
+            <h2> </h2>
+            <h2> </h2>
+        </div>
+    </div>
+
+    <script>
+        const videos = [
+            'videos/video1.mp4',
+            'videos/video2.mp4',
+            'videos/video3.mp4',
+            'videos/video4.mp4'
+        ];
+
+        function selectRandomVideo() {
+            const randomIndex = Math.floor(Math.random() * videos.length);
+            return videos[randomIndex];
+        }
+
+        const videoPlayer = document.getElementById('videoPlayer');
+        const videoSource = document.getElementById('videoSource');
+
+        function initializeVideo() {
+            videoSource.src = selectRandomVideo();
+            videoPlayer.load();
+            videoPlayer.muted = false; // Unmute the video
+            videoPlayer.play().catch(err => {
+                console.error('Autoplay with sound failed:', err);
+                //alert('Click anywhere on the page to enable sound.');
+            });
+        }
+
+        // Start playback after user interaction if needed
+        document.body.addEventListener('click', function () {
+            videoPlayer.muted = false; // Ensure video is unmuted
+            videoPlayer.play().catch(err => console.log('Play after interaction failed:', err));
+        });
+
+        // Load and play video on page load
+        initializeVideo();
+
+        // Handle custom file uploads
+        const fileInput = document.getElementById('fileInput');
+        fileInput.addEventListener('change', function (event) {
+            const file = event.target.files[0];
+            if (file && file.type === 'video/mp4') {
+                const fileURL = URL.createObjectURL(file);
+                videoSource.src = fileURL;
+                videoPlayer.load();
+                videoPlayer.muted = false; // Ensure sound is enabled
+                videoPlayer.play().catch(err => console.log('Play failed:', err));
+            } else {
+                alert('Please select a valid MP4 file.');
+            }
+        });
+
+        // Picture box jump effect
+        function jumpAround() {
+            const pictureBox = document.getElementById('picture-box');
+            pictureBox.classList.add('jump');
+            setTimeout(() => {
+                pictureBox.classList.remove('jump');
+            }, 1000);
+        }
+
+        // Add a test jump effect on page load
+        document.getElementById('picture-box').addEventListener('click', jumpAround);
+    </script>
+
+</body>
+</html>
+
+
+      
+<!-- Video Section -->
+<div class="video-container" style="margin-top: 20px;"> <!-- Adjusted margin to bring it closer -->
+    <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/acI1ljkM3vI?si=yuh-O-mE6epIcyQ-" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/xnHOxxJvGVo?si=bc9TmkcDpATfxNi9" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/qzZczdYPHLs?si=Y0oo1R6v43tODwIY" frameborder="0" allowfullscreen></iframe>
+    </div>
+    
+    <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/ZQbGFEaMzbE?si=_tXJDd4a8ytBijh9" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/8aKjjz3jssU?si=b95jkuKwt13HdNdn" frameborder="0" allowfullscreen></iframe>
+    </div>
+</div>
+
+
+
+
+<!-- Text Section Below Video Boxes -->
+<div class="heading text-center" style="margin-top: 100px;">
+    <h2>Purchase directly from the retailer.</h2>
+    <p>Your satisfaction is our priority. Explore the various retailers offering our products directly!</p>
+</div>
+        <div class="heading text-center">
+            <div class="container"> 
+                <!-- Heading -->
+      
+                <div class="picture-box">
+                    <img src="images/log/hwidgtardr.png" alt="Picture" class="img-responsive">
+                </div>
+    
+          
+            </div>
+        
+
+            <section id="buybuy">
+        <div class="flat plan">
+			<div class="col-lg-3 col-md-3 col-xs-6">
+                <ul class="plan plan1">
+                    <li class="plan-name">Master Package</li>
+                    <li class="plan-price"> <strong>$175</strong> / Price </li>
+                    <li> <strong>Access to GTA 5 Legacy & Enhanced, RDR2, FiveM, RedM, Spoofer and Tester </strong></li>
+                    <li> <strong>Lifetime to all</strong></li>
+    
+                    <li class="plan-action"> <a href="https://scooby.sell.app/product/mpinf" class="btn btn-danger btn-lg"target="_blank">Buy Now</a> </li>
+                    <li class="plan-action"><a href="https://scooby.sell.app/product/mpinf-copy" class="btn btn-danger btn-lg" target="_blank">Crypto</a></li>
+                    <li class="plan-action"><a href="giftcard.html" class="btn btn-danger btn-lg" target="_blank">Paysafe & Gift Cards</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-3 col-md-3 col-xs-6">
+                <ul class="plan plan1">
+                    <li class="plan-name">Private 8/25 slots left</li>
+                    <li class="plan-price"> <strong>$500</strong> / Price </li>
+                    <li> <strong>Access to GTA 5, RDR2, FiveM, RedM, Spoofer, unreleased products and Infamous Private</strong></li>
+                    <li> <strong>Lifetime to all</strong></li>
+    
+                    <li class="plan-action"> <a href="https://scooby.sell.app/product/mpinf" class="btn btn-danger btn-lg"target="_blank">Buy Now</a> </li>
+
+                    <li class="plan-action"><a href="giftcard.html" class="btn btn-danger btn-lg" target="_blank">Paysafe & Gift Cards</a></li>
+                </ul>
+            </div>
+
+            
+        </div>
+
+
+        
+    <div class="heading text-center">
+        <div class="container"> 
+            <!-- Heading -->
+  
+            <div class="picture-box">
+                <img src="images/log/gta5EN.png" alt="Picture" class="img-responsive">
+            </div>
+
+      
+        </div>
+
+    
+
+    </section>
+    <section id="plans" class="page-section">
+        <video id="video-background-plans" autoplay loop muted>
+            <source src="SnowNigger" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    
+ 
+    
+            
+            <div class="flat plan">
+         
+           <div class="col-lg-3 col-md-3 col-xs-6">
+                <ul class="plan plan1">
+                    <li class="plan-name">GTA 5 Enhanced Full Plus (BattlEye Version)</li>
+                    <li class="plan-price"><strong>$50</strong> / Price</li>
+           
+                    <li><strong>Battle Eye Enabled Support </strong></li>
+
+                    <li><strong>Fully Works in Public Sessions // Missions // Heists // Races etc</strong></li>
+                    
+                    <li><strong>No Host Needed</strong></li>
+                    
+                    <li><strong>Legacy & Enhanced  Support</strong></li>
+                    <li><strong>  </strong></li>
+                    <li><strong>  </strong></li>|
+                    <li><strong>  </strong></li>
+                    <li><strong>  </strong></li>
+                    <li><strong>  </strong></li>
+                    <li><strong>  </strong></li>
+                    <li><strong>  </strong></li>
+                    <li><strong>  </strong></li>
+                    <li><strong>  </strong></li>
+                    
+                    <li><strong>Lifetime</strong></li>
+                    <li class="plan-action"><a href="https://scooby.sell.app/product/infamous-full-plus-gta" class="btn btn-danger btn-lg" target="_blank">Buy Now</a></li>
+                    <li class="plan-action"><a href="https://scooby.sell.app/product/infamous-full-plus-gta" class="btn btn-danger btn-lg" target="_blank">Crypto</a></li>
+                    <li class="plan-action"><a href="giftcard.html" class="btn btn-danger btn-lg" target="_blank">Paysafe & Gift Cards</a></li>
+                    <li class="plan-action"><a href="https://scooby.sell.app/product/infamous-tester" class="btn btn-danger btn-lg" target="_blank">Buy Tester (Early Access)</a></li>
+                    <li class="plan-action"><a href="https://scooby.sell.app/product/infamous-full-plus-gta-upgrade" class="btn btn-danger btn-lg" target="_blank">Upgrade To Tester ()</a></li>
+                    <li class="plan-action"><a href="https://scooby.sell.app/product/infamous-full-plus-gta-upgrade" class="btn btn-danger btn-lg" target="_blank">Upgrade From Legacy to Enhanced (keep both versions, when upgraded)</a></li>
+                </ul>
+            </div>
+
+
+        </div>
+
+  
+
+    <div class="heading text-center">
+        <div class="container"> 
+            <!-- Heading -->
+  
+            <div class="picture-box">
+                <img src="images/log/gta5.png" alt="Picture" class="img-responsive">
+            </div>
+
+      
+        </div>
+
+    
+
+    </section>
+    <section id="plans" class="page-section">
+        <video id="video-background-plans" autoplay loop muted>
+            <source src="SnowNigger" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    
+ 
+    
+            
+            <div class="flat plan">
+            <div class="col-lg-3 col-md-3 col-xs-6">
+                <ul class="plan plan1">
+                    <li class="plan-name">GTA 5 Full Version</li>
+                    <li class="plan-price"><strong>$20</strong> / Price</li>
+                    <li><strong>Can Play Online in Solo & HOST is needed for Public sessions</strong></li>
+                    <li><strong>Battle Eye Disabled</strong></li>
+                    <li><strong>Inject in the loading screen</strong></li>
+                    <li><strong></strong></li>
+                    <li><strong>Session Bounty Loop</strong></li>
+                    <li><strong>Crashes & Kicks</strong></li>
+                    <li><strong>Player IP & Geo Location</strong></li>
+                    <li><strong>Money/Rp Drop & Give Collections to Players</strong></li>
+                    <li><strong>50+ Money Options</strong></li>
+                    <li><strong>Rank Options</strong></li>
+                    <li><strong>Stat Editor</strong></li>
+                    <li><strong>Unlocks/Unlock All</strong></li>
+                    <li><strong>Player Manget</strong></li>
+                    <li><strong>Full Creator - Map/Vehicles</strong></li>
+                    <li><strong>ScriptHookV</strong></li>
+                    <li><strong>Edit Outfit Names</strong></li>
+                    <li><strong>Casino Rigging</strong></li>
+                    <li><strong>Business Manager</strong></li>
+                    <li><strong>VFX Engine </strong></li>
+                    <li><strong>xml // ini // json support</strong></li>
+                    <li><strong>Save & Load Outfits & Vehicles </strong></li>
+                    <li><strong>Overall Much More Unique & Fun Options</strong></li>
+                    <li><strong>Advanced UI Editor</strong></li>
+                  
+                    
+                    <li><strong>Lifetime</strong></li>
+
+                    <li class="plan-action"><a href="https://scooby.sell.app/product/infamous-full-gta" class="btn btn-danger btn-lg" target="_blank">Buy Now</a></li>
+                    <li class="plan-action"><a href="https://scooby.sell.app/product/infamous-full-gta" class="btn btn-danger btn-lg" target="_blank">Crypto</a></li>
+                    <li class="plan-action"><a href="giftcard.html" class="btn btn-danger btn-lg" target="_blank">Paysafe & Gift Cards</a></li>
+                    <li class="plan-action"><a href="https://infamousgtav.sellpass.io/products/Lite-to-Full" class="btn btn-danger btn-lg" target="_blank">Upgrade to Full from Lite</a></li>
+                </ul>
+            </div>
+
+            <div class="col-lg-3 col-md-3 col-xs-6">
+                <ul class="plan plan1">
+                    <li class="plan-name">GTA 5 Full Plus // (BattlEye Version)  </li>
+                    <li class="plan-price"><strong>$50</strong> / Price</li>
+           
+                    <li><strong>Battle Eye Enabled Support </strong></li>
+
+                    <li><strong>Fully Works in Public Sessions // Missions // Heists // Races etc</strong></li>
+                    
+                    <li><strong>No Host Needed</strong></li>
+                    
+
+                    <li><strong>Inject anytime you want, like the good old days </strong></li>
+                    
+                    <li><strong>Save Any Vehicles in your Garage</strong></li>
+                    
+
+                    <li><strong> </strong></li>
+                    <li><strong>Crashes & Kicks</strong></li>
+                    <li><strong>Player IP & Geo Location</strong></li>
+                    <li><strong>Session Bounty Loop</strong></li>
+                    <li><strong>Money/Rp Drop & Give Collections to Players</strong></li>
+                    <li><strong>50+ Money Options</strong></li>
+                    <li><strong>Rank Options</strong></li>
+                    <li><strong>Stat Editor</strong></li>
+                    
+                    <li><strong>Unlocks/Unlock All</strong></li>
+                    <li><strong>Player Manget</strong></li>
+                    <li><strong>Full Creator - Map/Vehicles</strong></li>
+                    <li><strong>Edit Outfit Names</strong></li>
+                    <li><strong>Casino Rigging</strong></li>
+                    <li><strong>Business Manager</strong></li>
+                    <li><strong>VFX Engine</strong></li>
+                    <li><strong>Chat Spammer</strong></li>
+                    <li><strong>Advanced Protections</strong></li>
+                    <li><strong>Player Tracking</strong></li>
+                    <li><strong>Rockstar ID Tools</strong></li>
+                    <li><strong>Free Shopping</strong></li>
+                    <li><strong>ScriptHookV</strong></li>
+                    <li><strong>Lua Support</strong></li>
+                    <li><strong>xml // ini // json // txt // cfg support</strong></li>
+                    <li><strong>Save & Load Outfits & Vehicles & Maps</strong></li>
+                    <li><strong>Advanced UI Editor</strong></li>
+                    <li><strong>DLC Loading for Custom Vehicle/Ped Models</strong></li>
+                    <li><strong>Overall Much More Unique & Fun Options</strong></li>
+                    <li><strong>Fully Works in Public Sessions // Missions // Heists // Races etc</strong></li>
+                    <li><strong> </strong></li>
+                    <li><strong>Battle Eye Enabled Bypass // Support </strong></li>
+                    
+                    <li><strong>Lifetime</strong></li>
+                    <li class="plan-action"><a href="https://scooby.sell.app/product/infamous-full-plus-gta" class="btn btn-danger btn-lg" target="_blank">Buy Now</a></li>
+                    <li class="plan-action"><a href="https://scooby.sell.app/product/infamous-full-plus-gta" class="btn btn-danger btn-lg" target="_blank">Crypto</a></li>
+                    <li class="plan-action"><a href="giftcard.html" class="btn btn-danger btn-lg" target="_blank">Paysafe & Gift Cards</a></li>
+                    <li class="plan-action"><a href="https://scooby.sell.app/product/infamous-tester" class="btn btn-danger btn-lg" target="_blank">Buy Tester</a></li>
+                    <li class="plan-action"><a href="https://scooby.sell.app/product/infamous-full-plus-gta-upgrade" class="btn btn-danger btn-lg" target="_blank">Upgrade to Full from Full+</a></li>
+                </ul>
+            </div>
+
+
+        </div>
+
+        
+</section>
+<section id="plans" class="page-section">
+    <video id="video-background-plans" autoplay loop muted>
+        <source src="SnowNigger" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+
+        <div class="heading text-center">
+            <div class="container"> 
+                <!-- Heading -->
+                <div class="picture-box">
+                    <img src="images/log/RDR22.png" alt="Picture" class="img-responsive">
+                </div>
+                <p>Red Dead Redemption 2:<p>
+
+            </div>
+
+            <div class="flat plan">
+                <div class="col-lg-3 col-md-3 col-xs-6">
+    
+                    <ul class="plan plan1">
+                        <li class="plan-name">Infamous RDR2 Lite</li>
+                        <li class="plan-price"> <strong>$10</strong> / Price </li>
+                        <li> <strong>Basic Options</strong></li>
+        
+                        <li><strong>Lifetime</strong></li>
+                        <li class="plan-action"> <a href="https://scooby.sell.app/product/infamous-lite-rdr2" class="btn btn-danger btn-lg"target="_blank">Buy Now</a> </li>
+                        <li class="plan-action"><a href="giftcard.html" class="btn btn-danger btn-lg" target="_blank">Paysafe & Gift Cards</a></li>
+                    </ul>
+                </div>
+          
+            
+      
+       
+                <div class="col-lg-3 col-md-3 col-xs-6">
+    
+                    <ul class="plan plan1">
+                        <li class="plan-name">Infamous RDR2 Full </li>
+                        <li class="plan-price"> <strong>$20</strong> / Price </li>
+                        <li> <strong>Gold & Money Loops</strong></li>
+                        <li> <strong>XP Loop</strong></li>
+                        <li> <strong>Collections Loops</strong></li>
+                        <li> <strong>Roles XP Loops</strong></li>
+                        <li> <strong>Give Money & Gold to Friends/ Online Players</strong></li>
+                        <li> <strong>VFX Engine</strong></li>
+                        
+                        <li> <strong>Fun Options</strong></li>
+                        <li><strong>Lifetime</strong></li>
+        
+                        <li class="plan-action"> <a href="https://scooby.sell.app/product/infamous-full-rdr2" class="btn btn-danger btn-lg"target="_blank">Buy Now</a> </li>
+                        <li class="plan-action"><a href="https://scooby.sell.app/product/infamous-full-rdr2" class="btn btn-danger btn-lg" target="_blank">Crypto</a></li>
+                        <li class="plan-action"><a href="giftcard.html" class="btn btn-danger btn-lg" target="_blank">Paysafe & Gift Cards</a></li>
+                        <li class="plan-action"><a href="https://scooby.sell.app/product/infamous-lite-full-rdr" class="btn btn-danger btn-lg" target="_blank">Upgrade to Full from Lite</a></li>
+                    </ul>
+                </div>
+            </div>
+
+
+        </section>
+        <section id="plans" class="page-section">
+            <video id="video-background-plans" autoplay loop muted>
+                <source src="SnowNigger" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+
+            
+            <div class="heading text-center">
+                <div class="container"> 
+                    <!-- Heading -->
+                    <div class="picture-box">
+                        <img src="images/log/Fivem.png" alt="Picture" class="img-responsive">
+                    </div>
+                    <p>FiveM:<p>
+    
+                </div>
+
+                <div class="flat plan">
+                    <div class="col-lg-3 col-md-3 col-xs-6">
+        
+                        <ul class="plan plan1">
+                            <li class="plan-name">Infamous - FiveM Basic</li>
+                            <li class="plan-price"> <strong>$20</strong> / Price </li>
+                    
+                            <li> <strong>Aimbot & Settings</strong></li>
+                            <li> <strong>ESP - Players/Peds</strong></li>
+                            <li> <strong>Basic Options - Self/Weapon/Vehicle/Misc</strong></li>
+                            <li> <strong>Some VFX Options - Make the World YOUR</strong></li>
+                         <li> <strong>Lifetime</strong></li>
+                            <li> <strong></strong></li>
+                        
+            
+                            <li class="plan-action"> <a href="https://scooby.sell.app/product/yes-infamous-fivem" class="btn btn-danger btn-lg"target="_blank">Buy Now</a> </li>
+                            <li class="plan-action"> <a href="https://scooby.sell.app/product/yes-infamous-fivem" class="btn btn-danger btn-lg"target="_blank">Crypto</a> </li>
+                            <li class="plan-action"><a href="giftcard.html" class="btn btn-danger btn-lg" target="_blank">Paysafe & Gift Cards</a></li>
+                        </ul>
+                    </div>
+                
+
+       
+                        <div class="col-lg-3 col-md-3 col-xs-6">
+            
+                            <ul class="plan plan1">
+                                <li class="plan-name">Infamous - FiveM Full</li>
+                                <li class="plan-price"> <strong>$35</strong> / Price </li>
+                                    <li> <strong>Aimbot & Silent Aim & Magic Bullets & Settings</strong></li>
+                            <li> <strong>ESP - Players/Peds/Vehicle</strong></li>
+                                <li> <strong>Player Trolling</strong></li>
+                   
+                                <li> <strong>Unique Features you won't see in Fivem</strong></li>
+                                <li> <strong>Full VFX Engine - Make the World as You want it</strong></li>
+                                <li> <strong>Vehicle XML Spawner</strong></li>
+                                <li> <strong>Creator</strong></li>
+                             <li> <strong>Lifetime</strong></li>
+                                <li> <strong></strong></li>
+                            
+                
+                                <li class="plan-action"> <a href="https://scooby.sell.app/product/yes-infamous-fivem" class="btn btn-danger btn-lg"target="_blank">Buy Now</a> </li>
+                                <li class="plan-action"> <a href="https://scooby.sell.app/product/yes-infamous-fivem" class="btn btn-danger btn-lg"target="_blank">Crypto</a> </li>
+                                <li class="plan-action"><a href="giftcard.html" class="btn btn-danger btn-lg" target="_blank">Paysafe & Gift Cards</a></li>
+                            </ul>
+                        </div>
+      
+        </section>
+        <section id="plans" class="page-section">
+            <video id="video-background-plans" autoplay loop muted>
+                <source src="SnowNigger" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+
+            
+            <div class="heading text-center">
+                <div class="container"> 
+                    <!-- Heading -->
+                    <div class="picture-box">
+                        <img src="images/log/hwid.png" alt="Picture" class="img-responsive">
+                    </div>
+                    <p>Hardware Spoofer:<p>
+    
+                </div>
+                <div class="flat plan">
+                    <div class="col-lg-3 col-md-3 col-xs-6">
+        
+                        <ul class="plan plan1">
+                            <li class="plan-name">Infamous - Hardware Spoofer</li>
+                            <li class="plan-price"> <strong>$10 / $20</strong> / Price </li>
+                            <li> <strong>Spoof your Hardware</strong></li>
+                            <li> <strong>Protects your Main HWID</strong></li>
+                         <li> <strong>Get Past Any HWID'S Bans with One Click</strong></li>
+                         <li> <strong>Built in Cleaner for FiveM, Fortnite and More</strong></li>
+                         <li> <strong>1 Day / Lifetime</strong></li>
+                            <li> <strong></strong></li>
+                        
+            
+                            <li class="plan-action"> <a href="https://scooby.sell.app/product/infamous-hwid" class="btn btn-danger btn-lg"target="_blank">Buy Now</a> </li>
+                            <li class="plan-action"> <a href="https://scooby.sell.app/product/infamous-hwid" class="btn btn-danger btn-lg"target="_blank">Crypto</a> </li>
+                            <li class="plan-action"><a href="giftcard.html" class="btn btn-danger btn-lg" target="_blank">Paysafe & Gift Cards</a></li>
+                        </ul>
+                    </div>
+            
+
+        </section>
+        <section id="plans" class="page-section">
+            <video id="video-background-plans" autoplay loop muted>
+                <source src="SnowNigger" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+
+            
+            <div class="heading text-center">
+                <div class="container"> 
+                    <!-- Heading -->
+                    <div class="picture-box">
+                        <img src="images/log/cs2.png" alt="Picture" class="img-responsive">
+                    </div>
+                    <p>Counter-Strike 2:<p>
+    
+                </div>
+                <div class="flat plan">
+                    <div class="col-lg-3 col-md-3 col-xs-6">
+        
+                        <ul class="plan plan1">
+                            <li class="plan-name">Infamous - CS2</li>
+                            <li class="plan-price"> <strong>$5 / $65</strong> / Price </li>
+                            <li> <strong>  </strong></li>
+                            <li> <strong></strong></li>
+                            <li> <strong>30 days / Lifetime</strong></li>
+            
+                            <li class="plan-action"> <a href="https://infamousunleashed.mysellix.io/" class="btn btn-danger btn-lg"target="_blank">Buy Lifetime</a> </li>
+                            <li class="plan-action"> <a href="https://infamousunleashed.mysellix.io/product/infamous-cs2-30" class="btn btn-danger btn-lg"target="_blank">Buy 30 Days</a> </li>
+
+                            <li class="plan-action"><a href="giftcard.html" class="btn btn-danger btn-lg" target="_blank">Paysafe & Gift Cards</a></li>
+                        </ul>
+                    </div>
+            
+
+        </section>
+        <section id="plans" class="page-section">
+            <video id="video-background-plans" autoplay loop muted>
+                <source src="SnowNigger" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+
+            
+            <div class="heading text-center">
+                <div class="container"> 
+                    <!-- Heading -->
+                    <div class="picture-box">
+                        <img src="images/log/codd.png" alt="Picture" class="img-responsive">
+                    </div>
+                    <p>Call of Duty BO6/MW3/MW2/Warzone:<p>
+    
+                </div>
+                <div class="flat plan">
+                    <div class="col-lg-3 col-md-3 col-xs-6">
+        
+                        <ul class="plan plan1">
+                            <li class="plan-name">Infamous COD</li>
+                            <li class="plan-price"> <strong>$6-$60</strong> / Price </li>
+                            <li> <strong>Aimbot/ESP/AntiAim/More</strong></li>
+                            <li> <strong>Unlock All</strong></li>
+                            <li> <strong>Rage & Legit</strong></li>
+                            <li> <strong>Day/Week/Month/Lifetime</strong></li>
+            
+                            <li class="plan-action"> <a href="https://infamousgtav.sellpass.io/products/Infamous-Warzone" class="btn btn-danger btn-lg"target="_blank">Buy Now</a> </li>
+                            <li class="plan-action"> <a href="https://infamousunleashed.mysellix.io/product/infamous-cs2-30" class="btn btn-danger btn-lg"target="_blank">Crypto</a> </li>
+
+                        </ul>
+                    </div>
+            
+			
+        </div>
+
+
+        <div class="heading text-center">
+            <div class="container"> 
+                <!-- Heading -->
+                <div class="picture-box">
+                    <img src="images/log/fortnite.png" alt="Picture" class="img-responsive">
+                </div>
+                <p>Fortnite<p>
+
+            </div>
+            <div class="flat plan">
+                <div class="col-lg-3 col-md-3 col-xs-6">
+    
+                    <ul class="plan plan1">
+                        <li class="plan-name">Infamous - Fortnite</li>
+                        <li class="plan-price"> <strong>$8-$150</strong> / Price </li>
+                        <li> <strong>Tournament Ready</strong></li>
+                        <li> <strong>Aimbot/ESP</strong></li>
+                        <li> <strong>Legit Cheat</strong></li>
+                        <li> <strong>Day/Week/Month/Lifetime</strong></li>
+        
+                        <li class="plan-action"> <a href="https://infamousgtav.sellpass.io/products/Infamous-FN" class="btn btn-danger btn-lg"target="_blank">Buy Now</a> </li>
+                        <li class="plan-action"> <a href="https://infamousunleashed.mysellix.io/" class="btn btn-danger btn-lg"target="_blank">Crypto</a> </li>
+                    </ul>
+                </div>
+        
+        
+    </div>
+		
+    </div>
+
+
+    
+
+<section id="plans" class="page-section">
+    <video id="video-background-plans" autoplay loop muted>
+        <source src="SnowNigger" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+
+
+
+<div class="heading text-center">
+    <div class="container"> 
+        <!-- Heading -->
+
+        <div class="picture-box">
+            <img src="images/log/gta5.png" alt="Picture" class="img-responsive">
+        </div>
+
+  
+    </div>
+
+    
+</section>
+<section id="plans" class="page-section">
+    <video id="video-background-plans" autoplay loop muted>
+        <source src="SnowNigger" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+
+
+<section id="team" class="page-section">
+  <div class="container">
+    <div class="heading text-center"> 
+      <!-- Heading -->
+      <h2>GTA 5 - Resellers</h2>
+      <p>Explore the multitude of sellers offering Infamous for sale.</p>
+    </div>
+
+
+
+    
+    <div class="team-content">
+        <div class="row">
+        
+
+            <div class="col-md-3 col-sm-6 col-xs-6">
+                <!-- Team Member -->
+                <div class="team-member pDark">
+                    <!-- Image Hover Block -->
+                    <div class="member-img">
+                        <!-- Image  -->
+                        <img class="img-responsive" src="images/reseller/wwbst.png" alt="">
+                    </div>
+                    <!-- Member Details -->
+                    <h2>WWB</h2>
+                    <!-- Designation -->
+                    <div class="team-socials">
+                        <a href="https://whatwhatboy.sellpass.io/products/Infamous-GTA"target="_blank">
+                            <img src="images/link.png" alt="Custom Image">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="col-md-3 col-sm-6 col-xs-6">
+                <!-- Team Member -->
+                <div class="team-member pDark">
+                    <!-- Image Hover Block -->
+                    <div class="member-img">
+                        <!-- Image  -->
+                        <img class="img-responsive" src="images/reseller/rk.png" alt="">
+                    </div>
+                    <!-- Member Details -->
+                    <h2>Recoverykings</h2>
+                    <!-- Designation -->
+                    <div class="team-socials">
+                        <a href="https://recoverykings.net/product/infamous/?coupon=uno"target="_blank">
+                            <img src="images/link.png" alt="Custom Image">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 col-xs-6">
+                <!-- Team Member -->
+                <div class="team-member pDark">
+                    <!-- Image Hover Block -->
+                    <div class="member-img">
+                        <!-- Image  -->
+                        <img class="img-responsive" src="images/reseller/Noah.png" alt="">
+                    </div>
+                    <!-- Member Details -->
+                    <h2>Noahs Mods</h2>
+                    <!-- Designation -->
+                    <div class="team-socials">
+                        <a href="https://noahsmods.com/product/infamous/"target="_blank">
+                            <img src="images/link.png" alt="Custom Image">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            
+  
+
+            <div class="col-md-3 col-sm-6 col-xs-6">
+                <!-- Team Member -->
+                <div class="team-member pDark">
+                    <!-- Image Hover Block -->
+                    <div class="member-img">
+                        <!-- Image  -->
+                        <img class="img-responsive" src="images/reseller/ezMod.png" alt="">
+                    </div>
+                    <!-- Member Details -->
+                    <h2>EZmod</h2>
+                    <!-- Designation -->
+                    <div class="team-socials">
+                        <a href="https://ezmod.vip/product/infamous-gta-mod-menu/"target="_blank">
+                            <img src="images/link.png" alt="Custom Image">
+                        </a>
+                    </div>
+                </div>
+            </div>
+         
+
+            <div class="col-md-3 col-sm-6 col-xs-6">
+                <!-- Team Member -->
+                <div class="team-member pDark">
+                    <!-- Image Hover Block -->
+                    <div class="member-img">
+                        <!-- Image  -->
+                        <img class="img-responsive" src="images/reseller/lokoo.png" alt="">
+                    </div>
+                    <!-- Member Details -->
+                    <h2>Lokoszservices</h2>
+                    <!-- Designation -->
+                    <div class="team-socials">
+                        <a href="https://lokoszservices.sellauth.com/product/977bfd7f298e0"target="_blank">
+                            <img src="images/link.png" alt="Custom Image">
+                        </a>
+                    </div>
+                </div>
+            
+            </div>
+
+
+
+            <div class="col-md-3 col-sm-6 col-xs-6">
+                <!-- Team Member -->
+                <div class="team-member pDark">
+                    <!-- Image Hover Block -->
+                    <div class="member-img">
+                        <!-- Image  -->
+                        <img class="img-responsive" src="images/reseller/acces.png" alt="">
+                    </div>
+                    <!-- Member Details -->
+                    <h2>Acces Solutions</h2>
+                    <!-- Designation -->
+                    <div class="team-socials">
+                        <a href="https://www.acces2solutions.com/en/product-page/infamous-mod-menu-gta-v-lifetime"target="_blank">
+                            <img src="images/link.png" alt="Custom Image">
+                        </a>
+                    </div>
+                </div>
+            
+            </div>
+
+            
+               
+            <div class="col-md-3 col-sm-6 col-xs-6">
+                <!-- Team Member -->
+                <div class="team-member pDark">
+                    <!-- Image Hover Block -->
+                    <div class="member-img">
+                        <!-- Image  -->
+                        <img class="img-responsive" src="images/reseller/yuri.png" alt="">
+                    </div>
+                    <!-- Member Details -->
+                    <h2>Yurimod</h2>
+                    <!-- Designation -->
+                    <div class="team-socials">
+                        <a href="https://yurimod.com/product/infamous-mod-menu/"target="_blank">
+                            <img src="images/link.png" alt="Custom Image">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-3 col-sm-6 col-xs-6">
+                <!-- Team Member -->
+                <div class="team-member pDark">
+                    <!-- Image Hover Block -->
+                    <div class="member-img">
+                        <!-- Image  -->
+                        <img class="img-responsive" src="images/reseller/supkeys.png" alt="">
+                    </div>
+                    <!-- Member Details -->
+                    <h2>Supreme Keys</h2>
+                    <!-- Designation -->
+                    <div class="team-socials">
+                        <a href="https://supremekeys.net/product/infamous-premium/"target="_blank">
+                            <img src="images/link.png" alt="Custom Image">
+                        </a>
+                    </div>
+              
+            </div>
+            </div>
+
+        
+
+
+    
+
+
+            <div class="col-md-3 col-sm-6 col-xs-6">
+                <!-- Team Member -->
+                <div class="team-member pDark">
+                    <!-- Image Hover Block -->
+                    <div class="member-img">
+                        <!-- Image  -->
+                        <img class="img-responsive" src="images/reseller/wicked.png" alt="">
+                    </div>
+                    <!-- Member Details -->
+                    <h2>Wicked Gamerz</h2>
+                    <!-- Designation -->
+                    <div class="team-socials">
+                        <a href="https://www.wickedgamerz.com/purchase-infamous"target="_blank">
+                            <img src="images/link.png" alt="Custom Image">
+                        </a>
+                    </div>
+                </div>
+            </div>
+          
+		  
+
+            
+            <div class="col-md-3 col-sm-6 col-xs-6">
+                <!-- Team Member -->
+                <div class="team-member pDark">
+                    <!-- Image Hover Block -->
+                    <div class="member-img">
+                        <!-- Image  -->
+                        <img class="img-responsive" src="images/reseller/PremiumCheats.png" alt="">
+                    </div>
+                    <!-- Member Details -->
+                    <h2>Premium Cheats</h2>
+                    <!-- Designation -->
+                    <div class="team-socials">
+                        <a href="https://discord.gg/"target="_blank">
+                            <img src="images/link.png" alt="Custom Image">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="col-md-3 col-sm-6 col-xs-6">
+                <!-- Team Member -->
+                <div class="team-member pDark">
+                    <!-- Image Hover Block -->
+                    <div class="member-img">
+                        <!-- Image  -->
+                        <img class="img-responsive" src="images/reseller/Omar.png" alt="">
+                    </div>
+                    <!-- Member Details -->
+                    <h2>OmarPlays</h2>
+                    <!-- Designation -->
+                    <div class="team-socials">
+                        <a href=" "target="_blank">
+                            <img src="images/link.png" alt="Custom Image">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+   
+      
+
+            <div class="col-md-3 col-sm-6 col-xs-6">
+                <!-- Team Member -->
+                <div class="team-member pDark">
+                    <!-- Image Hover Block -->
+                    <div class="member-img">
+                        <!-- Image  -->
+                        <img class="img-responsive" src="images/reseller/moddingpal.png" alt="">
+                    </div>
+                    <!-- Member Details -->
+                    <h2>Modding Palace</h2>
+                    <!-- Designation -->
+                    <div class="team-socials">
+                        <a href="https://moddingpalace.com/product/infamous/"target="_blank">
+                            <img src="images/link.png" alt="Custom Image">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+    
+        
+           
+            <div class="col-md-3 col-sm-6 col-xs-6">
+                <!-- Team Member -->
+                <div class="team-member pDark">
+                    <!-- Image Hover Block -->
+                    <div class="member-img">
+                        <!-- Image  -->
+                        <img class="img-responsive" src="images/reseller/unix.png" alt="">
+                    </div>
+                    <!-- Member Details -->
+                    <h2>Unixx </h2>
+                    <!-- Designation -->
+                    <div class="team-socials">
+                        <a href="https://unixx.shop/#28"target="_blank">
+                            <img src="images/link.png" alt="Custom Image">
+                        </a>
+                    </div>
+                </div>
+            
+            </div>
+
+   
+
+
+            <div class="col-md-3 col-sm-6 col-xs-6">
+                <!-- Team Member -->
+                <div class="team-member pDark">
+                    <!-- Image Hover Block -->
+                    <div class="member-img">
+                        <!-- Image  -->
+                        <img class="img-responsive" src="images/reseller/divinemods.png" alt="">
+                    </div>
+                    <!-- Member Details -->
+                    <h2>Divinemods</h2>
+                    <!-- Designation -->
+                    <div class="team-socials">
+                        <a href="https://divinemods.com/shop/gta-v/infamous"target="_blank">
+                            <img src="images/link.png" alt="Custom Image">
+                        </a>
+                    </div>
+                </div>
+            
+            </div>
+
+            <div class="col-md-3 col-sm-6 col-xs-6">
+                <!-- Team Member -->
+                <div class="team-member pDark">
+                    <!-- Image Hover Block -->
+                    <div class="member-img">
+                        <!-- Image  -->
+                        <img class="img-responsive" src="images/reseller/infmods.png" alt="">
+                    </div>
+                    <!-- Member Details -->
+                    <h2>Infinitymods</h2>
+                    <!-- Designation -->
+                    <div class="team-socials">
+                        <a href="https://infinitymods.cc/shop/gta-v/infamous"target="_blank">
+                            <img src="images/link.png" alt="Custom Image">
+                        </a>
+                    </div>
+                </div>
+            
+            </div>
+
+            <div class="col-md-3 col-sm-6 col-xs-6">
+                <!-- Team Member -->
+                <div class="team-member pDark">
+                    <!-- Image Hover Block -->
+                    <div class="member-img">
+                        <!-- Image  -->
+                        <img class="img-responsive" src="images/reseller/wws.png" alt="">
+                    </div>
+                    <!-- Member Details -->
+                    <h2>WalterWhiteModz</h2>
+                    <!-- Designation -->
+                    <div class="team-socials">
+                        <a href="https://discord.gg/worldwinnersbr"target="_blank">
+                            <img src="images/link.png" alt="Custom Image">
+                        </a>
+                    </div>
+                </div>
+            
+            </div>
+
+            <div class="col-md-3 col-sm-6 col-xs-6">
+                <!-- Team Member -->
+                <div class="team-member pDark">
+                    <!-- Image Hover Block -->
+                    <div class="member-img">
+                        <!-- Image  -->
+                        <img class="img-responsive" src="images/reseller/hansModz.png" alt="">
+                    </div>
+                    <!-- Member Details -->
+                    <h2>HansModz </h2>
+                    <!-- Designation -->
+                    <div class="team-socials">
+                        <a href="https://hansmodz.com/product/infamous-mod-menu/"target="_blank">
+                            <img src="images/link.png" alt="Custom Image">
+                        </a>
+                    </div>
+                </div>
+            
+            </div>
+
+ 
+            <div class="col-md-3 col-sm-6 col-xs-6">
+                <!-- Team Member -->
+                <div class="team-member pDark">
+                    <!-- Image Hover Block -->
+                    <div class="member-img">
+                        <!-- Image  -->
+                        <img class="img-responsive" src="images/reseller/Modmarket.png" alt="">
+                    </div>
+                    <!-- Member Details -->
+                    <h2>Mod Market</h2>
+                    <!-- Designation -->
+                    <div class="team-socials">
+                        <a href="https://sites.google.com/view/mod-market-online/inicio"target="_blank">
+                            <img src="images/link.png" alt="Custom Image">
+                        </a>
+                    </div>
+                </div>
+
+            		
+           
+
+            
+
+            </div>
+        </div>
+    </div>
+  </div>
+
+  
+
+
+
+
+  
+    <div class="container">
+    <div class="heading text-center"> 
+      <!-- Heading -->
+      <h2>CN Resellers</h2>
+      <p>探索众多销售Infamous的卖家。.</p>
+    </div>
+    <!-- Team Member's Details -->
+    <div class="team-content">
+        <div class="row">
+		
+
+            <div class="col-md-3 col-sm-6 col-xs-6">
+                <!-- Team Member -->
+                <div class="team-member pDark">
+                    <!-- Image Hover Block -->
+                    <div class="member-img">
+                        <!-- Image  -->
+                        <img class="img-responsive" src="images/reseller/999.png" alt="">
+                    </div>
+                    <!-- Member Details -->
+                    <h2>999（招募中国经销商</h2>
+                    <!-- Designation -->
+                    <div class="team-socials">
+                        <a href=" http://999mod.co/"target="_blank">
+                            <img src="images/link.png" alt="Custom Image">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+         <div class="col-md-3 col-sm-6 col-xs-6">
+                <!-- Team Member -->
+                <div class="team-member pDark">
+                    <!-- Image Hover Block -->
+                    <div class="member-img">
+                        <!-- Image  -->
+                        <img class="img-responsive" src="images/reseller/cnr.png" alt="">
+                    </div>
+                    <!-- Member Details -->
+                    <h2> 智宇 </h2>
+                    <!-- Designation -->
+                    <div class="team-socials">
+                        <a href=" https://www.gtazhiyu.com/"target="_blank">
+                            <img src="images/link.png" alt="Custom Image">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 col-xs-6">
+                <!-- Team Member -->
+                <div class="team-member pDark">
+                    <!-- Image Hover Block -->
+                    <div class="member-img">
+                        <!-- Image  -->
+                        <img class="img-responsive" src="images/reseller/shicn.png" alt="">
+                    </div>
+                    <!-- Member Details -->
+                    <h2> Shark </h2>
+                    <!-- Designation -->
+                    <div class="team-socials">
+                        <a href=" https://sharkcheats.com/"target="_blank">
+                            <img src="images/link.png" alt="Custom Image">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 col-xs-6">
+                <!-- Team Member -->
+                <div class="team-member pDark">
+                    <!-- Image Hover Block -->
+                    <div class="member-img">
+                        <!-- Image  -->
+                        <img class="img-responsive" src="images/reseller/gualao.png" alt="">
+                    </div>
+                    <!-- Member Details -->
+                    <h2> Gualoa </h2>
+                    <!-- Designation -->
+                    <div class="team-socials">
+                        <a href="https://www.gualaoshop.com/?cid=2&mid=340"target="_blank">
+                            <img src="images/link.png" alt="Custom Image">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-3 col-sm-6 col-xs-6">
+                <!-- Team Member -->
+                <div class="team-member pDark">
+                    <!-- Image Hover Block -->
+                    <div class="member-img">
+                        <!-- Image  -->
+                        <img class="img-responsive" src="images/reseller/XiGua.jpg" alt="">
+                    </div>
+                    <!-- Member Details -->
+                    <h2> XiGua </h2>
+                    <!-- Designation -->
+                    <div class="team-socials">
+                        <a href="https://xgp.icu/"target="_blank">
+                            <img src="images/link.png" alt="Custom Image">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            </div>
+		
+
+            
+
+
+
+			
+     </div>
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+  </div>
+        </div>
+    </div>
+  </div>
+
+
+  
+
+<section id="plans" class="page-section">
+    <video id="video-background-plans" autoplay loop muted>
+        <source src="SnowNigger" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+
+  <div class="heading text-center">
+    <div class="container"> 
+        <!-- Heading -->
+
+        <div class="picture-box">
+            <img src="images/log/RDR22.png" alt="Picture" class="img-responsive">
+        </div>
+
+  
+    </div>
+
+
+<section id="team" class="page-section">
+  <div class="container">
+    <div class="heading text-center"> 
+      <!-- Heading -->
+      <h2>RDR2 - Resellers</h2>
+      <p>    </p>
+    </div>
+
+    <div class="team-content">
+        <div class="row">
+        
+
+            <div class="col-md-3 col-sm-6 col-xs-6">
+                <!-- Team Member -->
+                <div class="team-member pDark">
+                    <!-- Image Hover Block -->
+                    <div class="member-img">
+                        <!-- Image  -->
+                        <img class="img-responsive" src="images/reseller/wwbst.png" alt="">
+                    </div>
+                    <!-- Member Details -->
+                    <h2>WWB</h2>
+                    <!-- Designation -->
+                    <div class="team-socials">
+                        <a href="https://whatwhatboy.sellpass.io/products/Infamous-RDR2"target="_blank">
+                            <img src="images/link.png" alt="Custom Image">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="col-md-3 col-sm-6 col-xs-6">
+                <!-- Team Member -->
+                <div class="team-member pDark">
+                    <!-- Image Hover Block -->
+                    <div class="member-img">
+                        <!-- Image  -->
+                        <img class="img-responsive" src="images/reseller/rk.png" alt="">
+                    </div>
+                    <!-- Member Details -->
+                    <h1>Recoverykings</h1>
+                    <!-- Designation -->
+                    <div class="team-socials">
+                        <a href="https://recoverykings.net/product/infamous-rdr2/?coupon=uno"target="_blank">
+                            <img src="images/link.png" alt="Custom Image">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+     
+            <div class="col-md-3 col-sm-6 col-xs-6">
+                <!-- Team Member -->
+                <div class="team-member pDark">
+                    <!-- Image Hover Block -->
+                    <div class="member-img">
+                        <!-- Image  -->
+                        <img class="img-responsive" src="images/reseller/Noah.png" alt="">
+                    </div>
+                    <!-- Member Details -->
+                    <h2>Noahs Mods</h2>
+                    <!-- Designation -->
+                    <div class="team-socials">
+                        <a href="https://noahsmods.com/product/infamous/"target="_blank">
+                            <img src="images/link.png" alt="Custom Image">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-3 col-sm-6 col-xs-6">
+                <!-- Team Member -->
+                <div class="team-member pDark">
+                    <!-- Image Hover Block -->
+                    <div class="member-img">
+                        <!-- Image  -->
+                        <img class="img-responsive" src="images/reseller/supkeys.png" alt="">
+                    </div>
+                    <!-- Member Details -->
+                    <h2>Supreme Keys</h2>
+                    <!-- Designation -->
+                    <div class="team-socials">
+                        <a href="https://supremekeys.net/product/infamous-premium/"target="_blank">
+                            <img src="images/link.png" alt="Custom Image">
+                        </a>
+                    </div>
+              
+            </div>
+            </div>
+
+
+            <div class="col-md-3 col-sm-6 col-xs-6">
+                <!-- Team Member -->
+                <div class="team-member pDark">
+                    <!-- Image Hover Block -->
+                    <div class="member-img">
+                        <!-- Image  -->
+                        <img class="img-responsive" src="images/reseller/wws.png" alt="">
+                    </div>
+                    <!-- Member Details -->
+                    <h2>WalterWhiteModz</h2>
+                    <!-- Designation -->
+                    <div class="team-socials">
+                        <a href="https://discord.gg/worldwinnersbr"target="_blank">
+                            <img src="images/link.png" alt="Custom Image">
+                        </a>
+                    </div>
+                </div>
+            
+            </div>
+
+
+            </div>
+        </div>
+    </div>
+  </div>
+
+
+
+  <div class="heading text-center">
+    <div class="container"> 
+        <!-- Heading -->
+
+        <div class="picture-box">
+            <img src="images/log/hwid.png" alt="Picture" class="img-responsive">
+        </div>
+
+  
+    </div>
+
+  <section id="team" class="page-section">
+    <div class="container">
+      <div class="heading text-center"> 
+        <!-- Heading -->
+        <h2>Hardware Spoofer - Resellers</h2>
+        <p>   </p>
+      </div>
+
+      
+  
+      <div class="team-content">
+          <div class="row">
+          
+  
+            <div class="col-md-3 col-sm-6 col-xs-6">
+                <!-- Team Member -->
+                <div class="team-member pDark">
+                    <!-- Image Hover Block -->
+                    <div class="member-img">
+                        <!-- Image  -->
+                        <img class="img-responsive" src="images/reseller/wwbst.png" alt="">
+                    </div>
+                    <!-- Member Details -->
+                    <h2>WWB</h2>
+                    <!-- Designation -->
+                    <div class="team-socials">
+                        <a href="https://whatwhatboy.sellpass.io/products/Infamous-RDR2"target="_blank">
+                            <img src="images/link.png" alt="Custom Image">
+                        </a>
+                    </div>
+                </div>
+            </div>
+  
+            <div class="col-md-3 col-sm-6 col-xs-6">
+                <!-- Team Member -->
+                <div class="team-member pDark">
+                    <!-- Image Hover Block -->
+                    <div class="member-img">
+                        <!-- Image  -->
+                        <img class="img-responsive" src="images/reseller/rk.png" alt="">
+                    </div>
+                    <!-- Member Details -->
+                    <h1>Recoverykings</h1>
+                    <!-- Designation -->
+                    <div class="team-socials">
+                        <a href="https://recoverykings.net/?coupon=uno"target="_blank">
+                            <img src="images/link.png" alt="Custom Image">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-3 col-sm-6 col-xs-6">
+                <!-- Team Member -->
+                <div class="team-member pDark">
+                    <!-- Image Hover Block -->
+                    <div class="member-img">
+                        <!-- Image  -->
+                        <img class="img-responsive" src="images/reseller/wws.png" alt="">
+                    </div>
+                    <!-- Member Details -->
+                    <h2>WalterWhiteModz</h2>
+                    <!-- Designation -->
+                    <div class="team-socials">
+                        <a href="https://discord.gg/worldwinnersbr"target="_blank">
+                            <img src="images/link.png" alt="Custom Image">
+                        </a>
+                    </div>
+                </div>
+            
+            </div>
+
+            
+            <div class="col-md-3 col-sm-6 col-xs-6">
+                <!-- Team Member -->
+                <div class="team-member pDark">
+                    <!-- Image Hover Block -->
+                    <div class="member-img">
+                        <!-- Image  -->
+                        <img class="img-responsive" src="images/reseller/Noah.png" alt="">
+                    </div>
+                    <!-- Member Details -->
+                    <h2>Noahs Mods</h2>
+                    <!-- Designation -->
+                    <div class="team-socials">
+                        <a href="https://noahsmods.com/product/infamous-spoofer"target="_blank">
+                            <img src="images/link.png" alt="Custom Image">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            
+
+
+
+
+        </div>
+    </div>
+  </div>
+
+
+  <section id="plans" class="page-section">
+    <video id="video-background-plans" autoplay loop muted>
+        <source src="SnowNigger" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+  <div class="heading text-center">
+    <div class="container"> 
+        <!-- Heading -->
+
+        <div class="picture-box">
+            <img src="images/log/Fivem.png" alt="Picture" class="img-responsive">
+        </div>
+
+  
+    </div>
+
+  <section id="team" class="page-section">
+    <div class="container">
+      <div class="heading text-center"> 
+        <!-- Heading -->
+        <h2>FiveM - Resellers</h2>
+        <p>   </p>
+      </div>
+  
+      <div class="team-content">
+          <div class="row">
+          
+  
+  
+       
+              <div class="col-md-3 col-sm-6 col-xs-6">
+                  <!-- Team Member -->
+                  <div class="team-member pDark">
+                      <!-- Image Hover Block -->
+                      <div class="member-img">
+                          <!-- Image  -->
+                          <img class="img-responsive" src="images/reseller/ " alt="">
+                      </div>
+                      <!-- Member Details -->
+                      <h2>Place</h2>
+                      <!-- Designation -->
+                      <div class="team-socials">
+                          <a href="  "target="_blank">
+                              <img src="images/link.png" alt="Custom Image">
+                          </a>
+                      </div>
+                  </div>
+              </div>
+              
+
+<section id="plans" class="page-section">
+    <video id="video-background-plans" autoplay loop muted>
+        <source src="SnowNigger" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+  <div class="heading text-center">
+    <div class="container"> 
+        <!-- Heading -->
+
+        <div class="picture-box">
+            <img src="images/log/cs2.png" alt="Picture" class="img-responsive">
+        </div>
+
+  
+    </div>
+
+  <section id="team" class="page-section">
+    <div class="container">
+      <div class="heading text-center"> 
+        <!-- Heading -->
+        <h2>CS2- Resellers</h2>
+        <p>   </p>
+      </div>
+  
+      <div class="team-content">
+          <div class="row">
+          
+  
+  
+       
+              <div class="col-md-3 col-sm-6 col-xs-6">
+                  <!-- Team Member -->
+                  <div class="team-member pDark">
+                      <!-- Image Hover Block -->
+                      <div class="member-img">
+                          <!-- Image  -->
+                          <img class="img-responsive" src="images/reseller/ " alt="">
+                      </div>
+                      <!-- Member Details -->
+                      <h2>Place</h2>
+                      <!-- Designation -->
+                      <div class="team-socials">
+                          <a href="  "target="_blank">
+                              <img src="images/link.png" alt="Custom Image">
+                          </a>
+                      </div>
+                  </div>
+              </div>
+              
+              <section id="plans" class="page-section">
+                <video id="video-background-plans" autoplay loop muted>
+                    <source src="SnowNigger" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+  
+            </div>
+  <div class="heading text-center">
+    <div class="container"> 
+        <!-- Heading -->
+
+        <div class="picture-box">
+            <img src="images/log/codd.png" alt="Picture" class="img-responsive">
+        </div>
+
+  
+    </div>
+
+  <section id="team" class="page-section">
+    <div class="container">
+      <div class="heading text-center"> 
+        <!-- Heading -->
+        <h2>Cod - Resellers</h2>
+        <p>   </p>
+      </div>
+  
+      <div class="team-content">
+          <div class="row">
+          
+  
+  
+       
+              <div class="col-md-3 col-sm-6 col-xs-6">
+                  <!-- Team Member -->
+                  <div class="team-member pDark">
+                      <!-- Image Hover Block -->
+                      <div class="member-img">
+                          <!-- Image  -->
+                          <img class="img-responsive" src="images/reseller/Noah.png" alt="">
+                      </div>
+                      <!-- Member Details -->
+                      <h2>Noahs Mods</h2>
+                      <!-- Designation -->
+                      <div class="team-socials">
+                          <a href="https://noahsmods.com/product/infamous-cod/"target="_blank">
+                              <img src="images/link.png" alt="Custom Image">
+                          </a>
+                      </div>
+                  </div>
+              </div>
+  
+              <section id="team" class="page-section">
+                <div class="container">
+                  <div class="heading text-center"> 
+                    <!-- Heading -->
+                    <h2>Fortnite - Resellers</h2>
+    
+                  </div>
+              
+                  <div class="team-content">
+                      <div class="row">
+                      
+              
+              
+                   
+                          <div class="col-md-3 col-sm-6 col-xs-6">
+                              <!-- Team Member -->
+                              <div class="team-member pDark">
+                                  <!-- Image Hover Block -->
+                                  <div class="member-img">
+                                      <!-- Image  -->
+                                      <img class="img-responsive" src="images/reseller/ " alt="">
+                                  </div>
+                                  <!-- Member Details -->
+                                  <h2>Place</h2>
+                                  <!-- Designation -->
+                                  <div class="team-socials">
+                                      <a href="  "target="_blank">
+                                          <img src="images/link.png" alt="Custom Image">
+                                      </a>
+                                  </div>
+                              </div>
+                          </div>
+              
+                         
+
+  
+  
+              </div>
+          </div>
+      </div>
+    </div>
+
+
+
+</section>
+<section id="plans" class="page-section">
+    <video id="video-background-plans" autoplay loop muted>
+        <source src="SnowNigger" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div>
+</div>
+
+
+  <!--/.container--> 
+</section>
+<section id="contactUs" class="contact-parlex">
+  <div class="parlex-back">
+      <div class="container">
+          <div class="row">
+              <div class="heading text-center">
+                  <!-- Heading -->
+             <div id="SocialsHeader">
+        <div class="container"> 
+            <div class="socialLinks">Infamous Community</div>
+
+    </div>
+    <div class="socialButtons">
+        <div class="ButtonIcons">
+            <a class="icons" target="_blank" href="https://discord.gg/2KYUvZkD5q"><img
+                src="assets/discord.png" alt=""></a>
+  
+            <a class="icons" target="_blank" href="https://t.me/InfamousMenu"><img src="assets/telegram.png" alt=""></a>
+            <a class="icons" target="_blank" href="https://x.com/InfamousUL"><img
+            src="assets/x.png" alt=""></a>
+    
+</div>
+
+              </div></div>
+          </div>
+
+          <section id="download">
+          <div class="socialLinks">Download</div>
+          <section id="contactUs" class="contact-parlex">
+            <div class="parlex-back">
+                <div class="container">
+                    <div class="row">
+                        <div class="heading text-center">
+                            <!-- Heading -->
+                            <h2>Launcher</h2>
+        <div class="col-sm-12 text-center">Launcher Crashing? Install Me <a href="https://aka.ms/vs/17/release/vc_redist.x86.exe">Download</a> </div>
+			 <div class="col-sm-12 text-center">
+                <a href="Infamous - En.zip"><img src="images/Download.png" alt="discord"></a>
+
+		  
+
+
+                <div class="flex-container">
+                    <div class="flex-item">
+                      <h1 class="hero-title mt-0"> </h1>
+                    </div>
+             
+                </div>
+             
+         
+      
+                  <div class="video-container">
+                    <div class="video-box">
+                      <iframe src="https://www.youtube.com/embed/JHClTd3WOeM?si=iP52DbJiwDjRXgV5" frameborder="1" allowfullscreen></iframe>
+                    </div>
+                </div>           
+            </div>
+
+               
+      </div>
+      </div>
+   <!--/.container--> 
+<!--/.page-section-->
+  <div class="container">
+    <div class="row">
+        <div class="col-sm-12 text-center"> © 2024 Infamous Unleashed. All Rights Reserved — Website designed by <a href="https://www.infamousunleashed.org/">InfamousUnleashed.org</a> </div>
+    </div>
+    <!-- / .row --> 
+  </div>
+</div>
+
+</section>
+<section id="plans" class="page-section">
+    <video id="video-background-plans" autoplay loop muted>
+        <source src="SnowNigger" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+
+<a href="#top" class="topHome"><i class="fa fa-chevron-up fa-2x"></i></a> 
+
+<!--[if lte IE 8]><script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script><![endif]--> 
+<script src="js/modernizr-latest.js"></script> 
+<script src="js/jquery-1.8.2.min.js" type="text/javascript"></script> 
+<script src="js/bootstrap.min.js" type="text/javascript"></script> 
+<script src="js/jquery.isotope.min.js" type="text/javascript"></script> 
+<script src="js/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script> 
+<script src="js/jquery.nav.js" type="text/javascript"></script> 
+<script src="js/jquery.fittext.js"></script> 
+<script src="js/waypoints.js"></script> 
+<script src="js/custom.js" type="text/javascript"></script> 
+<script src="js/owl-carousel/owl.carousel.js"></script>
+</body>
+</html>

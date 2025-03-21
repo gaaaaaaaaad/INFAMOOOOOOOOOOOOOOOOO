@@ -1,0 +1,29 @@
+﻿/*
+ * The Typekit service used to deliver this font or fonts for use on websites
+ * is provided by Adobe and is subject to these Terms of Use
+ * http://www.adobe.com/products/eulas/tou_typekit. For font license
+ * information, see the list below.
+ *
+ * shackleton:
+ *   - http://typekit.com/eulas/00000000000000007735bd05
+ *   - http://typekit.com/eulas/00000000000000007735bd09
+ *
+ * © 2009-2024 Adobe Systems Incorporated. All Rights Reserved.
+ */
+/*{"last_published":"2022-09-05 09:55:02 UTC"}*/
+
+@import url("p.css");
+
+@font-face {
+font-family:"shackleton";
+src:url("af/e89c0a/00000000000000007735bd05/30/l") format("woff2"),url("af/e89c0a/00000000000000007735bd05/30/d") format("woff"),url("af/e89c0a/00000000000000007735bd05/30/a") format("opentype");
+font-display:auto;font-style:italic;font-weight:400;font-stretch:normal;
+}
+
+@font-face {
+font-family:"shackleton";
+src:url("af/72ae7e/00000000000000007735bd09/30/l") format("woff2"),url("af/72ae7e/00000000000000007735bd09/30/d") format("woff"),url("af/72ae7e/00000000000000007735bd09/30/a") format("opentype");
+font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
+}
+
+.tk-shackleton { font-family: "shackleton",serif; }

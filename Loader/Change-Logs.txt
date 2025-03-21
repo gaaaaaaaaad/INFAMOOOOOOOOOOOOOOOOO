@@ -1,0 +1,4 @@
+Version 12.80 (Date: [08-24)
+- Protections Improvement
+- Added Safe Mode For Missions
+- Improvements & Bug Fixes
