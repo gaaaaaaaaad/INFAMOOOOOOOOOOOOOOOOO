@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BattleEye Ban Checker</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #121212;
+            color: #f1f1f1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #f44336;
+            text-align: center;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+            width: 250px;
+            border: 2px solid #333;
+            border-radius: 8px;
+            background-color: #222;
+            color: #fff;
+            transition: border-color 0.3s, background-color 0.3s;
+        }
+
+        input[type="text"]:focus {
+            border-color: #f44336;
+            background-color: #333;
+            outline: none;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            color: #fff;
+            background-color: #f44336;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-bottom: 20px;
+            animation: fadeIn 2s ease-in-out, pulse 1.5s infinite;
+        }
+
+        button:hover {
+            background-color: #d32f2f;
+        }
+
+        #result {
+            font-size: 1.2rem;
+            text-align: center;
+            padding: 10px;
+            border-radius: 8px;
+            width: 300px;
+            margin-top: 10px;
+            animation: fadeIn 2.5s ease-in-out;
+            transition: color 0.3s;
+        }
+
+        /* Animation */
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        /* Snowfall Animation */
+        .snowflakes {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        .snowflake {
+            position: absolute;
+            top: -10px;
+            width: 5px;
+            height: 5px;
+            background-color: #fff;
+            opacity: 0.7;
+            border-radius: 50%;
+            animation: snow 10s linear infinite;
+        }
+
+        @keyframes snow {
+            0% {
+                transform: translateX(0);
+                opacity: 0.7;
+            }
+            100% {
+                transform: translateX(100vw) translateY(100vh);
+                opacity: 0.3;
+            }
+        }
+
+        /* Dark Mode Toggle */
+        .dark-mode {
+            background-color: #121212;
+            color: #f1f1f1;
+        }
+
+        .light-mode {
+            background-color: #fff;
+            color: #121212;
+        }
+
+        .toggle-button {
+            background-color: #f44336;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            margin: 20px;
+            animation: fadeIn 3s ease-in-out;
+        }
+
+    </style>
+    <script>
+        async function checkBan() {
+            const username = document.getElementById("username").value;
+            if (!username) {
+                alert("Please enter a username.");
+                return;
+            }
+
+            const response = await fetch(`https://server-ku4q.onrender.com/check_ban?username=${username}`);
+            const data = await response.json();
+
+            const resultElement = document.getElementById("result");
+            if (data.error) {
+                resultElement.innerText = `Error: ${data.error}`;
+                resultElement.style.backgroundColor = "#f44336"; // Red for error
+            } else {
+                resultElement.innerText = 
+                    data.ban_reason ? 
+                    `User '${data.username}' is banned. Reason: ${data.ban_reason}` : 
+                    `User '${data.username}' is not banned.`;
+                resultElement.style.backgroundColor = "#4CAF50"; // Green for success
+            }
+        }
+
+        // Toggle dark mode
+        function toggleDarkMode() {
+            const body = document.body;
+            const resultElement = document.getElementById("result");
+            const button = document.querySelector("button");
+            if (body.classList.contains("dark-mode")) {
+                body.classList.remove("dark-mode");
+                body.classList.add("light-mode");
+                resultElement.style.backgroundColor = "#f1f1f1"; // Light mode background for result
+                button.style.backgroundColor = "#f44336"; // Normal button color
+            } else {
+                body.classList.remove("light-mode");
+                body.classList.add("dark-mode");
+                resultElement.style.backgroundColor = "#222"; // Dark mode background for result
+                button.style.backgroundColor = "#f44336"; // Normal button color
+            }
+        }
+
+        // Snowflake generator
+        function createSnowflakes() {
+            const snowflakesContainer = document.createElement("div");
+            snowflakesContainer.classList.add("snowflakes");
+            document.body.appendChild(snowflakesContainer);
+
+            for (let i = 0; i < 100; i++) {
+                const snowflake = document.createElement("div");
+                snowflake.classList.add("snowflake");
+                snowflake.style.left = `${Math.random() * 100}vw`;
+                snowflake.style.animationDuration = `${Math.random() * 5 + 5}s`; // Random falling speed
+                snowflakesContainer.appendChild(snowflake);
+            }
+        }
+
+        // Start snowflakes when the page loads
+        window.onload = createSnowflakes;
+    </script>
+</head>
+<body class="dark-mode">
+    <h2>BattleEye Ban Checker</h2>
+    <input type="text" id="username" placeholder="Enter username" autofocus>
+    <button onclick="checkBan()">Check Ban</button>
+    <p id="result"></p>
+    <button class="toggle-button" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+</body>
+</html>
