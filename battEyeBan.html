@@ -3,19 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BattleEye Ban Checker</title>
+    <title>BattlEye</title>
     <style>
-        /* Basic Reset */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
         }
 
         body {
-            font-family: 'Arial', sans-serif;
-            background-color: #121212;
-            color: #f1f1f1;
+            background: linear-gradient(135deg, #000000, #000000);
+            color: #fff;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -23,131 +22,135 @@
             height: 100vh;
             overflow: hidden;
             position: relative;
-            transition: background-color 0.3s, color 0.3s;
+            animation: backgroundFade 20s ease-in-out infinite alternate;
         }
 
         h2 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            color: #f44336;
+            font-size: 3rem;
+            color: #ff0015;
             text-align: center;
+            margin-bottom: 20px;
+            text-shadow: 0 0 15px rgba(255, 0, 0, 0.8);
             animation: fadeIn 1.5s ease-in-out;
         }
 
-        input[type="text"] {
-            padding: 10px;
-            margin-bottom: 10px;
-            font-size: 1.2rem;
-            width: 250px;
-            border: 2px solid #333;
-            border-radius: 8px;
-            background-color: #222;
-            color: #fff;
-            transition: border-color 0.3s, background-color 0.3s;
+        .glass {
+            background: rgba(46, 46, 46, 0.7);
+            backdrop-filter: blur(15px);
+            border-radius: 20px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+            padding: 40px;
+            text-align: center;
+            transition: transform 0.5s ease, opacity 0.5s ease;
+            animation: slideIn 1s ease-in-out;
         }
 
-        input[type="text"]:focus {
-            border-color: #f44336;
-            background-color: #333;
+        .glass:hover {
+            transform: scale(1.05);
+            opacity: 0.9;
+        }
+
+        input {
+            padding: 15px;
+            font-size: 1.2rem;
+            width: 300px;
+            border: none;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.2);
+            color: #fff;
+            text-align: center;
+            transition: 0.3s;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
             outline: none;
         }
 
+        input::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        input:focus {
+            box-shadow: 0 0 20px rgba(255, 71, 87, 0.8);
+        }
+
         button {
-            padding: 10px 20px;
+            margin-top: 20px;
+            padding: 15px 40px;
             font-size: 1.2rem;
             color: #fff;
-            background-color: #f44336;
+            background: linear-gradient(135deg, #ff0015, #8a0015);
             border: none;
-            border-radius: 8px;
+            border-radius: 10px;
             cursor: pointer;
-            transition: background-color 0.3s;
-            margin-bottom: 20px;
-            animation: fadeIn 2s ease-in-out, pulse 1.5s infinite;
+            transition: 0.3s;
+            box-shadow: 0 4px 20px rgba(255, 71, 87, 0.3);
+            font-weight: bold;
         }
 
         button:hover {
-            background-color: #d32f2f;
+            transform: scale(1.1);
+            box-shadow: 0 0 30px rgba(255, 71, 87, 0.8);
         }
 
         #result {
-            font-size: 1.2rem;
+            margin-top: 20px;
+            font-size: 1.4rem;
+            padding: 15px;
+            border-radius: 10px;
+            width: 350px;
             text-align: center;
-            padding: 10px;
-            border-radius: 8px;
-            width: 300px;
-            margin-top: 10px;
-            animation: fadeIn 2.5s ease-in-out;
-            transition: color 0.3s;
+            background-color: rgba(255, 255, 255, 0.1);
+            display: none;
+            backdrop-filter: blur(15px);
+            box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+            opacity: 0;
+            animation: fadeResult 1s forwards;
         }
 
-        /* Animation */
         @keyframes fadeIn {
-            0% { opacity: 0; transform: translateY(20px); }
+            0% { opacity: 0; transform: translateY(-20px); }
             100% { opacity: 1; transform: translateY(0); }
         }
 
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.1); }
-            100% { transform: scale(1); }
+        @keyframes slideIn {
+            0% { opacity: 0; transform: translateY(50px); }
+            100% { opacity: 1; transform: translateY(0); }
         }
 
-        /* Snowfall Animation */
-        .snowflakes {
+        @keyframes fadeResult {
+            0% { opacity: 0; transform: translateY(10px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes backgroundFade {
+            0% { background: linear-gradient(135deg, #000000, #000000); }
+            100% { background: linear-gradient(135deg, #000000, #000000); }
+        }
+
+        /* Particle Animation */
+        .particles {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            pointer-events: none;
-            z-index: 1;
             overflow: hidden;
+            z-index: -1;
         }
 
-        .snowflake {
+        .particle {
             position: absolute;
-            top: -10px;
-            width: 5px;
-            height: 5px;
-            background-color: #fff;
-            opacity: 0.7;
+            width: 6px;
+            height: 6px;
+            background-color: rgb(255, 255, 255);
             border-radius: 50%;
-            animation: snow 10s linear infinite;
+            opacity: 1.0;
+            animation: moveParticles 30s infinite linear;
         }
 
-        @keyframes snow {
-            0% {
-                transform: translateX(0);
-                opacity: 0.7;
-            }
-            100% {
-                transform: translateX(100vw) translateY(100vh);
-                opacity: 0.3;
-            }
+        @keyframes moveParticles {
+            0% { transform: translateY(0) translateX(0); opacity: 1.0; }
+            100% { transform: translateY(100vh) translateX(100vw); opacity: 0.1; }
         }
-
-        /* Dark Mode Toggle */
-        .dark-mode {
-            background-color: #121212;
-            color: #f1f1f1;
-        }
-
-        .light-mode {
-            background-color: #fff;
-            color: #121212;
-        }
-
-        .toggle-button {
-            background-color: #f44336;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            color: white;
-            cursor: pointer;
-            margin: 20px;
-            animation: fadeIn 3s ease-in-out;
-        }
-
     </style>
     <script>
         async function checkBan() {
@@ -163,58 +166,48 @@
             const resultElement = document.getElementById("result");
             if (data.error) {
                 resultElement.innerText = `Error: ${data.error}`;
-                resultElement.style.backgroundColor = "#f44336"; // Red for error
+                resultElement.style.backgroundColor = "#ff0016";
             } else {
                 resultElement.innerText = 
                     data.ban_reason ? 
                     `User '${data.username}' is banned. Reason: ${data.ban_reason}` : 
                     `User '${data.username}' is not banned.`;
-                resultElement.style.backgroundColor = "#4CAF50"; // Green for success
+                resultElement.style.backgroundColor = data.ban_reason ? "#ff0016" : "#05f568";
+            }
+            resultElement.style.display = "block";
+        }
+
+        function createParticles() {
+            const particleContainer = document.createElement("div");
+            particleContainer.classList.add("particles");
+            document.body.appendChild(particleContainer);
+
+            for (let i = 0; i < 300; i++) {
+                const particle = document.createElement("div");
+                particle.classList.add("particle");
+
+                // Set random initial positions for the particles
+                const randomX = Math.random() * -window.innerWidth;  // Random horizontal position within the screen width
+                const randomY = Math.random() * -window.innerHeight; // Random vertical position within the screen height
+                particle.style.left = `${randomX}px`;
+                particle.style.top = `${randomY}px`;
+
+                // Set random animation durations for variation
+                particle.style.animationDuration = `${Math.random() * 10 + 5}s`;
+
+                particleContainer.appendChild(particle);
             }
         }
 
-        // Toggle dark mode
-        function toggleDarkMode() {
-            const body = document.body;
-            const resultElement = document.getElementById("result");
-            const button = document.querySelector("button");
-            if (body.classList.contains("dark-mode")) {
-                body.classList.remove("dark-mode");
-                body.classList.add("light-mode");
-                resultElement.style.backgroundColor = "#f1f1f1"; // Light mode background for result
-                button.style.backgroundColor = "#f44336"; // Normal button color
-            } else {
-                body.classList.remove("light-mode");
-                body.classList.add("dark-mode");
-                resultElement.style.backgroundColor = "#222"; // Dark mode background for result
-                button.style.backgroundColor = "#f44336"; // Normal button color
-            }
-        }
-
-        // Snowflake generator
-        function createSnowflakes() {
-            const snowflakesContainer = document.createElement("div");
-            snowflakesContainer.classList.add("snowflakes");
-            document.body.appendChild(snowflakesContainer);
-
-            for (let i = 0; i < 100; i++) {
-                const snowflake = document.createElement("div");
-                snowflake.classList.add("snowflake");
-                snowflake.style.left = `${Math.random() * 100}vw`;
-                snowflake.style.animationDuration = `${Math.random() * 5 + 5}s`; // Random falling speed
-                snowflakesContainer.appendChild(snowflake);
-            }
-        }
-
-        // Start snowflakes when the page loads
-        window.onload = createSnowflakes;
+        window.onload = createParticles;
     </script>
 </head>
-<body class="dark-mode">
-    <h2>BattleEye Ban Checker</h2>
-    <input type="text" id="username" placeholder="Enter username" autofocus>
-    <button onclick="checkBan()">Check Ban</button>
-    <p id="result"></p>
-    <button class="toggle-button" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+<body>
+    <h2>BattlEye R✮ Bans</h2>
+    <div class="glass">
+        <input type="text" id="username" placeholder="Username">
+        <button onclick="checkBan()">Check</button>
+        <p id="result"></p>
+    </div>
 </body>
 </html>
