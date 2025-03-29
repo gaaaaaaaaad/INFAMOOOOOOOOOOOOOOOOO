@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en-gb" class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Infamous Unleashed</title>
+    <link rel="shortcut icon" href="images/logo.png">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Style */
+        body {
+            font-family: 'Arial', sans-serif;
+            color: #121212;
+            line-height: 1.6;
+            background-color: #121212;
+        }
+
+        /* Video Player Styles */
+        #video-player {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        video {
+            width: 100%;
+            height: auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1; /* Send video to the back */
+        }
+
+        /* Overlay for content visibility */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 2; /* Content above the video */
+        }
+
+        /* Animated Text Styles */
+        .text-container {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 3;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            max-width: 100%;
+            animation: moveUpText 1s ease-in-out forwards;
+            font-size: 1.2rem;
+        }
+
+        /* Keyframes for text animation */
+        @keyframes moveUpText {
+            0% {
+                transform: translate(-50%, 0);
+            }
+            100% {
+                transform: translate(-50%, -100%);
+            }
+        }
+
+ /* Picture Box Styles with Outline */
+#picture-box {
+    position: absolute;
+    bottom: 30%;
+    left: 70%;
+    width: 300px;
+    z-index: 3;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+    border: 5px solid  /* Default color for the outline */
+    border-radius: 10px; /* Same as image for a smooth outline */
+}
+
+/* Customize Outline Color */
+#picture-box:hover {
+    border-color: #007bff; /* Changes outline color on hover */
+}
+
+#picture-box img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+
+        /* Button Styles */
+        .btn {
+            background-color: #9c0707;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        /* Rounded Button Style */
+        .btn-rounded {
+            border-radius: 30px;
+        }
+
+        /* Features Section Styling */
+        .features-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 50px 0;
+            text-align: center;
+            color: white;
+        }
+
+        .feature-box {
+            flex: 1;
+            min-width: 200px;
+            max-width: 300px;
+            margin: 20px;
+            padding: 20px;
+            background-color: #121212;
+            border-radius: 8px;
+        }
+
+        .feature-box h3 {
+            color: #ff4141;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .feature-box p {
+            color: #ddd;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        .feature-box .icon {
+            font-size: 2rem;
+            color: #ff4141;
+            margin-bottom: 10px;
+        }
+
+        /* Enlarged Text Style */
+        .heading p, .heading h1 {
+            color: white;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        /* Media Queries for Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            h3 {
+                font-size: 1.2rem;
+            }
+            #picture-box {
+                width: 200px;
+            }
+            .text-container {
+                max-width: 90%;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    </style>
+</head>
+<body>
+
+
+  <!--/.container--> 
+</section>
+<section id="contactUs" class="contact-parlex">
+  <div class="parlex-back">
+      <div class="container">
+          <div class="row">
+              <div class="heading text-center">
+                  <!-- Heading -->
+             <div id="SocialsHeader">
+        <div class="container"> 
+            <div class="socialLinks">Infamous Community</div>
+
+    </div>
+    <div class="socialButtons">
+        <div class="ButtonIcons">
+            <a class="icons" target="_blank" href="https://discord.gg/2KYUvZkD5q"><img
+                src="assets/discord.png" alt=""></a>
+  
+            <a class="icons" target="_blank" href="https://t.me/InfamousMenu"><img src="assets/telegram.png" alt=""></a>
+            <a class="icons" target="_blank" href="https://x.com/InfamousUL"><img
+            src="assets/x.png" alt=""></a>
+    
+</div>
+
+              </div></div>
+          </div>
+
+          <section id="download">
+          <div class="socialLinks">Need Help? Contact us: noahsmodsgta@gmail.com </div>
+          <section id="contactUs" class="contact-parlex">
+            <div class="parlex-back">
+                <div class="container">
+                    <div class="row">
+                        <div class="heading text-center">
+                            <!-- Heading -->
+ 
+
+
+                <div class="flex-container">
+                    <div class="flex-item">
+                      <h1 class="hero-title mt-0"> </h1>
+                    </div>
+             
+                </div>
+             
+    
+
+               
+      </div>
+      </div>
+   <!--/.container--> 
+<!--/.page-section-->
+  <div class="container">
+    <div class="row">
+        <div class="col-sm-12 text-center"> © 2025 Infamous Unleashed. All Rights Reserved — Website designed by <a href="https://www.infamousunleashed.org/">InfamousUnleashed.org</a> </div>
+    </div>
+    <!-- / .row --> 
+  </div>
+</div>
+
+</section>
+<section id="plans" class="page-section">
+    <video id="video-background-plans" autoplay loop muted>
+        <source src="SnowNigger" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+
+<a href="#top" class="topHome"><i class="fa fa-chevron-up fa-2x"></i></a> 
+
+<!--[if lte IE 8]><script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script><![endif]--> 
+<script src="js/modernizr-latest.js"></script> 
+<script src="js/jquery-1.8.2.min.js" type="text/javascript"></script> 
+<script src="js/bootstrap.min.js" type="text/javascript"></script> 
+<script src="js/jquery.isotope.min.js" type="text/javascript"></script> 
+<script src="js/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script> 
+<script src="js/jquery.nav.js" type="text/javascript"></script> 
+<script src="js/jquery.fittext.js"></script> 
+<script src="js/waypoints.js"></script> 
+<script src="js/custom.js" type="text/javascript"></script> 
+<script src="js/owl-carousel/owl.carousel.js"></script>
+</body>
+</html>
