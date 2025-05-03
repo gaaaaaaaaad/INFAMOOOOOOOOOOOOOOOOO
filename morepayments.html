@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/logo.png">
+    <title>Payment Methods | INFAMOUS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #e74c3c;
+            --secondary: #2980b9;
+            --accent: #3498db;
+            --text: #2d3436;
+            --light-gray: #f5f6fa;
+            --medium-gray: #dfe6e9;
+            --dark-gray: #636e72;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 15px;
+            color: var(--text);
+            line-height: 1.5;
+            background-color: var(--light-gray);
+        }
+        .tabs {
+            display: flex;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--medium-gray);
+        }
+        .tab {
+            padding: 10px 20px;
+            cursor: pointer;
+            background: white;
+            border: 1px solid var(--medium-gray);
+            border-bottom: none;
+            border-radius: 5px 5px 0 0;
+            margin-right: 5px;
+            font-weight: 600;
+            color: var(--dark-gray);
+            transition: all 0.3s ease;
+        }
+        .tab.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+        .tab:hover:not(.active) {
+            background: var(--medium-gray);
+        }
+        .tab-content {
+            display: none;
+            background: white;
+            padding: 20px;
+            border-radius: 0 5px 5px 5px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        .tab-content.active {
+            display: block;
+        }
+        h1 {
+            color: var(--primary);
+            font-size: 24px;
+            margin: 10px 0 20px;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .payment-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+        .payment-section {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        h2 {
+            color: var(--secondary);
+            font-size: 18px;
+            margin: 0 0 12px;
+            border-bottom: 1px solid var(--medium-gray);
+            padding-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .payment-method {
+            margin: 10px 0;
+            padding-left: 30px;
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+        .payment-method i {
+            position: absolute;
+            left: 8px;
+            color: var(--accent);
+            width: 20px;
+            text-align: center;
+            font-size: 16px;
+        }
+        .highlight {
+            font-weight: bold;
+            color: var(--primary);
+        }
+        .contact-box {
+            background: #e8f4f8;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+            grid-column: span 2;
+            border: 1px solid #d1e7f5;
+        }
+        a {
+            color: var(--secondary);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s;
+        }
+        a:hover {
+            color: var(--primary);
+            text-decoration: underline;
+        }
+        .compact-list {
+            columns: 2;
+            column-gap: 25px;
+            margin-top: 10px;
+        }
+        .compact-list div {
+            margin-bottom: 8px;
+            padding-left: 25px;
+            position: relative;
+        }
+        .compact-list div i {
+            position: absolute;
+            left: 5px;
+            color: var(--dark-gray);
+        }
+        .note {
+            font-size: 13px;
+            color: var(--dark-gray);
+            margin-top: 8px;
+            font-style: italic;
+        }
+        .user-id {
+            font-size: 12px;
+            color: var(--dark-gray);
+            font-family: monospace;
+        }
+        .store-link {
+            display: block;
+            text-align: center;
+            margin: 20px 0;
+        }
+        .store-btn {
+            background: var(--primary);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 5px;
+            font-weight: bold;
+            text-transform: uppercase;
+            display: inline-block;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .store-btn:hover {
+            background: #c0392b;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+            text-decoration: none;
+        }
+        .store-btn i {
+            margin-right: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="tabs">
+        <div class="tab active" onclick="openTab(event, 'alternative')">Alternative Payments</div>
+        <div class="tab" onclick="openTab(event, 'card')">OFFICIAL STORE (Instant Deliver)</div>
+    </div>
+
+    <div id="alternative" class="tab-content active">
+        <h1><i class="fas fa-money-bill-wave"></i> MORE PAYMENT METHODS FOR <span class="highlight">INFAMOUS</span></h1>
+        
+        <div class="payment-grid">
+            <div class="payment-section">
+                <h2><i class="fas fa-credit-card"></i> Payments:</h2>
+                <div class="payment-method"><i class="fab fa-paypal"></i> PayPal F&F (FAMILY & FRIENDS) Only</div>
+                <div class="payment-method"><i class="fas fa-money-check"></i> Skrill</div>
+                <div class="payment-method"><i class="fas fa-credit-card"></i> Paysafe</div>
+                <div class="payment-method"><i class="fab fa-alipay"></i> Alipay // <i class="fab fa-weixin"></i> WeChat</div>
+                <div class="payment-method"><i class="fas fa-university"></i> Bank Transfer</div>
+                <div class="payment-method"><i class="fas fa-envelope"></i> Cash by Post: <span class="highlight"> 50% Fee</span></div>
+            </div>
+            
+            <div class="payment-section">
+                <h2><i class="fas fa-gift"></i> Gift Cards:</h2>
+                <div class="payment-method"><i class="fab fa-steam"></i> <span class="highlight">Steam:</span> 50% Fee</div>
+                <div class="payment-method"><i class="fab fa-amazon"></i> <span class="highlight">Amazon:</span> 100% Fee</div>
+                <div class="note">(UK/DE/FR/NL/US/CA)</div>
+            </div>
+            
+            <div class="payment-section">
+                <h2><i class="fab fa-bitcoin"></i> Crypto Options</h2>
+                <div class="payment-method"><i class="fas fa-percentage"></i> <span class="highlight">10% OFF Discount</span></div>
+                <div class="payment-method"><i class="fas fa-info-circle"></i> Let us know which crypto and network you're using</div>
+                <div class="compact-list">
+                    <div><i class="fas fa-coins"></i> SUI</div>
+                    <div><i class="fas fa-coins"></i> Kaspa</div>
+                    <div><i class="fas fa-coins"></i> Tao</div>
+                    <div><i class="fab fa-ethereum"></i> USDT</div>
+                    <div><i class="fab fa-ethereum"></i> USDC</div>
+                    <div><i class="fas fa-coins"></i> TRX</div>
+                    <div><i class="fas fa-coins"></i> TON</div>
+                    <div><i class="fab fa-ethereum"></i> BNB</div>
+                    <div><i class="fab fa-solana"></i> SOL</div>
+                    <div><i class="fas fa-x"></i> XRP</div>
+                    <div><i class="fas fa-coins"></i> XLM</div>
+                    <div><i class="fas fa-monero"></i> XMR</div>
+                    <div><i class="fas fa-frog"></i> PEPE</div>
+                    <div><i class="fas fa-coins"></i> NEAR</div>
+                    <div><i class="fas fa-coins"></i> ONDO</div>
+                </div>
+            </div>
+            
+            <div class="contact-box">
+                <h2><i class="fas fa-shopping-cart"></i> CONTACT TO ORDER</h2>
+                <div class="payment-method">
+                    <i class="fab fa-discord"></i> <strong>Discord: </strong><br>
+                    <a href="#" target="_blank">@pornsad </a> <span class="user-id"> ID: 791411600103702528</span><br>
+                    <a href="#" target="_blank">@lt.evergreen1337 </a> <span class="user-id"> ID: 1306686547243958323</span><br>
+                    <a href="#" target="_blank">@starfaceedx </a> <span class="user-id"> ID: 351874614995058689</span>
+                </div>
+                <div class="payment-method">
+                    <i class="fab fa-discord"></i> <strong>Discord Server: </strong> <a href="https://discord.gg/6Z6Fvf2Bv3" target="_blank"> Join Here</a>
+                    <div class="note">Make ticket in Support channel after joining</div>
+                </div>
+                <div class="payment-method">
+                    <i class="fab fa-telegram"></i> <strong>Telegram Group: </strong> <a href="https://t.me/InfamousMenu" target="_blank"> Infamous Group</a>
+                </div>
+                <div class="payment-method">
+                    <i class="fab fa-telegram"></i> <strong>Telegram User: </strong> <a href="https://t.me/whatwhatboy" target="_blank"> @whatwhatboy</a>
+                </div>
+                <div class="payment-method">
+                    <i class="fas fa-comment"></i> <span class="highlight"> Message us with your preferred payment method</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="card" class="tab-content">
+        <h1><i class="fas fa-store"></i> OFFICIAL STORE PAYMENTS</h1>
+        
+        <div class="payment-section" style="grid-column: span 2;">
+            <h2><i class="fas fa-credit-card"></i> Payment Options</h2>
+            
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <i class="fas fa-credit-card benefit-icon"></i>
+                    <div>
+                        <strong>Credit/Debit Cards</strong><br>
+                        Visa, Mastercard, Amex ETC
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <i class="fab fa-bitcoin benefit-icon"></i>
+                    <div>
+                        <strong>Crypto Payments</strong><br>
+                        BTC, ETH, LTC, POL ETC
+                    </div>
+                </div>
+            </div>
+            
+            <div class="store-link">
+                <a href="https://dizzgaming.selly.store" class="store-btn" target="_blank">
+                    <i class="fas fa-external-link-alt"></i> Visit Store Now
+                </a>
+            </div>
+            
+            <h2><i class="fas fa-bolt"></i> Instant Delivery</h2>
+            <div class="payment-method">
+                <i class="fas fa-envelope"></i> Product delivered instantly via email after payment confirmation
+            </div>
+            <div class="payment-method">
+                <i class="fas fa-clock"></i> Automated 24/7 delivery system
+            </div>
+            
+            <div class="note">
+                <i class="fas fa-info-circle"></i> For any delivery issues, check spam folder or contact support
+            </div>
+        </div>
+        
+        <div class="contact-box">
+            <h2><i class="fas fa-headset"></i> NEED HELP?</h2>
+            <div class="payment-method">
+                <i class="fab fa-discord"></i> <strong>Discord Support: </strong> 
+                <a href="https://discord.gg/6Z6Fvf2Bv3" target="_blank">Join Server</a>
+            </div>
+            <div class="payment-method">
+                <i class="fab fa-telegram"></i> <strong>Telegram Support: </strong> 
+                <a href="https://t.me/whatwhatboy" target="_blank">@whatwhatboy</a>
+            </div>
+            <div class="payment-method">
+                <i class="fas fa-envelope"></i> <strong>Email Support: </strong> 
+                <a href="mailto:support@example.com">support@example.com</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].classList.remove("active");
+            }
+            
+            tablinks = document.getElementsByClassName("tab");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active");
+            }
+            
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+    </script>
+</body>
+</html>

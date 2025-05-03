@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Infamous Unleashed | Premium Gaming Modifications</title>
+    <title>Infamous Unleashed</title>
     <link rel="shortcut icon" href="images/logo.png">
     
     <!-- Modern Fonts -->
@@ -374,62 +374,102 @@
         }
         
         .product-features li:before {
-            content: '✓';
+            content: ' ';
             position: absolute;
             left: 0;
             color: var(--primary);
         }
         
-        .product-actions {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-        }
+   
+       
+
+        <style>
+
+.product-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.btn {
+  padding: 8px 16px;
+  font-size: 14px;
+  border-radius: 20px; /* Rounded corners */
+  text-decoration: none;
+  text-align: center;
+  flex: 1;
+  transition: all 0.2s ease;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: #ff4545;
+  color: rgb(255, 255, 255);
+}
+
+.btn-primary:hover {
+  background: #695fff;
+}
+
+.btn-outline {
+  background: transparent;
+  color: #4CAF50;
+  border: 1px solid #4CAF50;
+}
+
+.btn-outline:hover {
+  background: rgba(76, 175, 80, 0.1);
+}
+
+
+
         
-        /* Resellers */
+        .product-icon {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.product-icon svg {
+    width: 48px;
+    height: 48px;
+    color: #ff6464; /* Set your desired icon color */
+}
+
+        /* Resellers Section */
         .resellers {
-            margin-top: 4rem;
+            background-color: var(--dark);
         }
-        
+
         .reseller-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
+            gap: 1.5rem;
+            margin-top: 3rem;
         }
-        
+
         .reseller-card {
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 10px;
+            background-color: rgba(255,255,255,0.05);
+            border-radius: var(--radius);
             padding: 1.5rem;
             text-align: center;
-            transition: all 0.3s ease;
-            border: 1px solid rgba(255, 65, 65, 0.1);
+            transition: var(--transition);
         }
-        
+
         .reseller-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(255, 65, 65, 0.1);
-            border-color: rgba(255, 65, 65, 0.3);
+            background-color: rgba(255,255,255,0.1);
         }
-        
+
         .reseller-logo {
-            max-width: 150px;
-            max-height: 60px;
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
             margin: 0 auto 1rem;
-            filter: grayscale(100%) brightness(1.5);
-            transition: all 0.3s ease;
+            border-radius: var(--radius);
         }
-        
-        .reseller-card:hover .reseller-logo {
-            filter: grayscale(0) brightness(1);
-        }
-        
-        .reseller-name {
-            font-size: 1.1rem;
-            margin-bottom: 1rem;
-            color: white;
-        }
+
         
         /* Footer */
         .footer {
@@ -637,20 +677,32 @@
                         <iframe src="https://www.youtube.com/embed/acI1ljkM3vI?si=yuh-O-mE6epIcyQ-" frameborder="0" allowfullscreen></iframe>
                     </div>
                     <div class="video-item">
-                        <iframe src="https://www.youtube.com/embed/gXhQcfn4Z8s?si=eU-yoGTgOUBnraiY" frameborder="0" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/ipKKGPy7i8M?si=jfcfl92FGj-fPYFc" frameborder="0" allowfullscreen></iframe>
                     </div>
                     <div class="video-item">
-                        <iframe src="https://www.youtube.com/embed/qzZczdYPHLs?si=Y0oo1R6v43tODwIY" frameborder="0" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/j_qQUeyxzl8?si=TIzepbXnDhxUPjvI" frameborder="0" allowfullscreen></iframe>
                     </div>
+
                     <div class="video-item">
-                        <iframe src="https://www.youtube.com/embed/ZQbGFEaMzbE?si=_tXJDd4a8ytBijh9" frameborder="0" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/XG6DXSDhRmk?si=E-B_j4RzmZqo2iI1" frameborder="0" allowfullscreen></iframe>
                     </div>
+
                     <div class="video-item">
                         <iframe src="https://www.youtube.com/embed/8aKjjz3jssU?si=b95jkuKwt13HdNdn" frameborder="0" allowfullscreen></iframe>
                     </div>
+
                     <div class="video-item">
                         <iframe src="https://www.youtube.com/embed/JHClTd3WOeM?si=iP52DbJiwDjRXgV5" frameborder="0" allowfullscreen></iframe>
                     </div>
+
+                    <div class="video-item">
+                        <iframe src="https://www.youtube.com/embed/JHClTd3WOeM?si=iP52DbJiwDjRXgV5" frameborder="0" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="video-item">
+                        <iframe src="https://www.youtube.com/embed/JHClTd3WOeM?si=iP52DbJiwDjRXgV5" frameborder="0" allowfullscreen></iframe>
+                    </div>
+</div>
                 </div>
             </div>
         </div>
@@ -674,43 +726,155 @@
                 </div>
                 
                 <div class="product-cards">
+
+                    
                     <!-- Master Package -->
                     <div class="product-card" data-category="all">
-                        <div class="product-badge">BEST VALUE</div>
-                        <h3 class="product-title">Master Package</h3>
-                        <div class="product-price">$175</div>
-                        <ul class="product-features">
-                            <li>Access to GTA 5 Legacy & Enhanced</li>
-                            <li>RDR2, FiveM, RedM, Spoofer</li>
-                            <li>Tester access included</li>
-                            <li>Lifetime access to all products</li>
-                        </ul>
-                        <div class="product-actions">
-                            <a href="https://scooby.sell.app/product/mpinf" class="btn btn-primary" target="_blank">Buy Now</a>
-                            <a href="https://scooby.sell.app/product/mpinf-copy" class="btn btn-outline-light" target="_blank">Crypto</a>
+
+
+                        <div class="product-badge">BEST VALUE FOR MONEY</div>
+
+                             
+                        <div class="product-icon">
+                            <img src=" " alt="  ">
                         </div>
+                        <h3 class="product-title">Master Package</h3>
+                        <div class="product-price">$150</div>
+                        <ul class="product-features">
+                            <li>Access to </li>
+                            
+                            <li>RDR2</li>
+                            <li>FiveM & RedM</li>
+                            <li>HWID Spoofer</li>
+                            <li>GTA 5 Legacy & Enhanced</li>
+                            <li>Tester Access Included</li>
+                            <li>Lifetime Access</li>
+                        </ul>
+                           <div class="product-actions">
+                            <a href="https://dizzgaming.selly.store/product/9f534656" class="btn btn-primary" target="_blank">Buy With Card & Crypto</a>
+                            <a href="morepayments.html" class="btn btn-outline-light" target="_blank">More Payments</a>
+                           
+                            
+                        </div>
+                        
                     </div>
                     
                     <!-- GTA 5 Enhanced Full Plus -->
+                    
+                    
                     <div class="product-card" data-category="gta">
+                      
+                        <div class="product-icon">
+                            <img src="gta5enh48.png" alt="GTA Icon">
+                        </div>
+                        
                         <h3 class="product-title">GTA 5 Enhanced Full Plus</h3>
                         <div class="product-price">$50</div>
+                        
                         <ul class="product-features">
-                            <li>Battle Eye Enabled Support</li>
-                            <li>Works in Public Sessions</li>
-                            <li>Missions, Heists, Races support</li>
+                        
+                            <li>Support For Battle Eye Enabled & Disabled</li>
                             <li>No Host Needed</li>
-                            <li>Legacy & Enhanced Support</li>
+                            
+         
+                            
+                            <li>Free Shopping</li>
+                        
+                            <li>Casino Rigging</li>
+                            <li>Business Manager</li>
                             <li>Lifetime access</li>
+                            
+
+                          
                         </ul>
+                        
+                        <button class="view-more-btn">View All Features (+500 more)</button>
+
                         <div class="product-actions">
-                            <a href="https://scooby.sell.app/product/infamous-full-plus-gta-enhanced" class="btn btn-primary" target="_blank">Buy Now</a>
-                            <a href="giftcard.html" class="btn btn-outline-light" target="_blank">Gift Cards</a>
+                            <a href="https://dizzgaming.selly.store/product/5749058e" class="btn btn-primary" target="_blank">Buy With Card & Crypto</a>
+                            <a href="morepayments.html" class="btn btn-outline-light" target="_blank">More Payments</a>
+                            <a href="https://dizzgaming.selly.store/product/d1a82e47" class="btn btn-outline-light" target="_blank">Buy Tester </a>
+                            <a href="https://dizzgaming.selly.store/product/26a730c8" class="btn btn-outline-light" target="_blank">Upgrade to Full Plus</a>
+                            
                         </div>
                     </div>
                     
+                    <div class="product-card" data-category="gta">
+                        <div class="product-icon">
+                            <img src="gta5leg48.png" alt="GTA Icon">
+                        </div>
+                        
+                        <h3 class="product-title">GTA 5 Legacy Full Plus</h3>
+                        <div class="product-price">$40</div>
+                        
+                        <ul class="product-features">
+                           
+                            <li>Support For Battle Eye Enabled & Disabled</li>
+                            <li>No Host Needed</li>
+                            
+         
+                            <li>Free Shopping</li>
+                        
+                            <li>Casino Rigging</li>
+                            <li>Business Manager</li>
+                            <li>Lifetime access</li>
+                            
+
+                        </ul>
+                        
+                        <button class="view-more-btn">View All Features (+500 more)</button>
+                        
+                        
+                        <div class="product-actions">
+                            <a href="https://dizzgaming.selly.store/product/e2797567" class="btn btn-primary" target="_blank">Buy With Card & Crypto</a>
+                            <a href="morepayments.html" class="btn btn-outline-light" target="_blank">More Payments</a>
+                            <a href="https://dizzgaming.selly.store/product/d1a82e47" class="btn btn-outline-light" target="_blank">Buy Tester </a>
+                            <a href="https://dizzgaming.selly.store/product/26a730c8" class="btn btn-outline-light" target="_blank">Upgrade to Full Plus</a>
+                            
+                        </div>
+                        
+                    </div>
+                    
+             
+                          
+                    <div class="product-card" data-category="gta">
+                      
+                        <div class="product-icon">
+                            <img src="gta5leg48.png" alt="GTA Icon">
+                        </div>
+                        
+                        <h3 class="product-title">GTA 5 Full</h3>
+                        <div class="product-price">$20</div>
+                        
+                        <ul class="product-features">
+                           
+                            <li>Battle Eye Disabled</li>
+                            <li>ScriptHookV Support</li>
+                            <li>50+ Money Options</li>
+                            <li>Lifetime access</li>
+                           
+                        </ul>
+                        
+                        <button class="view-more-btn">View All Features (300+ more)</button>
+
+                        <div class="product-actions">
+                            <a href="https://dizzgaming.selly.store/product/97f8ea3f" class="btn btn-primary" target="_blank">Buy With Card & Crypto</a>
+                            <a href="morepayments.html" class="btn btn-outline-light" target="_blank">More Payments</a>
+                            <a href="https://dizzgaming.selly.store/product/d1a82e47" class="btn btn-outline-light" target="_blank">Buy Tester </a>
+                            <a href="https://dizzgaming.selly.store/product/26a730c8" class="btn btn-outline-light" target="_blank">Upgrade to Full Plus</a>
+                            
+                      
+                            
+                        </div>
+                    </div>
+
                     <!-- RDR2 Full -->
                     <div class="product-card" data-category="rdr2">
+
+                        <div class="product-icon">
+                            <img src="rdr248.png" alt="GTA Icon">
+                        </div>
+                        
                         <h3 class="product-title">RDR2 Full Version</h3>
                         <div class="product-price">$20</div>
                         <ul class="product-features">
@@ -723,13 +887,45 @@
                             <li>Lifetime access</li>
                         </ul>
                         <div class="product-actions">
-                            <a href="https://scooby.sell.app/product/infamous-full-rdr2" class="btn btn-primary" target="_blank">Buy Now</a>
-                            <a href="https://scooby.sell.app/product/infamous-full-rdr2" class="btn btn-outline-light" target="_blank">Crypto</a>
+
+
+                            
+                            <a href="https://dizzgaming.selly.store/product/779dae04" class="btn btn-primary" target="_blank">Buy Card & Crypto</a>
+                            <a href="morepayments.html" class="btn btn-outline-light" target="_blank">More Payments</a>
+                            
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="rdr2">
+
+                        <div class="product-icon">
+                            <img src="rdr248.png" alt="GTA Icon">
+                        </div>
+                        
+                        <h3 class="product-title">RDR2 Lite Version</h3>
+                        <div class="product-price">$10</div>
+                        <ul class="product-features">
+                            <li>Basic Options.</li>
+                            
+                            <li>Lifetime access</li>
+                        </ul>
+                        <div class="product-actions">
+
+
+                            
+                            <a href="https://dizzgaming.selly.store/product/779dae04" class="btn btn-primary" target="_blank">Buy Card & Crypto</a>
+                            <a href="morepayments.html" class="btn btn-outline-light" target="_blank">More Payments</a>
+                            
                         </div>
                     </div>
                     
                     <!-- FiveM Full -->
                     <div class="product-card" data-category="fivem">
+
+                        <div class="product-icon">
+                            <img src="fivem48.png" alt="GTA Icon">
+                        </div>
+
                         <h3 class="product-title">FiveM Full Version</h3>
                         <div class="product-price">$35</div>
                         <ul class="product-features">
@@ -742,127 +938,260 @@
                             <li>Lifetime access</li>
                         </ul>
                         <div class="product-actions">
-                            <a href="https://scooby.sell.app/product/yes-infamous-fivem" class="btn btn-primary" target="_blank">Buy Now</a>
-                            <a href="https://scooby.sell.app/product/yes-infamous-fivem" class="btn btn-outline-light" target="_blank">Crypto</a>
+                            <a href="https://dizzgaming.selly.store/product/e9f88f71" class="btn btn-primary" target="_blank">Buy Card & Crypto</a>
+                            <a href="morepayments.html" class="btn btn-outline-light" target="_blank">More Payments</a>
+                            
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="fivem">
+
+                        <div class="product-icon">
+                            <img src="fivem48.png" alt="GTA Icon">
+                        </div>
+
+                        <h3 class="product-title">FiveM Basic Version</h3>
+                        <div class="product-price">$20</div>
+                        <ul class="product-features">
+                            <li> Aimbot & Settings</li>
+                            <li> ESP - Players/Peds</li>
+                            <li> Basic Options - Self/Weapon/Vehicle/Misc</li>
+                            <li> Some VFX Options - Make the World YOUR</li>
+                            <li>Lifetime access</li>
+                        </ul>
+                        <div class="product-actions">
+                            <a href="https://dizzgaming.selly.store/product/e9f88f71" class="btn btn-primary" target="_blank">Buy Card & Crypto</a>
+                            <a href="morepayments.html" class="btn btn-outline-light" target="_blank">More Payments</a>
+                            
                         </div>
                     </div>
                     
                     <!-- Hardware Spoofer -->
                     <div class="product-card" data-category="other">
+
+                        <div class="product-icon">
+                            <img src="hwid48.png" alt="GTA Icon">
+                        </div>
+
                         <h3 class="product-title">Hardware Spoofer</h3>
-                        <div class="product-price">$10 / $20</div>
+                        <div class="product-price">$20</div>
                         <ul class="product-features">
                             <li>Spoof your Hardware</li>
                             <li>Protects your Main HWID</li>
                             <li>Bypass HWID bans</li>
                             <li>Built-in cleaner for FiveM</li>
-                            <li>1 Day / Lifetime options</li>
+                            <li>Lifetime Access</li>
                         </ul>
                         <div class="product-actions">
-                            <a href="https://scooby.sell.app/product/infamous-hwid" class="btn btn-primary" target="_blank">Buy Now</a>
-                            <a href="https://scooby.sell.app/product/infamous-hwid" class="btn btn-outline-light" target="_blank">Crypto</a>
+                            <a href="https://dizzgaming.selly.store/product/4477abb7" class="btn btn-primary" target="_blank">Buy Card & Crypto</a>
+                            <a href="morepayments.html" class="btn btn-outline-light" target="_blank">More Payments</a>
+                            
                         </div>
                     </div>
                     
-                    <!-- CS2 -->
-                    <div class="product-card" data-category="other">
-                        <h3 class="product-title">CS2 Cheat</h3>
-                        <div class="product-price">$5 / $65</div>
-                        <ul class="product-features">
-                            <li>Aimbot & ESP</li>
-                            <li>Triggerbot</li>
-                            <li>Skin Changer</li>
-                            <li>Legit & Rage modes</li>
-                            <li>30 days / Lifetime</li>
-                        </ul>
-                        <div class="product-actions">
-                            <a href="https://infamousunleashed.mysellix.io/" class="btn btn-primary" target="_blank">Buy Lifetime</a>
-                            <a href="https://infamousunleashed.mysellix.io/product/infamous-cs2-30" class="btn btn-outline-light" target="_blank">30 Days</a>
-                        </div>
-                    </div>
+               
                 </div>
             </div>
         </div>
     </section>
     
+  
     <!-- Resellers Section -->
-    <section class="section section-darker" id="resellers">
+    <section class="resellers">
         <div class="container">
-            <h2 class="section-title">Official Resellers</h2>
-            <p class="text-center mb-5 mx-auto" style="max-width: 800px;">
-                Purchase Infamous products from our trusted resellers around the world.
-            </p>
+            <div class="text-center">
+                <h2>Our Trusted Resellers</h2>
+                <p>Explore the multitude of sellers offering Infamous for sale.</p>
+            </div>
             
-            <div class="resellers">
-                <div class="reseller-tabs">
-                    <div class="product-tab active" onclick="filterResellers('all')">All</div>
-                    <div class="product-tab" onclick="filterResellers('gta')">GTA 5</div>
-                    <div class="product-tab" onclick="filterResellers('rdr2')">RDR2</div>
-                    <div class="product-tab" onclick="filterResellers('other')">Other</div>
+            <div class="reseller-grid">
+                <div class="reseller-card">
+                    <img src="images/reseller/wwbst.png" alt="WWB" class="reseller-logo">
+                    <h4>WWB</h4>
+                    <a href=" " class="btn btn-outline" target="_blank">Visit</a>
                 </div>
                 
-                <div class="reseller-grid">
-                    <!-- GTA 5 Resellers -->
-                    <div class="reseller-card" data-category="gta all">
-                        <img src="images/reseller/wwbst.png" alt="WWB" class="reseller-logo">
-                        <h4 class="reseller-name">WWB</h4>
-                        <a href="https://whatwhatboy.sellpass.io/products/Infamous-GTA" class="btn btn-outline-light btn-sm" target="_blank">Visit</a>
-                    </div>
-                    
-                    <div class="reseller-card" data-category="gta all">
-                        <img src="images/reseller/rk.png" alt="Recovery Kings" class="reseller-logo">
-                        <h4 class="reseller-name">Recovery Kings</h4>
-                        <a href="https://recoverykings.net/product/infamous/?coupon=uno" class="btn btn-outline-light btn-sm" target="_blank">Visit</a>
-                    </div>
-                    
-                    <div class="reseller-card" data-category="gta all">
-                        <img src="images/reseller/Noah.png" alt="Noahs Mods" class="reseller-logo">
-                        <h4 class="reseller-name">Noahs Mods</h4>
-                        <a href="https://noahsmods.com/product/infamous/" class="btn btn-outline-light btn-sm" target="_blank">Visit</a>
-                    </div>
-                    
-                    <div class="reseller-card" data-category="gta all">
-                        <img src="images/reseller/ezMod.png" alt="EZmod" class="reseller-logo">
-                        <h4 class="reseller-name">EZmod</h4>
-                        <a href="https://ezmod.vip/product/infamous-gta-mod-menu/" class="btn btn-outline-light btn-sm" target="_blank">Visit</a>
-                    </div>
-                    
-                    <div class="reseller-card" data-category="gta all">
-                        <img src="images/reseller/lokoo.png" alt="Lokoszservices" class="reseller-logo">
-                        <h4 class="reseller-name">Lokoszservices</h4>
-                        <a href="https://lokoszservices.sellauth.com/product/977bfd7f298e0" class="btn btn-outline-light btn-sm" target="_blank">Visit</a>
-                    </div>
-                    
-                    <!-- RDR2 Resellers -->
-                    <div class="reseller-card" data-category="rdr2 all">
-                        <img src="images/reseller/wwbst.png" alt="WWB" class="reseller-logo">
-                        <h4 class="reseller-name">WWB</h4>
-                        <a href="https://whatwhatboy.sellpass.io/products/Infamous-RDR2" class="btn btn-outline-light btn-sm" target="_blank">Visit</a>
-                    </div>
-                    
-                    <div class="reseller-card" data-category="rdr2 all">
-                        <img src="images/reseller/rk.png" alt="Recovery Kings" class="reseller-logo">
-                        <h4 class="reseller-name">Recovery Kings</h4>
-                        <a href="https://recoverykings.net/product/infamous-rdr2/?coupon=uno" class="btn btn-outline-light btn-sm" target="_blank">Visit</a>
-                    </div>
-                    
-                    <!-- Other Resellers -->
-                    <div class="reseller-card" data-category="other all">
-                        <img src="images/reseller/shicn.png" alt="Shark" class="reseller-logo">
-                        <h4 class="reseller-name">Shark (CN)</h4>
-                        <a href="https://shark9.com/" class="btn btn-outline-light btn-sm" target="_blank">Visit</a>
-                    </div>
-                    
-                    <div class="reseller-card" data-category="other all">
-                        <img src="images/reseller/XiGua.jpg" alt="XiGua" class="reseller-logo">
-                        <h4 class="reseller-name">XiGua (CN)</h4>
-                        <a href="https://xgcs.shop/" class="btn btn-outline-light btn-sm" target="_blank">Visit</a>
-                    </div>
+
+                
+                <div class="reseller-card">
+                    <img src="images/reseller/Noah.png" alt="Noahs Mods" class="reseller-logo">
+                    <h4>Noahs Mods</h4>
+                    <a href="" class="btn btn-outline" target="_blank">Visit</a>
                 </div>
-            </div>
+                
+           
         </div>
     </section>
+
+       <!-- Modal Popup -->
+       <div class="features-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>GTA 5 Enhanced & Legacy Full Plus </h3>
+                <h3>There are many more options beyond these, but here are a few to consider.</h3>
+                <span class="close-modal">&times;</span>
+            </div>
+            <div class="modal-body">
+                <ul>
+                    
+                   
+
+                    <li>Battle Eye Enabled & Disabled Support</li>
+                    <li>Fully Works in Public Sessions // Missions // Heists // Races etc</li>
+                    <li>No Host Needed</li>
+                
+                    <li>Unlock GTA+</li>
+                    <li>Free Shopping</li>
+             
+                     <li>Unlocks & DLC Unlocks</li>
+                    <li>Money Loops - 6 Million per 2-5 secs</li>
+                     <li>Heist Editor & Instant Finish & 15mil payout etc</li>
+                     <li>Save Modded Outfits & Edit The Names</li>
+                    <li>Modded Vehicles </li>
+                    <li>Multiplier For Money & RP 100x Payout on Missions etc</li>
+                    
+                   
+
+                    <li>Save Any Vehicles in your Garage</li>
+                    <li>Player Crashes & Kicks</li>
+                    <li>Player IP & Geo Location</li>
+                    <li>Session Bounty Loop</li>
+                    <li>Money/Rp Drop & Give Collections to Players</li>
+                    <li>50+ Money Options</li>
+                    <li>Rank Options</li>
+                    <li>Stat Editor</li>
+                    <li>DLC Unlocks/Unlocks/Unlock All</li>
+                    <li>Player Manget</li>
+                    <li>Full Creator - Map/Vehicles</li>
+                    <li>Edit Outfit Names</li>
+                    <li>Casino Rigging</li>
+                    <li>Business Manager</li>
+                    <li>VFX Engine</li>
+                    <li>Chat Spammer</li>
+                    <li>Advanced Protections</li>
+                    <li>Player Tracking</li>
+                    <li>Rockstar ID Tools</li>
+                    <li>Free Shopping</li>
+                    <li>ScriptHookV</li>
+                    <li>Lua Support</li>
+                    <li>xml // ini // json // txt // cfg support</li>
+                    <li>Save & Load Outfits & Vehicles & Maps</li>
+                    <li>Advanced UI Editor</li>
+                    <li>DLC Loading for Custom Vehicle/Ped Models</li>
+                    <li>Overall Much More Unique & Fun Options</li>
+                    <li>Fully Works in Public Sessions // Missions // Heists // Races etc</li>
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
     
+    <style>
+        /* Initial styles for product card */
+        .product-card {
+            position: relative;
+            max-width: 300px;
+            background: #1a1a1a;
+            border-radius: 10px;
+            padding: 20px;
+            color: white;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        
+        .product-features {
+            max-height: 200px;
+            overflow: hidden;
+            margin-bottom: 10px;
+        }
+        
+        .product-features li {
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+        
+        .view-more-btn {
+            background: transparent;
+            color: #4CAF50;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            margin: 10px 0;
+            text-decoration: underline;
+        }
+        
+        /* Modal styles */
+        .features-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.7);
+            backdrop-filter: blur(5px);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .modal-content {
+            background: #1a1a1a;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 1000px;
+            max-height: 80vh;
+            overflow-y: auto;
+            padding: 20px;
+            position: relative;
+        }
+        
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .close-modal {
+            font-size: 28px;
+            cursor: pointer;
+        }
+        
+        .modal-body ul {
+            columns: 2;
+            column-gap: 30px;
+        }
+        
+        @media (max-width: 768px) {
+            .modal-body ul {
+                columns: 1;
+            }
+        }
+    </style>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const viewMoreBtn = document.querySelector('.view-more-btn');
+            const modal = document.querySelector('.features-modal');
+            const closeModal = document.querySelector('.close-modal');
+            
+            viewMoreBtn.addEventListener('click', function() {
+                modal.style.display = 'flex';
+            });
+            
+            closeModal.addEventListener('click', function() {
+                modal.style.display = 'none';
+            });
+            
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        });
+    </script>
+
+
     <!-- Download Section -->
     <section class="section section-dark" id="download">
         <div class="container">
@@ -878,7 +1207,7 @@
                     </a>
                 </div>
                 <p class="text-muted">
-                    Launcher crashing? Install <a href="https://aka.ms/vs/17/release/vc_redist.x86.exe" class="text-primary">Visual C++ Redistributable</a>
+                    Having Issues with Infamous Launcher? Install:  <a href="https://www.techpowerup.com/download/visual-c-redistributable-runtime-package-all-in-one/" class="text-primary">Visual C++ Runtimes</a>
                 </p>
             </div>
         </div>

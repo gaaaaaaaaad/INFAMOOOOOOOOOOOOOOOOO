@@ -1,0 +1,1288 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Infamous Unleashed | Premium Gaming Modifications</title>
+    <link rel="shortcut icon" href="images/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #ff4141;
+            --primary-dark: #d13636;
+            --primary-light: rgba(255, 65, 65, 0.1);
+            --dark: #0d0d0d;
+            --darker: #080808;
+            --light: #f8f9fa;
+            --gray: #8a8f95;
+            --light-gray: rgba(255, 255, 255, 0.05);
+            --dark-gray: #343a40;
+            --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            --shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+            --shadow-lg: 0 15px 30px rgba(0, 0, 0, 0.3);
+            --radius: 12px;
+            --radius-lg: 16px;
+            --section-spacing: 8rem;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--dark);
+            color: var(--light);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Typography */
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+        }
+
+        h1 { 
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            background: linear-gradient(90deg, #fff, #ff6b6b);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            letter-spacing: -0.03em;
+        }
+        
+        h2 { 
+            font-size: clamp(1.75rem, 4vw, 3rem);
+            letter-spacing: -0.02em;
+        }
+        
+        h3 { font-size: clamp(1.5rem, 3vw, 2rem); }
+        h4 { font-size: 1.5rem; }
+
+        p {
+            margin-bottom: 1.5rem;
+            color: var(--gray);
+            font-size: clamp(1rem, 1.1vw, 1.1rem);
+            line-height: 1.7;
+        }
+
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        a:hover {
+            color: var(--primary-dark);
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 0.875rem 2rem;
+            font-weight: 600;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            border-radius: var(--radius);
+            transition: var(--transition);
+            cursor: pointer;
+            border: none;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: white;
+            box-shadow: 0 4px 15px rgba(255, 65, 65, 0.3);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow);
+        }
+
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: 0.5s;
+        }
+
+        .btn-primary:hover::before {
+            left: 100%;
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        .btn-lg {
+            padding: 1.25rem 2.5rem;
+            font-size: 1.1rem;
+        }
+
+        /* Layout */
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        section {
+            padding: var(--section-spacing) 0;
+            position: relative;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .section-header {
+            max-width: 700px;
+            margin: 0 auto 4rem;
+        }
+
+        .section-title {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 1.5rem;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: var(--primary);
+            border-radius: 3px;
+        }
+
+        .section-subtitle {
+            color: var(--gray);
+            font-size: 1.1rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 100vh;
+            min-height: 800px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background-color: var(--darker);
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 100%);
+            z-index: 1;
+        }
+
+        .hero-video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            transform: translate(-50%, -50%);
+            z-index: 0;
+            object-fit: cover;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+            padding: 2rem;
+            text-align: center;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s ease 0.3s forwards;
+        }
+
+        .hero-title {
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            margin-bottom: 1.5rem;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+            line-height: 1.1;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1rem, 2vw, 1.5rem);
+            margin-bottom: 3rem;
+            color: rgba(255,255,255,0.85);
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s ease 0.6s forwards;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s ease 0.9s forwards;
+        }
+
+        .floating-box {
+            position: absolute;
+            right: 8%;
+            bottom: 20%;
+            width: 320px;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            transform: translateY(0);
+            transition: var(--transition);
+            z-index: 3;
+            animation: float 8s ease-in-out infinite;
+            opacity: 0;
+            animation: fadeIn 1s ease 1.2s forwards, float 8s ease-in-out infinite 1.5s;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .floating-box:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        }
+
+        .floating-box img {
+            width: 100%;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+
+        .floating-box:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Features Section */
+        .features {
+            background-color: var(--darker);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .features::before {
+            content: '';
+            position: absolute;
+            top: -100px;
+            left: -100px;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, var(--primary-light), transparent 70%);
+            filter: blur(60px);
+            z-index: 0;
+        }
+
+        .features::after {
+            content: '';
+            position: absolute;
+            bottom: -100px;
+            right: -100px;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, var(--primary-light), transparent 70%);
+            filter: blur(60px);
+            z-index: 0;
+        }
+
+        .features-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .feature-card {
+            background-color: rgba(255,255,255,0.03);
+            border-radius: var(--radius);
+            padding: 2.5rem 2rem;
+            transition: var(--transition);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.05);
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .feature-card:nth-child(1) { animation: fadeInUp 0.8s ease 0.2s forwards; }
+        .feature-card:nth-child(2) { animation: fadeInUp 0.8s ease 0.4s forwards; }
+        .feature-card:nth-child(3) { animation: fadeInUp 0.8s ease 0.6s forwards; }
+
+        .feature-card:hover {
+            transform: translateY(-10px) !important;
+            background-color: rgba(255,255,255,0.07);
+            box-shadow: var(--shadow);
+            border-color: rgba(255,65,65,0.2);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            transition: var(--transition);
+        }
+
+        .feature-card:hover .feature-icon {
+            transform: scale(1.2);
+        }
+
+        .feature-title {
+            color: white;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        /* Video Showcase */
+        .video-showcase {
+            background-color: var(--dark);
+            position: relative;
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .video-item {
+            position: relative;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            transform: scale(0.95);
+            opacity: 0;
+        }
+
+        .video-item:nth-child(1) { animation: fadeIn 0.8s ease 0.2s forwards, scaleIn 0.8s ease 0.2s forwards; }
+        .video-item:nth-child(2) { animation: fadeIn 0.8s ease 0.4s forwards, scaleIn 0.8s ease 0.4s forwards; }
+        .video-item:nth-child(3) { animation: fadeIn 0.8s ease 0.6s forwards, scaleIn 0.8s ease 0.6s forwards; }
+
+        .video-item:hover {
+            transform: scale(1) translateY(-10px) !important;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .video-item iframe {
+            width: 100%;
+            height: 200px;
+            border: none;
+            display: block;
+        }
+
+        /* Products Section */
+        .products {
+            background-color: var(--darker);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-categories {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 3rem;
+        }
+
+        .category-btn {
+            padding: 0.75rem 1.75rem;
+            border-radius: 50px;
+            background-color: rgba(255,255,255,0.05);
+            color: var(--gray);
+            font-weight: 500;
+            transition: var(--transition);
+            cursor: pointer;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .category-btn.active, .category-btn:hover {
+            background-color: var(--primary);
+            color: white;
+            border-color: var(--primary);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(255, 65, 65, 0.3);
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .product-card {
+            background-color: rgba(255,255,255,0.03);
+            border-radius: var(--radius);
+            overflow: hidden;
+            transition: var(--transition);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.05);
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .product-card:nth-child(1) { animation: fadeInUp 0.8s ease 0.2s forwards; }
+        .product-card:nth-child(2) { animation: fadeInUp 0.8s ease 0.3s forwards; }
+        .product-card:nth-child(3) { animation: fadeInUp 0.8s ease 0.4s forwards; }
+        .product-card:nth-child(4) { animation: fadeInUp 0.8s ease 0.5s forwards; }
+        .product-card:nth-child(5) { animation: fadeInUp 0.8s ease 0.6s forwards; }
+
+        .product-card:hover {
+            transform: translateY(-10px) scale(1.02) !important;
+            box-shadow: var(--shadow-lg);
+            border-color: rgba(255,65,65,0.3);
+        }
+
+        .product-header {
+            padding: 1.75rem;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, rgba(255,65,65,0.1), transparent);
+            z-index: 0;
+        }
+
+        .product-title {
+            color: white;
+            margin-bottom: 0.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .product-price {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--primary);
+            position: relative;
+            z-index: 1;
+        }
+
+        .product-body {
+            padding: 1.75rem;
+        }
+
+        .product-features {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        .product-features li {
+            padding: 0.5rem 0;
+            color: var(--gray);
+            position: relative;
+            padding-left: 1.75rem;
+            font-size: 0.95rem;
+        }
+
+        .product-features li:before {
+            content: "✓";
+            color: var(--primary);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        .product-footer {
+            padding: 0 1.75rem 1.75rem;
+        }
+
+        /* Resellers Section */
+        .resellers {
+            background-color: var(--dark);
+        }
+
+        .reseller-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .reseller-card {
+            background-color: rgba(255,255,255,0.03);
+            border-radius: var(--radius);
+            padding: 2rem;
+            text-align: center;
+            transition: var(--transition);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.05);
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .reseller-card:nth-child(1) { animation: fadeInUp 0.8s ease 0.2s forwards; }
+        .reseller-card:nth-child(2) { animation: fadeInUp 0.8s ease 0.3s forwards; }
+        .reseller-card:nth-child(3) { animation: fadeInUp 0.8s ease 0.4s forwards; }
+        .reseller-card:nth-child(4) { animation: fadeInUp 0.8s ease 0.5s forwards; }
+
+        .reseller-card:hover {
+            transform: translateY(-10px) scale(1.03) !important;
+            background-color: rgba(255,255,255,0.07);
+            box-shadow: var(--shadow);
+        }
+
+        .reseller-logo {
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+            margin: 0 auto 1.5rem;
+            border-radius: var(--radius);
+            transition: var(--transition);
+            filter: grayscale(100%) brightness(0.8);
+        }
+
+        .reseller-card:hover .reseller-logo {
+            filter: grayscale(0) brightness(1);
+            transform: scale(1.1);
+        }
+
+        /* Footer */
+        .footer {
+            background-color: var(--darker);
+            padding: 5rem 0 2rem;
+            position: relative;
+        }
+
+        .footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255,65,65,0.5), transparent);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-about {
+            max-width: 300px;
+        }
+
+        .footer-logo {
+            width: 150px;
+            margin-bottom: 1.5rem;
+            opacity: 0.9;
+        }
+
+        .footer-links h4 {
+            color: white;
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+            position: relative;
+            padding-bottom: 0.75rem;
+        }
+
+        .footer-links h4::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background: var(--primary);
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-links a {
+            color: var(--gray);
+            transition: var(--transition);
+            display: inline-block;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary);
+            transform: translateX(5px);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background-color: rgba(255,255,255,0.05);
+            color: white;
+            transition: var(--transition);
+            font-size: 1.1rem;
+        }
+
+        .social-link:hover {
+            background-color: var(--primary);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(255, 65, 65, 0.3);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 3rem;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        /* Scroll Indicator */
+        .scroll-indicator {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+            color: white;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            opacity: 0;
+            animation: fadeIn 1s ease 2s forwards;
+        }
+
+        .scroll-indicator::after {
+            content: '';
+            position: absolute;
+            top: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 50px;
+            background: rgba(255,255,255,0.3);
+            animation: scrollPulse 2s infinite;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes scaleIn {
+            from { transform: scale(0.95); }
+            to { transform: scale(1); }
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+
+        @keyframes scrollPulse {
+            0% { transform: translateX(-50%) scaleY(1); opacity: 1; }
+            50% { transform: translateX(-50%) scaleY(0.7); opacity: 0.5; }
+            100% { transform: translateX(-50%) scaleY(1); opacity: 1; }
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            :root {
+                --section-spacing: 6rem;
+            }
+            
+            .floating-box {
+                width: 280px;
+                right: 5%;
+            }
+            
+            .hero-title {
+                font-size: clamp(2.5rem, 5vw, 3.5rem);
+            }
+        }
+
+        @media (max-width: 768px) {
+            :root {
+                --section-spacing: 5rem;
+                --radius: 10px;
+            }
+            
+            section {
+                padding: 4rem 0;
+            }
+            
+            .hero {
+                min-height: 700px;
+            }
+            
+            .hero-content {
+                padding: 1rem;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+            }
+            
+            .floating-box {
+                position: relative;
+                right: auto;
+                bottom: auto;
+                margin: 3rem auto 0;
+                width: 80%;
+                max-width: 300px;
+            }
+            
+            .feature-card, .product-card {
+                padding: 2rem 1.5rem;
+            }
+            
+            .product-categories {
+                gap: 0.75rem;
+            }
+            
+            .category-btn {
+                padding: 0.6rem 1.5rem;
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            :root {
+                --section-spacing: 4rem;
+            }
+            
+            .container {
+                padding: 0 1.5rem;
+            }
+            
+            .hero {
+                min-height: 600px;
+            }
+            
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .feature-card, .product-card {
+                padding: 1.75rem 1.25rem;
+            }
+            
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <video class="hero-video" autoplay loop muted playsinline>
+            <source src="videos/video1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        
+        <div class="hero-content">
+            <h1 class="hero-title">Infamous Unleashed</h1>
+            <p class="hero-subtitle">Premium gaming modifications for an unparalleled experience</p>
+            <div class="hero-buttons">
+                <a href="https://discord.gg/2KYUvZkD5q" class="btn btn-primary btn-lg" target="_blank">
+                    <i class="fab fa-discord"></i> Join Discord
+                </a>
+                <a href="#products" class="btn btn-outline btn-lg">
+                    <i class="fas fa-shopping-cart"></i> Our Products
+                </a>
+            </div>
+        </div>
+        
+        <div class="floating-box">
+            <img src="https://i.imgur.com/9rcJn7g.png" alt="Infamous Unleashed">
+        </div>
+        
+        <div class="scroll-indicator">Scroll Down</div>
+    </section>
+
+    <!-- About Section -->
+    <section class="container">
+        <div class="section-header">
+            <h2 class="section-title">About Us</h2>
+            <p class="section-subtitle">
+                Infamous started as a mod menu for GTA 5 as Very well Known Mod Menu called N3NYOOO Started back in 2021/2022 as a Free Menu, but we're committed to providing high-quality Mod Menus/Cheats for other games like RDR2, FiveM, RedM CS2, and more in the future.
+            </p>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Why Choose Infamous?</h2>
+                <p class="section-subtitle">Experience the difference with our premium features</p>
+            </div>
+            
+            <div class="features-container">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3 class="feature-title">Unique Options</h3>
+                    <p>We focus on integrating unique ideas to keep it fresh from others with innovative features you won't find anywhere else.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-puzzle-piece"></i>
+                    </div>
+                    <h3 class="feature-title">Adaptable Design</h3>
+                    <p>The Infamous UI boasts remarkable adaptability, featuring a comprehensive theming system and configuration saving capabilities.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="feature-title">Premium Experience</h3>
+                    <p>Easy to use, packed with features, transparent, secure, and with 24/7 support for a reliable experience.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Showcase Section -->
+    <section class="video-showcase">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">See Infamous in Action</h2>
+                <p class="section-subtitle">Here's a sneak peek of what Infamous has to offer.</p>
+            </div>
+            
+            <div class="video-grid">
+                <div class="video-item">
+                    <iframe src="https://www.youtube.com/embed/acI1ljkM3vI?si=yuh-O-mE6epIcyQ-" allowfullscreen></iframe>
+                </div>
+                <div class="video-item">
+                    <iframe src="https://www.youtube.com/embed/gXhQcfn4Z8s?si=eU-yoGTgOUBnraiY" allowfullscreen></iframe>
+                </div>
+                <div class="video-item">
+                    <iframe src="https://www.youtube.com/embed/qzZczdYPHLs?si=Y0oo1R6v43tODwIY" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Products</h2>
+                <p class="section-subtitle">Purchase directly from the retailer.</p>
+            </div>
+            
+            <div class="product-categories">
+                <button class="category-btn active" data-category="all">All Products</button>
+                <button class="category-btn" data-category="gta">GTA 5</button>
+                <button class="category-btn" data-category="rdr2">RDR2</button>
+                <button class="category-btn" data-category="fivem">FiveM</button>
+                <button class="category-btn" data-category="spoofer">Spoofer</button>
+            </div>
+            
+            <div class="product-grid">
+                <!-- Master Package -->
+                <div class="product-card" data-category="all">
+                    <div class="product-header">
+                        <h3 class="product-title">Master Package</h3>
+                        <div class="product-price">$175</div>
+                    </div>
+                    <div class="product-body">
+                        <ul class="product-features">
+                            <li>Access to GTA 5 Legacy & Enhanced</li>
+                            <li>RDR2, FiveM, RedM, Spoofer</li>
+                            <li>Tester Access</li>
+                            <li>Lifetime to all products</li>
+                            <li>Priority Support</li>
+                            <li>Early Access to New Features</li>
+                        </ul>
+                    </div>
+                    <div class="product-footer">
+                        <a href="https://dizzgaming.selly.store/product/9f534656" class="btn btn-primary" target="_blank">
+                            <i class="fas fa-shopping-cart"></i> Buy Now
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- GTA 5 Enhanced -->
+                <div class="product-card" data-category="gta">
+                    <div class="product-header">
+                        <h3 class="product-title">GTA 5 Enhanced</h3>
+                        <div class="product-price">$50</div>
+                    </div>
+                    <div class="product-body">
+                        <ul class="product-features">
+                            <li>Support Battle Eye Enabled & Disabled</li>
+                            <li>Works in Public Sessions</li>
+                            <li>Casino Rigging</li>
+                            <li>Business Manager</li>
+                            <li>Heist Editor & Instant Finish</li>
+                            <li>Lifetime Access</li>
+                        </ul>
+                    </div>
+                    <div class="product-footer">
+                        <a href="https://dizzgaming.selly.store/product/5749058e" class="btn btn-primary" target="_blank">
+                            <i class="fas fa-shopping-cart"></i> Buy Now
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- RDR2 Full -->
+                <div class="product-card" data-category="rdr2">
+                    <div class="product-header">
+                        <h3 class="product-title">RDR2 Full</h3>
+                        <div class="product-price">$20</div>
+                    </div>
+                    <div class="product-body">
+                        <ul class="product-features">
+                            <li>Gold & Money Loops</li>
+                            <li>XP Loop</li>
+                            <li>Collections Loops</li>
+                            <li>Roles XP Loops</li>
+                            <li>Give Money & Gold to Friends</li>
+                            <li>Lifetime Access</li>
+                        </ul>
+                    </div>
+                    <div class="product-footer">
+                        <a href="https://dizzgaming.selly.store/product/779dae04" class="btn btn-primary" target="_blank">
+                            <i class="fas fa-shopping-cart"></i> Buy Now
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- FiveM Full -->
+                <div class="product-card" data-category="fivem">
+                    <div class="product-header">
+                        <h3 class="product-title">FiveM Full</h3>
+                        <div class="product-price">$35</div>
+                    </div>
+                    <div class="product-body">
+                        <ul class="product-features">
+                            <li>Aimbot & Silent Aim</li>
+                            <li>ESP - Players/Peds/Vehicle</li>
+                            <li>Player Trolling</li>
+                            <li>Unique Features</li>
+                            <li>Full VFX Engine</li>
+                            <li>Lifetime Access</li>
+                        </ul>
+                    </div>
+                    <div class="product-footer">
+                        <a href="https://dizzgaming.selly.store/product/e9f88f71" class="btn btn-primary" target="_blank">
+                            <i class="fas fa-shopping-cart"></i> Buy Now
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Hardware Spoofer -->
+                <div class="product-card" data-category="spoofer">
+                    <div class="product-header">
+                        <h3 class="product-title">Hardware Spoofer</h3>
+                        <div class="product-price">$10-$20</div>
+                    </div>
+                    <div class="product-body">
+                        <ul class="product-features">
+                            <li>Spoof your Hardware</li>
+                            <li>Protects your Main HWID</li>
+                            <li>Bypass HWID Bans</li>
+                            <li>Built-in Cleaner</li>
+                            <li>Easy One-Click Solution</li>
+                            <li>1 Day / Lifetime Options</li>
+                        </ul>
+                    </div>
+                    <div class="product-footer">
+                        <a href="https://dizzgaming.selly.store/product/4477abb7" class="btn btn-primary" target="_blank">
+                            <i class="fas fa-shopping-cart"></i> Buy Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resellers Section -->
+    <section class="resellers">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Trusted Resellers</h2>
+                <p class="section-subtitle">Explore the multitude of sellers offering Infamous for sale.</p>
+            </div>
+            
+            <div class="reseller-grid">
+                <div class="reseller-card">
+                    <img src="images/reseller/wwbst.png" alt="WWB" class="reseller-logo">
+                    <h4>WWB</h4>
+                    <a href="https://whatwhatboy.sellpass.io/products/Infamous-GTA" class="btn btn-outline" target="_blank">
+                        <i class="fas fa-external-link-alt"></i> Visit Store
+                    </a>
+                </div>
+                
+                <div class="reseller-card">
+                    <img src="images/reseller/rk.png" alt="Recovery Kings" class="reseller-logo">
+                    <h4>Recovery Kings</h4>
+                    <a href="https://recoverykings.net/product/infamous/?coupon=uno" class="btn btn-outline" target="_blank">
+                        <i class="fas fa-external-link-alt"></i> Visit Store
+                    </a>
+                </div>
+                
+                <div class="reseller-card">
+                    <img src="images/reseller/Noah.png" alt="Noahs Mods" class="reseller-logo">
+                    <h4>Noahs Mods</h4>
+                    <a href="https://noahsmods.com/product/infamous/" class="btn btn-outline" target="_blank">
+                        <i class="fas fa-external-link-alt"></i> Visit Store
+                    </a>
+                </div>
+                
+                <div class="reseller-card">
+                    <img src="images/reseller/ezMod.png" alt="EZmod" class="reseller-logo">
+                    <h4>EZmod</h4>
+                    <a href="https://ezmod.vip/product/infamous-gta-mod-menu/" class="btn btn-outline" target="_blank">
+                        <i class="fas fa-external-link-alt"></i> Visit Store
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <img src="images/logo.png" alt="Infamous Unleashed" class="footer-logo">
+                    <p>Premium gaming modifications for an enhanced experience across multiple platforms.</p>
+                    <div class="social-links">
+                        <a href="https://discord.gg/2KYUvZkD5q" class="social-link" target="_blank" title="Discord">
+                            <i class="fab fa-discord"></i>
+                        </a>
+                        <a href="https://t.me/InfamousMenu" class="social-link" target="_blank" title="Telegram">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                        <a href="https://x.com/InfamousUL" class="social-link" target="_blank" title="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Products</h4>
+                    <ul>
+                        <li><a href="#products">GTA 5 Mods</a></li>
+                        <li><a href="#products">RDR2 Mods</a></li>
+                        <li><a href="#products">FiveM Mods</a></li>
+                        <li><a href="#products">Hardware Spoofer</a></li>
+                        <li><a href="#products">All Products</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#download">Download</a></li>
+                        <li><a href="https://discord.gg/2KYUvZkD5q" target="_blank">Support</a></li>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Tutorials</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Refund Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Infamous Unleashed. All Rights Reserved. Designed with passion by the Infamous team.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple category filtering
+        document.querySelectorAll('.category-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                // Remove active class from all buttons
+                document.querySelectorAll('.category-btn').forEach(b => b.classList.remove('active'));
+                // Add active class to clicked button
+                this.classList.add('active');
+                
+                const category = this.dataset.category;
+                const products = document.querySelectorAll('.product-card');
+                
+                products.forEach(product => {
+                    if (category === 'all' || product.dataset.category === category) {
+                        product.style.display = 'block';
+                    } else {
+                        product.style.display = 'none';
+                    }
+                });
+            });
+        });
+        
+        // Initialize video
+        const videoPlayer = document.querySelector('.hero-video');
+        const videoSource = videoPlayer.querySelector('source');
+        
+        // Array of video sources
+        const videos = [
+            'videos/video1.mp4',
+            'videos/video2.mp4',
+            'videos/video3.mp4'
+        ];
+        
+        // Function to select random video
+        function selectRandomVideo() {
+            const randomIndex = Math.floor(Math.random() * videos.length);
+            return videos[randomIndex];
+        }
+        
+        // Set initial video source
+        videoSource.src = selectRandomVideo();
+        videoPlayer.load();
+        
+        // Change video every 30 seconds
+        setInterval(() => {
+            videoSource.src = selectRandomVideo();
+            videoPlayer.load();
+            videoPlayer.play().catch(e => console.log('Video play error:', e));
+        }, 30000);
+        
+        // Play video on user interaction
+        document.addEventListener('click', function initVideo() {
+            videoPlayer.play().catch(e => console.log('Video play error:', e));
+            document.removeEventListener('click', initVideo);
+        }, { once: true });
+        
+        // Animate elements when they come into view
+        const animateOnScroll = () => {
+            const elements = document.querySelectorAll('.feature-card, .video-item, .product-card, .reseller-card');
+            
+            elements.forEach(el => {
+                const elementPosition = el.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                
+                if (elementPosition < windowHeight - 100) {
+                    el.style.animationPlayState = 'running';
+                }
+            });
+        };
+        
+        // Run once on load and then on scroll
+        window.addEventListener('load', animateOnScroll);
+        window.addEventListener('scroll', animateOnScroll);
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
