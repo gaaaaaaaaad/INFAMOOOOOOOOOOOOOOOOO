@@ -597,12 +597,69 @@
     </style>
 </head>
 <body>
-    <!-- Hero Section -->
-    <section class="hero-section">
-        <video class="hero-video" autoplay loop muted playsinline>
-            <source src="videos/video1.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+  <!-- Hero Section -->
+<section class="hero-section">
+    <video class="hero-video" autoplay loop playsinline>
+        Your browser does not support the video tag.
+    </video>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Array of video sources
+            const videoSources = [
+                'videos/video1.mp4',
+                'videos/video2.mp4',
+                'videos/video3.mp4',
+          
+                // Add more video paths as needed
+            ];
+            
+            // Select a random video
+            const randomVideo = videoSources[Math.floor(Math.random() * videoSources.length)];
+            
+            // Get the video element
+            const videoElement = document.querySelector('.hero-video');
+            
+            // Create source element
+            const sourceElement = document.createElement('source');
+            sourceElement.src = randomVideo;
+            sourceElement.type = 'video/mp4';
+            
+            // Clear any existing sources and add the new one
+            videoElement.innerHTML = '';
+            videoElement.appendChild(sourceElement);
+            
+            // Try to play with audio, and if blocked, mute and try again
+            videoElement.play().catch(error => {
+                console.log("Auto-play with audio was prevented, trying muted...");
+                videoElement.muted = true;
+                videoElement.play();
+            });
+            
+            // Fallback if video fails to load
+            videoElement.addEventListener('error', function() {
+                console.log("Error loading video, trying next option...");
+                const currentIndex = videoSources.indexOf(randomVideo);
+                const nextIndex = (currentIndex + 1) % videoSources.length;
+                const fallbackVideo = videoSources[nextIndex];
+                
+                const fallbackSource = document.createElement('source');
+                fallbackSource.src = fallbackVideo;
+                fallbackSource.type = 'video/mp4';
+                
+                videoElement.innerHTML = '';
+                videoElement.appendChild(fallbackSource);
+                videoElement.load();
+                videoElement.play().catch(e => {
+                    videoElement.muted = true;
+                    videoElement.play();
+                });
+            });
+        });
+    </script>
+</section>
+
+
         <div class="hero-overlay"></div>
         
         <div class="hero-content">
