@@ -1,0 +1,1346 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Infamous Unleashed</title>
+    <link rel="shortcut icon" href="images/logo.png">
+    
+    <!-- Modern Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Oxanium:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Modern CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <style>
+        :root {
+            --primary: #ff4141;
+            --primary-dark: #9c0707;
+            --dark: #121212;
+            --darker: #0a0a0a;
+            --light: #f8f9fa;
+            --gray: #6c757d;
+            --dark-gray: #343a40;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--light);
+            background-color: var(--darker);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Oxanium', sans-serif;
+            font-weight: 700;
+        }
+        
+        /* Hero Section */
+        .hero-section {
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--dark);
+        }
+        
+        .hero-video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            min-width: 100%;
+            min-height: 100%;
+            z-index: 1;
+        }
+        
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 2;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 3;
+            text-align: center;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .hero-logo {
+            max-width: 200px;
+            margin-bottom: 2rem;
+            filter: drop-shadow(0 0 10px rgba(255, 65, 65, 0.7));
+        }
+        
+        .hero-title {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            background: linear-gradient(90deg, #ff4141, #ff8a00);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 10px rgba(255, 65, 65, 0.3);
+        }
+        
+        .hero-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            font-weight: 400;
+        }
+        
+        /* Buttons */
+        .btn {
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            margin: 0.5rem;
+            display: inline-block;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary);
+            border-color: var(--primary);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+            border-color: var(--primary-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(156, 7, 7, 0.3);
+        }
+        
+        .btn-outline-light {
+            border: 2px solid white;
+            color: white;
+            background-color: transparent;
+        }
+        
+        .btn-outline-light:hover {
+            background-color: white;
+            color: var(--dark);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+        }
+        
+        /* Floating Box */
+        .floating-box {
+            position: absolute;
+            bottom: 15%;
+            right: 10%;
+            width: 250px;
+            z-index: 10;
+            cursor: pointer;
+            transition: all 0.5s ease;
+            border: 3px solid var(--primary);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .floating-box:hover {
+            transform: scale(1.05);
+            border-color: white;
+        }
+        
+        .floating-box img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        /* Sections */
+        .section {
+            padding: 5rem 0;
+            position: relative;
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            text-align: center;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--primary);
+            border-radius: 2px;
+        }
+        
+        .section-dark {
+            background-color: var(--dark);
+        }
+        
+        .section-darker {
+            background-color: var(--darker);
+        }
+        
+        /* Features */
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .feature-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 2rem;
+            width: 100%;
+            max-width: 350px;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 65, 65, 0.1);
+            backdrop-filter: blur(10px);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(255, 65, 65, 0.1);
+            border-color: rgba(255, 65, 65, 0.3);
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+        
+        .feature-title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: white;
+        }
+        
+        .feature-text {
+            color: var(--gray);
+            font-size: 1rem;
+        }
+        
+        /* Video Showcase */
+        .video-showcase {
+            margin-top: 4rem;
+        }
+        
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .video-item {
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .video-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(255, 65, 65, 0.2);
+        }
+        
+        .video-item iframe {
+            width: 100%;
+            height: 200px;
+            border: none;
+        }
+        
+        /* Products */
+        .products {
+            margin-top: 4rem;
+        }
+        
+        .product-tabs {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 3rem;
+        }
+        
+        .product-tab {
+            padding: 0.8rem 1.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
+        
+        .product-tab.active, .product-tab:hover {
+            background: var(--primary);
+            color: white;
+        }
+        
+        .product-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .product-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 65, 65, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(255, 65, 65, 0.1);
+            border-color: rgba(255, 65, 65, 0.3);
+        }
+        
+        .product-badge {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: var(--primary);
+            color: white;
+            padding: 0.3rem 1rem;
+            border-bottom-left-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        
+        .product-title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: white;
+        }
+        
+        .product-price {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+        }
+        
+        .product-features {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+        
+        .product-features li {
+            margin-bottom: 0.5rem;
+            position: relative;
+            padding-left: 1.5rem;
+            color: var(--gray);
+        }
+        
+        .product-features li:before {
+            content: ' ';
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+        }
+        
+   
+       
+
+        <style>
+
+.product-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.btn {
+  padding: 8px 16px;
+  font-size: 14px;
+  border-radius: 20px; /* Rounded corners */
+  text-decoration: none;
+  text-align: center;
+  flex: 1;
+  transition: all 0.2s ease;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: #ff4545;
+  color: rgb(255, 255, 255);
+}
+
+.btn-primary:hover {
+  background: #695fff;
+}
+
+.btn-outline {
+  background: transparent;
+  color: #4CAF50;
+  border: 1px solid #4CAF50;
+}
+
+.btn-outline:hover {
+  background: rgba(76, 175, 80, 0.1);
+}
+
+
+
+        
+        .product-icon {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.product-icon svg {
+    width: 48px;
+    height: 48px;
+    color: #ff6464; /* Set your desired icon color */
+}
+
+        /* Resellers Section */
+        .resellers {
+            background-color: var(--dark);
+        }
+
+        .reseller-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .reseller-card {
+            background-color: rgba(255,255,255,0.05);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .reseller-card:hover {
+            transform: translateY(-5px);
+            background-color: rgba(255,255,255,0.1);
+        }
+
+        .reseller-logo {
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+            margin: 0 auto 1rem;
+            border-radius: var(--radius);
+        }
+
+        
+        /* Footer */
+        .footer {
+            background-color: var(--darker);
+            padding: 3rem 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .footer-logo {
+            max-width: 150px;
+            margin-bottom: 1.5rem;
+        }
+        
+        .footer-social {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            color: white;
+            font-size: 1.2rem;
+        }
+        
+        .social-icon:hover {
+            background: var(--primary);
+            transform: translateY(-3px);
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-link {
+            color: var(--gray);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .footer-link:hover {
+            color: var(--primary);
+        }
+        
+        .copyright {
+            text-align: center;
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+        
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .fade-in {
+            animation: fadeIn 1s ease forwards;
+        }
+        
+        .delay-1 { animation-delay: 0.2s; }
+        .delay-2 { animation-delay: 0.4s; }
+        .delay-3 { animation-delay: 0.6s; }
+        
+        /* Responsive */
+        @media (max-width: 992px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .floating-box {
+                width: 200px;
+                right: 5%;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .floating-box {
+                position: relative;
+                right: auto;
+                bottom: auto;
+                margin: 2rem auto;
+                width: 180px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero-title {
+                font-size: 1.8rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+            
+            .btn {
+                padding: 0.6rem 1.5rem;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+  <!-- Hero Section -->
+<section class="hero-section">
+    <video class="hero-video" autoplay loop playsinline>
+        Your browser does not support the video tag.
+    </video>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Array of video sources
+            const videoSources = [
+                'videos/video1.mp4',
+                'videos/video2.mp4',
+                'videos/video3.mp4',
+          
+                // Add more video paths as needed
+            ];
+            
+            // Select a random video
+            const randomVideo = videoSources[Math.floor(Math.random() * videoSources.length)];
+            
+            // Get the video element
+            const videoElement = document.querySelector('.hero-video');
+            
+            // Create source element
+            const sourceElement = document.createElement('source');
+            sourceElement.src = randomVideo;
+            sourceElement.type = 'video/mp4';
+            
+            // Clear any existing sources and add the new one
+            videoElement.innerHTML = '';
+            videoElement.appendChild(sourceElement);
+            
+            // Try to play with audio, and if blocked, mute and try again
+            videoElement.play().catch(error => {
+                console.log("Auto-play with audio was prevented, trying muted...");
+                videoElement.muted = true;
+                videoElement.play();
+            });
+            
+            // Fallback if video fails to load
+            videoElement.addEventListener('error', function() {
+                console.log("Error loading video, trying next option...");
+                const currentIndex = videoSources.indexOf(randomVideo);
+                const nextIndex = (currentIndex + 1) % videoSources.length;
+                const fallbackVideo = videoSources[nextIndex];
+                
+                const fallbackSource = document.createElement('source');
+                fallbackSource.src = fallbackVideo;
+                fallbackSource.type = 'video/mp4';
+                
+                videoElement.innerHTML = '';
+                videoElement.appendChild(fallbackSource);
+                videoElement.load();
+                videoElement.play().catch(e => {
+                    videoElement.muted = true;
+                    videoElement.play();
+                });
+            });
+        });
+    </script>
+
+
+
+        <div class="hero-overlay"></div>
+        
+        <div class="hero-content">
+            <img src="images/logo.png" alt="Infamous Unleashed Logo" class="hero-logo fade-in">
+            <h1 class="hero-title fade-in">Infamous Unleashed</h1>
+            <p class="hero-subtitle fade-in delay-1">Unlock the Extraordinary – Top-Tier Cheats For GTA 5, RDR2, FiveM, RedM & Beyond</p>
+            <div class="fade-in delay-2">
+                <a href="https://discord.gg/2KYUvZkD5q" class="btn btn-primary" target="_blank">Join Our Discord</a>
+                <a href="#products" class="btn btn-outline-light">View Products</a>
+            </div>
+        </div>
+        
+        <div class="floating-box fade-in delay-3" onclick="jumpAround()">
+            <img src="https://i.imgur.com/9rcJn7g.png" alt="Infamous Screenshot">
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section class="section section-dark" id="about">
+        <div class="container">
+            <h2 class="section-title">About Infamous</h2>
+            <p class="text-center mb-5 mx-auto" style="max-width: 800px;">
+                Infamous began in 2021/2022 as a free GTA 5 mod menu (originally known as N3NY000/NENYOOO) but has since grown into a premium gaming enhancement suite. Today, we specialize in high-end mods and cheats for GTA 5, RDR2, FiveM, RedM, CS2, COD, FN and beyond—delivering unmatched quality and innovation for immersive gameplay experiences.
+            </p>
+            
+            <div class="features">
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3 class="feature-title">Unique Options</h3>
+                    <p class="feature-text">
+                        We focus on integrating unique ideas to keep our products fresh and innovative compared to others in the market.
+                    </p>
+                </div>
+                
+                <div class="feature-card fade-in delay-1">
+                    <div class="feature-icon">
+                        <i class="fas fa-puzzle-piece"></i>
+                    </div>
+                    <h3 class="feature-title">Adaptable Design</h3>
+                    <p class="feature-text">
+                        The Infamous UI boasts remarkable adaptability with a comprehensive theming system and configuration saving capabilities.
+                    </p>
+                </div>
+                
+                <div class="feature-card fade-in delay-2">
+                    <div class="feature-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3 class="feature-title">Why Choose Infamous</h3>
+                    <p class="feature-text">
+                        Easy to use, packed with features, transparent, secure, and with 24/7 support for a reliable experience.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Video Showcase Section -->
+    <section class="section section-darker" id="showcase">
+        <div class="container">
+            <h2 class="section-title">Showcase</h2>
+            <p class="text-center mb-5 mx-auto" style="max-width: 800px;">
+                Here's a sneak peek of what Infamous has to offer. Watch our videos to see the features in action.
+            </p>
+            
+            <div class="video-showcase">
+                <div class="video-grid">
+                    <div class="video-item">
+                        <iframe src="https://www.youtube.com/embed/acI1ljkM3vI?si=yuh-O-mE6epIcyQ-" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-item">
+                        <iframe src="https://www.youtube.com/embed/ipKKGPy7i8M?si=jfcfl92FGj-fPYFc" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-item">
+                        <iframe src="https://www.youtube.com/embed/j_qQUeyxzl8?si=TIzepbXnDhxUPjvI" frameborder="0" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="video-item">
+                        <iframe src="https://www.youtube.com/embed/XG6DXSDhRmk?si=E-B_j4RzmZqo2iI1" frameborder="0" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="video-item">
+                        <iframe src="https://www.youtube.com/embed/8aKjjz3jssU?si=b95jkuKwt13HdNdn" frameborder="0" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="video-item">
+                        <iframe src="https://www.youtube.com/embed/CdNU0lRZ5uY?si=ftBj2nVzq1QBKRP3" frameborder="0" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="video-item">
+                        <iframe src="https://www.youtube.com/embed/uuINL0j4vhw?si=cTvF4VnDh73-V3y6" frameborder="0" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="video-item">
+                        <iframe src="https://www.youtube.com/embed/0PxYNrF3L0w?si=Gni9BMFx94K-MUZa" frameborder="0" allowfullscreen></iframe>
+                    </div>
+</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Products Section -->
+    <section class="section section-dark" id="products">
+        <div class="container">
+            <h2 class="section-title">Our Products</h2>
+            <p class="text-center mb-5 mx-auto" style="max-width: 800px;">
+                Purchase directly from our official retailers or through our trusted resellers.
+            </p>
+            
+            <div class="products">
+                <div class="product-tabs">
+                    <div class="product-tab active" onclick="filterProducts('all')">All Products</div>
+                    <div class="product-tab" onclick="filterProducts('gta')">GTA 5</div>
+                    <div class="product-tab" onclick="filterProducts('rdr2')">RDR2</div>
+                    <div class="product-tab" onclick="filterProducts('fivem')">FiveM</div>
+                    <div class="product-tab" onclick="filterProducts('other')">Other</div>
+                </div>
+                
+                <div class="product-cards">
+
+                    
+                    <!-- Master Package -->
+                    <div class="product-card" data-category="all">
+
+
+                        <div class="product-badge">BEST VALUE FOR MONEY</div>
+
+                             
+                        <div class="product-icon">
+                            <img src=" " alt="  ">
+                        </div>
+                        <h3 class="product-title">Master Package</h3>
+                        <div class="product-price">$125</div>
+                        <ul class="product-features">
+                            <li>Access to </li>
+                            
+                            <li>RDR2</li>
+                            <li>FiveM & RedM</li>
+                            <li>HWID Spoofer</li>
+                            <li>GTA 5 Legacy & Enhanced</li>
+                            <li>Tester Access Included</li>
+                            <li>Lifetime Access</li>
+                        </ul>
+                           <div class="product-actions">
+                            <a href="https://nenyooo.myshopify.com/products/infamous-master-package" class="btn btn-primary" target="_blank">Buy With Card</a>
+                            <a href="https://dizzgaming.selly.store/product/9f534656" class="btn btn-primary" target="_blank">Buy With Crypto</a>
+                            <a href="morepayments.html" class="btn btn-outline-light" target="_blank">More Payments</a>
+                           
+                            
+                        </div>
+                        
+                    </div>
+                    
+                    <!-- GTA 5 Enhanced Full Plus -->
+                    
+                    
+                    <div class="product-card" data-category="gta">
+                      
+                        <div class="product-icon">
+                            <img src="gta5enh48.png" alt="GTA Icon">
+                        </div>
+                        
+                        <h3 class="product-title">GTA 5 Enhanced Full Plus</h3>
+                        <div class="product-price">$50</div>
+                        
+                        <ul class="product-features">
+                        
+                            <li>Support For Battle Eye Enabled & Disabled</li>
+                            <li>No Host Needed</li>
+                            
+         
+                            
+                            <li>Free Shopping</li>
+                        
+                            <li>Casino Rigging</li>
+                            <li>Business Manager</li>
+                            <li>Lifetime access</li>
+                            
+
+                          
+                        </ul>
+                        
+                        <button class="view-more-btn">View All Features (+500 more)</button>
+
+                        <div class="product-actions">
+                             <a href="https://nenyooo.myshopify.com/products/infamous-full-plus-gta-5-enhanced" class="btn btn-primary" target="_blank">Buy With Card</a>
+                            <a href="https://dizzgaming.selly.store/product/5749058e" class="btn btn-primary" target="_blank">Buy With Crypto</a>
+                            <a href="morepayments.html" class="btn btn-outline-light" target="_blank">More Payments</a>
+                            <a href="https://dizzgaming.selly.store/product/d1a82e47" class="btn btn-outline-light" target="_blank">Buy Tester </a>
+                            <a href="https://dizzgaming.selly.store/product/26a730c8" class="btn btn-outline-light" target="_blank">Upgrade to Full Plus</a>
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="product-card" data-category="gta">
+                        <div class="product-icon">
+                            <img src="gta5leg48.png" alt="GTA Icon">
+                        </div>
+                        
+                        <h3 class="product-title">GTA 5 Legacy Full Plus</h3>
+                        <div class="product-price">$40</div>
+                        
+                        <ul class="product-features">
+                           
+                            <li>Battle Eye Enabled</li>
+                            <li>No Host Needed</li>
+                            
+         
+                            <li>Free Shopping</li>
+                        
+                            <li>Casino Rigging</li>
+                            <li>Business Manager</li>
+                            <li>Lifetime access</li>
+                            
+
+                        </ul>
+                        
+                        <button class="view-more-btn">View All Features (+500 more)</button>
+                        
+                        
+                        <div class="product-actions">
+                            <a href="https://nenyooo.myshopify.com/products/infamous-full-plus-gta-5-legacy" class="btn btn-primary" target="_blank">Buy With Card</a>
+                            <a href="https://dizzgaming.selly.store/product/e2797567" class="btn btn-primary" target="_blank">Buy With Crypto</a>
+                            <a href="morepayments.html" class="btn btn-outline-light" target="_blank">More Payments</a>
+                            <a href="https://dizzgaming.selly.store/product/d1a82e47" class="btn btn-outline-light" target="_blank">Buy Tester </a>
+                            <a href="https://dizzgaming.selly.store/product/26a730c8" class="btn btn-outline-light" target="_blank">Upgrade to Full Plus</a>
+                            
+                        </div>
+                        
+                    </div>
+                    
+             
+                          
+                    <div class="product-card" data-category="gta">
+                      
+                        <div class="product-icon">
+                            <img src="gta5leg48.png" alt="GTA Icon">
+                        </div>
+                        
+                        <h3 class="product-title">GTA 5 Legacy Full</h3>
+                        <div class="product-price">$20</div>
+                        
+                        <ul class="product-features">
+                           
+                            <li>Battle Eye Disabled</li>
+                            <li>ScriptHookV Support</li>
+                            <li>50+ Money Options</li>
+                            <li>Lifetime access</li>
+                           
+                        </ul>
+                        
+                        <button class="view-more-btn">View All Features (300+ more)</button>
+
+                        <div class="product-actions">
+                            <a href="https://nenyooo.myshopify.com/products/infamous-full-version-gta-5" class="btn btn-primary" target="_blank">Buy With Card & Crypto</a>
+                            <a href="https://dizzgaming.selly.store/product/97f8ea3f" class="btn btn-primary" target="_blank">Buy With Crypto</a>
+                            <a href="morepayments.html" class="btn btn-outline-light" target="_blank">More Payments</a>
+                            <a href="https://dizzgaming.selly.store/product/d1a82e47" class="btn btn-outline-light" target="_blank">Buy Tester </a>
+                            <a href="https://dizzgaming.selly.store/product/26a730c8" class="btn btn-outline-light" target="_blank">Upgrade to Full Plus</a>
+                            
+                      
+                            
+                        </div>
+                    </div>
+
+                    <!-- RDR2 Full -->
+                    <div class="product-card" data-category="rdr2">
+
+                        <div class="product-icon">
+                            <img src="rdr248.png" alt="GTA Icon">
+                        </div>
+                        
+                        <h3 class="product-title">RDR2 Full Version</h3>
+                        <div class="product-price">$20</div>
+                        <ul class="product-features">
+                            <li>Gold & Money Loops</li>
+                            <li>XP Loop</li>
+                            <li>Collections Loops</li>
+                            <li>Roles XP Loops</li>
+                            <li>Give Money & Gold to Friends</li>
+                            <li>VFX Engine</li>
+                            <li>Lifetime access</li>
+                        </ul>
+                        <div class="product-actions">
+
+
+                            <a href="https://nenyooo.myshopify.com/products/infamous-full-rdr2" class="btn btn-primary" target="_blank">Buy With Card </a>
+                            <a href="https://dizzgaming.selly.store/product/779dae04" class="btn btn-primary" target="_blank">Buy With Crypto </a>
+                            <a href="morepayments.html" class="btn btn-outline-light" target="_blank">More Payments</a>
+                            
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="rdr2">
+
+                        <div class="product-icon">
+                            <img src="rdr248.png" alt="GTA Icon">
+                        </div>
+                        
+                        <h3 class="product-title">RDR2 Lite Version</h3>
+                        <div class="product-price">$10</div>
+                        <ul class="product-features">
+                            <li>Basic Options.</li>
+                            
+                            <li>Lifetime access</li>
+                        </ul>
+                        <div class="product-actions">
+
+
+                            
+
+                             <a href="https://nenyooo.myshopify.com/products/infamous-full-rdr2" class="btn btn-primary" target="_blank">Buy With Card </a>
+                            <a href="https://dizzgaming.selly.store/product/779dae04" class="btn btn-primary" target="_blank">Buy With Crypto </a>
+
+                            <a href="morepayments.html" class="btn btn-outline-light" target="_blank">More Payments</a>
+                            
+                        </div>
+                    </div>
+                    
+                    <!-- FiveM Full -->
+                    <div class="product-card" data-category="fivem">
+
+                        <div class="product-icon">
+                            <img src="fivem48.png" alt="GTA Icon">
+                        </div>
+
+                        <h3 class="product-title">FiveM Full Version</h3>
+                        <div class="product-price">$30</div>
+                        <ul class="product-features">
+                            <li>Aimbot & Silent Aim</li>
+                            <li>Magic Bullets</li>
+                            <li>ESP - Players/Peds/Vehicle</li>
+                            <li>Player Trolling</li>
+                            <li>Full VFX Engine</li>
+                            <li>Vehicle XML Spawner</li>
+                            <li>Lifetime access</li>
+                        </ul>
+                        <div class="product-actions">
+
+
+                            <a href="https://nenyooo.myshopify.com/products/infamous-fivem-full-plus" class="btn btn-primary" target="_blank">Buy With Card</a>
+                            <a href="https://dizzgaming.selly.store/product/e9f88f71" class="btn btn-primary" target="_blank">Buy With Crypto </a>
+                            <a href="morepayments.html" class="btn btn-outline-light" target="_blank">More Payments</a>
+                            
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="fivem">
+
+                        <div class="product-icon">
+                            <img src="fivem48.png" alt="GTA Icon">
+                        </div>
+
+                        <h3 class="product-title">FiveM Basic Version</h3>
+                        <div class="product-price">$10</div>
+                        <ul class="product-features">
+                            <li> Aimbot & Settings</li>
+                            <li> ESP - Players/Peds</li>
+                            <li> Basic Options - Self/Weapon/Vehicle/Misc</li>
+                            <li> Some VFX Options - Make the World YOUR</li>
+                            <li>Lifetime access</li>
+                        </ul>
+                        <div class="product-actions">
+                          <a href="https://nenyooo.myshopify.com/products/infamous-fivem-full-plus" class="btn btn-primary" target="_blank">Buy With Card</a>
+                            <a href="https://dizzgaming.selly.store/product/e9f88f71" class="btn btn-primary" target="_blank">Buy With Crypto </a>
+                            <a href="morepayments.html" class="btn btn-outline-light" target="_blank">More Payments</a>
+                            
+                        </div>
+                    </div>
+                    
+                    <!-- Hardware Spoofer -->
+                    <div class="product-card" data-category="other">
+
+                        <div class="product-icon">
+                            <img src="hwid48.png" alt="GTA Icon">
+                        </div>
+
+                        <h3 class="product-title">Hardware Spoofer</h3>
+                        <div class="product-price">$20</div>
+                        <ul class="product-features">
+                            <li>Spoof your Hardware</li>
+                            <li>Protects your Main HWID</li>
+                            <li>Bypass HWID bans</li>
+                            <li>Built-in cleaner for FiveM</li>
+                            <li>Lifetime Access</li>
+                        </ul>
+                        <div class="product-actions">
+                            <a href="https://nenyooo.myshopify.com/products/infamous-hwid-spoofer" class="btn btn-primary" target="_blank">Buy With Card</a>
+                            <a href="https://dizzgaming.selly.store/product/4477abb7" class="btn btn-primary" target="_blank">Buy With Crypto </a>
+                            <a href="morepayments.html" class="btn btn-outline-light" target="_blank">More Payments</a>
+                            
+                        </div>
+                    </div>
+                    
+               
+                </div>
+            </div>
+        </div>
+    </section>
+    
+  
+    <!-- Resellers Section -->
+    <section class="resellers">
+        <div class="container">
+            <div class="text-center">
+                <h2>Our Trusted Resellers</h2>
+                <p>Explore the multitude of sellers offering Infamous for sale.</p>
+            </div>
+            
+            <div class="reseller-grid">
+                <div class="reseller-card">
+                    <img src="images/reseller/wwbst.png" alt="WWB" class="reseller-logo">
+                    <h4>WWB</h4>
+                    <a href=" " class="btn btn-outline" target="_blank">Visit</a>
+                </div>
+                
+
+                
+                <div class="reseller-card">
+                    <img src="images/reseller/Noah.png" alt="Noahs Mods" class="reseller-logo">
+                    <h4>Noahs Mods</h4>
+                    <a href="" class="btn btn-outline" target="_blank">Visit</a>
+                </div>
+                
+           
+        </div>
+    </section>
+
+       <!-- Modal Popup -->
+       <div class="features-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>GTA 5 Enhanced & Legacy Full Plus </h3>
+                <h3>There are many more options beyond these, but here are a few to consider.</h3>
+                <span class="close-modal">&times;</span>
+            </div>
+            <div class="modal-body">
+                <ul>
+                    
+                   
+
+                    <li>Battle Eye Enabled & Disabled Support</li>
+                    <li>Fully Works in Public Sessions // Missions // Heists // Races etc</li>
+                    <li>No Host Needed</li>
+                
+                    <li>Unlock GTA+</li>
+                    <li>Free Shopping</li>
+             
+                     <li>Unlocks & DLC Unlocks</li>
+                    <li>Money Loops - 6 Million per 2-5 secs</li>
+                     <li>Heist Editor & Instant Finish & 15mil payout etc</li>
+                     <li>Save Modded Outfits & Edit The Names</li>
+                    <li>Modded Vehicles </li>
+                    <li>Multiplier For Money & RP 100x Payout on Missions etc</li>
+                    
+                   
+
+                    <li>Save Any Vehicles in your Garage</li>
+                    <li>Player Crashes & Kicks</li>
+                    <li>Player IP & Geo Location</li>
+                    <li>Session Bounty Loop</li>
+                    <li>Money/Rp Drop & Give Collections to Players</li>
+                    <li>50+ Money Options</li>
+                    <li>Rank Options</li>
+                    <li>Stat Editor</li>
+                    <li>DLC Unlocks/Unlocks/Unlock All</li>
+                    <li>Player Manget</li>
+                    <li>Full Creator - Map/Vehicles</li>
+                    <li>Edit Outfit Names</li>
+                    <li>Casino Rigging</li>
+                    <li>Business Manager</li>
+                    <li>VFX Engine</li>
+                    <li>Chat Spammer</li>
+                    <li>Advanced Protections</li>
+                    <li>Player Tracking</li>
+                    <li>Rockstar ID Tools</li>
+                    <li>Free Shopping</li>
+                    <li>ScriptHookV</li>
+                    <li>Lua Support</li>
+                    <li>xml // ini // json // txt // cfg support</li>
+                    <li>Save & Load Outfits & Vehicles & Maps</li>
+                    <li>Advanced UI Editor</li>
+                    <li>DLC Loading for Custom Vehicle/Ped Models</li>
+                    <li>Overall Much More Unique & Fun Options</li>
+                    <li>Fully Works in Public Sessions // Missions // Heists // Races etc</li>
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <style>
+        /* Initial styles for product card */
+        .product-card {
+            position: relative;
+            max-width: 300px;
+            background: #1a1a1a;
+            border-radius: 10px;
+            padding: 20px;
+            color: white;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        
+        .product-features {
+            max-height: 200px;
+            overflow: hidden;
+            margin-bottom: 10px;
+        }
+        
+        .product-features li {
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+        
+        .view-more-btn {
+            background: transparent;
+            color: #4CAF50;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            margin: 10px 0;
+            text-decoration: underline;
+        }
+        
+        /* Modal styles */
+        .features-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.7);
+            backdrop-filter: blur(5px);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .modal-content {
+            background: #1a1a1a;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 1000px;
+            max-height: 80vh;
+            overflow-y: auto;
+            padding: 20px;
+            position: relative;
+        }
+        
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .close-modal {
+            font-size: 28px;
+            cursor: pointer;
+        }
+        
+        .modal-body ul {
+            columns: 2;
+            column-gap: 30px;
+        }
+        
+        @media (max-width: 768px) {
+            .modal-body ul {
+                columns: 1;
+            }
+        }
+    </style>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const viewMoreBtn = document.querySelector('.view-more-btn');
+            const modal = document.querySelector('.features-modal');
+            const closeModal = document.querySelector('.close-modal');
+            
+            viewMoreBtn.addEventListener('click', function() {
+                modal.style.display = 'flex';
+            });
+            
+            closeModal.addEventListener('click', function() {
+                modal.style.display = 'none';
+            });
+            
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        });
+    </script>
+
+
+    <!-- Download Section -->
+    <section class="section section-dark" id="download">
+        <div class="container">
+            <h2 class="section-title">Download</h2>
+            <p class="text-center mb-5 mx-auto" style="max-width: 800px;">
+                Download the Infamous launcher to access your purchased products and receive updates.
+            </p>
+            
+            <div class="text-center">
+                <div class="mb-4">
+                    <a href="Infamous.zip" class="btn btn-primary btn-lg">
+                        <i class="fas fa-download me-2"></i> Download Launcher
+                    </a>
+                </div>
+                <p class="text-muted">
+                    Having Issues with Infamous Launcher? Install:  <a href="https://www.techpowerup.com/download/visual-c-redistributable-runtime-package-all-in-one/" class="text-primary">Visual C++ Runtimes</a>
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="text-center">
+                <img src="images/logo.png" alt="Infamous Unleashed Logo" class="footer-logo" style="max-width: 150px;">
+                
+                <div class="footer-social">
+                    <a href="https://discord.gg/2KYUvZkD5q" class="social-icon" target="_blank">
+                        <i class="fab fa-discord"></i>
+                    </a>
+                    <a href="https://t.me/InfamousMenu" class="social-icon" target="_blank">
+                        <i class="fab fa-telegram"></i>
+                    </a>
+                    <a href="https://x.com/InfamousUL" class="social-icon" target="_blank">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+                
+                <div class="footer-links">
+                    <a href="#about" class="footer-link">About</a>
+                    <a href="#products" class="footer-link
+                    ">Products</a>
+                    <a href="#resellers" class="footer-link">Resellers</a>
+                    <a href="#download" class="footer-link">Download</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function jumpAround() {
+            alert('Jump around!');
+        }
+        
+        function filterProducts(category) {
+            const productCards = document.querySelectorAll('.product-card');
+            productCards.forEach(card => {
+                if (category === 'all') {
+                    card.style.display = 'block';
+                } else if (card.getAttribute('data-category').includes(category)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+        
+        function filterResellers(category) {
+            const resellerCards = document.querySelectorAll('.reseller-card');
+            resellerCards.forEach(card => {
+                if (category === 'all') {
+                    card.style.display = 'block';
+                } else if (card.getAttribute('data-category').includes(category)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
+```
