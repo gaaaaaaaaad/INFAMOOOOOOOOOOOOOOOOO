@@ -1,0 +1,1199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Lua API Documentation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #e63946;
+            --primary-light: #ffccd5;
+            --secondary-color: #c1121f;
+            --accent-color: #ff758f;
+            --background-color: #fff5f5;
+            --sidebar-bg: #fff0f0;
+            --text-color: #2b2d42;
+            --light-text: #6c757d;
+            --code-bg: #ffecec;
+            --border-color: #ffd6d6;
+            --card-shadow: 0 2px 6px rgba(230, 57, 70, 0.1);
+            --hover-shadow: 0 10px 15px -3px rgba(230, 57, 70, 0.2);
+            --sidebar-width: 300px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --radius-sm: 6px;
+            --radius-md: 10px;
+            --radius-lg: 14px;
+            --nav-indent: 16px;
+            --header-gradient: linear-gradient(135deg, #e63946 0%, #c1121f 100%);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --primary-color: #ff758f;
+                --primary-light: #3a0a12;
+                --secondary-color: #e63946;
+                --accent-color: #ff8fa3;
+                --background-color: #1a0005;
+                --sidebar-bg: #26000a;
+                --text-color: #f8f9fa;
+                --light-text: #adb5bd;
+                --code-bg: #33000d;
+                --border-color: #4d0014;
+                --card-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+                --hover-shadow: 0 10px 15px -3px rgba(255, 117, 143, 0.3);
+                --header-gradient: linear-gradient(135deg, #c1121f 0%, #780000 100%);
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            margin: 0;
+            padding: 0;
+            transition: var(--transition);
+        }
+
+        .container {
+            display: flex;
+            max-width: 1600px;
+            margin: 0 auto;
+            min-height: 100vh;
+        }
+
+        /* Sidebar with elegant red theme */
+        .sidebar {
+            width: var(--sidebar-width);
+            background: var(--sidebar-bg);
+            padding: 0;
+            position: sticky;
+            top: 0;
+            height: 100vh;
+            overflow-y: auto;
+            border-right: 1px solid var(--border-color);
+            transition: var(--transition);
+            scrollbar-width: thin;
+            scrollbar-color: var(--primary-color) var(--sidebar-bg);
+        }
+
+        .sidebar::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .sidebar::-webkit-scrollbar-track {
+            background: var(--sidebar-bg);
+        }
+
+        .sidebar::-webkit-scrollbar-thumb {
+            background-color: var(--primary-color);
+            border-radius: 3px;
+        }
+
+        .sidebar-header {
+            padding: 20px;
+            background: var(--header-gradient);
+            color: white;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .sidebar-header h2 {
+            margin: 0;
+            font-size: 1.5rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+        }
+
+        .sidebar-header h2 i {
+            margin-right: 10px;
+            font-size: 1.3rem;
+        }
+
+        .search-container {
+            position: relative;
+            margin: 0 20px 20px;
+        }
+
+        #search-input {
+            width: 100%;
+            padding: 12px 15px 12px 45px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border-color);
+            background-color: var(--background-color);
+            color: var(--text-color);
+            font-size: 0.95rem;
+            transition: var(--transition);
+            box-shadow: var(--card-shadow);
+        }
+
+        #search-input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(230, 57, 70, 0.3);
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--primary-color);
+            font-size: 1rem;
+        }
+
+        .nav-container {
+            padding: 0 12px;
+        }
+
+        .nav-group {
+            margin-bottom: 24px;
+        }
+
+        .nav-header {
+            font-weight: 600;
+            margin: 0 8px 8px;
+            color: var(--primary-color);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            padding: 8px 12px;
+            border-radius: var(--radius-sm);
+            display: flex;
+            align-items: center;
+            background-color: rgba(230, 57, 70, 0.1);
+        }
+
+        .nav-header i {
+            margin-right: 10px;
+            font-size: 0.8rem;
+            color: var(--primary-color);
+        }
+
+        .nav-list {
+            list-style: none;
+        }
+
+        .nav-item {
+            position: relative;
+            margin-bottom: 4px;
+        }
+
+        .nav-item a {
+            text-decoration: none;
+            color: var(--text-color);
+            display: flex;
+            align-items: center;
+            padding: 10px 15px;
+            border-radius: var(--radius-sm);
+            transition: var(--transition);
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
+        .nav-item a:hover {
+            color: var(--primary-color);
+            background-color: var(--primary-light);
+            transform: translateX(5px);
+        }
+
+        .nav-item.active a {
+            color: white;
+            font-weight: 600;
+            background-color: var(--primary-color);
+        }
+
+        .nav-item.active::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background-color: var(--accent-color);
+            border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+        }
+
+        .nav-item .nav-icon {
+            margin-right: 10px;
+            color: var(--primary-color);
+            font-size: 0.9rem;
+            width: 18px;
+            text-align: center;
+        }
+
+        .nav-item.has-children > a {
+            font-weight: 600;
+        }
+
+        .nav-subitems {
+            list-style: none;
+            padding-left: var(--nav-indent);
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .nav-item.expanded .nav-subitems {
+            max-height: 1000px;
+        }
+
+        .nav-subitem a {
+            padding-left: calc(var(--nav-indent) + 10px);
+            font-size: 0.9rem;
+        }
+
+        .nav-toggle {
+            margin-left: auto;
+            transition: transform 0.2s ease;
+            color: var(--light-text);
+        }
+
+        .nav-item.expanded .nav-toggle {
+            transform: rotate(90deg);
+            color: var(--primary-color);
+        }
+
+        /* Main Content */
+        .content {
+            flex: 1;
+            padding: 40px 60px;
+            background: var(--background-color);
+            transition: var(--transition);
+            max-width: calc(100% - var(--sidebar-width));
+        }
+
+        h1, h2, h3, h4 {
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            font-family: 'Inter', sans-serif;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            position: relative;
+            padding-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        h1::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 80px;
+            height: 5px;
+            background: var(--header-gradient);
+            border-radius: 3px;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin-top: 3rem;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--border-color);
+            color: var(--primary-color);
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--accent-color);
+        }
+
+        h3 {
+            font-size: 1.4rem;
+            margin-top: 2.5rem;
+            color: var(--secondary-color);
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            color: var(--text-color);
+            line-height: 1.7;
+            font-size: 1.05rem;
+        }
+
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: var(--transition);
+            font-weight: 500;
+        }
+
+        a:hover {
+            color: var(--secondary-color);
+            text-decoration: underline;
+        }
+
+        code {
+            background-color: var(--code-bg);
+            padding: 0.3em 0.5em;
+            border-radius: var(--radius-sm);
+            font-family: 'Fira Code', 'Courier New', Courier, monospace;
+            font-size: 0.95em;
+            color: var(--primary-color);
+            border: 1px solid var(--border-color);
+        }
+
+        pre {
+            background-color: var(--code-bg);
+            padding: 1.5rem;
+            border-radius: var(--radius-md);
+            overflow-x: auto;
+            margin: 2rem 0;
+            box-shadow: var(--card-shadow);
+            transition: var(--transition);
+            border-left: 5px solid var(--primary-color);
+        }
+
+        pre code {
+            background: transparent;
+            padding: 0;
+            color: var(--text-color);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            border: none;
+        }
+
+        /* Elegant Function Cards */
+        .function {
+            background-color: var(--code-bg);
+            border-radius: var(--radius-md);
+            padding: 2rem;
+            margin: 2.5rem 0;
+            box-shadow: var(--card-shadow);
+            transition: var(--transition);
+            animation: slideIn 0.4s ease-out;
+            border: 1px solid var(--border-color);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .function:hover {
+            box-shadow: var(--hover-shadow);
+            transform: translateY(-5px);
+            border-color: var(--primary-color);
+        }
+
+        .function::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: var(--header-gradient);
+        }
+
+        .function-name {
+            font-weight: bold;
+            color: var(--secondary-color);
+            font-size: 1.3rem;
+            margin-bottom: 1.2rem;
+            display: flex;
+            align-items: center;
+            font-family: 'Fira Code', 'Courier New', Courier, monospace;
+        }
+
+        .function-name::before {
+            content: 'ƒ';
+            display: inline-block;
+            margin-right: 10px;
+            color: var(--accent-color);
+            font-weight: normal;
+            font-size: 1.5rem;
+        }
+
+        .param {
+            margin: 1.5rem 0;
+            padding-left: 1.2rem;
+            border-left: 3px solid var(--border-color);
+        }
+
+        .param-name {
+            font-weight: bold;
+            color: var(--primary-color);
+            font-family: 'Fira Code', 'Courier New', Courier, monospace;
+            font-size: 1.05rem;
+        }
+
+        .param-type {
+            color: var(--light-text);
+            font-size: 0.9em;
+            margin-left: 8px;
+            font-family: 'Fira Code', 'Courier New', Courier, monospace;
+            background-color: rgba(230, 57, 70, 0.1);
+            padding: 0.2em 0.5em;
+            border-radius: var(--radius-sm);
+        }
+
+        .return {
+            margin: 1.5rem 0;
+            padding: 1.2rem;
+            background-color: rgba(230, 57, 70, 0.1);
+            border-left: 4px solid var(--accent-color);
+            border-radius: 0 var(--radius-md) var(--radius-md) 0;
+        }
+
+        .return-type {
+            color: var(--light-text);
+            font-size: 0.9em;
+            font-family: 'Fira Code', 'Courier New', Courier, monospace;
+            background-color: rgba(230, 57, 70, 0.2);
+            padding: 0.2em 0.5em;
+            border-radius: var(--radius-sm);
+        }
+
+        .example {
+            margin: 2rem 0;
+            animation: fadeIn 0.7s ease-out;
+        }
+
+        .example-title {
+            font-weight: 600;
+            margin-bottom: 1.2rem;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            font-size: 1.1rem;
+        }
+
+        .example-title i {
+            margin-right: 10px;
+            color: var(--accent-color);
+            font-size: 1.2rem;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 0.3em 0.7em;
+            font-size: 0.75em;
+            font-weight: 700;
+            line-height: 1;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: middle;
+            border-radius: 10px;
+            margin-left: 0.8em;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .badge-optional {
+            background-color: rgba(108, 117, 125, 0.2);
+            color: var(--light-text);
+        }
+
+        .badge-new {
+            background-color: rgba(40, 167, 69, 0.2);
+            color: #28a745;
+        }
+
+        .badge-deprecated {
+            background-color: rgba(220, 53, 69, 0.2);
+            color: #dc3545;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 50px;
+            font-style: italic;
+            color: var(--light-text);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .loading-spinner {
+            width: 50px;
+            height: 50px;
+            border: 5px solid var(--border-color);
+            border-top-color: var(--primary-color);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-bottom: 25px;
+        }
+
+        /* Floating Buttons */
+        .scroll-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: var(--header-gradient);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 6px 15px rgba(230, 57, 70, 0.3);
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            z-index: 100;
+            font-size: 1.2rem;
+        }
+
+        .scroll-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .scroll-top:hover {
+            background: var(--primary-color);
+            transform: translateY(-5px) scale(1.1);
+            box-shadow: 0 8px 20px rgba(230, 57, 70, 0.4);
+        }
+
+        .theme-toggle {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            width: 60px;
+            height: 60px;
+            background: var(--header-gradient);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 6px 15px rgba(230, 57, 70, 0.3);
+            z-index: 100;
+            transition: var(--transition);
+            font-size: 1.2rem;
+        }
+
+        .theme-toggle:hover {
+            background: var(--primary-color);
+            transform: translateY(-5px) scale(1.1);
+            box-shadow: 0 8px 20px rgba(230, 57, 70, 0.4);
+        }
+
+        /* Breadcrumbs */
+        .breadcrumbs {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            font-size: 0.95rem;
+            color: var(--light-text);
+            padding: 10px 15px;
+            background-color: var(--code-bg);
+            border-radius: var(--radius-md);
+            box-shadow: var(--card-shadow);
+        }
+
+        .breadcrumbs a {
+            color: var(--light-text);
+            text-decoration: none;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+        }
+
+        .breadcrumbs a:hover {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .breadcrumbs .separator {
+            margin: 0 12px;
+            color: var(--border-color);
+        }
+
+        /* Tabs */
+        .tabs-container {
+            margin: 3rem 0;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--card-shadow);
+        }
+
+        .tabs-header {
+            display: flex;
+            background-color: var(--code-bg);
+            border-bottom: 1px solid var(--border-color);
+            overflow-x: auto;
+            scrollbar-width: none;
+        }
+
+        .tabs-header::-webkit-scrollbar {
+            display: none;
+        }
+
+        .tab {
+            padding: 15px 25px;
+            cursor: pointer;
+            font-weight: 600;
+            color: var(--light-text);
+            border-bottom: 3px solid transparent;
+            white-space: nowrap;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .tab:hover {
+            color: var(--primary-color);
+            background-color: rgba(230, 57, 70, 0.05);
+        }
+
+        .tab.active {
+            color: var(--primary-color);
+            border-bottom-color: var(--primary-color);
+            background-color: var(--code-bg);
+        }
+
+        .tab-badge {
+            margin-left: 8px;
+            font-size: 0.7rem;
+            padding: 3px 8px;
+            border-radius: 999px;
+            background-color: var(--primary-light);
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+
+        .tab-content {
+            display: none;
+            padding: 30px;
+            background-color: var(--code-bg);
+            border-radius: 0 0 var(--radius-md) var(--radius-md);
+        }
+
+        .tab-content.active {
+            display: block;
+            animation: fadeIn 0.4s ease-out;
+        }
+
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .content {
+                padding: 35px 45px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .container {
+                flex-direction: column;
+            }
+            
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+                max-height: 400px;
+                overflow-y: auto;
+                border-right: none;
+                border-bottom: 1px solid var(--border-color);
+            }
+            
+            .content {
+                padding: 35px;
+                max-width: 100%;
+            }
+            
+            .theme-toggle {
+                left: 25px;
+                bottom: 25px;
+                width: 55px;
+                height: 55px;
+            }
+            
+            .scroll-top {
+                right: 25px;
+                bottom: 25px;
+                width: 55px;
+                height: 55px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                padding: 30px;
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            h2 {
+                font-size: 1.7rem;
+            }
+            
+            h3 {
+                font-size: 1.35rem;
+            }
+            
+            .function {
+                padding: 1.8rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .content {
+                padding: 25px 20px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .function {
+                padding: 1.5rem;
+            }
+            
+            .theme-toggle, .scroll-top {
+                width: 50px;
+                height: 50px;
+                font-size: 1.1rem;
+            }
+            
+            .tab {
+                padding: 12px 18px;
+            }
+            
+            .tab-content {
+                padding: 20px;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            from { 
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to { 
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <h2><i class="fas fa-fire"></i> Lua API Docs</h2>
+            </div>
+            
+            <div class="search-container">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" id="search-input" placeholder="Search documentation...">
+            </div>
+            
+            <div class="nav-container">
+                <div class="loading">
+                    <div class="loading-spinner"></div>
+                    Loading documentation...
+                </div>
+            </div>
+        </div>
+
+        <div class="content" id="content">
+            <div class="loading">
+                <div class="loading-spinner"></div>
+                Loading documentation...
+            </div>
+        </div>
+    </div>
+    
+    <div class="theme-toggle" id="theme-toggle">
+        <i class="fas fa-moon"></i>
+    </div>
+    
+    <div class="scroll-top" id="scroll-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script src="api_docs.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            generateDocumentation(apiDocs);
+            setupSearch();
+            setupScrollTop();
+            setupThemeToggle();
+            highlightNavOnScroll();
+            setupTabs();
+        });
+
+        function generateDocumentation(data) {
+            // Generate sidebar
+            const sidebar = document.querySelector('.nav-container');
+            sidebar.innerHTML = `
+                <div class="nav-group">
+                    <div class="nav-header">
+                        <i class="fas fa-book"></i>
+                        Documentation
+                    </div>
+                    <ul class="nav-list" id="modules-list">
+                        ${data.docs.map(module => `
+                            <li class="nav-item ${module.functions && module.functions.length ? 'has-children' : ''}" 
+                                data-search="${module.name.toLowerCase()} ${module.description?.toLowerCase() || ''}">
+                                <a href="#module-${module.id}">
+                                    <span class="nav-icon">
+                                        <i class="fas fa-cube"></i>
+                                    </span>
+                                    <span>${module.name}</span>
+                                    ${module.functions && module.functions.length ? `
+                                    <span class="nav-toggle">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </span>
+                                    ` : ''}
+                                </a>
+                                ${module.functions && module.functions.length ? `
+                                <ul class="nav-subitems">
+                                    ${module.functions.map(func => `
+                                    <li class="nav-item nav-subitem" data-search="${func.name.toLowerCase()} ${func.description?.toLowerCase() || ''}">
+                                        <a href="#function-${module.id}-${func.name}">
+                                            <span class="nav-icon">
+                                                <i class="fas fa-function"></i>
+                                            </span>
+                                            <span>${func.name}()</span>
+                                        </a>
+                                    </li>
+                                    `).join('')}
+                                </ul>
+                                ` : ''}
+                            </li>
+                        `).join('')}
+                    </ul>
+                </div>
+                
+                ${data.examples ? `
+                <div class="nav-group">
+                    <div class="nav-header">
+                        <i class="fas fa-code"></i>
+                        Examples
+                    </div>
+                    <ul class="nav-list">
+                        ${data.examples.map((example, index) => `
+                        <li class="nav-item" data-search="${example.title?.toLowerCase() || ''} ${example.description?.toLowerCase() || ''}">
+                            <a href="#example-${index + 1}">
+                                <span class="nav-icon">
+                                    <i class="fas fa-laptop-code"></i>
+                                </span>
+                                <span>${example.title || `Example ${index + 1}`}</span>
+                            </a>
+                        </li>
+                        `).join('')}
+                    </ul>
+                </div>
+                ` : ''}
+            `;
+
+            // Generate main content
+            const content = document.getElementById('content');
+            content.innerHTML = `
+                <h1>${data.api_name || 'Lua API'} Documentation</h1>
+                <p class="description">${data.description || 'Welcome to the API documentation.'}</p>
+                
+                ${data.installation ? `
+                <section id="installation">
+                    <h2><i class="fas fa-download"></i> Installation</h2>
+                    ${data.installation.description ? `<p>${data.installation.description}</p>` : ''}
+                    ${data.installation.code ? `
+                    <pre><code>${data.installation.code}</code></pre>
+                    ` : ''}
+                </section>
+                ` : ''}
+                
+                ${data.basic_usage ? `
+                <section id="basic-usage">
+                    <h2><i class="fas fa-play"></i> Basic Usage</h2>
+                    ${data.basic_usage.description ? `<p>${data.basic_usage.description}</p>` : ''}
+                    ${data.basic_usage.code ? `
+                    <pre><code>${data.basic_usage.code}</code></pre>
+                    ` : ''}
+                </section>
+                ` : ''}
+                
+                ${data.docs.map(module => `
+                <section id="module-${module.id}">
+                    <div class="breadcrumbs">
+                        <a href="#"><i class="fas fa-home"></i> Home</a>
+                        <span class="separator">/</span>
+                        <span>${module.name}</span>
+                    </div>
+                    
+                    <h2><i class="fas fa-cube"></i> ${module.name} Module</h2>
+                    ${module.description ? `<p>${module.description}</p>` : ''}
+                    
+                    ${module.functions.map(func => `
+                    <div class="function" id="function-${module.id}-${func.name}" 
+                         data-search="${func.name.toLowerCase()} ${func.description?.toLowerCase() || ''}">
+                        <div class="function-name">${func.name}(${func.params ? func.params.map(p => p.name).join(', ') : ''})</div>
+                        ${func.description ? `<p>${func.description}</p>` : ''}
+                        
+                        ${func.params && func.params.length > 0 ? `
+                        <div class="param">
+                            <strong>Parameters:</strong>
+                            ${func.params.map(param => `
+                            <div class="param">
+                                <div>
+                                    <span class="param-name">${param.name}</span>
+                                    <span class="param-type">${param.type}</span>
+                                    ${param.optional ? '<span class="badge badge-optional">optional</span>' : ''}
+                                    ${param.new ? '<span class="badge badge-new">new</span>' : ''}
+                                    ${param.deprecated ? '<span class="badge badge-deprecated">deprecated</span>' : ''}
+                                </div>
+                                <p>${param.description}</p>
+                            </div>
+                            `).join('')}
+                        </div>
+                        ` : ''}
+                        
+                        ${func.returns ? `
+                        <div class="return">
+                            <strong>Returns:</strong> 
+                            ${func.returns.type ? `<code class="return-type">${func.returns.type}</code>` : ''}
+                            ${func.returns.description ? ` - ${func.returns.description}` : ''}
+                        </div>
+                        ` : ''}
+                        
+                        ${func.example ? `
+                        <div class="example">
+                            <div class="example-title">
+                                <i class="fas fa-code"></i>
+                                Example:
+                            </div>
+                            <pre><code>${func.example}</code></pre>
+                        </div>
+                        ` : ''}
+                    </div>
+                    `).join('')}
+                </section>
+                `).join('')}
+                
+                ${data.examples ? `
+                <section id="examples">
+                    <h2><i class="fas fa-code"></i> Examples</h2>
+                    
+                    <div class="tabs-container">
+                        <div class="tabs-header">
+                            ${data.examples.map((example, index) => `
+                            <div class="tab ${index === 0 ? 'active' : ''}" data-tab="example-${index + 1}">
+                                ${example.title || `Example ${index + 1}`}
+                                ${example.new ? '<span class="tab-badge">New</span>' : ''}
+                            </div>
+                            `).join('')}
+                        </div>
+                        
+                        ${data.examples.map((example, index) => `
+                        <div class="tab-content ${index === 0 ? 'active' : ''}" id="tab-example-${index + 1}">
+                            <h3 id="example-${index + 1}">${example.title || `Example ${index + 1}`}</h3>
+                            ${example.description ? `<p>${example.description}</p>` : ''}
+                            ${example.code ? `
+                            <pre><code>${example.code}</code></pre>
+                            ` : ''}
+                        </div>
+                        `).join('')}
+                    </div>
+                </section>
+                ` : ''}
+            `;
+            
+            // Setup navigation toggle
+            setupNavToggle();
+            // Reinitialize search after content is loaded
+            setupSearch();
+            // Setup tabs
+            setupTabs();
+        }
+
+        function setupNavToggle() {
+            const navItems = document.querySelectorAll('.nav-item.has-children');
+            
+            navItems.forEach(item => {
+                const toggle = item.querySelector('.nav-toggle');
+                if (toggle) {
+                    toggle.addEventListener('click', function(e) {
+                        e.stopPropagation();
+                        item.classList.toggle('expanded');
+                    });
+                    
+                    // Also expand when clicking the main item
+                    item.querySelector('a').addEventListener('click', function(e) {
+                        if (e.target === this || e.target.classList.contains('nav-icon')) {
+                            e.preventDefault();
+                            item.classList.toggle('expanded');
+                            const href = this.getAttribute('href');
+                            if (href && href !== '#') {
+                                setTimeout(() => {
+                                    document.querySelector(href).scrollIntoView({
+                                        behavior: 'smooth'
+                                    });
+                                }, 100);
+                            }
+                        }
+                    });
+                }
+            });
+        }
+
+        function setupSearch() {
+            const searchInput = document.getElementById('search-input');
+            if (!searchInput) return;
+            
+            searchInput.addEventListener('input', function() {
+                const searchTerm = this.value.toLowerCase().trim();
+                const navItems = document.querySelectorAll('.nav-item');
+                const contentItems = document.querySelectorAll('.function, section[id^="example-"]');
+                
+                // Search in sidebar
+                navItems.forEach(item => {
+                    const searchData = item.getAttribute('data-search') || '';
+                    if (searchTerm === '' || searchData.includes(searchTerm)) {
+                        item.style.display = 'block';
+                        
+                        // Show parent items if child matches
+                        let parent = item.closest('.nav-subitems')?.closest('.nav-item');
+                        while (parent) {
+                            parent.style.display = 'block';
+                            parent.classList.add('expanded');
+                            parent = parent.closest('.nav-subitems')?.closest('.nav-item');
+                        }
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+                
+                // Search in content
+                if (searchTerm.length > 2) {
+                    contentItems.forEach(item => {
+                        const searchData = item.getAttribute('data-search') || '';
+                        if (searchData.includes(searchTerm)) {
+                            item.style.display = 'block';
+                            item.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                } else {
+                    contentItems.forEach(item => {
+                        item.style.display = 'block';
+                    });
+                }
+            });
+        }
+
+        function setupTabs() {
+            const tabs = document.querySelectorAll('.tab');
+            const tabContents = document.querySelectorAll('.tab-content');
+            
+            tabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    // Remove active class from all tabs
+                    tabs.forEach(t => t.classList.remove('active'));
+                    tabContents.forEach(c => c.classList.remove('active'));
+                    
+                    // Add active class to clicked tab
+                    this.classList.add('active');
+                    const tabId = this.getAttribute('data-tab');
+                    document.getElementById(`tab-${tabId}`).classList.add('active');
+                });
+            });
+        }
+
+        function setupScrollTop() {
+            const scrollTopBtn = document.getElementById('scroll-top');
+            
+            window.addEventListener('scroll', function() {
+                if (window.pageYOffset > 300) {
+                    scrollTopBtn.classList.add('visible');
+                } else {
+                    scrollTopBtn.classList.remove('visible');
+                }
+            });
+            
+            scrollTopBtn.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        }
+
+           function setupThemeToggle() {
+            const themeToggle = document.getElementById('theme-toggle');
+            const icon = themeToggle.querySelector('i');
+            
+            // Check for saved theme preference or use preferred color scheme
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme) {
+                document.body.classList.toggle('dark-theme', savedTheme === 'dark');
+                icon.className = savedTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+            } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                document.body.classList.add('dark-theme');
+                icon.className = 'fas fa-sun';
+            }
+            
+            themeToggle.addEventListener('click', function() {
+                document.body.classList.toggle('dark-theme');
+                const isDark = document.body.classList.contains('dark-theme');
+                localStorage.setItem('theme', isDark ? 'dark' : 'light');
+                icon.className = isDark ? 'fas fa-sun' : 'fas fa-moon';
+            });
+        }
+
+        function highlightNavOnScroll() {
+            const sections = document.querySelectorAll('section, .function');
+            const navItems = document.querySelectorAll('.nav-item a');
+            
+            window.addEventListener('scroll', function() {
+                let current = '';
+                
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    
+                    if (pageYOffset >= (sectionTop - 100)) {
+                        current = section.getAttribute('id');
+                    }
+                });
+                
+                navItems.forEach(item => {
+                    item.parentElement.classList.remove('active');
+                    const href = item.getAttribute('href').substring(1);
+                    if (href === current) {
+                        item.parentElement.classList.add('active');
+                        
+                        // Ensure parent items are expanded
+                        let parent = item.closest('.nav-subitems')?.closest('.nav-item');
+                        while (parent) {
+                            parent.classList.add('expanded');
+                            parent = parent.closest('.nav-subitems')?.closest('.nav-item');
+                        }
+                    }
+                });
+            });
+        }
+    </script>
+</body>
+</html>
